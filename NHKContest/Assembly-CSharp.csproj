@@ -64,6 +64,7 @@
     <Compile Include="Assets\PlayerScript\PlayerMove.cs" />
     <Compile Include="Assets\Scripts\SceneChanger.cs" />
     <Compile Include="Assets\StartCheck.cs" />
+    <Compile Include="Assets\Scripts\SceneChangeCheck.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\PlayerScript\PlayerJump.cs" />
   </ItemGroup>
