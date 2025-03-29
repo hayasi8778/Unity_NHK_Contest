@@ -11,3 +11,8 @@ Thumbs.db
 *.csproj
 *.sln
 *.userprefs
+
+git rm --cached -r Library/
+git rm --cached -r Temp/
+git add .gitignore
+git commit -m "Add .gitignore and remove unnecessary files"
