@@ -1,0 +1,13 @@
+# Unity関連
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+*.log
+*.lock
+.DS_Store
+Thumbs.db
+*.csproj
+*.sln
+*.userprefs
