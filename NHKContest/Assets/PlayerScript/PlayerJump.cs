@@ -1,45 +1,50 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerJump : MonoBehaviour
 {
     public Rigidbody rb;
-    public float JumpPoewr = 10.0f;//ジャンプ力
+    public float JumpPower = 10.0f; // ジャンプ力
 
-    public bool JumpFg = false;//ジャンプフラグ
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    private HashSet<GameObject> validGround = new HashSet<GameObject>(); // 有効な"ground"を追跡
+    private const float NormalThreshold = 0.7f; // 法線方向のしきい値
+
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
     void Update()
     {
-        //ジャンプ
-        if (Input.GetKeyDown(KeyCode.Space))
+        // ジャンプ処理
+        if (Input.GetKeyDown(KeyCode.Space) && validGround.Count > 0)
         {
-            if (JumpFg == true)//trueの時
+            rb.AddForce(Vector3.up * JumpPower, ForceMode.Impulse);
+        }
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "ground")
+        {
+            foreach (ContactPoint contact in collision.contacts)
             {
-                rb.AddForce(Vector3.up * JumpPoewr, ForceMode.Impulse);
+                // 衝突面がほぼ上向きの場合のみカウント
+                if (Vector3.Dot(contact.normal, Vector3.up) > NormalThreshold)
+                {
+                    validGround.Add(collision.gameObject);
+                    break; // 一度条件を満たしたらループを抜ける
+                }
             }
         }
     }
 
-    //衝突した瞬間
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "ground")//タグがguroundのオブジェクトと当たった時
-        {
-            JumpFg = true;
-        }
-    }
-
-    //離れた瞬間
     void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.tag == "ground")//タグがguroundのオブジェクトと当たっていないとき
+        if (collision.gameObject.tag == "ground")
         {
-            JumpFg = false;
+            validGround.Remove(collision.gameObject); // 接触解除時にリストから削除
         }
     }
 }
