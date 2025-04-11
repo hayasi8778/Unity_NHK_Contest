@@ -327,6 +327,22 @@ PrefabInstance:
       propertyPath: slider
       value: 
       objectReference: {fileID: 595972738}
+    - target: {fileID: -4947648801523635205, guid: c427004f11d4cbe4ab819e94ad586363, type: 3}
+      propertyPath: replacementPrefabs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -4947648801523635205, guid: c427004f11d4cbe4ab819e94ad586363, type: 3}
+      propertyPath: 'replacementPrefabs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 7070390924141681084, guid: c427004f11d4cbe4ab819e94ad586363, type: 3}
+    - target: {fileID: -4947648801523635205, guid: c427004f11d4cbe4ab819e94ad586363, type: 3}
+      propertyPath: 'replacementPrefabs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2383299231095202120, guid: 8de886be5e0a21d4f8c03670b1395acd, type: 3}
+    - target: {fileID: -4947648801523635205, guid: c427004f11d4cbe4ab819e94ad586363, type: 3}
+      propertyPath: 'replacementPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 3533025899980285235, guid: eb69ff78e2a97254d93196666a8f4418, type: 3}
     - target: {fileID: 7070390924141681084, guid: c427004f11d4cbe4ab819e94ad586363, type: 3}
       propertyPath: m_Name
       value: Player
@@ -470,7 +486,7 @@ MonoBehaviour:
       - m_Target: {fileID: 595972739}
         m_TargetAssemblyTypeName: SliderTimeCounter, Assembly-CSharp
         m_MethodName: OnSliderMoved
-        m_Mode: 4
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -505,9 +521,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 595972738}
   currentObject: {fileID: 1197165478}
-  objectPrefabs:
-  - {fileID: 1197165478}
-  - {fileID: 2383299231095202120, guid: 8de886be5e0a21d4f8c03670b1395acd, type: 3}
 --- !u!1 &648397784
 GameObject:
   m_ObjectHideFlags: 0

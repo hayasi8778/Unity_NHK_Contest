@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -6,22 +6,29 @@ using UnityEngine.UI;
 
 public class SliderTimeCounter : MonoBehaviour
 {
-    public Slider slider;   // ƒXƒ‰ƒCƒ_[ƒRƒ“ƒ|[ƒlƒ“ƒg‚Ö‚ÌQÆ
+    public Slider slider;   // ã‚¹ãƒ©ã‚¤ãƒ€ãƒ¼ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã¸ã®å‚ç…§
     public GameObject currentObject;
-    public GameObject[] objectPrefabs;
+    private int currentPrefabIndex = 0;  // ãƒ—ãƒ¬ãƒãƒ–é…åˆ—ã®ç¾åœ¨ã®ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹
 
-    float timeCounter = 0;     // FPSƒJƒEƒ“ƒ^
-    float ValueOld = 0;   //ƒfƒoƒbƒN—p‚ÉƒXƒ‰ƒCƒ_[‚ÌƒƒOˆÊ’u‚Æ‚é
+    float timeCounter = 0;     // FPSã‚«ã‚¦ãƒ³ã‚¿
+    float ValueOld = 0;   //ãƒ‡ãƒãƒƒã‚¯ç”¨ã«ã‚¹ãƒ©ã‚¤ãƒ€ãƒ¼ã®ãƒ­ã‚°ä½ç½®ã¨ã‚‹
 
-    //ƒvƒŒƒCƒ„[‚ÆƒXƒ‰ƒCƒ_[‚ª“¯Šú‚µ‚È‚¢‚½‚ß‚Ì•ÏX
-    private bool isManualInput = false;  // è“®‚Å‘€ì‚³‚ê‚½‚©‚Ç‚¤‚©‚Ìƒtƒ‰ƒO
-    private float manualInputTimer = 0f; // è“®‘€ì‚Ì–³ŒøŠÔ
+    
+
+    //ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã¨ã‚¹ãƒ©ã‚¤ãƒ€ãƒ¼ãŒåŒæœŸã—ãªã„ãŸã‚ã®å¤‰æ›´
+    private bool isManualInput = false;  // æ‰‹å‹•ã§æ“ä½œã•ã‚ŒãŸã‹ã©ã†ã‹ã®ãƒ•ãƒ©ã‚°
+    private float manualInputTimer = 0f; // æ‰‹å‹•æ“ä½œã®ç„¡åŠ¹æ™‚é–“
+
+    private bool Movement = false; //Updateå†…ã§0.1valueã‚’å¢—ã‚„ã—ãŸã¨ãã«ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒæˆ»ã‚‰ãªã„ç”¨ã«ç„¡ç†ã‚„ã‚Šæ­¢ã‚ã‚‹
 
     private float previousSliderValue = 0f;
 
+    private float changeCooldown = 2.0f;       // ã‚¯ãƒ¼ãƒ«ã‚¿ã‚¤ãƒ ï¼ˆç§’ï¼‰
+    private float changeCooldownTimer = 0f;    // ã‚¯ãƒ¼ãƒ«ã‚¿ã‚¤ãƒãƒ¼ã‚«ã‚¦ãƒ³ãƒˆ
+
     void Start()
     {
-        // ‰Šú’l‚ğİ’è
+        // åˆæœŸå€¤ã‚’è¨­å®š
         slider.value = 0.0f;
         slider.maxValue = 300.0f;
         slider.minValue = 0.0f;
@@ -30,37 +37,22 @@ public class SliderTimeCounter : MonoBehaviour
     void Update()
     {
 
-        if (slider == null)//ƒfƒoƒbƒN—p‚ÉƒXƒ‰ƒCƒ_[“o˜^‚³‚ê‚Ä‚é‚©Šm”F‚·‚é
+        if (slider == null)//ãƒ‡ãƒãƒƒã‚¯ç”¨ã«ã‚¹ãƒ©ã‚¤ãƒ€ãƒ¼ç™»éŒ²ã•ã‚Œã¦ã‚‹ã‹ç¢ºèªã™ã‚‹
         {
-            Debug.LogError("ƒVƒF[ƒ_[‚ªw’è‚³‚ê‚Ä‚È‚¢‚¼(SliderTimeCounter)");
+            Debug.LogError("ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ãŒæŒ‡å®šã•ã‚Œã¦ãªã„ã(SliderTimeCounter)");
+        }
+
+        // ã‚¯ãƒ¼ãƒ«ã‚¿ã‚¤ãƒ ä¸­ãªã‚‰ã‚¿ã‚¤ãƒãƒ¼æ›´æ–°ã—ã¦ã‚¹ã‚­ãƒƒãƒ—
+        if (changeCooldownTimer > 0f)
+        {
+            changeCooldownTimer -= Time.deltaTime;
         }
 
         float diff = Mathf.Abs(slider.value - ValueOld);
 
-        // Œƒ‚µ‚¢è“®‘€ìi·‚ªˆê’èˆÈãj‚ğŒŸo
-        if (diff > 5.0f && currentObject != null)
-        {
-            Debug.LogWarning("Œƒ‚µ‚¢ƒXƒ‰ƒCƒ_[‘€ì‚ğŒŸ’m");
+        
 
-            Vector3 spawnPosition = currentObject.transform.position;
-            int randomIndex = UnityEngine.Random.Range(0, objectPrefabs.Length);
-
-            GameObject newObj = Instantiate(objectPrefabs[randomIndex], spawnPosition, Quaternion.identity);
-
-            TimeSlider2 newSliderScript = newObj.GetComponent<TimeSlider2>();
-            TimeSlider2 oldSliderScript = currentObject.GetComponent<TimeSlider2>();
-
-            if (newSliderScript != null && oldSliderScript != null)
-            {
-                newSliderScript.slider = slider;
-                newSliderScript.SetPositionHistory(oldSliderScript.GetPositionHistory());
-
-                oldSliderScript.ObjectChanged(newObj); // ©•ª‚ğíœ‚µ‚ÄØ‚è‘Ö‚¦
-                currentObject = newObj; // V‚µ‚¢ƒIƒuƒWƒFƒNƒg‚ğ“o˜^
-            }
-        }
-
-        // è“®‘€ì‚ªs‚í‚ê‚½ê‡Aˆê’èŠÔ(1•b)‚ÍŠÔŒo‰ß‚É‚æ‚éƒXƒ‰ƒCƒ_[‚ÌˆÚ“®‚ğ’â~
+        // æ‰‹å‹•æ“ä½œãŒè¡Œã‚ã‚ŒãŸå ´åˆã€ä¸€å®šæ™‚é–“(1ç§’)ã¯æ™‚é–“çµŒéã«ã‚ˆã‚‹ã‚¹ãƒ©ã‚¤ãƒ€ãƒ¼ã®ç§»å‹•ã‚’åœæ­¢
         if (isManualInput)
         {
             manualInputTimer += Time.deltaTime;
@@ -68,7 +60,7 @@ public class SliderTimeCounter : MonoBehaviour
             {
                 isManualInput = false;
                 //manualInputTimer = 0f;
-                Debug.Log("ƒXƒ‰ƒCƒ_[’â~");
+                Debug.Log("ã‚¹ãƒ©ã‚¤ãƒ€ãƒ¼åœæ­¢");
             }
             return;
         }
@@ -77,56 +69,59 @@ public class SliderTimeCounter : MonoBehaviour
 
         if (timeCounter >= 0.1)
         {
-            // ƒXƒ‰ƒCƒ_[‚ÌƒCƒxƒ“ƒg‚ğˆê“I‚É‰ğœ‚µ‚Ä’l‚ğ•ÏX
-            slider.onValueChanged.RemoveListener(OnSliderMoved);//ƒCƒxƒ“ƒg’â~(‚È‚ñ‚©•’Ê‚É“®‚­‚Á‚Û‚¢)
-            //slider.onValueChanged.RemoveListener(OnSliderValueChanged);//ƒCƒxƒ“ƒg’â~(‚È‚ñ‚©•’Ê‚É“®‚­‚Á‚Û‚¢)
+            // ã‚¹ãƒ©ã‚¤ãƒ€ãƒ¼ã®ã‚¤ãƒ™ãƒ³ãƒˆã‚’ä¸€æ™‚çš„ã«è§£é™¤ã—ã¦å€¤ã‚’å¤‰æ›´
+            slider.onValueChanged.RemoveListener(OnSliderMoved);//ã‚¤ãƒ™ãƒ³ãƒˆåœæ­¢(ãªã‚“ã‹æ™®é€šã«å‹•ãã£ã½ã„)
+            Movement = false; //ã“ã“ã§ã‚ã‚‰ã‹ã˜ã‚valueå‹•ã„ãŸæ™‚ã®å‡¦ç†ã‚’åˆ‡ã‚‹
             slider.value += 0.1f;
-            slider.onValueChanged.AddListener(OnSliderMoved);//ƒCƒxƒ“ƒgXV
+            Movement = true; //valueãŒå‹•ãã¨OnSliderMovedãŒèµ·å‹•ã™ã‚‹ã‚ˆã†ã«
+            slider.onValueChanged.AddListener(OnSliderMoved);//ã‚¤ãƒ™ãƒ³ãƒˆæ›´æ–°
 
             timeCounter = 0;
-            Debug.Log("ƒXƒ‰ƒCƒ_[XV");
+            Debug.Log("ã‚¹ãƒ©ã‚¤ãƒ€ãƒ¼æ›´æ–°");
             //Debug.Log($"ValueOld: {ValueOld}, slider.value: {slider.value}");
         }
 
     }
 
 
-    // ƒXƒ‰ƒCƒ_[‚ª‘€ì‚³‚ê‚½Û‚ÉŒÄ‚Î‚ê‚é
-    public void OnSliderMoved(float value)
+    // ã‚¹ãƒ©ã‚¤ãƒ€ãƒ¼ãŒæ“ä½œã•ã‚ŒãŸéš›ã«å‘¼ã°ã‚Œã‚‹
+    public void OnSliderMoved(float value) //valueãŒæ›´æ–°ã•ã‚ŒãŸã¨ãã®å‡¦ç†
     {
-        // ƒXƒ‰ƒCƒ_[‚Ìè“®‘€ì‚ğŒŸ’m
-        isManualInput = true;
-
-        if (currentObject != null)
+        if (Movement)//RemoveListener(OnSliderMoved)ã§æ­¢ã‚ã‚Œãªã‹ã£ãŸã‹ã‚‰ã”ã‚ŠæŠ¼ã—ã§æ­¢ã‚ã‚‹
         {
-            TimeSlider2 script = currentObject.GetComponent<TimeSlider2>();
-            if (script != null)
+
+            Debug.Log("ã‚¹ãƒ©ã‚¤ãƒ€ãƒ¼å‹•ã„ãŸæ™‚ã®å‡¦ç†ã™ã‚‹");
+
+            // ã‚¹ãƒ©ã‚¤ãƒ€ãƒ¼ã®æ‰‹å‹•æ“ä½œã‚’æ¤œçŸ¥
+            isManualInput = true;
+
+            if (currentObject != null)
             {
-                script.OnSliderMovedByUser(value); // © ‚±‚±I
+                TimeSlider2 script = currentObject.GetComponent<TimeSlider2>();
+                if (script != null)
+                {
+                    script.OnSliderMovedByUser(value); // ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å·»ãæˆ»ã—å‡¦ç†
+                }
             }
-        }
 
-        // ˆÈ‰ºAƒXƒ‰ƒCƒ_[‚ğŒƒ‚µ‚­“®‚©‚µ‚½‚©‚Ç‚¤‚©‚Ì”»’è
-        float diff = Mathf.Abs(value - previousSliderValue);
-        previousSliderValue = value;
+            // ä»¥ä¸‹ã€ã‚¹ãƒ©ã‚¤ãƒ€ãƒ¼ã‚’æ¿€ã—ãå‹•ã‹ã—ãŸã‹ã©ã†ã‹ã®åˆ¤å®š
+            float diff = Mathf.Abs(value - previousSliderValue);
+            previousSliderValue = value;
 
-        if (diff > 5.0f && currentObject != null && objectPrefabs.Length > 0)
-        {
-            Vector3 spawnPosition = currentObject.transform.position;
-            int randomIndex = UnityEngine.Random.Range(0, objectPrefabs.Length);
-
-            GameObject newObj = Instantiate(objectPrefabs[randomIndex], spawnPosition, Quaternion.identity);
-
-            TimeSlider2 newSliderScript = newObj.GetComponent<TimeSlider2>();
-            TimeSlider2 oldSliderScript = currentObject.GetComponent<TimeSlider2>();
-
-            if (newSliderScript != null && oldSliderScript != null)
+            if (diff > 5.0f && currentObject != null && changeCooldownTimer <= 0f)
             {
-                newSliderScript.slider = slider;
-                newSliderScript.SetPositionHistory(oldSliderScript.GetPositionHistory());
+                TimeSlider2 script = currentObject.GetComponent<TimeSlider2>();
+                if (script != null)
+                {
+                    GameObject newObj = script.ObjectChanged();
+                    if (newObj != null)
+                    {
+                        currentObject = newObj;
+                        changeCooldownTimer = changeCooldown;
+                    }
+                }
 
-                oldSliderScript.ObjectChanged(newObj);
-                currentObject = newObj;
+                
             }
         }
     }

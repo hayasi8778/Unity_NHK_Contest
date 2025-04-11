@@ -12,6 +12,9 @@ GameObject:
   - component: {fileID: 4487091591114984705}
   - component: {fileID: 6915443986680403472}
   - component: {fileID: 446897820292994033}
+  - component: {fileID: -1610624184735828178}
+  - component: {fileID: -5794114037777168606}
+  - component: {fileID: -8992522007494682037}
   - component: {fileID: 7889862528108310618}
   m_Layer: 0
   m_Name: Player(FullHD)
@@ -109,6 +112,60 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &-1610624184735828178
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3533025899980285235}
+  serializedVersion: 4
+  m_Mass: 10
+  m_Drag: 0.1
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &-5794114037777168606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3533025899980285235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eb5142d29cb98e4996f50ed59c07618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movespeed: 1
+--- !u!114 &-8992522007494682037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3533025899980285235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0cbd1f33b5b2b344aa6cdb0dc9d8b35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: -1610624184735828178}
+  JumpPower: 50
 --- !u!114 &7889862528108310618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,7 +179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 0}
-  objects:
+  replacementPrefabs:
+  - {fileID: 7070390924141681084, guid: c427004f11d4cbe4ab819e94ad586363, type: 3}
   - {fileID: 2383299231095202120, guid: 8de886be5e0a21d4f8c03670b1395acd, type: 3}
-  - {fileID: 6069682677288751729, guid: c427004f11d4cbe4ab819e94ad586363, type: 3}
   - {fileID: 3533025899980285235}
