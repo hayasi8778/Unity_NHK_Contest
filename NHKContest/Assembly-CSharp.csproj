@@ -64,6 +64,7 @@
     <Compile Include="Assets\PlayerScript\PlayerMove.cs" />
     <Compile Include="Assets\PlayerScript\TimeSlider.cs" />
     <Compile Include="Assets\Scripts\SceneChanger.cs" />
+    <Compile Include="Assets\PlayerScript\PlayerDeath.cs" />
     <Compile Include="Assets\StartCheck.cs" />
     <Compile Include="Assets\Scripts\SliderTimeCounter.cs" />
     <Compile Include="Assets\Scripts\SceneChangeCheck.cs" />

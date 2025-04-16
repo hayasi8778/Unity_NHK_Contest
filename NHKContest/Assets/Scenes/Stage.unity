@@ -606,6 +606,7 @@ GameObject:
   - component: {fileID: 776827149}
   - component: {fileID: 776827151}
   - component: {fileID: 776827152}
+  - component: {fileID: 776827153}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -769,6 +770,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 595972738}
+--- !u!114 &776827153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776827144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 940848d7d54158e4ea848cd39c2bc320, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blockTag: ground
 --- !u!1 &1015021961
 GameObject:
   m_ObjectHideFlags: 0
