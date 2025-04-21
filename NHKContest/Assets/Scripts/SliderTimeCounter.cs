@@ -1,4 +1,5 @@
 ﻿using System;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -13,7 +14,10 @@ public class SliderTimeCounter : MonoBehaviour
     float timeCounter = 0;     // FPSカウンタ
     float ValueOld = 0;   //デバック用にスライダーのログ位置とる
 
-    
+
+    [SerializeField]
+    public float initMaxSeconds = 300.0f;  // 最大秒数の初期値
+
 
     //プレイヤーとスライダーが同期しないための変更
     private bool isManualInput = false;  // 手動で操作されたかどうかのフラグ
@@ -37,7 +41,7 @@ public class SliderTimeCounter : MonoBehaviour
     {
         // 初期値を設定
         slider.value = 0.0f;
-        slider.maxValue = 300.0f;
+        slider.maxValue = initMaxSeconds;
         slider.minValue = 0.0f;
 
         sliderHistory = new float[historySize];
@@ -84,8 +88,6 @@ public class SliderTimeCounter : MonoBehaviour
             }
             return;
         }
-
-        //timeCounter += Time.deltaTime;
 
         // 時間加算（0.1秒ごと）
         timeCounter += Time.deltaTime;
