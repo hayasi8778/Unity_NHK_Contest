@@ -85,7 +85,7 @@ public class SliderTimeCounter : MonoBehaviour
             return;
         }
 
-        timeCounter += Time.deltaTime;
+        //timeCounter += Time.deltaTime;
 
         // 時間加算（0.1秒ごと）
         timeCounter += Time.deltaTime;
