@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|c:\\git\\testgit1\\nhkcontest\\assets\\scripts\\slidertimecounter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\slidertimecounter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|c:\\git\\testgit1\\nhkcontest\\assets\\playerscript\\timeslider2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|solutionrelative:assets\\playerscript\\timeslider2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,11 +18,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TimeSlider2.cs",
+              "DocumentMoniker": "C:\\Git\\TestGit1\\NHKContest\\Assets\\PlayerScript\\TimeSlider2.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerScript\\TimeSlider2.cs",
+              "ToolTip": "C:\\Git\\TestGit1\\NHKContest\\Assets\\PlayerScript\\TimeSlider2.cs",
+              "RelativeToolTip": "Assets\\PlayerScript\\TimeSlider2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T13:28:31.777Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -40,7 +57,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\SliderTimeCounter.cs",
               "ToolTip": "C:\\Git\\TestGit1\\NHKContest\\Assets\\Scripts\\SliderTimeCounter.cs",
               "RelativeToolTip": "Assets\\Scripts\\SliderTimeCounter.cs",
-              "ViewState": "AgIAAJ4AAAAAAAAAAAAQwCEAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAABcAAAAAAAAAAADwvyEAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-12T10:17:13.508Z",
               "EditorCaption": ""

@@ -28,10 +28,10 @@ public class SliderTimeCounter : MonoBehaviour
 
     //スライダー移動で入れ替わり判定するために配列用意する
     private float[] sliderHistory;
-    private int historySize = 20; // 2秒分の履歴（0.1秒ごと）
+    private int historySize = 5; // 1秒分の履歴（0.1秒ごと）
     private int historyIndex = 0;
     private float autoIncreasePerEntry = 0.1f; // 自動加算分
-    private float handMoveThreshold = 30.0f;     // 手動で動かしたとみなす最小差分
+    private float handMoveThreshold = 10.0f;     // 手動で動かしたとみなす最小差分
 
     void Start()
     {
@@ -106,7 +106,7 @@ public class SliderTimeCounter : MonoBehaviour
         }
 
         // 履歴が一周したら動きの差分チェック
-        if (historyIndex == 0 && changeCooldownTimer <= 0f)
+        if (/* historyIndex == 0 && */changeCooldownTimer <= 0f)//判断基準一旦切る
         {
             float oldest = sliderHistory[(historyIndex + 1) % historySize];
             float newest = sliderHistory[(historyIndex - 1 + historySize) % historySize];
@@ -115,7 +115,7 @@ public class SliderTimeCounter : MonoBehaviour
             float expectedAuto = autoIncreasePerEntry * (historySize - 1);
             float manualMovement = rawDiff - expectedAuto;
 
-            Debug.Log($"手動移動量: {manualMovement}");
+            //Debug.Log($"手動移動量: {manualMovement}");
 
             if (manualMovement > handMoveThreshold && currentObject != null)
             {
@@ -127,7 +127,7 @@ public class SliderTimeCounter : MonoBehaviour
                     {
                         currentObject = newObj;
                         changeCooldownTimer = changeCooldown;
-                        Debug.Log("オブジェクトを切り替えました！");
+                        Debug.LogError("オブジェクトを切り替えました！");
                     }
                 }
             }
@@ -142,9 +142,11 @@ public class SliderTimeCounter : MonoBehaviour
         if (Movement)//RemoveListener(OnSliderMoved)で止めれなかったからごり押しで止める
         {
 
-            Debug.Log("スライダー動いた時の処理する");
+            //ログかさばるからデバック用
+            //Debug.Log("スライダー動いた時の処理する");
 
             // スライダーの手動操作を検知
+            /*
             isManualInput = true;
 
             if (currentObject != null)
@@ -170,11 +172,27 @@ public class SliderTimeCounter : MonoBehaviour
                     {
                         currentObject = newObj;
                         changeCooldownTimer = changeCooldown;
+                        Debug.LogError("こっちで切り替えてるとよくなさそう");
                     }
                 }
 
                 
             }
+            */
+
+            Debug.Log("手動スライダー操作を検知");
+            isManualInput = true;
+            manualInputTimer = 0f;
+
+            if (currentObject != null)
+            {
+                TimeSlider2 script = currentObject.GetComponent<TimeSlider2>();
+                if (script != null)
+                {
+                    script.OnSliderMovedByUser(value);
+                }
+            }
+
         }
     }
 
