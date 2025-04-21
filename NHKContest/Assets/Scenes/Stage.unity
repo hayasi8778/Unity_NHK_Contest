@@ -509,6 +509,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 595972738}
   currentObject: {fileID: 1197165478}
+  initMaxSeconds: 20
 --- !u!1 &648397784
 GameObject:
   m_ObjectHideFlags: 0
