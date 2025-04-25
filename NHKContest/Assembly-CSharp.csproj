@@ -72,6 +72,7 @@
     <Compile Include="Assets\PlayerScript\TimeSlider2.cs" />
     <Compile Include="Assets\Scripts\SceneChangeCheck.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Scripts\PouseGame.cs" />
     <Compile Include="Assets\PlayerScript\TimeReverse.cs" />
     <Compile Include="Assets\PlayerScript\PlayerJump.cs" />
   </ItemGroup>
