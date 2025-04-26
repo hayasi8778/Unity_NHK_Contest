@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 461963271702857718}
-  JumpPower: 10
+  JumpPower: 50
 --- !u!114 &3583925070144240299
 MonoBehaviour:
   m_ObjectHideFlags: 0

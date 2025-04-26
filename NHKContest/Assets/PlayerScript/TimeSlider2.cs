@@ -14,6 +14,11 @@ public class TimeSlider2 : MonoBehaviour
 
     private bool isManualInput = false; //手動で巻き戻しているかのフラグ
 
+    //時間で画質戻すための処理
+    private float revertTimer = 0f;
+    private float revertTimeLimit = 5f; // 5秒で戻す
+    private bool isBeingDestroyed = false; //削除フラグ
+
     void Start()
     {
         for (int i = 0; i < positionHistory.Length; i++)
@@ -31,6 +36,8 @@ public class TimeSlider2 : MonoBehaviour
 
     void Update()
     {
+        if (isBeingDestroyed) return; //消されるならアップデート動かさない
+
         if (!isRewinding) //巻き戻し中じゃないなら座標を配列に追加
         {
             int index = Mathf.RoundToInt(slider.value * 10); 
@@ -40,6 +47,15 @@ public class TimeSlider2 : MonoBehaviour
                 currentIndex = index;
             }
         }
+
+        //タイマーで5秒経ったら前に戻す処理
+        revertTimer += Time.deltaTime;
+        if (revertTimer >= revertTimeLimit)
+        {
+            TryRevertObject();
+            revertTimer = 0f; // タイマーリセット
+        }
+
     }
 
     public void OnSliderValueChanged()//プレイヤーの巻き戻し処理
@@ -173,6 +189,66 @@ public class TimeSlider2 : MonoBehaviour
         if (positionHistory[index] != Vector3.zero)
         {
             transform.position = positionHistory[index];
+        }
+    }
+
+    private void TryRevertObject()
+    {
+
+        for (int i = 0; i < replacementPrefabs.Length; i++)
+        {
+            if (replacementPrefabs[i] == null)
+            {
+                Debug.LogWarning($"[DEBUG] replacementPrefabs[{i}] = NULL (Destroyed)");
+            }
+            else
+            {
+                Debug.LogWarning($"[DEBUG] replacementPrefabs[{i}] = {replacementPrefabs[i].name}");
+            }
+        }
+
+        if (replacementIndex > 0)
+        {
+            GameObject prevPrefab = replacementPrefabs[replacementIndex - 1];
+
+            // nullチェック（重要！！）
+            if (prevPrefab == null)
+            {
+                Debug.LogError("戻ろうとしたPrefabがnullです！");
+                return;
+            }
+
+            Vector3 spawnPosition = transform.position;
+            spawnPosition.y += 0.5f;
+            Quaternion spawnRotation = Quaternion.Euler(90f, 90f, -90f);
+
+            GameObject newObj = Instantiate(prevPrefab, spawnPosition, spawnRotation);
+
+            TimeSlider2 newScript = newObj.GetComponent<TimeSlider2>();
+            if (newScript != null)
+            {
+                newScript.slider = this.slider;
+                newScript.SetPositionHistory(this.GetPositionHistory());
+                newScript.replacementPrefabs = this.replacementPrefabs;
+                newScript.replacementIndex = this.replacementIndex - 1;
+            }
+
+            Debug.LogError("画質向上");
+
+            StartCoroutine(DestroyAfterFrame()); // Destroyは1フレーム遅らせる
+        }
+        else
+        {
+            Debug.LogError("これ以上戻れない！");
+        }
+    }
+
+    private System.Collections.IEnumerator DestroyAfterFrame()
+    {
+        yield return null; // 1フレーム待ってから
+        if (this != null)
+        {
+            Destroy(this.gameObject); // 念のためnullチェックしてDestroy
         }
     }
 }
