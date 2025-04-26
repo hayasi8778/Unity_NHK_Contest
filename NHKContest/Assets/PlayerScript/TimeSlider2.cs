@@ -1,34 +1,37 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.UI;
 
 public class TimeSlider2 : MonoBehaviour
 {
-    public Slider slider; //ƒXƒ‰ƒCƒ_[
-    private Vector3[] positionHistory = new Vector3[3000]; //•b”(5•ª“ü‚éƒTƒCƒY)
-    private int currentIndex = 0;  //Œ»İ‚ÌƒXƒ‰ƒCƒ_[’l
-    private bool isRewinding = false;  //ƒXƒ‰ƒCƒ_[Šª‚«–ß‚µ’†‚©‚ğ”»’è‚·‚éƒtƒ‰ƒO
+    public Slider slider; //ã‚¹ãƒ©ã‚¤ãƒ€ãƒ¼
+    private Vector3[] positionHistory = new Vector3[3000]; //ç§’æ•°(5åˆ†å…¥ã‚‹ã‚µã‚¤ã‚º)
+    private int currentIndex = 0;  //ç¾åœ¨ã®ã‚¹ãƒ©ã‚¤ãƒ€ãƒ¼å€¤
+    private bool isRewinding = false;  //ã‚¹ãƒ©ã‚¤ãƒ€ãƒ¼å·»ãæˆ»ã—ä¸­ã‹ã‚’åˆ¤å®šã™ã‚‹ãƒ•ãƒ©ã‚°
 
-    //ƒIƒuƒWƒFƒNƒg‚ÌØ‚è‘Ö‚¦‚±‚Á‚¿‚Å‚â‚é‚©‚çƒXƒ‰ƒCƒ_[‚©‚çˆÚA
-    public GameObject[] replacementPrefabs; // ‡”Ô‚ÉØ‚è‘Ö‚¦‚éƒvƒŒƒnƒuŒQ
+    //ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®åˆ‡ã‚Šæ›¿ãˆã“ã£ã¡ã§ã‚„ã‚‹ã‹ã‚‰ã‚¹ãƒ©ã‚¤ãƒ€ãƒ¼ã‹ã‚‰ç§»æ¤
+    public GameObject[] replacementPrefabs; // é †ç•ªã«åˆ‡ã‚Šæ›¿ãˆã‚‹ãƒ—ãƒ¬ãƒãƒ–ç¾¤
     private int replacementIndex = 0;
 
-    private bool isManualInput = false; //è“®‚ÅŠª‚«–ß‚µ‚Ä‚¢‚é‚©‚Ìƒtƒ‰ƒO
+    private bool isManualInput = false; //æ‰‹å‹•ã§å·»ãæˆ»ã—ã¦ã„ã‚‹ã‹ã®ãƒ•ãƒ©ã‚°
 
     void Start()
     {
         for (int i = 0; i < positionHistory.Length; i++)
         {
-            if (positionHistory[i] == null) //ƒIƒuƒWƒFƒNƒgØ‚è‘Ö‚¦‚É‰ŠúÀ•W‚Å–„‚ß‚é‰Â”\«‚ª‚ ‚é‚©‚çnullƒ`ƒFƒbƒN
+            if (positionHistory[i] == null) //ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆåˆ‡ã‚Šæ›¿ãˆæ™‚ã«åˆæœŸåº§æ¨™ã§åŸ‹ã‚ã‚‹å¯èƒ½æ€§ãŒã‚ã‚‹ã‹ã‚‰nullãƒã‚§ãƒƒã‚¯
             {
-                positionHistory[i] = transform.position;//”z—ñ‚Ì‰Šú‰»
+                positionHistory[i] = transform.position;//é…åˆ—ã®åˆæœŸåŒ–
             }
             
         }
+
+       
+
     }
 
     void Update()
     {
-        if (!isRewinding) //Šª‚«–ß‚µ’†‚¶‚á‚È‚¢‚È‚çÀ•W‚ğ”z—ñ‚É’Ç‰Á
+        if (!isRewinding) //å·»ãæˆ»ã—ä¸­ã˜ã‚ƒãªã„ãªã‚‰åº§æ¨™ã‚’é…åˆ—ã«è¿½åŠ 
         {
             int index = Mathf.RoundToInt(slider.value * 10); 
             if (index >= 0 && index < positionHistory.Length)
@@ -39,11 +42,11 @@ public class TimeSlider2 : MonoBehaviour
         }
     }
 
-    public void OnSliderValueChanged()//ƒvƒŒƒCƒ„[‚ÌŠª‚«–ß‚µˆ—
+    public void OnSliderValueChanged()//ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®å·»ãæˆ»ã—å‡¦ç†
     {
         if (slider == null)
         {
-            Debug.LogError("ƒXƒ‰ƒCƒ_[‚ªw’è‚³‚ê‚Ä‚È‚¢‚¼(TimeSlider)");
+            Debug.LogError("ã‚¹ãƒ©ã‚¤ãƒ€ãƒ¼ãŒæŒ‡å®šã•ã‚Œã¦ãªã„ã(TimeSlider)");
             return;
         }
 
@@ -77,12 +80,12 @@ public class TimeSlider2 : MonoBehaviour
         isRewinding = false;
     }
 
-    public Vector3[] GetPositionHistory() //ƒIƒuƒWƒFƒNƒg‚ÌˆøŒp‚¬‚Ì‚½‚ß‚ÌƒQƒbƒ^[
+    public Vector3[] GetPositionHistory() //ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å¼•ç¶™ãã®ãŸã‚ã®ã‚²ãƒƒã‚¿ãƒ¼
     {
         return positionHistory;
     }
 
-    public void SetPositionHistory(Vector3[] history)//ƒIƒuƒWƒFƒNƒgˆøŒp‚¬‚Ì‚½‚ß‚ÌƒZƒbƒ^[
+    public void SetPositionHistory(Vector3[] history)//ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆå¼•ç¶™ãã®ãŸã‚ã®ã‚»ãƒƒã‚¿ãƒ¼
     {
         if (history.Length == positionHistory.Length)
         {
@@ -97,16 +100,30 @@ public class TimeSlider2 : MonoBehaviour
     {
         if (replacementPrefabs == null || replacementPrefabs.Length == 0)
         {
-            Debug.LogWarning("replacementPrefabs ‚ªİ’è‚³‚ê‚Ä‚¢‚Ü‚¹‚ñI");
+            Debug.LogWarning("replacementPrefabs ãŒè¨­å®šã•ã‚Œã¦ã„ã¾ã›ã‚“ï¼");
             return null;
         }
+
+        // æœ€å¾Œã¾ã§æ¥ãŸã‚‰å…¥ã‚Œæ›¿ãˆã—ãªã„
+
+        // ğŸ” ä»Šã®è‡ªåˆ†ãŒ replacementPrefabs ã®æœ€å¾Œã®ãƒ—ãƒ¬ãƒãƒ–ã¨åŒã˜ãªã‚‰å…¥ã‚Œæ›¿ãˆã—ãªã„
+        if (replacementPrefabs[replacementPrefabs.Length - 1].name == this.gameObject.name.Replace("(Clone)", "").Trim())
+        {
+            Debug.LogWarning("æœ€å¾Œã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãªã®ã§å…¥ã‚Œæ›¿ãˆã—ã¾ã›ã‚“");
+            return null;
+        }
+
 
         GameObject nextPrefab = replacementPrefabs[replacementIndex];
         replacementIndex = (replacementIndex + 1) % replacementPrefabs.Length;
 
         Vector3 spawnPosition = transform.position;
-        GameObject newObj = Instantiate(nextPrefab, spawnPosition, Quaternion.identity);
+        spawnPosition.y += 0.5f; // 0.5fä¸Šã«ãšã‚‰ã™
+        Quaternion spawnRotation = Quaternion.Euler(90f, 90f, -90f);
 
+        GameObject newObj = Instantiate(nextPrefab, spawnPosition, spawnRotation);
+
+        // æ–°ã—ã„ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«æƒ…å ±ã‚’æ¸¡ã™
         TimeSlider2 newScript = newObj.GetComponent<TimeSlider2>();
         if (newScript != null)
         {
@@ -116,16 +133,26 @@ public class TimeSlider2 : MonoBehaviour
             newScript.replacementIndex = this.replacementIndex;
         }
 
+        //æœ€å¾Œã«è‡ªåˆ†ã‚’æ¶ˆã™ï¼
         Destroy(this.gameObject);
 
-        return newObj; // © ‚±‚±‚Å•Ô‚·I
+        return newObj;
     }
 
-    public void ObjectChanged(GameObject newObject) //V‚µ‚¢ƒIƒuƒWƒFƒNƒg‚ÉƒXƒ‰ƒCƒ_[‚ğˆøŒp‚¬©g‚ğíœ
+    public void ObjectChanged(GameObject newObject) //æ–°ã—ã„ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã«ã‚¹ãƒ©ã‚¤ãƒ€ãƒ¼ã‚’å¼•ç¶™ãè‡ªèº«ã‚’å‰Šé™¤
     {
 
         
         if (newObject == null) return;
+
+        GameObject nextPrefab = replacementPrefabs[replacementIndex];
+        replacementIndex = (replacementIndex + 1) % replacementPrefabs.Length;
+
+        Vector3 spawnPosition = transform.position;
+        GameObject newObj = Instantiate(nextPrefab, spawnPosition, Quaternion.identity);
+
+        // ğŸ”½ ã“ã“ã§è§’åº¦ã‚’å¼•ãç¶™ã
+        newObj.transform.rotation = this.transform.rotation;
 
         var newSliderScript = newObject.GetComponent<TimeSlider2>();
         if (newSliderScript != null)
@@ -138,7 +165,7 @@ public class TimeSlider2 : MonoBehaviour
         
     }
 
-    public void OnSliderMovedByUser(float value) //ƒXƒ‰ƒCƒ_[‚ªˆø‚«–ß‚³‚ê‚½‚Æ‚«‚ÉƒvƒŒƒCƒ„[À•W‚ğŠª‚«–ß‚·
+    public void OnSliderMovedByUser(float value) //ã‚¹ãƒ©ã‚¤ãƒ€ãƒ¼ãŒå¼•ãæˆ»ã•ã‚ŒãŸã¨ãã«ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼åº§æ¨™ã‚’å·»ãæˆ»ã™
     {
         isManualInput = true;
 
