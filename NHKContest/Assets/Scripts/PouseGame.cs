@@ -1,30 +1,17 @@
 using UnityEngine;
 
-public class PauseGame : MonoBehaviour
+public class PauseGameScript : MonoBehaviour
 {
-    private bool isPaused = false;
-    public float timeScale = 0.0f;  // ポーズ中の時間倍率 
+    public static float timeScale = 0.0f;  // ポーズ中の時間倍率
+    public static bool IsPaused { get; private set; } = false;
 
-    void Update()
-    {
-        // ポーズ切り替え（例: Escキーでポーズ）
-        if (Input.GetKeyDown(KeyCode.Escape)) {
-            if (isPaused) {
-                Resume_Game();
-            }
-            else {
-                Pause_Game();
-            }
-        }
-    }
-
-    public void Pause_Game() {
+    public static void PauseGame() {
         Time.timeScale = timeScale; // ゲーム停止
-        isPaused = true;
+        IsPaused = true;
     }
 
-    public void Resume_Game() {
+    public static void ResumeGame() {
         Time.timeScale = 1; // ゲーム再開
-        isPaused = false;
+        IsPaused = false;
     }
 }
