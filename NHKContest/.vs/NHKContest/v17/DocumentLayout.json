@@ -1,0 +1,226 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|c:\\git\\backapp\\unity_nhk_contest\\nhkcontest\\assets\\chat\\chatmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|solutionrelative:assets\\chat\\chatmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\assets\\startcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|solutionrelative:assets\\startcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\assets\\scripts\\backgroundmovementscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\backgroundmovementscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\assets\\scripts\\billboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\billboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\assets\\scripts\\parallax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\parallax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\assets\\scripts\\followplayerscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\followplayerscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\assets\\playerscript\\timeslider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|solutionrelative:assets\\playerscript\\timeslider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\assets\\playerscript\\timereverse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|solutionrelative:assets\\playerscript\\timereverse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\assets\\playerscript\\timeslider2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|solutionrelative:assets\\playerscript\\timeslider2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\assets\\playerscript\\playermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|solutionrelative:assets\\playerscript\\playermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\assets\\playerscript\\playerjump.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|solutionrelative:assets\\playerscript\\playerjump.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\git\\backapp\\unity_nhk_contest\\nhkcontest\\assets\\scripts\\chatflg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\chatflg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ChatManager.cs",
+              "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\Assets\\chat\\ChatManager.cs",
+              "RelativeDocumentMoniker": "Assets\\chat\\ChatManager.cs",
+              "ToolTip": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\Assets\\chat\\ChatManager.cs",
+              "RelativeToolTip": "Assets\\chat\\ChatManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T13:45:41.448Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StartCheck.cs",
+              "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\Assets\\StartCheck.cs",
+              "RelativeDocumentMoniker": "Assets\\StartCheck.cs",
+              "ToolTip": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\Assets\\StartCheck.cs",
+              "RelativeToolTip": "Assets\\StartCheck.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T13:09:54.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BackgroundMovementScript.cs",
+              "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\Assets\\Scripts\\BackgroundMovementScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\BackgroundMovementScript.cs",
+              "ToolTip": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\Assets\\Scripts\\BackgroundMovementScript.cs",
+              "RelativeToolTip": "Assets\\Scripts\\BackgroundMovementScript.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T13:09:48.912Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Billboard.cs",
+              "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\Assets\\Scripts\\Billboard.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Billboard.cs",
+              "ToolTip": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\Assets\\Scripts\\Billboard.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Billboard.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T13:09:44.442Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Parallax.cs",
+              "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\Assets\\Scripts\\Parallax.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Parallax.cs",
+              "ToolTip": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\Assets\\Scripts\\Parallax.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Parallax.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T13:09:29.075Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FollowPlayerScript.cs",
+              "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\Assets\\Scripts\\FollowPlayerScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\FollowPlayerScript.cs",
+              "ToolTip": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\Assets\\Scripts\\FollowPlayerScript.cs",
+              "RelativeToolTip": "Assets\\Scripts\\FollowPlayerScript.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T13:09:19.165Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ChatFlg.cs",
+              "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\Assets\\Scripts\\ChatFlg.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ChatFlg.cs",
+              "ToolTip": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\Assets\\Scripts\\ChatFlg.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ChatFlg.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T13:08:56.13Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TimeReverse.cs",
+              "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\Assets\\PlayerScript\\TimeReverse.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerScript\\TimeReverse.cs",
+              "ToolTip": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\Assets\\PlayerScript\\TimeReverse.cs",
+              "RelativeToolTip": "Assets\\PlayerScript\\TimeReverse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T13:08:18.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TimeSlider.cs",
+              "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\Assets\\PlayerScript\\TimeSlider.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerScript\\TimeSlider.cs",
+              "ToolTip": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\Assets\\PlayerScript\\TimeSlider.cs",
+              "RelativeToolTip": "Assets\\PlayerScript\\TimeSlider.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T13:07:38.641Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TimeSlider2.cs",
+              "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\Assets\\PlayerScript\\TimeSlider2.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerScript\\TimeSlider2.cs",
+              "ToolTip": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\Assets\\PlayerScript\\TimeSlider2.cs",
+              "RelativeToolTip": "Assets\\PlayerScript\\TimeSlider2.cs",
+              "ViewState": "AQIAALcAAAAAAAAAAAA5wAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T13:07:30.862Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PlayerJump.cs",
+              "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\Assets\\PlayerScript\\PlayerJump.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerScript\\PlayerJump.cs",
+              "ToolTip": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\Assets\\PlayerScript\\PlayerJump.cs",
+              "RelativeToolTip": "Assets\\PlayerScript\\PlayerJump.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T13:06:32.107Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PlayerMove.cs",
+              "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\Assets\\PlayerScript\\PlayerMove.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerScript\\PlayerMove.cs",
+              "ToolTip": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\Assets\\PlayerScript\\PlayerMove.cs",
+              "RelativeToolTip": "Assets\\PlayerScript\\PlayerMove.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T13:06:01.129Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
