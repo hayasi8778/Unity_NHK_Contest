@@ -15,6 +15,8 @@ public class SliderTimeCounter : MonoBehaviour
     float ValueOld = 0;   //デバック用にスライダーのログ位置とる
 
 
+
+
     [SerializeField]
     public float initMaxSeconds = 300.0f;  // 最大秒数の初期値
 
@@ -196,6 +198,11 @@ public class SliderTimeCounter : MonoBehaviour
             }
 
         }
+    }
+
+    public void SetCurrentPlayer(GameObject player)
+    {
+        currentObject = player;
     }
 
 }
