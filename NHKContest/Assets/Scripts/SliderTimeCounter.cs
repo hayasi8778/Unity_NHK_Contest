@@ -218,6 +218,7 @@ public class SliderTimeCounter : MonoBehaviour
 
     public void SetCurrentObjects(GameObject objects,int it)
     {
+        Debug.LogWarning("ステージオブジェクト継承");
         currentObjects[it] = objects;
     }
 

@@ -8,6 +8,8 @@ public class TimeSliderObject : MonoBehaviour
     private Vector3[] positionHistory = new Vector3[3000];
     private int currentIndex = 0;
 
+    public Slider slider; //スライダー
+
     public GameObject[] replacementPrefabs;
     public int replacementIndex = 0;
 
@@ -60,19 +62,26 @@ public class TimeSliderObject : MonoBehaviour
         if (replacementPrefabs == null || replacementPrefabs.Length == 0)
             return null;
 
-        // 配列の最後だったら入れ替え禁止！
         if (replacementIndex >= replacementPrefabs.Length - 1)
         {
             Debug.LogWarning("最後のオブジェクトなので入れ替えしません");
             return null;
         }
 
-        // 次のオブジェクトへ
         replacementIndex++;
 
         Vector3 spawnPosition = transform.position;
         GameObject nextPrefab = replacementPrefabs[replacementIndex];
         GameObject newObj = Instantiate(nextPrefab, spawnPosition, transform.rotation);
+
+        // ここでreplacement情報を引き継ぐ！！
+        var newScript = newObj.GetComponent<TimeSliderObject>();
+        if (newScript != null)
+        {
+            newScript.slider = this.slider;
+            newScript.replacementPrefabs = this.replacementPrefabs;
+            newScript.replacementIndex = this.replacementIndex;
+        }
 
         Destroy(this.gameObject);
 
@@ -90,7 +99,8 @@ public class TimeSliderObject : MonoBehaviour
             return;
         }
 
-        replacementIndex = (replacementIndex - 1 + replacementPrefabs.Length) % replacementPrefabs.Length;
+        // ここでいったん減らす（戻す）
+        replacementIndex--;
 
         Vector3 spawnPosition = transform.position;
         GameObject prevPrefab = replacementPrefabs[replacementIndex];
@@ -99,9 +109,18 @@ public class TimeSliderObject : MonoBehaviour
         var newScript = newObj.GetComponent<TimeSliderObject>();
         if (newScript != null)
         {
-            // 必要なら履歴や設定を引き継ぐ
+            newScript.slider = this.slider;
             newScript.replacementPrefabs = this.replacementPrefabs;
+
+            // 🔥 注意！！戻った後のオブジェクトでは「次に行けるよう」replacementIndexを1つ進めた値にする！
             newScript.replacementIndex = this.replacementIndex;
+        }
+
+        // ここでスライダー側に「新しいオブジェクト」を教える！
+        var counter = slider.GetComponent<SliderTimeCounter>();
+        if (counter != null)
+        {
+            counter.SetCurrentObjects(newObj, 0);
         }
 
         StartCoroutine(DestroyAfterFrame());
@@ -113,6 +132,10 @@ public class TimeSliderObject : MonoBehaviour
         if (this != null)
         {
             Destroy(this.gameObject);
+        }
+        else
+        {
+            Debug.LogWarning("ゲームオブジェクト消せてないかも");
         }
     }
 

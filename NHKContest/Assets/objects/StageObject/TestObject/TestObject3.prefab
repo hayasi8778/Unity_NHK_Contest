@@ -132,7 +132,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 72
@@ -153,4 +153,4 @@ MonoBehaviour:
   - {fileID: 3217855016262567419, guid: 17af225aba34cb84e9052ed006e5d029, type: 3}
   - {fileID: 7234230593975599630, guid: ddc409a9ed1ebad498d003783dd02491, type: 3}
   - {fileID: 993678391217483495}
-  replacementIndex: 2
+  replacementIndex: 0
