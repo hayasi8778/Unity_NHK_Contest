@@ -1641,7 +1641,7 @@ Camera:
   m_GameObject: {fileID: 1015021961}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 4
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -3505,7 +3505,7 @@ Canvas:
   m_GameObject: {fileID: 2004327463}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 1015021963}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -3517,7 +3517,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &2004327467
 RectTransform:
