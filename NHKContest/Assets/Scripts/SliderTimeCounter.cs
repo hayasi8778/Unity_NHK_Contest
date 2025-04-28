@@ -11,6 +11,8 @@ public class SliderTimeCounter : MonoBehaviour
     public GameObject currentObject;
     private int currentPrefabIndex = 0;  // プレハブ配列の現在のインデックス
 
+    public GameObject[] currentObjects;
+
     float timeCounter = 0;     // FPSカウンタ
     float ValueOld = 0;   //デバック用にスライダーのログ位置とる
 
@@ -121,19 +123,48 @@ public class SliderTimeCounter : MonoBehaviour
 
             //Debug.Log($"手動移動量: {manualMovement}");
 
-            if (manualMovement > handMoveThreshold && currentObject != null)
+            if (manualMovement > handMoveThreshold)
             {
-                TimeSlider2 script = currentObject.GetComponent<TimeSlider2>();
-                if (script != null)
+                // 🔥 まずプレイヤーを入れ替え
+                if (currentObject != null)
                 {
-                    GameObject newObj = script.ObjectChanged();
-                    if (newObj != null)
+                    TimeSlider2 script = currentObject.GetComponent<TimeSlider2>();
+                    if (script != null)
                     {
-                        currentObject = newObj;
-                        changeCooldownTimer = changeCooldown;
-                        Debug.LogError("オブジェクトを切り替えました！");
+                        GameObject newObj = script.ObjectChanged();
+                        if (newObj != null)
+                        {
+                            currentObject = newObj;
+                            Debug.LogError("プレイヤーオブジェクトを切り替えました！");
+                        }
                     }
                 }
+
+                // 🔥 次にステージオブジェクトたちも入れ替え
+                if (currentObjects != null)
+                {
+                    for (int i = 0; i < currentObjects.Length; i++)
+                    {
+                        GameObject obj = currentObjects[i];
+                        if (obj == null) continue;
+
+                        var timeObj = obj.GetComponent<TimeSliderObject>();
+                        if (timeObj != null)
+                        {
+                            // ReplaceObjectには、replacementPrefabsとindexを渡す必要がある！
+                            // 仮に timeObj自身が持っていると想定
+                            GameObject newObj = timeObj.ReplaceObject(/* replacementPrefabs ,  replacementIndex */);
+                            if (newObj != null)
+                            {
+                                currentObjects[i] = newObj;
+                                Debug.LogError($"ステージオブジェクト[{i}]を切り替えました！");
+                            }
+                        }
+                    }
+                }
+
+                // クールタイムをセットして連続切り替え防止
+                changeCooldownTimer = changeCooldown;
             }
         }
 
@@ -149,41 +180,6 @@ public class SliderTimeCounter : MonoBehaviour
             //ログかさばるからデバック用
             //Debug.Log("スライダー動いた時の処理する");
 
-            // スライダーの手動操作を検知
-            /*
-            isManualInput = true;
-
-            if (currentObject != null)
-            {
-                TimeSlider2 script = currentObject.GetComponent<TimeSlider2>();
-                if (script != null)
-                {
-                    script.OnSliderMovedByUser(value); // オブジェクトの巻き戻し処理
-                }
-            }
-
-            // 以下、スライダーを激しく動かしたかどうかの判定
-            float diff = Mathf.Abs(value - previousSliderValue);
-            previousSliderValue = value;
-
-            if (diff > 5.0f && currentObject != null && changeCooldownTimer <= 0f)
-            {
-                TimeSlider2 script = currentObject.GetComponent<TimeSlider2>();
-                if (script != null)
-                {
-                    GameObject newObj = script.ObjectChanged();
-                    if (newObj != null)
-                    {
-                        currentObject = newObj;
-                        changeCooldownTimer = changeCooldown;
-                        Debug.LogError("こっちで切り替えてるとよくなさそう");
-                    }
-                }
-
-                
-            }
-            */
-
             Debug.Log("手動スライダー操作を検知");
             isManualInput = true;
             manualInputTimer = 0f;
@@ -197,12 +193,32 @@ public class SliderTimeCounter : MonoBehaviour
                 }
             }
 
+            // ★ステージ内オブジェクトたちの巻き戻し
+            if (currentObjects != null)
+            {
+                foreach (var obj in currentObjects)
+                {
+                    if (obj == null) continue;
+
+                    var timeObj = obj.GetComponent<TimeSliderObject>();
+                    if (timeObj != null)
+                    {
+                        timeObj.RewindToSlider(value);
+                    }
+                }
+            }
+
         }
     }
 
     public void SetCurrentPlayer(GameObject player)
     {
         currentObject = player;
+    }
+
+    public void SetCurrentObjects(GameObject objects,int it)
+    {
+        currentObjects[it] = objects;
     }
 
 }

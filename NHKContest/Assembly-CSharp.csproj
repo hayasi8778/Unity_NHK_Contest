@@ -65,6 +65,7 @@
     <Compile Include="Assets\chat\ChatManager.cs" />
     <Compile Include="Assets\Scripts\PauseMenuScript.cs" />
     <Compile Include="Assets\PlayerScript\PlayerMove.cs" />
+    <Compile Include="Assets\Scripts\StageObject\TimeSliderObject.cs" />
     <Compile Include="Assets\PlayerScript\TimeSlider.cs" />
     <Compile Include="Assets\Scripts\Parallax.cs" />
     <Compile Include="Assets\Scripts\SceneChanger.cs" />
