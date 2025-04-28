@@ -403,7 +403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e55f9babb10abb9448901acf030d479e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: StageSelect
+  sceneToLoad: "ChangeScene\u53C2\u7167"
 --- !u!114 &50119370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -490,7 +490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e55f9babb10abb9448901acf030d479e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: StageSelect
+  sceneToLoad: Stage
 --- !u!4 &384747525
 Transform:
   m_ObjectHideFlags: 0

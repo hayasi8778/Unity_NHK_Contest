@@ -1354,7 +1354,7 @@ PrefabInstance:
       objectReference: {fileID: 595972738}
     - target: {fileID: 7920937295279460336, guid: 5343802caf3c78543b4f06dbcb12e1ed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7920937295279460336, guid: 5343802caf3c78543b4f06dbcb12e1ed, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1391,6 +1391,14 @@ PrefabInstance:
     - target: {fileID: 7920937295279460336, guid: 5343802caf3c78543b4f06dbcb12e1ed, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794501966669308239, guid: 5343802caf3c78543b4f06dbcb12e1ed, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 462cc1689a6aaac42958a3def3723b09, type: 2}
+    - target: {fileID: 9077810673642535831, guid: 5343802caf3c78543b4f06dbcb12e1ed, type: 3}
+      propertyPath: m_Constraints
+      value: 120
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1594,7 +1602,7 @@ Transform:
   m_GameObject: {fileID: 1015021961}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 1, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1656,7 +1664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7018dc01a2073941bf37e715373fe21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerObject: {fileID: 0}
+  playerObject: {fileID: 220279762}
 --- !u!1 &1101038441
 GameObject:
   m_ObjectHideFlags: 0
