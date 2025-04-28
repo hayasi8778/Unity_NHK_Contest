@@ -73,6 +73,7 @@
     <Compile Include="Assets\chat\ChatFlg.cs" />
     <Compile Include="Assets\Scripts\Billboard.cs" />
     <Compile Include="Assets\Scripts\SliderTimeCounter.cs" />
+    <Compile Include="Assets\Scripts\Goal\Goal.cs" />
     <Compile Include="Assets\PlayerScript\TimeSlider2.cs" />
     <Compile Include="Assets\Scripts\SceneChangeCheck.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />

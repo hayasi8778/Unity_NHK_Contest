@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 772.8
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Game
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 94
+  controlID: 97
   draggingID: 0
 --- !u!114 &3
 MonoBehaviour:
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 38
+  controlID: 48
   draggingID: 0
 --- !u!114 &10
 MonoBehaviour:
@@ -326,7 +326,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Camera
+    - Assets/Scripts/Goal
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -336,16 +336,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/Camera
+  - Assets/Scripts/Goal
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Git\TestGit1\NHKContest
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 56.400024}
-    m_SelectedIDs: 60e10000
-    m_LastClickedID: 57696
-    m_ExpandedIDs: 00000000fadd000006de000000ca9a3b
+    scrollPos: {x: 0, y: 88.400024}
+    m_SelectedIDs: eadf0000
+    m_LastClickedID: 57322
+    m_ExpandedIDs: 00000000fadd000000de000006de000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -520,9 +520,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: d4de0000
-      m_LastClickedID: 57044
-      m_ExpandedIDs: 2c4affff6a4effff0edf00006adf0000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 1208ffff2a08ffff8e0affff940affffda0affffde0afffffe0affffa03bffff3c3fffff3e4affff6a4effff88e100001ae20000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1098,9 +1098,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 7.3357005, y: 1.7123814, z: 0.41125694}
+    m_Target: {x: 6.156755, y: 2.6930077, z: -0.60881335}
     speed: 2
-    m_Value: {x: 7.3357005, y: 1.7123814, z: 0.41125694}
+    m_Value: {x: 6.156755, y: 2.6930077, z: -0.60881335}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1146,13 +1146,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.03660207, y: -0.0050982162, z: 0.00018561255, w: -0.99934596}
+    m_Target: {x: -0.03419874, y: -0.018288808, z: 0.0006315842, w: -0.9992942}
     speed: 2
-    m_Value: {x: -0.036601007, y: -0.0050980686, z: 0.00018560718, w: -0.999317}
+    m_Value: {x: -0.034197144, y: -0.018287955, z: 0.00063155475, w: -0.99924767}
   m_Size:
-    m_Target: 7.288559
+    m_Target: 2.5364642
     speed: 2
-    m_Value: 7.288559
+    m_Value: 2.5364642
   m_Ortho:
     m_Target: 0
     speed: 2
