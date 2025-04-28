@@ -1,24 +1,25 @@
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class FollowPlayerScript : MonoBehaviour
 {
     // 参照したいオブジェクトを格納する変数
     [SerializeField]
-    private GameObject playerObject;
+    public Transform target;
+    public Vector3 offset;
 
-    void Update()
+    void LateUpdate()
     {
-
-        // カメラの位置を取得するための変数
-        Vector3 cameraPosition = transform.position;
-
-        // targetObjectが設定されている場合、そのpositionを取得
-        if (playerObject != null)
+        if (target != null)//ターゲットが設定されてるなら
         {
-            Vector3 targetPosition = playerObject.transform.position;
-            cameraPosition.x = targetPosition.x;
-            transform.position = cameraPosition;
+            transform.position = target.position + offset;
         }
     }
+
+    public void SetTarget(Transform newTarget)//オブジェクト切り替えても継承するための関数
+    {
+        target = newTarget;
+    }
+
 }
 

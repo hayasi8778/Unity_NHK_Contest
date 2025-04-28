@@ -152,6 +152,17 @@ public class TimeSlider2 : MonoBehaviour
             newScript.replacementIndex = this.replacementIndex;
         }
 
+        // カメラの追従対象も更新する
+        Camera mainCamera = Camera.main;
+        if (mainCamera != null)
+        {
+            FollowPlayerScript followScript = mainCamera.GetComponent<FollowPlayerScript>();
+            if (followScript != null)
+            {
+                followScript.SetTarget(newObj.transform);
+            }
+        }
+
         //最後に自分を消す！
         Destroy(this.gameObject);
 
@@ -232,6 +243,16 @@ public class TimeSlider2 : MonoBehaviour
             if (counter != null)
             {
                 counter.SetCurrentPlayer(newObj);
+            }
+
+            Camera mainCamera = Camera.main;
+            if (mainCamera != null)
+            {
+                FollowPlayerScript followScript = mainCamera.GetComponent<FollowPlayerScript>();
+                if (followScript != null)
+                {
+                    followScript.SetTarget(newObj.transform);
+                }
             }
 
             Debug.LogError("画質向上");
