@@ -14,14 +14,17 @@ public class FollowPlayerScript : MonoBehaviour
     {
         if (isFollowing && target != null)
         {
-            transform.position = target.position + offset;
+            // 補間移動でカメラに滑らかさと速度を持たせる
+            Vector3 desiredPosition = target.position + offset;
+            //Lerp使ってモーションブラーに対応できるようにする
+            transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime * 10f);
         }
     }
 
     public void SetTarget(Transform newTarget)//オブジェクト切り替えても継承するための関数
     {
         target = newTarget;
-        PauseFollowing(1.5f);//1.5秒間カメラの追従止める
+        PauseFollowing(0.5f);//1.5秒間カメラの追従止める
     }
 
     public void PauseFollowing(float pauseDuration)//指定秒数間カメラ追従止める関数
