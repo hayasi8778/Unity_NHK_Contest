@@ -24,7 +24,7 @@ public class FollowPlayerScript : MonoBehaviour
     public void SetTarget(Transform newTarget)//ƒIƒuƒWƒFƒNƒgØ‚è‘Ö‚¦‚Ä‚àŒp³‚·‚é‚½‚ß‚ÌŠÖ”
     {
         target = newTarget;
-        PauseFollowing(0.5f);//1.5•bŠÔƒJƒƒ‰‚Ì’Ç]~‚ß‚é
+        PauseFollowing(0.5f);//0.5•bŠÔƒJƒƒ‰‚Ì’Ç]~‚ß‚é
     }
 
     public void PauseFollowing(float pauseDuration)//w’è•b”ŠÔƒJƒƒ‰’Ç]~‚ß‚éŠÖ”

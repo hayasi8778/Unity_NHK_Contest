@@ -135,7 +135,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 72
+  m_Constraints: 56
   m_CollisionDetection: 0
 --- !u!114 &3407846177805962554
 MonoBehaviour:
@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfbe816624659c040b97ac73d5791839, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slider: {fileID: 0}
   replacementPrefabs:
   - {fileID: 3217855016262567419}
   - {fileID: 7234230593975599630, guid: ddc409a9ed1ebad498d003783dd02491, type: 3}

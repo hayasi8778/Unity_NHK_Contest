@@ -1401,6 +1401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 595972738}
   currentObject: {fileID: 220279762}
+  CameraController: {fileID: 444606164}
   currentObjects:
   - {fileID: 1056050896}
   initMaxSeconds: 300

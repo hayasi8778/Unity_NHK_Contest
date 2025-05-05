@@ -8,7 +8,8 @@ using UnityEngine.UI;
 public class SliderTimeCounter : MonoBehaviour
 {
     public Slider slider;   // スライダーコンポーネントへの参照
-    public GameObject currentObject;
+    public GameObject currentObject; //プレイヤー
+    public GameObject CameraController; //カメラ制御用の空オブジェクト
     private int currentPrefabIndex = 0;  // プレハブ配列の現在のインデックス
 
     public GameObject[] currentObjects;
@@ -191,6 +192,16 @@ public class SliderTimeCounter : MonoBehaviour
                 {
                     script.OnSliderMovedByUser(value);
                 }
+            }
+
+            if (CameraController != null) //スライダーの操作に同期してカメラにエフェクトかける
+            { 
+                FilmGrainToggle script = CameraController.GetComponent<FilmGrainToggle>();
+                if(script != null)
+                {
+                    script.SliderMovedControl();//カメラにエフェクトをかける命令
+                }
+            
             }
 
             // ★ステージ内オブジェクトたちの巻き戻し
