@@ -74,4 +74,17 @@ public class ChatManager : MonoBehaviour
         return (c >= 0x3000 && c <= 0xFF60);
     }
 
+    private void Update()
+    {
+        float deleteThreshold = 300f; // ã‚É‚±‚êˆÈãs‚Á‚½ƒRƒƒ“ƒg‚Ííœ
+        foreach (Transform child in chatContent.transform)
+        {
+            RectTransform rt = child.GetComponent<RectTransform>();
+            if (rt != null && rt.anchoredPosition.y > deleteThreshold)
+            {
+                Destroy(child.gameObject);
+            }
+        }
+    }
+
 }

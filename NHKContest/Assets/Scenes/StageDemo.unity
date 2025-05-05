@@ -3813,6 +3813,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1549888003}
   - component: {fileID: 1549888004}
+  - component: {fileID: 1549888005}
   m_Layer: 5
   m_Name: ChatManager
   m_TagString: Untagged
@@ -3854,6 +3855,27 @@ MonoBehaviour:
   chatContent: {fileID: 1885967294}
   chatMessagePrefab: {fileID: 557338768}
   scrollRect: {fileID: 424529767}
+--- !u!114 &1549888005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549888002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c46a718b8138e2641be0214cc5f0ec30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chatManager: {fileID: 1549888004}
+  commentList:
+  - "\u3053\u3093\u306B\u3061\u306F"
+  - "\u3053\u3093\u3070\u3093\u306F"
+  - "\u304A\u306F\u3088\u3046"
+  - "\u3042\u308A\u304C\u3068\u3046"
+  - "\u304A\u3084\u3059\u307F"
+  minInterval: 1
+  maxInterval: 1
 --- !u!1001 &1570843206
 PrefabInstance:
   m_ObjectHideFlags: 0
