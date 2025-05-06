@@ -190,7 +190,8 @@ public class SliderTimeCounter : MonoBehaviour
                 TimeSlider2 script = currentObject.GetComponent<TimeSlider2>();
                 if (script != null)
                 {
-                    script.OnSliderMovedByUser(value);
+                    //プレイヤーの巻き戻し処理を一旦無効化する
+                    //script.OnSliderMovedByUser(value);
                 }
             }
 
