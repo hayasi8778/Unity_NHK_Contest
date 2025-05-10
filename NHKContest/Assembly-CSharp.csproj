@@ -86,6 +86,7 @@
     <Compile Include="Assets\chat\RandomComment.cs" />
     <Compile Include="Assets\Scripts\Camera\FollowPlayerScript.cs" />
     <Compile Include="Assets\PlayerScript\PlayerJump.cs" />
+    <Compile Include="Assets\Scripts\Slider\SliderColor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
