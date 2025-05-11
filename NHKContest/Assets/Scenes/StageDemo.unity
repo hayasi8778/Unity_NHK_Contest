@@ -1986,6 +1986,10 @@ PrefabInstance:
       propertyPath: m_Size.z
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 9117479635012111755, guid: 5343802caf3c78543b4f06dbcb12e1ed, type: 3}
+      propertyPath: JumpPower
+      value: 70
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4292223568709950202, guid: 5343802caf3c78543b4f06dbcb12e1ed, type: 3}
     m_RemovedGameObjects: []
