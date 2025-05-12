@@ -46,7 +46,10 @@ public class PlayerJump : MonoBehaviour
 
     void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.tag == "ground")
+        if (collision.gameObject.CompareTag("ground") ||
+         collision.gameObject.CompareTag("object1") ||
+         collision.gameObject.CompareTag("Object2") ||
+         collision.gameObject.CompareTag("Object3"))
         {
             validGround.Remove(collision.gameObject); // ÚG‰ğœ‚ÉƒŠƒXƒg‚©‚çíœ
         }

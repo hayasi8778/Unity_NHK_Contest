@@ -77,6 +77,7 @@
     <Compile Include="Assets\chat\ChatFlg.cs" />
     <Compile Include="Assets\Scripts\Billboard.cs" />
     <Compile Include="Assets\Scripts\SliderTimeCounter.cs" />
+    <Compile Include="Assets\Scripts\TagBasedCollider.cs" />
     <Compile Include="Assets\Scripts\Goal\Goal.cs" />
     <Compile Include="Assets\PlayerScript\TimeSlider2.cs" />
     <Compile Include="Assets\Scripts\SceneChangeCheck.cs" />
@@ -592,14 +593,6 @@
     </Reference>
     <Reference Include="Mono.Cecil">
       <HintPath>Library\PackageCache\com.unity.nuget.mono-cecil@d6f9955a5d5f\Mono.Cecil.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Android.Types">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.43f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Android.Gradle">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.43f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Gradle.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="netstandard">
