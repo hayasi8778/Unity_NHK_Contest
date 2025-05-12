@@ -5,7 +5,7 @@ public class PlayerJump : MonoBehaviour
 {
     public Rigidbody rb;
     public float JumpPower = 10.0f; // ジャンプ力
-
+    public float gravity = 20.0f;
 
     private HashSet<GameObject> validGround = new HashSet<GameObject>(); // 有効な"ground"を追跡
     private const float NormalThreshold = 0.7f; // 法線方向のしきい値
@@ -22,6 +22,13 @@ public class PlayerJump : MonoBehaviour
         {
             rb.AddForce(Vector3.up * JumpPower, ForceMode.Impulse);
         }
+
+       
+            if (validGround.Count == 0)
+            { // 空中にいるとき
+                rb.AddForce(Vector3.down * gravity, ForceMode.Acceleration); // 強い下向きの力を加える
+            }
+        
     }
 
     void OnCollisionEnter(Collision collision)

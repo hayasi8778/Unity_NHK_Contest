@@ -3320,6 +3320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 776827149}
   JumpPower: 50
+  gravity: 20
 --- !u!114 &776827152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3416,7 +3417,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7920937295279460336, guid: 5343802caf3c78543b4f06dbcb12e1ed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 7920937295279460336, guid: 5343802caf3c78543b4f06dbcb12e1ed, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3424,7 +3425,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7920937295279460336, guid: 5343802caf3c78543b4f06dbcb12e1ed, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: 7920937295279460336, guid: 5343802caf3c78543b4f06dbcb12e1ed, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3479,8 +3480,12 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9117479635012111755, guid: 5343802caf3c78543b4f06dbcb12e1ed, type: 3}
+      propertyPath: gravity
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117479635012111755, guid: 5343802caf3c78543b4f06dbcb12e1ed, type: 3}
       propertyPath: JumpPower
-      value: 60
+      value: 170
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4292223568709950202, guid: 5343802caf3c78543b4f06dbcb12e1ed, type: 3}

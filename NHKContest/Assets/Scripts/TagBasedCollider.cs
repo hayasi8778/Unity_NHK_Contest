@@ -2,33 +2,7 @@ using UnityEngine;
 
 public class TagBasedCollider : MonoBehaviour
 {
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    // Object3だけはぶつかる（Triggerを通さない）
-    //    if (other.CompareTag("Object3"))
-    //    {
-    //        // ブロック自身のColliderとObject3のColliderの衝突を再有効化
-    //        Collider myCol = GetComponent<Collider>();
-    //        Collider[] others = other.GetComponentsInChildren<Collider>();
-    //        foreach (var oc in others)
-    //        {
-    //            Physics.IgnoreCollision(myCol, oc, false);
-    //        }
-    //    }
-    //}
-    //private void OnTriggerStay(Collider other)
-    //{
-    //    // Object3以外は常にすり抜ける
-    //    if (!other.CompareTag("Object3"))
-    //    {
-    //        Collider myCol = GetComponent<Collider>();
-    //        Collider[] others = other.GetComponentsInChildren<Collider>();
-    //        foreach (var oc in others)
-    //        {
-    //            Physics.IgnoreCollision(myCol, oc, true);
-    //        }
-    //    }
-    //}
+    
     private Collider blockCollider;
     void Start()
     {
