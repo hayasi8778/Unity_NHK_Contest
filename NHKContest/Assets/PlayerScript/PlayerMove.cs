@@ -1,5 +1,7 @@
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.Video;
+using System.Collections;
 
 
 public class PlayerMove : MonoBehaviour
@@ -9,12 +11,16 @@ public class PlayerMove : MonoBehaviour
     private bool muveFlag = true; //歩行しているかのフラグ
     public bool isFacingRight = true; //向き
     private bool OldisFacing = true; //1フレーム前の向き
+    private AudioSource audioSource; //音鳴らすためのコンポーネント
+    public AudioClip walkSE;
+
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         videoPlayer = GetComponent<VideoPlayer>();
+        audioSource = GetComponent<AudioSource>(); // AudioSourceを取得
     }
 
     // Update is called once per frame
@@ -29,6 +35,8 @@ public class PlayerMove : MonoBehaviour
 
         OldisFacing = isFacingRight;//1フレーム前の分をとる
 
+
+
         //右移動
         if (Input.GetKey(KeyCode.D))
         {
@@ -37,8 +45,13 @@ public class PlayerMove : MonoBehaviour
             transform.Translate(-movespeed * Time.deltaTime, 0, 0);
 
             isFacingRight = true;
-
             muveFlag = true;
+
+            if (!audioSource.isPlaying) // 音が再生中じゃないなら
+            {
+                PlaySound(); //SE再生
+            }
+
         }
 
         //左移動
@@ -49,9 +62,16 @@ public class PlayerMove : MonoBehaviour
             isFacingRight = false;
 
             muveFlag = true;
+
+            if (!audioSource.isPlaying) // 再生中でないなら
+            {
+                PlaySound();
+
+            }
+
         }
 
-        
+
 
         if (OldisFacing != isFacingRight)
         {
@@ -61,7 +81,7 @@ public class PlayerMove : MonoBehaviour
             transform.localScale = scale;
         }
 
-        if(videoPlayer == null)
+        if (videoPlayer == null)
         {
             Debug.Log("動画ないからアップデートここまで");
             return;
@@ -88,10 +108,19 @@ public class PlayerMove : MonoBehaviour
             }
         }
 
-        
-        
-        
-
-
     }
+
+    void PlaySound()
+    {
+        audioSource.PlayOneShot(walkSE);
+        Invoke("StopAudio", 0.5f);
+    }
+
+
+    void StopAudio()
+    {
+        audioSource.Stop();
+    }
+
+
 }

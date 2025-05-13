@@ -167,6 +167,7 @@ MonoBehaviour:
   rb: {fileID: 9077810673642535831}
   JumpPower: 170
   gravity: 15
+  jumpSE: {fileID: 8300000, guid: a55c42d8ab8d33e418fce6647416dd7a, type: 3}
 --- !u!65 &9095129154862879986
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -281,3 +282,4 @@ MonoBehaviour:
   movespeed: 1
   videoPlayer: {fileID: 5827255345316483653}
   isFacingRight: 1
+  walkSE: {fileID: 8300000, guid: e60ddb9cf865648489ac925a6ad3ee3b, type: 3}
