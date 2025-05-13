@@ -112,6 +112,25 @@ public class SliderTimeCounter : MonoBehaviour
             timeCounter = 0f;
         }
 
+        if (slider.value > 0)
+        {
+            if (currentObjects != null)
+            {
+                for (int i = 0; i < currentObjects.Length; i++)
+                {
+                    GameObject obj = currentObjects[i];
+                    if (obj == null) continue;
+
+                    var timeObj = obj.GetComponent<TimeSliderObject>();
+                    if (timeObj != null)
+                    {
+                        timeObj.UpdatePositionHistory(slider.value);
+                    }
+                }
+            }
+        }
+
+
         // 履歴が一周したら動きの差分チェック
         if (/* historyIndex == 0 && */changeCooldownTimer <= 0f)//判断基準一旦切る
         {
