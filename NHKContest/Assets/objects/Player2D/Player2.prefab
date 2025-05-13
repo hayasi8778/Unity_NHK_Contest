@@ -153,7 +153,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 129705917166101356}
-  JumpPower: 50
+  JumpPower: 170
+  gravity: 15
 --- !u!114 &3242727324316616029
 MonoBehaviour:
   m_ObjectHideFlags: 0
