@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using static UnityEngine.Rendering.DebugUI;
 
 public class SliderTimeCounter : MonoBehaviour
 {
@@ -111,6 +112,25 @@ public class SliderTimeCounter : MonoBehaviour
 
             timeCounter = 0f;
         }
+
+        // ★ステージ内オブジェクトたちの巻き戻し
+        if(slider.value != 0f)
+        {
+            if (currentObjects != null)
+            {
+                foreach (var obj in currentObjects)
+                {
+                    if (obj == null) continue;
+
+                    var timeObj = obj.GetComponent<TimeSliderObject>();
+                    if (timeObj != null)
+                    {
+                        timeObj.UpdatePositionHistory(slider.value);
+                    }
+                }
+            }
+        }
+        
 
         // 履歴が一周したら動きの差分チェック
         if (/* historyIndex == 0 && */changeCooldownTimer <= 0f)//判断基準一旦切る

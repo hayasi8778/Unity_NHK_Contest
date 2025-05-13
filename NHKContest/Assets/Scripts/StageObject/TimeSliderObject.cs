@@ -14,7 +14,7 @@ public class TimeSliderObject : MonoBehaviour
     public int replacementIndex = 0;
 
     private float revertTimer = 0f;
-    private float revertTimeLimit = 5f; // 5秒で戻す
+    public float revertTimeLimit = 5f; // 5秒で戻す
     private bool isBeingDestroyed = false;
 
     void Start()
@@ -27,6 +27,8 @@ public class TimeSliderObject : MonoBehaviour
 
     void Update()
     {
+
+
         if (isBeingDestroyed) return;
 
         revertTimer += Time.deltaTime;
@@ -88,7 +90,7 @@ public class TimeSliderObject : MonoBehaviour
         return newObj;
     }
 
-    private void TryRevertObject()
+    private void TryRevertObject()//前のオブジェクトに戻る
     {
         if (replacementPrefabs == null || replacementPrefabs.Length == 0)
             return;

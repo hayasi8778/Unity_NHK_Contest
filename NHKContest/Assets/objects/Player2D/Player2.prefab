@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 905971226476664543}
   - component: {fileID: 3242727324316616029}
   - component: {fileID: 329612012937822466}
+  - component: {fileID: 5421437394261937288}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Player
@@ -69,7 +70,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 92778615fd3d81c4d8c7c41709c03470, type: 2}
+  - {fileID: 2100000, guid: 31a19d927a9702a4792232ca9209a5da, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -165,7 +166,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eb5142d29cb98e4996f50ed59c07618, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movespeed: 1
+  movespeed: 4
+  videoPlayer: {fileID: 5421437394261937288}
+  isFacingRight: 1
 --- !u!114 &329612012937822466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,3 +186,37 @@ MonoBehaviour:
   - {fileID: 8542069817008449855, guid: 72ba5ac9929dcd1428391f48368d10c1, type: 3}
   - {fileID: 5547523356316681998}
   - {fileID: 3487587227234941558, guid: eb1aa0fbe1124744d8d0b04e3a637221, type: 3}
+--- !u!328 &5421437394261937288
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5547523356316681998}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: 0ab092a115dd2ef40ba591fc3e5d4620, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 3
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_TimeUpdateMode: 2
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources: []
+  m_DirectAudioVolumes: []
+  m_Url: 
+  m_EnabledAudioTracks: 
+  m_DirectAudioMutes: 
+  m_ControlledAudioTrackCount: 0
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
