@@ -125,6 +125,8 @@ public class SliderTimeCounter : MonoBehaviour
                     var timeObj = obj.GetComponent<TimeSliderObject>();
                     if (timeObj != null)
                     {
+
+                        Debug.Log("オブジェクトの配列アップデート");
                         timeObj.UpdatePositionHistory(slider.value);
                     }
                 }
