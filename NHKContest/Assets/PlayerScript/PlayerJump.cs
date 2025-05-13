@@ -10,8 +10,13 @@ public class PlayerJump : MonoBehaviour
     private HashSet<GameObject> validGround = new HashSet<GameObject>(); // 有効な"ground"を追跡
     private const float NormalThreshold = 0.7f; // 法線方向のしきい値
 
+    private AudioSource audioSource; //ジャンプ時のSE再生するためのやつ
+    public AudioClip jumpSE;
+
+
     void Start()
     {
+        audioSource = GetComponent<AudioSource>(); //AudioSourceをセット
 
     }
 
@@ -21,13 +26,20 @@ public class PlayerJump : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && validGround.Count > 0)
         {
             rb.AddForce(Vector3.up * JumpPower, ForceMode.Impulse);
+            if(!audioSource.isPlaying)
+            {
+                audioSource.PlayOneShot(jumpSE); // ジャンプ時のSE再生
+            }
+            
+
         }
 
-       
-            if (validGround.Count == 0)
-            { // 空中にいるとき
+
+        if (validGround.Count == 0)
+        { // 空中にいるとき
                 rb.AddForce(Vector3.down * gravity, ForceMode.Acceleration); // 強い下向きの力を加える
-            }
+            
+        }
         
     }
 
