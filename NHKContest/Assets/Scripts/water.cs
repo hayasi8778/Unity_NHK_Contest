@@ -10,6 +10,9 @@ public class WaterScript : MonoBehaviour
     private Renderer objRenderer;
     private Collider objCollider;
 
+    // 水流の一つ手前のブロックの参照を保持
+    [SerializeField] private GameObject previousBlock;
+
     // ブロックとの接触フラグ
     bool isBlockInWater = false;
 
@@ -27,8 +30,16 @@ public class WaterScript : MonoBehaviour
 
     void Update()
     {
-        // デルタ時間を保存
-        wasDeltaTime = Time.deltaTime;
+        if (!isBlockInWater) {
+            // 水流の一つ手前のブロックのRendererが有効なら
+            if (previousBlock.GetComponent<Renderer>().enabled) {
+                // Rendererを有効にする
+                if (objRenderer != null) objRenderer.enabled = true;
+            } else {
+                // Rendererを無効にする
+                if (objRenderer != null) objRenderer.enabled = false;
+            }
+        }
     }
 
     void OnTriggerEnter(Collider other) 

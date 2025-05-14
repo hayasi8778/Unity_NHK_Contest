@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\water.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|c:\\users\\daryu\\desktop\\hal\\\u795E\u30B2\u30FC\\unity_nhk_contest\\nhkcontest\\assets\\playerscript\\playermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|C:\\Users\\daryu\\Desktop\\HAL\\\u795E\u30B2\u30FC\\Unity_NHK_Contest\\NHKContest\\assets\\playerscript\\playermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|solutionrelative:assets\\playerscript\\playermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -38,8 +38,7 @@
               "RelativeToolTip": "Assets\\PlayerScript\\PlayerMove.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T02:39:28.448Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T02:39:28.448Z"
             },
             {
               "$type": "Document",
@@ -47,9 +46,9 @@
               "Title": "water.cs",
               "DocumentMoniker": "C:\\Users\\daryu\\Desktop\\HAL\\\u795E\u30B2\u30FC\\Unity_NHK_Contest\\NHKContest\\Assets\\Scripts\\water.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\water.cs",
-              "ToolTip": "C:\\Users\\daryu\\Desktop\\HAL\\\u795E\u30B2\u30FC\\Unity_NHK_Contest\\NHKContest\\Assets\\Scripts\\water.cs",
-              "RelativeToolTip": "Assets\\Scripts\\water.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAqwDAAAAA7AAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\daryu\\Desktop\\HAL\\\u795E\u30B2\u30FC\\Unity_NHK_Contest\\NHKContest\\Assets\\Scripts\\water.cs*",
+              "RelativeToolTip": "Assets\\Scripts\\water.cs*",
+              "ViewState": "AgIAAAsAAAAAAAAAAADwvyAAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-12T01:25:43.009Z",
               "EditorCaption": ""
