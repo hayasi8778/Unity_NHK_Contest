@@ -82,6 +82,7 @@
     <Compile Include="Assets\Scripts\SceneChangeCheck.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\PouseGame.cs" />
+    <Compile Include="Assets\Scripts\water.cs" />
     <Compile Include="Assets\PlayerScript\TimeReverse.cs" />
     <Compile Include="Assets\Scripts\Camera\FollowPlayerScript.cs" />
     <Compile Include="Assets\PlayerScript\PlayerJump.cs" />
