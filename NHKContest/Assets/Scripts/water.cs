@@ -61,8 +61,12 @@ public class WaterScript : MonoBehaviour
             Rigidbody rb = other.GetComponent<Rigidbody>();
             if (rb != null) {
                 // プレイヤーを押し戻す
-                Vector3 pushDirection = (other.transform.position - transform.position).normalized;
-                rb.AddForce(pushDirection * forceStrength);
+                if (objRenderer.enabled)//レンダラーが有効なら(水オブジェクトとしてシーンに登場しているなら)
+                {
+                    Vector3 pushDirection = (other.transform.position - transform.position).normalized;
+                    rb.AddForce(pushDirection * forceStrength);
+                }
+                
             }
         }
     }

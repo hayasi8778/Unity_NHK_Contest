@@ -121,5 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03af983f818149f44bc51a9ce46a5e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blockTag: Block
+  blockTag: Object3
   playerTag: Player
+  previousBlock: {fileID: 0}
+  forceStrength: 500

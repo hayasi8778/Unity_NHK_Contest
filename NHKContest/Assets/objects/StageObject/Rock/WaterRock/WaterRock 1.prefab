@@ -152,6 +152,6 @@ MonoBehaviour:
   slider: {fileID: 0}
   replacementPrefabs:
   - {fileID: 3779874429321746165}
-  - {fileID: 4100761802818790882, guid: de98d48a5ea800646a5ac31a896decfe, type: 3}
+  - {fileID: 943133470200076296, guid: 4e7ab6938ebe4f64b97aa997da1d3959, type: 3}
   - {fileID: 4100761802818790882, guid: 55ab8efcf117d7e46992a6e99172be3a, type: 3}
   replacementIndex: 0
