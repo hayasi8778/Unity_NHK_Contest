@@ -17,6 +17,8 @@ public class TimeSliderObject : MonoBehaviour
     private float revertTimeLimit = 5f; // 5秒で戻す
     private bool isBeingDestroyed = false;
 
+    public int Currentnum = 0;//配列の何番目にいるか
+
     void Start()
     {
         for (int i = 0; i < positionHistory.Length; i++)
@@ -120,7 +122,7 @@ public class TimeSliderObject : MonoBehaviour
         var counter = slider.GetComponent<SliderTimeCounter>();
         if (counter != null)
         {
-            counter.SetCurrentObjects(newObj, 0);
+            counter.SetCurrentObjects(newObj, Currentnum);
         }
 
         StartCoroutine(DestroyAfterFrame());
@@ -137,6 +139,13 @@ public class TimeSliderObject : MonoBehaviour
         {
             Debug.LogWarning("ゲームオブジェクト消せてないかも");
         }
+    }
+
+    public void SetCurrentnum(int num)
+    {
+        //配列が設定されたよ
+        Debug.LogWarning("配列設定" + num);
+        Currentnum = num;
     }
 
 }

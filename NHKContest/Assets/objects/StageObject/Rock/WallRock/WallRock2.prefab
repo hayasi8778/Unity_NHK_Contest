@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7240531340025870874}
   - component: {fileID: 4044228232536809336}
   m_Layer: 0
-  m_Name: WaterRock 2
+  m_Name: WallRock2
   m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.5, y: 2.5, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 0.6, y: 2.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -118,7 +118,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4100761802818790882}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 0}
   replacementPrefabs:
-  - {fileID: 3779874429321746165, guid: cb578deb8ddf3244f8f176a0a22a97d5, type: 3}
+  - {fileID: 8495906800496980265, guid: 5cade810ded14bb4dbda3c833d1c16ae, type: 3}
   - {fileID: 4100761802818790882}
-  - {fileID: 4100761802818790882, guid: 55ab8efcf117d7e46992a6e99172be3a, type: 3}
+  - {fileID: 7196385547939640719, guid: c3eb4d05ac639394db4487d7c40c8b99, type: 3}
   replacementIndex: 0

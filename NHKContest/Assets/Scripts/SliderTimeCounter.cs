@@ -51,6 +51,19 @@ public class SliderTimeCounter : MonoBehaviour
 
         sliderHistory = new float[historySize];
         for (int i = 0; i < historySize; i++) sliderHistory[i] = 0f;
+
+        //オブジェクトたちに配列番号を与える
+        for (int i = 0; i < currentObjects.Length; i++)
+        {
+            GameObject obj = currentObjects[i];
+            if (obj == null) continue;
+
+            var timeObj = obj.GetComponent<TimeSliderObject>();
+            if (timeObj != null)
+            {
+                timeObj.SetCurrentnum(i);
+            }
+        }
     }
 
     void Update()
