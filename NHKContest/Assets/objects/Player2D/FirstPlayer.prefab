@@ -279,7 +279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eb5142d29cb98e4996f50ed59c07618, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movespeed: 1
+  movespeed: 4
   videoPlayer: {fileID: 5827255345316483653}
   isFacingRight: 1
   walkSE: {fileID: 8300000, guid: e60ddb9cf865648489ac925a6ad3ee3b, type: 3}

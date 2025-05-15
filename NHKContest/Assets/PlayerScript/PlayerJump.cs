@@ -46,7 +46,7 @@ public class PlayerJump : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("ground") ||
-         collision.gameObject.CompareTag("object1") ||
+         collision.gameObject.CompareTag("Object1") ||
          collision.gameObject.CompareTag("Object2") ||
          collision.gameObject.CompareTag("Object3")
         )
