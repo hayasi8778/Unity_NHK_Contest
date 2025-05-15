@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 96
+  controlID: 94
   draggingID: 0
 --- !u!114 &3
 MonoBehaviour:
@@ -69,8 +69,8 @@ MonoBehaviour:
     y: 0
     width: 394.40002
     height: 716.8
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 76}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -95,8 +95,8 @@ MonoBehaviour:
     y: 0
     width: 280.8
     height: 432.8
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 226}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -326,7 +326,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/objects/StageObject/TestObject
+    - Assets/Scenes
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -336,16 +336,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/objects/StageObject/TestObject
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\git\backapp\Unity_NHK_Contest\NHKContest
+  m_LastProjectPath: C:\Git\TestGit1\NHKContest
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: ece80000
-    m_LastClickedID: 59628
-    m_ExpandedIDs: 000000000ee4000014e4000092e4000000ca9a3bffffff7f
+    m_SelectedIDs: 44e40000
+    m_LastClickedID: 58436
+    m_ExpandedIDs: 000000003ae4000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -520,9 +520,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 8ae40000
       m_LastClickedID: 0
-      m_ExpandedIDs: 8a3dffff1a42fffff4e70000
+      m_ExpandedIDs: 543dffffd241ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1098,9 +1098,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 12.977463, y: 1.3430765, z: -0.64287597}
+    m_Target: {x: 6.6273336, y: 2.1290798, z: -0.5776262}
     speed: 2
-    m_Value: {x: 12.977463, y: 1.3430765, z: -0.64287597}
+    m_Value: {x: 6.6273336, y: 2.1290798, z: -0.5776262}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1148,11 +1148,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.03900199, y: -0.0002993094, z: 0.000016406968, w: -0.99929386}
     speed: 2
-    m_Value: {x: -0.038999856, y: -0.00029929302, z: 0.00001640607, w: -0.9992392}
+    m_Value: {x: -0.03900199, y: -0.0002993094, z: 0.000016406968, w: -0.99929386}
   m_Size:
-    m_Target: 11.737001
+    m_Target: 9.975121
     speed: 2
-    m_Value: 11.231581
+    m_Value: 9.975121
   m_Ortho:
     m_Target: 0
     speed: 2
