@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 100
+  controlID: 96
   draggingID: 0
 --- !u!114 &3
 MonoBehaviour:
@@ -95,8 +95,8 @@ MonoBehaviour:
     y: 0
     width: 280.8
     height: 432.8
-  m_MinSize: {x: 201, y: 226}
-  m_MaxSize: {x: 4001, y: 4026}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -326,7 +326,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Goal
+    - Assets/objects/StageObject/TestObject
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -336,16 +336,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/Goal
+  - Assets/objects/StageObject/TestObject
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Git\TestGit1\NHKContest
+  m_LastProjectPath: C:\git\backapp\Unity_NHK_Contest\NHKContest
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 146}
-    m_SelectedIDs: 36e70000
-    m_LastClickedID: 59190
-    m_ExpandedIDs: 0000000028e400002ee4000034e4000044e4000046e4000000ca9a3b
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: ece80000
+    m_LastClickedID: 59628
+    m_ExpandedIDs: 000000000ee4000014e4000092e4000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -475,7 +475,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 537.60004
+  m_LastVerticalScrollValue: 586.39996
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -520,9 +520,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 1aed0000
-      m_LastClickedID: 60698
-      m_ExpandedIDs: 582affff6a3dffffe841ffff60e5000072ec00006ced0000aaed0000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 8a3dffff1a42fffff4e70000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1098,9 +1098,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 6.978841, y: 5.742642, z: 40.06456}
+    m_Target: {x: 12.977463, y: 1.3430765, z: -0.64287597}
     speed: 2
-    m_Value: {x: 6.978841, y: 5.742642, z: 40.06456}
+    m_Value: {x: 12.977463, y: 1.3430765, z: -0.64287597}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1150,9 +1150,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.038999856, y: -0.00029929302, z: 0.00001640607, w: -0.9992392}
   m_Size:
-    m_Target: 28.631134
+    m_Target: 11.737001
     speed: 2
-    m_Value: 28.631134
+    m_Value: 11.231581
   m_Ortho:
     m_Target: 0
     speed: 2
