@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class Goal :MonoBehaviour
 {
     private PressPlate pressPlate;
-
+    public bool PlateUse;
     private void Start()
     {
         pressPlate = transform.parent.GetChild(0).GetComponent<PressPlate>();
@@ -17,6 +17,13 @@ public class Goal :MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
        　{
+
+            Debug.LogWarning("プレイヤー接触");
+            if (!PlateUse)//プレートを使わないならそのまま許可
+            {
+                SceneManager.LoadScene(sceneToLoad);
+            }
+
             // プレートが押されていれば
             if (pressPlate.press)
             {
