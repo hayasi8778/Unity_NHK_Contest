@@ -14,10 +14,10 @@ public class TimeSliderObject : MonoBehaviour
     public int replacementIndex = 0;
 
     private float revertTimer = 0f;
-    private float revertTimeLimit = 5f; // 5秒で戻す
+    private float revertTimeLimit = 8f; // 5秒で戻す
     private bool isBeingDestroyed = false;
 
-    public int Currentnum = 0;//配列の何番目にいるか
+    private int Currentnum = 0;//配列の何番目にいるか
 
     void Start()
     {
@@ -59,7 +59,7 @@ public class TimeSliderObject : MonoBehaviour
         }
     }
 
-    public GameObject ReplaceObject()
+    public GameObject ReplaceObject()//オブジェクト入れ替え(後ろ)
     {
         if (replacementPrefabs == null || replacementPrefabs.Length == 0)
             return null;
@@ -83,6 +83,8 @@ public class TimeSliderObject : MonoBehaviour
             newScript.slider = this.slider;
             newScript.replacementPrefabs = this.replacementPrefabs;
             newScript.replacementIndex = this.replacementIndex;
+            newScript.Currentnum = this.Currentnum; //配列番号更新処理を追加
+            newScript.positionHistory = this.positionHistory;
         }
 
         Destroy(this.gameObject);
@@ -113,6 +115,8 @@ public class TimeSliderObject : MonoBehaviour
         {
             newScript.slider = this.slider;
             newScript.replacementPrefabs = this.replacementPrefabs;
+            newScript.Currentnum = this.Currentnum; //配列番号更新処理を追加
+            newScript.positionHistory = this.positionHistory;
 
             // 🔥 注意！！戻った後のオブジェクトでは「次に行けるよう」replacementIndexを1つ進めた値にする！
             newScript.replacementIndex = this.replacementIndex;
@@ -122,6 +126,7 @@ public class TimeSliderObject : MonoBehaviour
         var counter = slider.GetComponent<SliderTimeCounter>();
         if (counter != null)
         {
+            Debug.LogWarning("配列設定" + Currentnum);
             counter.SetCurrentObjects(newObj, Currentnum);
         }
 
