@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 7240531340025870874}
   - component: {fileID: 4044228232536809336}
   m_Layer: 0
-  m_Name: Rock 3
-  m_TagString: Untagged
+  m_Name: WaterRock 3
+  m_TagString: Object3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.5, y: 2.5, z: 0}
-  m_LocalScale: {x: 1, y: 2.9999, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -152,6 +152,6 @@ MonoBehaviour:
   slider: {fileID: 0}
   replacementPrefabs:
   - {fileID: 3779874429321746165, guid: cb578deb8ddf3244f8f176a0a22a97d5, type: 3}
-  - {fileID: 4100761802818790882, guid: de98d48a5ea800646a5ac31a896decfe, type: 3}
+  - {fileID: 943133470200076296, guid: 4e7ab6938ebe4f64b97aa997da1d3959, type: 3}
   - {fileID: 4100761802818790882}
   replacementIndex: 0

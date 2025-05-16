@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4100761802818790882
+--- !u!1 &8495906800496980265
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,49 +8,49 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2667226711350904733}
-  - component: {fileID: 558055247815907178}
-  - component: {fileID: 3567340302455662936}
-  - component: {fileID: 3738658151624251286}
-  - component: {fileID: 7240531340025870874}
-  - component: {fileID: 4044228232536809336}
+  - component: {fileID: 431736945580112682}
+  - component: {fileID: 2641773371495248039}
+  - component: {fileID: 1308954944671289682}
+  - component: {fileID: 2841455620985857751}
+  - component: {fileID: 7291419171354692591}
+  - component: {fileID: 83863396498124604}
   m_Layer: 0
-  m_Name: Rock 2
-  m_TagString: Untagged
+  m_Name: WallRock1
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2667226711350904733
+--- !u!4 &431736945580112682
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4100761802818790882}
+  m_GameObject: {fileID: 8495906800496980265}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 2.5, z: 0}
-  m_LocalScale: {x: 1, y: 3, z: 1}
+  m_LocalPosition: {x: 1.08, y: 2.56, z: -0.000002026558}
+  m_LocalScale: {x: 0.6, y: 2.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &558055247815907178
+--- !u!33 &2641773371495248039
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4100761802818790882}
+  m_GameObject: {fileID: 8495906800496980265}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &3567340302455662936
+--- !u!23 &1308954944671289682
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4100761802818790882}
+  m_GameObject: {fileID: 8495906800496980265}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -89,13 +89,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3738658151624251286
+--- !u!65 &2841455620985857751
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4100761802818790882}
+  m_GameObject: {fileID: 8495906800496980265}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -110,15 +110,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &7240531340025870874
+--- !u!54 &7291419171354692591
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4100761802818790882}
+  m_GameObject: {fileID: 8495906800496980265}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -137,13 +137,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
---- !u!114 &4044228232536809336
+--- !u!114 &83863396498124604
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4100761802818790882}
+  m_GameObject: {fileID: 8495906800496980265}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cfbe816624659c040b97ac73d5791839, type: 3}
@@ -152,6 +152,6 @@ MonoBehaviour:
   slider: {fileID: 0}
   replacementPrefabs:
   - {fileID: 3779874429321746165, guid: cb578deb8ddf3244f8f176a0a22a97d5, type: 3}
-  - {fileID: 4100761802818790882}
+  - {fileID: 8495906800496980265}
   - {fileID: 4100761802818790882, guid: 55ab8efcf117d7e46992a6e99172be3a, type: 3}
   replacementIndex: 0

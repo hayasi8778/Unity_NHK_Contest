@@ -10,6 +10,8 @@ public class PlayerJump : MonoBehaviour
     private HashSet<GameObject> validGround = new HashSet<GameObject>(); // 有効な"ground"を追跡
     private const float NormalThreshold = 0.7f; // 法線方向のしきい値
 
+    private bool JumpFlag = false;
+
     private AudioSource audioSource; //ジャンプ時のSE再生するためのやつ
     public AudioClip jumpSE;
 
@@ -24,6 +26,7 @@ public class PlayerJump : MonoBehaviour
     {
         // ジャンプ処理
         if (Input.GetKeyDown(KeyCode.Space) && validGround.Count > 0)
+        //if (Input.GetKeyDown(KeyCode.Space) && JumpFlag)
         {
             rb.AddForce(Vector3.up * JumpPower, ForceMode.Impulse);
             if(!audioSource.isPlaying)
@@ -40,13 +43,13 @@ public class PlayerJump : MonoBehaviour
                 rb.AddForce(Vector3.down * gravity, ForceMode.Acceleration); // 強い下向きの力を加える
             
         }
-        
+
     }
 
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("ground") ||
-         collision.gameObject.CompareTag("object1") ||
+         collision.gameObject.CompareTag("Object1") ||
          collision.gameObject.CompareTag("Object2") ||
          collision.gameObject.CompareTag("Object3")
         )
@@ -56,8 +59,15 @@ public class PlayerJump : MonoBehaviour
                 // 衝突面がほぼ上向きの場合のみカウント
                 if (Vector3.Dot(contact.normal, Vector3.up) > NormalThreshold)
                 {
-                    validGround.Add(collision.gameObject);
-                    break; // 一度条件を満たしたらループを抜ける
+                    if (validGround.Count < 1)
+                    {
+                        validGround.Add(collision.gameObject);
+                        break; // 一度条件を満たしたらループを抜ける
+                    }
+                    else
+                    {
+                        break; // 一度条件を満たしたらループを抜ける
+                    }
                 }
             }
         }
@@ -66,11 +76,15 @@ public class PlayerJump : MonoBehaviour
     void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject.CompareTag("ground") ||
-         collision.gameObject.CompareTag("object1") ||
+         collision.gameObject.CompareTag("Object1") ||
          collision.gameObject.CompareTag("Object2") ||
          collision.gameObject.CompareTag("Object3"))
         {
-            validGround.Remove(collision.gameObject); // 接触解除時にリストから削除
+            if(validGround.Count > 0)
+            {
+                validGround.Remove(collision.gameObject); // 接触解除時にリストから削除
+            }
+            
         }
     }
 }
