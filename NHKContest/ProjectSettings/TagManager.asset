@@ -8,6 +8,7 @@ TagManager:
   - Object1
   - Object2
   - Object3
+  - CameraWall
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - CameraWall
   - 
   - 
   - 
