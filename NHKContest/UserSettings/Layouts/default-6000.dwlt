@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 95
+  controlID: 105
   draggingID: 0
 --- !u!114 &3
 MonoBehaviour:
@@ -69,8 +69,8 @@ MonoBehaviour:
     y: 0
     width: 369.59998
     height: 716.8
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 76}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -95,8 +95,8 @@ MonoBehaviour:
     y: 0
     width: 285.6
     height: 432.8
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 226}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -326,7 +326,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -336,16 +336,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Git\TestGit1\NHKContest
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 314}
-    m_SelectedIDs: d2e40000
-    m_LastClickedID: 58578
-    m_ExpandedIDs: 00000000c6e40000cce40000d0e40000dae4000018ec00001cec000000ca9a3b
+    scrollPos: {x: 0, y: 118}
+    m_SelectedIDs: fee40000
+    m_LastClickedID: 58622
+    m_ExpandedIDs: 00000000fee4000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -402,7 +402,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000cce00000d2e60000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -520,9 +520,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: d8e80000
-      m_LastClickedID: 59608
-      m_ExpandedIDs: 9c3cffff1a41ffff04e90000
+      m_SelectedIDs: c6c30000
+      m_LastClickedID: 0
+      m_ExpandedIDs: a840ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1148,11 +1148,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.1191332, y: -0.0014877387, z: 0.00019012362, w: -0.9929383}
     speed: 2
-    m_Value: {x: -0.120317325, y: -0.0014874191, z: 0.00019189756, w: -0.9927343}
+    m_Value: {x: -0.11913319, y: -0.0014877386, z: 0.00019012361, w: -0.9929383}
   m_Size:
     m_Target: 9.865117
     speed: 2
-    m_Value: 9.440304
+    m_Value: 9.865117
   m_Ortho:
     m_Target: 0
     speed: 2
