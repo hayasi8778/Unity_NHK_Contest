@@ -65,11 +65,13 @@
     <Compile Include="Assets\Scripts\Camera\FilmGrainToggle.cs" />
     <Compile Include="Assets\Scripts\CubeMapping.cs" />
     <Compile Include="Assets\chat\ChatManager.cs" />
+    <Compile Include="Assets\Scripts\Camera\MoveCamera.cs" />
     <Compile Include="Assets\Scripts\PauseMenuScript.cs" />
     <Compile Include="Assets\Scripts\StageObject\PressPlate.cs" />
     <Compile Include="Assets\Scripts\StageObject\PressurePlate.cs" />
     <Compile Include="Assets\Scripts\DestroyMesh.cs" />
     <Compile Include="Assets\PlayerScript\PlayerMove.cs" />
+    <Compile Include="Assets\Scripts\ColliderVisualizer.cs" />
     <Compile Include="Assets\Scripts\StageObject\TimeSliderObject.cs" />
     <Compile Include="Assets\PlayerScript\TimeSlider.cs" />
     <Compile Include="Assets\Scripts\Parallax.cs" />
@@ -85,6 +87,7 @@
     <Compile Include="Assets\Scripts\SceneChangeCheck.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\PouseGame.cs" />
+    <Compile Include="Assets\Scripts\Camera\AreaCamera.cs" />
     <Compile Include="Assets\Scripts\StageObject\Rock\RockMoveSe.cs" />
     <Compile Include="Assets\Scripts\water.cs" />
     <Compile Include="Assets\PlayerScript\TimeReverse.cs" />
