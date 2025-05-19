@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 4257469053337179604}
   m_Layer: 0
   m_Name: WaterRock 2Tes
-  m_TagString: Object1
+  m_TagString: Object2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
