@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|c:\\git\\backapp\\unity_nhk_contest\\nhkcontest\\assets\\playerscript\\playermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|solutionrelative:assets\\playerscript\\playermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|c:\\git\\backapp\\unity_nhk_contest\\nhkcontest\\assets\\chat\\randomcomment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|solutionrelative:assets\\chat\\randomcomment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|c:\\git\\backapp\\unity_nhk_contest\\nhkcontest\\assets\\chat\\chatmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\assets\\chat\\chatmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|solutionrelative:assets\\chat\\chatmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -35,6 +39,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "PlayerMove.cs",
+              "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\Assets\\PlayerScript\\PlayerMove.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerScript\\PlayerMove.cs",
+              "ToolTip": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\Assets\\PlayerScript\\PlayerMove.cs",
+              "RelativeToolTip": "Assets\\PlayerScript\\PlayerMove.cs",
+              "ViewState": "AQIAAHAAAAAAAAAAAAAswHkAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T03:10:56.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "RandomComment.cs",
               "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\Assets\\chat\\RandomComment.cs",
               "RelativeDocumentMoniker": "Assets\\chat\\RandomComment.cs",
@@ -47,7 +64,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ChatManager.cs",
               "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\Assets\\chat\\ChatManager.cs",
               "RelativeDocumentMoniker": "Assets\\chat\\ChatManager.cs",
@@ -55,8 +72,7 @@
               "RelativeToolTip": "Assets\\chat\\ChatManager.cs",
               "ViewState": "AQIAAEsAAAAAAAAAAAAqwFkAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T02:33:18.588Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T02:33:18.588Z"
             }
           ]
         }
