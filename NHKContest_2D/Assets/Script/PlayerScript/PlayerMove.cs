@@ -19,8 +19,8 @@ public class PlayerMove : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //videoPlayer = GetComponent<VideoPlayer>();
-        //audioSource = GetComponent<AudioSource>(); // AudioSource‚ðŽæ“¾
+        videoPlayer = GetComponent<VideoPlayer>();
+        audioSource = GetComponent<AudioSource>(); // AudioSource‚ðŽæ“¾
     }
 
     // Update is called once per frame
