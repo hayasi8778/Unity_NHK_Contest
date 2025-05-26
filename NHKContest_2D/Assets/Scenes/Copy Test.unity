@@ -652,8 +652,11 @@ MonoBehaviour:
   - "\u3053\u3093\u306B\u3061\u306F\u3053\u3093\u306B\u3061\u306F\u3042"
   - "\u3053\u3093\u3070\u3093\u306F"
   - "\u304A\u306F\u3088\u3046"
-  minInterval: 1
-  maxInterval: 1
+  - "\u304A\u306F\u3088\u3046"
+  - "\u304A\u306F\u3088\u3046"
+  - "\u304A\u306F\u3088\u3046"
+  minInterval: 5
+  maxInterval: 10
 --- !u!114 &410377357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1692,7 +1695,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 9.8
+  m_GravityScale: 8
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1703,7 +1706,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 5
 --- !u!212 &1572532282
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2043,7 +2046,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 843ef6fabf9ffc847aa1e32c4c353c4e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2084,7 +2087,7 @@ Transform:
   m_GameObject: {fileID: 1826269038}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.85, y: 0.4, z: 0}
+  m_LocalPosition: {x: -9.802, y: 0.295, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
