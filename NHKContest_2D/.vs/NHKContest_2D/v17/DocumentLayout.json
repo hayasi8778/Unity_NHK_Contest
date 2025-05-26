@@ -1,0 +1,87 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Git\\TestGit1\\NHKContest_2D\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|c:\\git\\testgit1\\nhkcontest_2d\\assets\\script\\player\\timeslider2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\timeslider2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|c:\\git\\testgit1\\nhkcontest_2d\\assets\\script\\playerscript\\playermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playerscript\\playermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|c:\\git\\testgit1\\nhkcontest_2d\\assets\\script\\playerscript\\playerjump.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playerscript\\playerjump.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TimeSlider2.cs",
+              "DocumentMoniker": "C:\\Git\\TestGit1\\NHKContest_2D\\Assets\\Script\\Player\\TimeSlider2.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Player\\TimeSlider2.cs",
+              "ToolTip": "C:\\Git\\TestGit1\\NHKContest_2D\\Assets\\Script\\Player\\TimeSlider2.cs",
+              "RelativeToolTip": "Assets\\Script\\Player\\TimeSlider2.cs",
+              "ViewState": "AgIAAPIAAAAAAAAAAAAkwOoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T03:11:42.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlayerMove.cs",
+              "DocumentMoniker": "C:\\Git\\TestGit1\\NHKContest_2D\\Assets\\Script\\PlayerScript\\PlayerMove.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\PlayerScript\\PlayerMove.cs",
+              "ToolTip": "C:\\Git\\TestGit1\\NHKContest_2D\\Assets\\Script\\PlayerScript\\PlayerMove.cs",
+              "RelativeToolTip": "Assets\\Script\\PlayerScript\\PlayerMove.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAADwvw8AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T02:42:30.339Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PlayerJump.cs",
+              "DocumentMoniker": "C:\\Git\\TestGit1\\NHKContest_2D\\Assets\\Script\\PlayerScript\\PlayerJump.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\PlayerScript\\PlayerJump.cs",
+              "ToolTip": "C:\\Git\\TestGit1\\NHKContest_2D\\Assets\\Script\\PlayerScript\\PlayerJump.cs",
+              "RelativeToolTip": "Assets\\Script\\PlayerScript\\PlayerJump.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAwEkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T02:24:52.662Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{2d7728c2-de0a-45b5-99aa-89b609dfde73}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

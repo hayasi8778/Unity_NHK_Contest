@@ -32,8 +32,6 @@ public class TimeSlider2 : MonoBehaviour
             
         }
 
-       
-
     }
 
     void Update()
@@ -145,6 +143,8 @@ public class TimeSlider2 : MonoBehaviour
 
         // 新しいオブジェクトに情報を渡す
         TimeSlider2 newScript = newObj.GetComponent<TimeSlider2>();
+        newObj.SetActive(true); // 念のためアクティブ化
+
         if (newScript != null)
         {
             newScript.slider = this.slider;
@@ -175,6 +175,9 @@ public class TimeSlider2 : MonoBehaviour
 
         
         if (newObject == null) return;
+
+        newObject.SetActive(true); // 念のためアクティブ化
+
 
         GameObject nextPrefab = replacementPrefabs[replacementIndex];
         replacementIndex = (replacementIndex + 1) % replacementPrefabs.Length;
@@ -209,7 +212,7 @@ public class TimeSlider2 : MonoBehaviour
         }
     }
 
-    private void TryRevertObject()
+    private void TryRevertObject()//オブジェクトが画質よくなる
     {
         Debug.LogWarning($"[TryRevert] Current replacementIndex: {replacementIndex}");
 
@@ -228,6 +231,8 @@ public class TimeSlider2 : MonoBehaviour
             Quaternion spawnRotation = Quaternion.Euler(90f, 90f, -90f);
 
             GameObject newObj = Instantiate(prevPrefab, spawnPosition, spawnRotation);
+            newObj.SetActive(true); // 念のためアクティブ化
+
             Debug.Log($"[TryRevert] Instantiated: {newObj.name}");
 
             TimeSlider2 newScript = newObj.GetComponent<TimeSlider2>();
