@@ -1,0 +1,114 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|c:\\git\\backapp\\unity_nhk_contest\\nhkcontest\\assets\\chat\\chatflg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|solutionrelative:assets\\chat\\chatflg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|c:\\git\\backapp\\unity_nhk_contest\\nhkcontest\\assets\\playerscript\\playerjump.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|solutionrelative:assets\\playerscript\\playerjump.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\assets\\playerscript\\playermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|solutionrelative:assets\\playerscript\\playermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\assets\\chat\\randomcomment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|solutionrelative:assets\\chat\\randomcomment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\assets\\chat\\chatmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B4A0906-A469-61C8-2F25-ADEFAC8A9508}|Assembly-CSharp.csproj|solutionrelative:assets\\chat\\chatmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ChatFlg.cs",
+              "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\Assets\\chat\\ChatFlg.cs",
+              "RelativeDocumentMoniker": "Assets\\chat\\ChatFlg.cs",
+              "ToolTip": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\Assets\\chat\\ChatFlg.cs",
+              "RelativeToolTip": "Assets\\chat\\ChatFlg.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T01:22:20.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlayerJump.cs",
+              "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\Assets\\PlayerScript\\PlayerJump.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerScript\\PlayerJump.cs",
+              "ToolTip": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\Assets\\PlayerScript\\PlayerJump.cs",
+              "RelativeToolTip": "Assets\\PlayerScript\\PlayerJump.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T00:36:09.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PlayerMove.cs",
+              "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\Assets\\PlayerScript\\PlayerMove.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerScript\\PlayerMove.cs",
+              "ToolTip": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\Assets\\PlayerScript\\PlayerMove.cs",
+              "RelativeToolTip": "Assets\\PlayerScript\\PlayerMove.cs",
+              "ViewState": "AQIAAGIAAAAAAAAAAAAqwHkAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T03:10:56.531Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RandomComment.cs",
+              "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\Assets\\chat\\RandomComment.cs",
+              "RelativeDocumentMoniker": "Assets\\chat\\RandomComment.cs",
+              "ToolTip": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\Assets\\chat\\RandomComment.cs",
+              "RelativeToolTip": "Assets\\chat\\RandomComment.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAkwCUAAAAyAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALLSURBVDhP7ZNdSFNhGMf/73vO2ea209zmNPEiQzhbUlGwJKJ54\u002BiD8CLwKlIhIW/DSXkjOLoyiEUQRHdGJIFdaCYNvSjvHOeitmU5rSzMPHOrs7bUfbzndHVEA6\u002Biu35XDzz/58cD7/sA//lbOKNIKkl725U2t3BSEIWAIDrOOsRDFw\u002BJLZ0tpvmx\u002BU0AUFXVaT9vd64dWTOlo\u002Blif3\u002B/J\u002BPP7Ntq3cL61HoJAKghrBQrvaRCZE3Q5ApfkRmYTDkq8\u002BAjRoaBRUy6SWYcixQKhZqiVnyhQZNZhfUaGQIA8S/xwelP05ffKG8kM29Gs6cZNsEGpjOUWGmy\u002B3B3FwOL3I3dPTf7Zbbuc\u002B6zYubN8WP7jwWWvi9Zfmz\u002BSFFKH6WupW5SAIh9i534qH6UNF3DmYNnCkfrjt4\u002BXnc8LLmkcK21dtThcJQ1XUvUi/U5j80DQkiuiq\u002BK\u002B9y\u002BsmgSQUBWCcgHY0t0jHZMXHpySQ9Ph5V8Pv9QVVXXdnMH2Z/ZiVuvbulSRHqWLqTrs7ns156nPbo34h0yMhQAFrOLMHNmOKucMVEUu6qrq7/vFOm6TvP5fG3mV8ayUdoAAMv9ufu1SkHhiqwIHbq9\u002BXaza1vIUx485SFQYadnG\u002BMB7szdCYy9G0NZK58eeT0S7RzvrJFXZTCdXWUci8AQNogN2KxsIp6O/\u002BkCANhsthx03GiX2uOtB1rBES7R5G66PnBqIOd1e0FAJjWm3QMAHgCCB4N4u/4Wi9lFKfQ8NBRsDMJusSOzkYGSV1KU0scAprNqtiahJLwc5VLR7uhERs14pj5MiRzhXi70LcRgfJu55bnB6FL0cjKdlFxWF3xuH6yCFWWtjCIrTvYF\u002Btr/WHpPiFHMLMyEltXl0Pj7cazkV8BRDk3OJjTua5wZvjDctXtsb7YvxaJZHqAMPykTP3T4GWN\u002BohN/iStd2z3yn3/Nb0PjNWfDy7QfAAAAAElFTkSuQmCC",
+              "WhenOpened": "2025-05-19T02:34:14.758Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ChatManager.cs",
+              "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\Assets\\chat\\ChatManager.cs",
+              "RelativeDocumentMoniker": "Assets\\chat\\ChatManager.cs",
+              "ToolTip": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest\\Assets\\chat\\ChatManager.cs",
+              "RelativeToolTip": "Assets\\chat\\ChatManager.cs",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAqwFkAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T02:33:18.588Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
