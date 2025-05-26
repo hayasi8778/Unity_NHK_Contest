@@ -33,10 +33,7 @@ public class PlayerJump : MonoBehaviour
             {
                 audioSource.PlayOneShot(jumpSE); // ƒWƒƒƒ“ƒv‚ÌSEÄ¶
             }
-            
-
         }
-
 
         if (validGround.Count == 0)
         { // ‹ó’†‚É‚¢‚é‚Æ‚«
