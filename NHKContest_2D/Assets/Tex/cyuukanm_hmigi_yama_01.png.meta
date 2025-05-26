@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b27a66d550412c74988cacd6acc2486d
+guid: 02c1dbe93ab8b97449f2dd2f760fb6a0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3095648225022645599
-    second: BG1_0
+      213: -6945169231855469628
+    second: cyuukanm_hmigi_yama_01_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BG1_0
+      name: cyuukanm_hmigi_yama_01_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 876
         y: 0
-        width: 1280
-        height: 720
+        width: 1150
+        height: 877
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f551b02c8a3f5fa20800000000000000
-      internalID: 3095648225022645599
+      spriteID: 4cb3846716dcd9f90800000000000000
+      internalID: -6945169231855469628
       vertices: []
       indices: 
       edges: []
