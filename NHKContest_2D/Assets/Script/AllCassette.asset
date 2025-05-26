@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4c7e411572331d41a79582d5bbef52a, type: 3}
+  m_Name: AllCassette
+  m_EditorClassIdentifier: 
+  cassettes:
+  - {fileID: 5987436092188937359, guid: 7d975f8e46b0f814faf8112a399a834d, type: 3}
+  - {fileID: 5987436092188937359, guid: 70e15e885efb31a4abec9a459a8e2625, type: 3}
