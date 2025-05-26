@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7775953657852199581}
   - component: {fileID: 3590035040837865959}
   - component: {fileID: 7670211047727746422}
-  - component: {fileID: 1695995277629328903}
+  - component: {fileID: 5351342750135274837}
   m_Layer: 0
   m_Name: Player_first
   m_TagString: Player
@@ -33,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 1341670412280057972}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.06, y: -0.09, z: 0}
+  m_LocalPosition: {x: -9, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -302,7 +302,7 @@ MonoBehaviour:
   sprites:
   - {fileID: -440736293735374185, guid: bb70335c3c313154f8272b4317b2ef1e, type: 3}
   - {fileID: -5098009807472485664, guid: 5bd3f1bc616e5404ea7526e5e7bcf67f, type: 3}
---- !u!114 &1695995277629328903
+--- !u!114 &5351342750135274837
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -311,10 +311,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1341670412280057972}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6f2ed8566837bb4cb472007de422696, type: 3}
+  m_Script: {fileID: 11500000, guid: 51bbf8d76e6407c4faeef888f552d776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 3250789006359637939}
   JumpPower: 10
-  gravity: 20
   jumpSE: {fileID: 8300000, guid: 10f64368dc936e44f9a906df74739e5b, type: 3}
