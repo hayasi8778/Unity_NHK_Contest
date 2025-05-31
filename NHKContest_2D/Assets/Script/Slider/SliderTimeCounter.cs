@@ -125,7 +125,7 @@ public class SliderTimeCounter : MonoBehaviour
             timeCounter = 0f;
         }
 
-        if (slider.value > 0)
+        if (slider.value > 0)//オブジェクトに座標のログを取らせる
         {
             if (currentObjects != null)
             {
