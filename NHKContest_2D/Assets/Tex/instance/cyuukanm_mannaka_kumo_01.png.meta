@@ -1,13 +1,16 @@
 fileFormatVersion: 2
-guid: 2e5811efd587a8e41a37ccce494ab7cf
+guid: bf3996173bb910f4a906154d934136d3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3314868373422430134
-    second: cyuukanm_migi_kumo_01_0
+      213: -2918318452544762715
+    second: cyuukanm_mannaka_kumo_01_0
   - first:
-      213: 2186255237052928094
-    second: cyuukanm_migi_kumo_01_1
+      213: 8296134307843687077
+    second: cyuukanm_mannaka_kumo_01_1
+  - first:
+      213: -7124773586718740728
+    second: cyuukanm_mannaka_kumo_01_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cyuukanm_migi_kumo_01_0
+      name: cyuukanm_mannaka_kumo_01_0
       rect:
         serializedVersion: 2
-        x: 1467
-        y: 607
-        width: 223
-        height: 312
+        x: 898
+        y: 585
+        width: 291
+        height: 372
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a48aafcf6c83ff1d0800000000000000
-      internalID: -3314868373422430134
+      spriteID: 5ac0a9e44dc0087d0800000000000000
+      internalID: -2918318452544762715
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cyuukanm_migi_kumo_01_1
+      name: cyuukanm_mannaka_kumo_01_1
       rect:
         serializedVersion: 2
-        x: 1678
-        y: 691
-        width: 270
-        height: 281
+        x: 1113
+        y: 588
+        width: 359
+        height: 304
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +143,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e5090e80e83275e10800000000000000
-      internalID: 2186255237052928094
+      spriteID: 5a244fbb23ac12370800000000000000
+      internalID: 8296134307843687077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cyuukanm_mannaka_kumo_01_2
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 821
+        width: 90
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80f2b8aeb28bf1d90800000000000000
+      internalID: -7124773586718740728
       vertices: []
       indices: 
       edges: []
@@ -159,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cyuukanm_mannaka_kumo_01_0: -2918318452544762715
+      cyuukanm_mannaka_kumo_01_1: 8296134307843687077
+      cyuukanm_mannaka_kumo_01_2: -7124773586718740728
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 36b841c86727176428c235bd71f8add6
+guid: 4ba13916e3223614c808b6470948cf83
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1210512538119749499
-    second: cyuukanm_mori_02_0
+      213: 9027525367020287662
+    second: kitanai_00_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cyuukanm_mori_02_0
+      name: kitanai_00_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 2026
-        height: 628
+        height: 1014
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 58047399245633fe0800000000000000
-      internalID: -1210512538119749499
+      spriteID: ea6721ecd76384d70800000000000000
+      internalID: 9027525367020287662
       vertices: []
       indices: 
       edges: []
@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      kitanai_00_0: 9027525367020287662
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

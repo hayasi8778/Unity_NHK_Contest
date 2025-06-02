@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: ca7627aa1a7c8ae4cb06d034b551e32b
+guid: edd6238b8e45ac748bd6f2b38f6ceee1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7123017401769143816
-    second: cyuukanm_hidari_kumo_01_0
-  - first:
-      213: 2564451348474979549
-    second: cyuukanm_hidari_kumo_01_1
+      213: 6695323322531508419
+    second: kitanai_yama_migi_01_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cyuukanm_hidari_kumo_01_0
+      name: kitanai_yama_migi_01_0
       rect:
         serializedVersion: 2
-        x: 239
-        y: 574
-        width: 643
-        height: 439
+        x: 714
+        y: 0
+        width: 1312
+        height: 861
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 80e2069669a0ad260800000000000000
-      internalID: 7123017401769143816
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cyuukanm_hidari_kumo_01_1
-      rect:
-        serializedVersion: 2
-        x: 1470
-        y: 607
-        width: 188
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dd46f951ae2c69320800000000000000
-      internalID: 2564451348474979549
+      spriteID: 3c0f0e7a6119aec50800000000000000
+      internalID: 6695323322531508419
       vertices: []
       indices: 
       edges: []
@@ -159,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      kitanai_yama_migi_01_0: 6695323322531508419
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

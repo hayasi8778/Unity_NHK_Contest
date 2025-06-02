@@ -234,7 +234,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      kitanai_hidari_kumo_01_0: 3719592718970520941
+      kitanai_hidari_kumo_01_1: -8631188883739018707
+      kitanai_hidari_kumo_01_2: -239640112923109734
+      kitanai_hidari_kumo_01_3: 4576284669409911145
+      kitanai_hidari_kumo_01_4: -3960679722270792470
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

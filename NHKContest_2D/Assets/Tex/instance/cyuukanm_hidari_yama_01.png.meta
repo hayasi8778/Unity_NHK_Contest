@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2ae955d3908eb7c41914ad7010c06615
+guid: 6cf8f1b520f5f92439305a668c579da3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4883259145769120411
-    second: kitanai_migi_kumo_01_0
+      213: -2640899664719724562
+    second: cyuukanm_hidari_yama_01_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: kitanai_migi_kumo_01_0
+      name: cyuukanm_hidari_yama_01_0
       rect:
         serializedVersion: 2
-        x: 1427
-        y: 558
-        width: 561
-        height: 455
+        x: 0
+        y: 0
+        width: 1141
+        height: 911
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 56d0146fdad2b3cb0800000000000000
-      internalID: -4883259145769120411
+      spriteID: eefbeec3fb3a95bd0800000000000000
+      internalID: -2640899664719724562
       vertices: []
       indices: 
       edges: []
@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cyuukanm_hidari_yama_01_0: -2640899664719724562
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
