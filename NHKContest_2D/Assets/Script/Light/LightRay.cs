@@ -1,99 +1,85 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 public class LightRay : MonoBehaviour
 {
 
-    public GameObject platformPrefab; // ‘«ê‚ÌƒvƒŒƒnƒu
-    public float rayDistance = 5f; // ƒŒƒC‚Ì’·‚³
-    public string mirrorTag = "Mirror"; // ‹¾‚Ìƒ^ƒOi”½Ë—pj
-    public string ignoreTag = "LightObject"; // ŒõüƒIƒuƒWƒFƒNƒg‚Ìƒ^ƒOiƒŒƒCƒLƒƒƒXƒg‚Ì‘ÎÛŠOj
-    public Vector2 customRayDirection = Vector2.left; // ƒŒƒC‚Ì•ûŒü(‰Šú‚Í¶‘¤)
-    public int maxReflections = 3; // Å‘å”½Ë‰ñ”
+    public GameObject platformPrefab; // è¶³å ´ã®ãƒ—ãƒ¬ãƒãƒ–
+    public float rayDistance = 5f; // ãƒ¬ã‚¤ã®é•·ã•
+    public string mirrorTag = "Mirror"; // é¡ã®ã‚¿ã‚°ï¼ˆåå°„ç”¨ï¼‰
+    public string LightTag = "ground"; //ä½œæˆã—ãŸè¶³å ´ã®ã‚¿ã‚°
+    public Vector2 customRayDirection = Vector2.left; // åˆæœŸãƒ¬ã‚¤æ–¹å‘
+    public int maxReflections = 100; // æœ€å¤§åå°„å›æ•°
 
-    bool LightColFlag = false; //Œõ‚Ì¶¬”»’è
-    //bool LightColFlag = true; //Œõ‚Ì¶¬”»’è
+    bool LightFlag = false;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !LightColFlag) // ƒXƒy[ƒXƒL[‚ÅŒõü‚ğ¶¬
+        if (Input.GetKeyDown(KeyCode.Space) && !LightFlag) // ã‚¹ãƒšãƒ¼ã‚¹ã‚­ãƒ¼ã§å…‰ç·šã‚’ç”Ÿæˆ
         {
             CastRay(transform.position, customRayDirection, maxReflections);
+            LightFlag = true;
         }
-
     }
 
-    void CastRay(Vector2 origin, Vector2 direction, int remainingReflections)
+    public void CastRay(Vector2 origin, Vector2 direction, int remainingReflections)
     {
-        if (remainingReflections <= 0) return; // Å‘å”½Ë‰ñ”‚ğ’´‚¦‚½‚çI—¹
+        if (remainingReflections <= 0) return;
 
-        RaycastHit2D hit = Physics2D.Raycast(origin, direction.normalized, rayDistance);
+        RaycastHit2D[] hits = Physics2D.RaycastAll(origin, direction.normalized, rayDistance);
+        RaycastHit2D validHit = default;
 
-        if (hit.collider != null) // ‰½‚©‚Éƒqƒbƒg‚µ‚½‚©Šm”F
+        foreach (RaycastHit2D hit in hits)
         {
-            // –³‹‚·‚éƒ^ƒO‚È‚çƒXƒLƒbƒv
-            if (hit.collider.CompareTag(ignoreTag))
+            if (hit.collider != null && !hit.collider.CompareTag(LightTag) && hit.distance > 0.01f) // âœ… `LightTag` ã‚’æŒã¤ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’é€é & é•·ã• 0 ã‚’é˜²ã
             {
-                CastRay(hit.point, direction, remainingReflections);
-                return;
+                validHit = hit;
+                break;
             }
+        }
 
-            Debug.Log($"Ray hit object: {hit.collider.gameObject.name} at {hit.point}, Distance: {hit.distance}");
+        if (validHit.collider != null)
+        {
+            Debug.Log($"Ray hit object: {validHit.collider.gameObject.name} at {validHit.point}, Distance: {validHit.distance}");
 
-            // ƒ~ƒ‰[‚É“–‚½‚Á‚½ê‡
-            if (hit.collider.CompareTag(mirrorTag))
+            // **é•·ã• 0 ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’é˜²ã**
+            if (validHit.distance > 0.01f)
             {
-                // ƒ~ƒ‰[‚É“–‚½‚Á‚½“_‚ÅŒõüƒIƒuƒWƒFƒNƒg‚ğ¶¬
-                CreateLightObject(origin, hit.point);
-
-                // **”½Ë•ûŒü‚ğŒvZ**
-                Vector2 newDirection = Vector2.Reflect(direction, hit.normal);
-
-                // **V‚µ‚¢ƒŒƒC‚ğo‚·iÄ‹A“I‚É”½Ë‚ğ‘±‚¯‚éj**
-                CastRay(hit.point, newDirection, remainingReflections - 1);
+                CreateLightObject(origin, validHit.point);
             }
             else
             {
-                // ‘«ê‚ğ¶¬i‹¾ˆÈŠO‚É“–‚½‚Á‚½‚ç‚»‚±‚ÅŒõü‚ğƒIƒuƒWƒFƒNƒg‰»j
-                CreateLightObject(origin, hit.point);
+                Debug.Log("Skipping platform creation: Distance too small");
+            }
+
+            if (validHit.collider.CompareTag(mirrorTag))
+            {
+                validHit.collider.GetComponent<MirrorRay>().ReflectRay(validHit.point, remainingReflections - 1);
             }
         }
 
-        // ƒfƒoƒbƒO—p‚ÉƒŒƒC‚ğ•\¦
         Debug.DrawRay(origin, direction.normalized * rayDistance, Color.yellow, 10f);
-
-        //2‰ñ–Ú‚Ì¶¬‚ğØ‚é
-        LightColFlag = true;
     }
+
+
 
     void CreateLightObject(Vector2 startPoint, Vector2 endPoint)
     {
-        // ’†ŠÔ’n“_‚ğŒvZ
+        // **ä¸­é–“åœ°ç‚¹ã‚’è¨ˆç®—**
         Vector2 midPoint = (startPoint + endPoint) / 2;
 
-       
-
-        // Õ“Ë’n“_‚Å‚Í‚È‚­’†ŠÔ’n“_‚ÉƒIƒuƒWƒFƒNƒg‚ğ¶¬
+        // **ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ç”Ÿæˆ**
         GameObject platform = Instantiate(platformPrefab, midPoint, Quaternion.identity);
-        platform.tag = ignoreTag; // ¶¬‚µ‚½ƒIƒuƒWƒFƒNƒg‚É–³‹‚·‚éƒ^ƒO‚ğİ’è
 
-        // ƒŒƒC‚Ì•ûŒü‚ğæ“¾
+        // **ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å›è»¢ã‚’ãƒ¬ã‚¤ã®è§’åº¦ã«åˆã‚ã›ã‚‹**
         Vector2 direction = endPoint - startPoint;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        platform.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
-        // Šp“x‚ğŒvZ
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; 
-
-        // ‰¡•iX²‚ÌƒXƒP[ƒ‹j‚ğƒŒƒC‚Ì‹——£‚É•ÏX
+        // **ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æ¨ªå¹…ã‚’ãƒ¬ã‚¤ã®è·é›¢ã«å¤‰æ›´**
         Vector3 newScale = platform.transform.localScale;
-        newScale.x = Vector2.Distance(startPoint, endPoint);  // ‰¡•‚ğƒŒƒC‚Ì‹——£‚É
-        platform.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward); // Z²‰ñ“]‚Ì‚İ“K—p
+        newScale.x = Vector2.Distance(startPoint, endPoint);
         platform.transform.localScale = newScale;
     }
+
 
 }
