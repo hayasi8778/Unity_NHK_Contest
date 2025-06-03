@@ -5,7 +5,8 @@ public class LightRay : MonoBehaviour
 
     public GameObject platformPrefab; // 足場のプレハブ
     public float rayDistance = 5f; // レイの長さ
-    public string mirrorTag = "Mirror"; // 鏡のタグ（反射用）
+    public string MirrorTag = "Mirror"; // 鏡のタグ（反射用）
+    public string GoalTag = "Goal"; // 鏡のタグ（反射用）
     public string LightTag = "ground"; //作成した足場のタグ
     public Vector2 customRayDirection = Vector2.left; // 初期レイ方向
     public int maxReflections = 100; // 最大反射回数
@@ -39,7 +40,7 @@ public class LightRay : MonoBehaviour
 
         if (validHit.collider != null)
         {
-            Debug.Log($"Ray hit object: {validHit.collider.gameObject.name} at {validHit.point}, Distance: {validHit.distance}");
+            //Debug.Log($"Ray hit object: {validHit.collider.gameObject.name} at {validHit.point}, Distance: {validHit.distance}");
 
             // **長さ 0 のオブジェクトを防ぐ**
             if (validHit.distance > 0.01f)
@@ -51,7 +52,7 @@ public class LightRay : MonoBehaviour
                 Debug.Log("Skipping platform creation: Distance too small");
             }
 
-            if (validHit.collider.CompareTag(mirrorTag))
+            if (validHit.collider.CompareTag(MirrorTag)|| validHit.collider.CompareTag(GoalTag))
             {
                 validHit.collider.GetComponent<MirrorRay>().ReflectRay(validHit.point, remainingReflections - 1);
             }

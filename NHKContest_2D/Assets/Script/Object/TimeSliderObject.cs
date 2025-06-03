@@ -3,7 +3,7 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 using System.Collections;
 using UnityEngine.UI;
 
-public class TimeSliderObject : MonoBehaviour
+public class TimeSliderObject : TimeSliderObject_Base
 {
     private Vector3[] positionHistory = new Vector3[3000];
     private int currentIndex = 0;
@@ -18,6 +18,8 @@ public class TimeSliderObject : MonoBehaviour
     private bool isBeingDestroyed = false;
 
     private int Currentnum = 0;//配列の何番目にいるか
+
+    
 
     void Start()
     {
@@ -59,7 +61,7 @@ public class TimeSliderObject : MonoBehaviour
         }
     }
 
-    public GameObject ReplaceObject()//オブジェクト入れ替え(後ろ)
+    public override GameObject ReplaceObject()//オブジェクト入れ替え(後ろ)
     {
         if (replacementPrefabs == null || replacementPrefabs.Length == 0)
             return null;

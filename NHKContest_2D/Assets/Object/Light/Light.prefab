@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 415610113648817939}
   - component: {fileID: 2602264905889866944}
   - component: {fileID: 6826187139371870626}
+  - component: {fileID: -8199030047249837143}
   m_Layer: 0
   m_Name: Light
   m_TagString: Untagged
@@ -102,5 +103,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platformPrefab: {fileID: 6904133578542570795, guid: 24838010d61c87f4597184e4d7e7f3f1, type: 3}
   rayDistance: 20
-  targetTag: Mirror
+  MirrorTag: Mirror
+  GoalTag: Goal
+  LightTag: ground
   customRayDirection: {x: -1, y: 0}
+  maxReflections: 100
+--- !u!114 &-8199030047249837143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2641547641638341580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ed20bd1faad36341a083bd8915369d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 0}
+  replacementPrefabs:
+  - {fileID: 2641547641638341580}
+  replacementIndex: 0

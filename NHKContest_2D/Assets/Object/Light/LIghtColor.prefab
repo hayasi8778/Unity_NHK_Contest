@@ -148,4 +148,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformCollider: {fileID: -6634962732321133925}
-  passThroughTime: 1.5
+  passThroughTime: 0.5

@@ -19,7 +19,6 @@ public class SliderTimeCounter : MonoBehaviour
 
 
 
-
     [SerializeField]
     public float initMaxSeconds = 300.0f;  // 最大秒数の初期値
 
@@ -181,20 +180,19 @@ public class SliderTimeCounter : MonoBehaviour
                         GameObject obj = currentObjects[i];
                         if (obj == null) continue;
 
+                        // **基底クラス（TimeSliderObject）を取得**
                         var timeObj = obj.GetComponent<TimeSliderObject>();
                         if (timeObj != null)
                         {
-                            // ReplaceObjectには、replacementPrefabsとindexを渡す必要がある！
-                            // 仮に timeObj自身が持っていると想定
-                            GameObject newObj = timeObj.ReplaceObject(/* replacementPrefabs ,  replacementIndex */);
+                            GameObject newObj = timeObj.ReplaceObject(); //派生クラスのメソッドが自動適用される
                             if (newObj != null)
                             {
-                                //currentObjects[i] = newObj;
                                 Debug.LogError($"ステージオブジェクト[{i}]を切り替えました！");
                             }
                         }
                     }
                 }
+
 
                 // クールタイムをセットして連続切り替え防止
                 changeCooldownTimer = changeCooldown;
