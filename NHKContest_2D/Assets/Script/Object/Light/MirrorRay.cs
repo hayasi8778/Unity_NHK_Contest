@@ -8,7 +8,7 @@ public class MirrorRay : MonoBehaviour
     {
         if (remainingReflections <= 0) return;
 
-        LightRay lightRay = FindObjectOfType<LightRay>(); //`LightRay` のインスタンスを取得
+        LightRay lightRay = Object.FindFirstObjectByType<LightRay>(); //`LightRay` のインスタンスを取得
         if (lightRay != null)
         {
             lightRay.CastRay(hitPoint, MirrorRayDirection, remainingReflections);

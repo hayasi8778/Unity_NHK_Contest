@@ -175,16 +175,38 @@ public class SliderTimeCounter : MonoBehaviour
                 // 🔥 次にステージオブジェクトたちも入れ替え
                 if (currentObjects != null)
                 {
+                    /*
+                     for (int i = 0; i < currentObjects.Length; i++)
+                     {
+                         GameObject obj = currentObjects[i];
+                         if (obj == null) continue;
+                         Debug.LogError("オブジェクトNULLじゃないです");
+                         // **基底クラス（TimeSliderObject）を取得**
+                         var timeObj = obj.GetComponent<TimeSliderObject>();
+                         if (timeObj != null)
+                         {
+                             Debug.LogError("オブジェクト切り替え処理します");
+                             GameObject newObj = timeObj.ReplaceObject(); //派生クラスのメソッドが自動適用される
+                             if (newObj != null)
+                             {
+                                 Debug.LogError($"ステージオブジェクト[{i}]を切り替えました！");
+                             }
+                         }
+                     }
+                    */
                     for (int i = 0; i < currentObjects.Length; i++)
                     {
                         GameObject obj = currentObjects[i];
                         if (obj == null) continue;
+                        Debug.LogError("オブジェクトNULLじゃないです");
 
-                        // **基底クラス（TimeSliderObject）を取得**
-                        var timeObj = obj.GetComponent<TimeSliderObject>();
+                        // **TimeSliderObject_Base を継承しているコンポーネントを取得**
+                        TimeSliderObject_Base timeObj = obj.GetComponent<TimeSliderObject_Base>();
+
                         if (timeObj != null)
                         {
-                            GameObject newObj = timeObj.ReplaceObject(); //派生クラスのメソッドが自動適用される
+                            Debug.LogError("オブジェクト切り替え処理します");
+                            GameObject newObj = timeObj.ReplaceObject(); // 子クラスのオーバーライドされたメソッドが適用される
                             if (newObj != null)
                             {
                                 Debug.LogError($"ステージオブジェクト[{i}]を切り替えました！");
@@ -211,7 +233,7 @@ public class SliderTimeCounter : MonoBehaviour
             //ログかさばるからデバック用
             //Debug.Log("スライダー動いた時の処理する");
 
-            Debug.Log("手動スライダー操作を検知");
+            //Debug.Log("手動スライダー操作を検知");
             isManualInput = true;
             manualInputTimer = 0f;
 

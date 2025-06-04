@@ -17,7 +17,7 @@ public class TimeSlider_Light : TimeSliderObject_Base
         
     }
 
-    public override GameObject ReplaceObject()
+    public override GameObject ReplaceObject()//オブジェクト入れ替え(後ろ)
     {
         Debug.LogWarning("オーバーライドのテスト");
 

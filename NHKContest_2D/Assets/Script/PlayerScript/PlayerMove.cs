@@ -11,7 +11,7 @@ public class PlayerMove : MonoBehaviour
     
     private AudioSource audioSource; //音鳴らすためのコンポーネント
     public AudioClip walkSE;
-    private SpriteRenderer renderer; //レンダーを取得する
+    private new SpriteRenderer renderer; //レンダーを取得する
 
     public PlayerMoveAmin MoveAmin; //歩行時のアニメーション
     bool animFlag = true;//アニメーション中かのフラグ
@@ -28,7 +28,7 @@ public class PlayerMove : MonoBehaviour
 
         if (renderer != null)
         {
-            Debug.Log("Renderer is " + (renderer.enabled ? "enabled" : "disabled"));
+            //Debug.Log("Renderer is " + (renderer.enabled ? "enabled" : "disabled"));
         }
         else
         {
