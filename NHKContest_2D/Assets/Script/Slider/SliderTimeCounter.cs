@@ -57,7 +57,8 @@ public class SliderTimeCounter : MonoBehaviour
             GameObject obj = currentObjects[i];
             if (obj == null) continue;
 
-            var timeObj = obj.GetComponent<TimeSliderObject>();
+            //親オブジェクトから継承した物を呼び出す
+            TimeSliderObject_Base timeObj = obj.GetComponent<TimeSliderObject_Base>();
             if (timeObj != null)
             {
                 timeObj.SetCurrentnum(i);
@@ -175,7 +176,7 @@ public class SliderTimeCounter : MonoBehaviour
                 // 🔥 次にステージオブジェクトたちも入れ替え
                 if (currentObjects != null)
                 {
-                    /*
+                    /*クラス継承させる前のコード
                      for (int i = 0; i < currentObjects.Length; i++)
                      {
                          GameObject obj = currentObjects[i];
@@ -200,7 +201,7 @@ public class SliderTimeCounter : MonoBehaviour
                         if (obj == null) continue;
                         Debug.LogError("オブジェクトNULLじゃないです");
 
-                        // **TimeSliderObject_Base を継承しているコンポーネントを取得**
+                        //親オブジェクトを取得(子オブジェクトをアタッチしてても取得できる)
                         TimeSliderObject_Base timeObj = obj.GetComponent<TimeSliderObject_Base>();
 
                         if (timeObj != null)
@@ -211,10 +212,13 @@ public class SliderTimeCounter : MonoBehaviour
                             {
                                 Debug.LogError($"ステージオブジェクト[{i}]を切り替えました！");
                             }
+                            else
+                            {
+                                Debug.Log($"ステージオブジェクト帰ってきてないぞ");
+                            }
                         }
                     }
                 }
-
 
                 // クールタイムをセットして連続切り替え防止
                 changeCooldownTimer = changeCooldown;

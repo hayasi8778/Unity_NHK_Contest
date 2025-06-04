@@ -89,6 +89,14 @@ public class TimeSliderObject : TimeSliderObject_Base
             newScript.positionHistory = this.positionHistory;
         }
 
+        //スライダーに新しいオブジェクト入れる
+        var counter = slider.GetComponent<SliderTimeCounter>();
+        if (counter != null)
+        {
+            Debug.LogWarning("配列設定" + Currentnum);
+            counter.SetCurrentObjects(newObj, Currentnum);
+        }
+
         Destroy(this.gameObject);
 
         return newObj;
@@ -148,7 +156,7 @@ public class TimeSliderObject : TimeSliderObject_Base
         }
     }
 
-    public void SetCurrentnum(int num)
+    public override void SetCurrentnum(int num)
     {
         //配列が設定されたよ
         Debug.LogWarning("配列設定" + num);
