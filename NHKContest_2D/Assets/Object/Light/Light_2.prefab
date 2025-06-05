@@ -106,7 +106,7 @@ MonoBehaviour:
   MirrorTag: Mirror
   GoalTag: Goal
   LightTag: ground
-  customRayDirection: {x: -1, y: 0.5}
+  customRayDirection: {x: -1, y: -0.5}
   maxReflections: 100
 --- !u!114 &1247685901684277026
 MonoBehaviour:

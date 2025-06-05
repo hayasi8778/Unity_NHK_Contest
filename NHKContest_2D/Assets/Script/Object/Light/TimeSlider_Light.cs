@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class TimeSlider_Light : TimeSliderObject_Base
@@ -12,6 +13,8 @@ public class TimeSlider_Light : TimeSliderObject_Base
     //画質戻すための時間関係
     private float revertTimer = 0f;
     private float revertTimeLimit = 8f; // 5秒で戻す
+
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -71,6 +74,8 @@ public class TimeSlider_Light : TimeSliderObject_Base
             counter.SetCurrentObjects(newObj, Currentnum);
         }
         */
+
+
         
         Destroy(this.gameObject);
 
@@ -131,7 +136,7 @@ public class TimeSlider_Light : TimeSliderObject_Base
 
         Destroy(this.gameObject);
     }
-
     
+
 
 }

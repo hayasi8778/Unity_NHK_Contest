@@ -106,7 +106,7 @@ MonoBehaviour:
   MirrorTag: Mirror
   GoalTag: Goal
   LightTag: ground
-  customRayDirection: {x: -1, y: 0}
+  customRayDirection: {x: -1, y: 0.5}
   maxReflections: 100
 --- !u!114 &396826707020404275
 MonoBehaviour:
@@ -123,3 +123,4 @@ MonoBehaviour:
   replacementPrefabs:
   - {fileID: 5620717433732232244}
   replacementIndex: 0
+  slider: {fileID: 0}

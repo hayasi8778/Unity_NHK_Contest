@@ -1,4 +1,5 @@
-﻿using UnityEditor.Rendering;
+﻿using Unity.Cinemachine;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,6 +22,10 @@ public class TimeSlider2 : MonoBehaviour
     private float revertTimeLimit = 5f; // 5秒で戻す
     private bool isBeingDestroyed = false; //削除フラグ
     private GameObject currentPlayer; //操作対象のプレイヤー
+
+
+    public CinemachineCamera virtualCamera;
+
 
     void Start()
     {
@@ -157,10 +162,12 @@ public class TimeSlider2 : MonoBehaviour
             newScript.SetPositionHistory(this.GetPositionHistory());
             newScript.replacementPrefabs = this.replacementPrefabs;
             newScript.replacementIndex = this.replacementIndex;
+            newScript.virtualCamera = this.virtualCamera;
         }
 
         // カメラの追従対象も更新する
         Camera mainCamera = Camera.main;
+        /*
         if (mainCamera != null)
         {
             FollowPlayerScript followScript = mainCamera.GetComponent<FollowPlayerScript>();
@@ -169,6 +176,12 @@ public class TimeSlider2 : MonoBehaviour
                 followScript.SetTarget(newObj.transform);
             }
         }
+        */
+        //バーチャルカメラ使うからこっちに変更する
+        //Debug.Log("バーチャルカメラ変更");
+        virtualCamera.Follow = newObj.transform;
+        virtualCamera.LookAt = newObj.transform;
+
 
         //そのままだと入れ替え時に角度バグるから矯正する
         newObj.transform.rotation = Quaternion.Euler(newObj.transform.rotation.x, newObj.transform.rotation.y, 0f);
@@ -254,6 +267,7 @@ public class TimeSlider2 : MonoBehaviour
                 newScript.SetPositionHistory(this.GetPositionHistory());
                 newScript.replacementPrefabs = this.replacementPrefabs;
                 newScript.replacementIndex = this.replacementIndex - 1;
+                newScript.virtualCamera = this.virtualCamera;
             }
 
             // 🔥ここでスライダー側に「新しいプレイヤー」を教える！
@@ -263,6 +277,11 @@ public class TimeSlider2 : MonoBehaviour
                counter.SetCurrentPlayer(newObj);
             }
 
+            //カメラ切り替え
+            virtualCamera.Follow = newObj.transform;
+            virtualCamera.LookAt = newObj.transform;
+
+            /*
             Camera mainCamera = Camera.main;
             if (mainCamera != null)
             {
@@ -272,12 +291,15 @@ public class TimeSlider2 : MonoBehaviour
                     followScript.SetTarget(newObj.transform);
                 }
             }
+            */
 
             //そのままだと入れ替え時に角度バグるから矯正する
             newObj.transform.rotation = Quaternion.Euler(newObj.transform.rotation.x, newObj.transform.rotation.y, 0f);
             //Debug.LogError("透明なの直したい");
 
             Debug.LogError("画質向上");
+
+            //Destroy(this.gameObject); // 念のためnullチェックしてDestroy
 
             StartCoroutine(DestroyAfterFrame());
         }
@@ -291,6 +313,9 @@ public class TimeSlider2 : MonoBehaviour
     private System.Collections.IEnumerator DestroyAfterFrame()
     {
         yield return null; // 1フレーム待ってから
+
+        
+
         if (this != null)
         {
             Destroy(this.gameObject); // 念のためnullチェックしてDestroy

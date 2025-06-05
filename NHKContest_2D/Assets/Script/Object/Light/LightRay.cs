@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class LightRay : MonoBehaviour
 {
@@ -11,15 +12,25 @@ public class LightRay : MonoBehaviour
     public Vector2 customRayDirection = Vector2.left; // 初期レイ方向
     public int maxReflections = 100; // 最大反射回数
 
+    //作成したオブジェクトの構造体
+    private List<GameObject> createdPlatforms = new List<GameObject>();
+
     bool LightFlag = false;
 
-    void Update()
+    void LateUpdate()
     {
+        if (!LightFlag) // 自動で光線を生成
+        {
+            CastRay(transform.position, customRayDirection, maxReflections);
+            LightFlag = true;
+        }
+        /*
         if (Input.GetKeyDown(KeyCode.Space) && !LightFlag) // スペースキーで光線を生成
         {
             CastRay(transform.position, customRayDirection, maxReflections);
             LightFlag = true;
         }
+        */
     }
 
     public void CastRay(Vector2 origin, Vector2 direction, int remainingReflections)
@@ -71,6 +82,11 @@ public class LightRay : MonoBehaviour
         // **オブジェクトを生成**
         GameObject platform = Instantiate(platformPrefab, midPoint, Quaternion.identity);
 
+        // **リストに追加**
+        //TimeSlider_Light timeSlider_Light = this.GetComponent<TimeSlider_Light>();
+        //timeSlider_Light.AddPlatforms(platform);
+        createdPlatforms.Add(platform);
+
         // **オブジェクトの回転をレイの角度に合わせる**
         Vector2 direction = endPoint - startPoint;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
@@ -82,5 +98,13 @@ public class LightRay : MonoBehaviour
         platform.transform.localScale = newScale;
     }
 
+    void OnDestroy()//オブジェクトが破棄される際についでに足場も消す
+    {
+        foreach (GameObject platform in createdPlatforms)
+        {
+            if (platform != null) Destroy(platform);
+        }
+        createdPlatforms.Clear(); // リストをクリア
+    }
 
 }

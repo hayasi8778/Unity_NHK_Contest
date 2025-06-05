@@ -121,5 +121,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   replacementPrefabs:
-  - {fileID: 7208636664083960849}
+  - {fileID: 5487193096857014131, guid: 8e9095f5faf24fe47881f16f2c7d1b82, type: 3}
+  - {fileID: 8594554324057141351, guid: 56058dc559efeb842b1a5f1bc339238d, type: 3}
+  - {fileID: 261295569898958772, guid: 7dcef845a142d834e80ff04fb8968d81, type: 3}
   replacementIndex: 0
+  slider: {fileID: 0}
