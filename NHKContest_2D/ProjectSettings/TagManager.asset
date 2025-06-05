@@ -10,6 +10,9 @@ TagManager:
   - Object3
   - Mirror
   - Goal
+  - bomb1
+  - bomb2
+  - bomb3
   layers:
   - Default
   - TransparentFX
