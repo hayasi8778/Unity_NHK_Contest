@@ -172,7 +172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movespeed: 4
   walkSE: {fileID: 8300000, guid: 6e65b62b2d1a8c94495a4bde59cf02db, type: 3}
-  AnimationTime: 0.02
+  AnimationTime: 0.03
 --- !u!82 &1708560637085469510
 AudioSource:
   m_ObjectHideFlags: 0
