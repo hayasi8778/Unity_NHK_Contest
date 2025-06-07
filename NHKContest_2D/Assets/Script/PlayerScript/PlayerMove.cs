@@ -13,15 +13,17 @@ public class PlayerMove : MonoBehaviour
     public AudioClip walkSE;
     private new SpriteRenderer renderer; //レンダーを取得する
 
-    public PlayerMoveAmin MoveAmin; //歩行時のアニメーション
+    //public PlayerMoveAmin MoveAmin; //歩行時のアニメーション
     bool animFlag = true;//アニメーション中かのフラグ
+
+    public float AnimationTime = 0.5f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         audioSource = GetComponent<AudioSource>(); // AudioSourceを取得
 
-        MoveAmin = GetComponent<PlayerMoveAmin>();
+        //MoveAmin = GetComponent<PlayerMoveAmin>();
 
         //プレイヤーが描画されないからレンダーが有効か確認する
         renderer = GetComponent<SpriteRenderer>();
@@ -46,21 +48,14 @@ public class PlayerMove : MonoBehaviour
         
         muveFlag = false; //歩行フラグは毎フレーム切る
         
-
         Vector3 scale = transform.localScale;
-
-       
-
 
 
         //右移動
         if (Input.GetKey(KeyCode.D))
         {
-
-
+            //左右切り替え
             transform.Translate(movespeed * Time.deltaTime, 0, 0);
-
-            
 
             renderer.flipX = false;
 
@@ -76,6 +71,7 @@ public class PlayerMove : MonoBehaviour
         //左移動
         if (Input.GetKey(KeyCode.A))
         {
+            //左右切り替え
             transform.Translate(-movespeed * Time.deltaTime, 0, 0);
 
 
@@ -134,8 +130,11 @@ public class PlayerMove : MonoBehaviour
     void PlayAnim()
     {
         animFlag = false;
+        //オブジェクト継承して
+        PlayerMoveAmin MoveAmin = this.GetComponent<PlayerMoveAmin>();
+
         MoveAmin.ChangeSprite();
-        Invoke("StopAmin", 0.5f);
+        Invoke("StopAmin", AnimationTime);
     }
 
     void StopAmin()

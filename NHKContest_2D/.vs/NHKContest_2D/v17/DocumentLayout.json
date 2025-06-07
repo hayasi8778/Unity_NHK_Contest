@@ -3,40 +3,24 @@
   "WorkspaceRootPath": "C:\\Git\\TestGit1\\NHKContest_2D\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|c:\\git\\testgit1\\nhkcontest_2d\\assets\\script\\player\\timeslider2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\timeslider2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\Git\\TestGit1\\NHKContest_2D\\assets\\script\\playerscript\\playermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playerscript\\playermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\Git\\TestGit1\\NHKContest_2D\\assets\\script\\object\\light\\lightray.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\object\\light\\lightray.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|c:\\git\\testgit1\\nhkcontest_2d\\assets\\script\\playerscript\\playeranimation\\player01_animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playerscript\\playeranimation\\player01_animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\Git\\TestGit1\\NHKContest_2D\\assets\\script\\playerscript\\playeranimation\\playermoveamin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playerscript\\playeranimation\\playermoveamin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\Git\\TestGit1\\NHKContest_2D\\assets\\script\\object\\light\\timeslider_light.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\object\\light\\timeslider_light.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\Git\\TestGit1\\NHKContest_2D\\assets\\chat\\chatmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\chat\\chatmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\Git\\TestGit1\\NHKContest_2D\\assets\\script\\object\\timesliderobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\object\\timesliderobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\Git\\TestGit1\\NHKContest_2D\\assets\\script\\slider\\slidertimecounter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\slider\\slidertimecounter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\Git\\TestGit1\\NHKContest_2D\\assets\\script\\playerscript\\playermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playerscript\\playermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\Git\\TestGit1\\NHKContest_2D\\Assets\\Script\\Object\\TimeSliderObject_Base.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:Assets\\Script\\Object\\TimeSliderObject_Base.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\Git\\TestGit1\\NHKContest_2D\\assets\\script\\object\\light\\mirrorray.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\object\\light\\mirrorray.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,11 +38,11 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
               "$type": "Bookmark",
@@ -66,112 +50,65 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LightRay.cs",
-              "DocumentMoniker": "C:\\Git\\TestGit1\\NHKContest_2D\\Assets\\Script\\Object\\Light\\LightRay.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Object\\Light\\LightRay.cs",
-              "ToolTip": "C:\\Git\\TestGit1\\NHKContest_2D\\Assets\\Script\\Object\\Light\\LightRay.cs",
-              "RelativeToolTip": "Assets\\Script\\Object\\Light\\LightRay.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAAwBUAAAAeAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "PlayerMoveAmin.cs",
+              "DocumentMoniker": "C:\\Git\\TestGit1\\NHKContest_2D\\Assets\\Script\\PlayerScript\\PlayerAnimation\\PlayerMoveAmin.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\PlayerScript\\PlayerAnimation\\PlayerMoveAmin.cs",
+              "ToolTip": "C:\\Git\\TestGit1\\NHKContest_2D\\Assets\\Script\\PlayerScript\\PlayerAnimation\\PlayerMoveAmin.cs",
+              "RelativeToolTip": "Assets\\Script\\PlayerScript\\PlayerAnimation\\PlayerMoveAmin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T07:25:09.772Z"
+              "WhenOpened": "2025-06-07T06:19:17.991Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ChatManager.cs",
-              "DocumentMoniker": "C:\\Git\\TestGit1\\NHKContest_2D\\Assets\\chat\\ChatManager.cs",
-              "RelativeDocumentMoniker": "Assets\\chat\\ChatManager.cs",
-              "ToolTip": "C:\\Git\\TestGit1\\NHKContest_2D\\Assets\\chat\\ChatManager.cs",
-              "RelativeToolTip": "Assets\\chat\\ChatManager.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAhwBIAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:45:42.946Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MirrorRay.cs",
-              "DocumentMoniker": "C:\\Git\\TestGit1\\NHKContest_2D\\Assets\\Script\\Object\\Light\\MirrorRay.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Object\\Light\\MirrorRay.cs",
-              "ToolTip": "C:\\Git\\TestGit1\\NHKContest_2D\\Assets\\Script\\Object\\Light\\MirrorRay.cs",
-              "RelativeToolTip": "Assets\\Script\\Object\\Light\\MirrorRay.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:44:06.592Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TimeSlider2.cs",
-              "DocumentMoniker": "C:\\Git\\TestGit1\\NHKContest_2D\\Assets\\Script\\Player\\TimeSlider2.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Player\\TimeSlider2.cs",
-              "ToolTip": "C:\\Git\\TestGit1\\NHKContest_2D\\Assets\\Script\\Player\\TimeSlider2.cs",
-              "RelativeToolTip": "Assets\\Script\\Player\\TimeSlider2.cs",
-              "ViewState": "AgIAABABAAAAAAAAAAAkwBkBAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:40:47.866Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PlayerMove.cs",
-              "DocumentMoniker": "C:\\Git\\TestGit1\\NHKContest_2D\\Assets\\Script\\PlayerScript\\PlayerMove.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\PlayerScript\\PlayerMove.cs",
-              "ToolTip": "C:\\Git\\TestGit1\\NHKContest_2D\\Assets\\Script\\PlayerScript\\PlayerMove.cs",
-              "RelativeToolTip": "Assets\\Script\\PlayerScript\\PlayerMove.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAEwB4AAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:40:30.626Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "TimeSlider_Light.cs",
               "DocumentMoniker": "C:\\Git\\TestGit1\\NHKContest_2D\\Assets\\Script\\Object\\Light\\TimeSlider_Light.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Object\\Light\\TimeSlider_Light.cs",
               "ToolTip": "C:\\Git\\TestGit1\\NHKContest_2D\\Assets\\Script\\Object\\Light\\TimeSlider_Light.cs",
               "RelativeToolTip": "Assets\\Script\\Object\\Light\\TimeSlider_Light.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAQwIkAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAIwCUAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T10:24:12.749Z"
+              "WhenOpened": "2025-06-07T06:18:23.917Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TimeSliderObject_Base.cs",
-              "DocumentMoniker": "C:\\Git\\TestGit1\\NHKContest_2D\\Assets\\Script\\Object\\TimeSliderObject_Base.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Object\\TimeSliderObject_Base.cs",
-              "ToolTip": "C:\\Git\\TestGit1\\NHKContest_2D\\Assets\\Script\\Object\\TimeSliderObject_Base.cs",
-              "RelativeToolTip": "Assets\\Script\\Object\\TimeSliderObject_Base.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T10:20:39.761Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "SliderTimeCounter.cs",
               "DocumentMoniker": "C:\\Git\\TestGit1\\NHKContest_2D\\Assets\\Script\\Slider\\SliderTimeCounter.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Slider\\SliderTimeCounter.cs",
               "ToolTip": "C:\\Git\\TestGit1\\NHKContest_2D\\Assets\\Script\\Slider\\SliderTimeCounter.cs",
               "RelativeToolTip": "Assets\\Script\\Slider\\SliderTimeCounter.cs",
-              "ViewState": "AgIAAMcAAAAAAAAAAAArwNgAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAMAAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T09:57:26.293Z"
+              "WhenOpened": "2025-06-07T06:15:49.02Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TimeSliderObject.cs",
-              "DocumentMoniker": "C:\\Git\\TestGit1\\NHKContest_2D\\Assets\\Script\\Object\\TimeSliderObject.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Object\\TimeSliderObject.cs",
-              "ToolTip": "C:\\Git\\TestGit1\\NHKContest_2D\\Assets\\Script\\Object\\TimeSliderObject.cs",
-              "RelativeToolTip": "Assets\\Script\\Object\\TimeSliderObject.cs",
-              "ViewState": "AgIAAIMAAAAAAAAAAAAcwJEAAAARAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "PlayerMove.cs",
+              "DocumentMoniker": "C:\\Git\\TestGit1\\NHKContest_2D\\Assets\\Script\\PlayerScript\\PlayerMove.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\PlayerScript\\PlayerMove.cs",
+              "ToolTip": "C:\\Git\\TestGit1\\NHKContest_2D\\Assets\\Script\\PlayerScript\\PlayerMove.cs",
+              "RelativeToolTip": "Assets\\Script\\PlayerScript\\PlayerMove.cs",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAUwIgAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T09:39:07.644Z"
+              "WhenOpened": "2025-06-07T06:15:14.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Player01_Animation.cs",
+              "DocumentMoniker": "C:\\Git\\TestGit1\\NHKContest_2D\\Assets\\Script\\PlayerScript\\PlayerAnimation\\Player01_Animation.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\PlayerScript\\PlayerAnimation\\Player01_Animation.cs",
+              "ToolTip": "C:\\Git\\TestGit1\\NHKContest_2D\\Assets\\Script\\PlayerScript\\PlayerAnimation\\Player01_Animation.cs",
+              "RelativeToolTip": "Assets\\Script\\PlayerScript\\PlayerAnimation\\Player01_Animation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T06:14:14.859Z",
+              "EditorCaption": ""
             }
           ]
         }
