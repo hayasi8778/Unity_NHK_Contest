@@ -122,7 +122,7 @@ public class TimeSlider2 : MonoBehaviour
             }
         }
     }
-
+    
     public GameObject ObjectChanged()
     {
         if (replacementPrefabs == null || replacementPrefabs.Length == 0)
@@ -152,9 +152,8 @@ public class TimeSlider2 : MonoBehaviour
 
         // 新しいオブジェクトに情報を渡す
         TimeSlider2 newScript = newObj.GetComponent<TimeSlider2>();
+        PlayerJump newjump = newObj.GetComponent<PlayerJump>();
         newObj.SetActive(true); // 念のためアクティブ化
-
-        
 
         if (newScript != null)
         {
@@ -165,18 +164,14 @@ public class TimeSlider2 : MonoBehaviour
             newScript.virtualCamera = this.virtualCamera;
         }
 
+        if (newjump != null) 
+        {
+            PlayerJump tihsjump = this.GetComponent<PlayerJump>();
+            newjump.SetNewGravityFlag(tihsjump.GetGravityFlag());
+        }
+
         // カメラの追従対象も更新する
         Camera mainCamera = Camera.main;
-        /*
-        if (mainCamera != null)
-        {
-            FollowPlayerScript followScript = mainCamera.GetComponent<FollowPlayerScript>();
-            if (followScript != null)
-            {
-                followScript.SetTarget(newObj.transform);
-            }
-        }
-        */
         //バーチャルカメラ使うからこっちに変更する
         //Debug.Log("バーチャルカメラ変更");
         virtualCamera.Follow = newObj.transform;
@@ -192,40 +187,7 @@ public class TimeSlider2 : MonoBehaviour
 
         return newObj;
     }
-
-    public void ObjectChanged(GameObject newObject) //新しいオブジェクトにスライダーを引継ぎ自身を削除
-    {
-        if (newObject == null) return;
-
-        newObject.SetActive(true); // 念のためアクティブ化
-
-        GameObject nextPrefab = replacementPrefabs[replacementIndex];
-        replacementIndex = (replacementIndex + 1) % replacementPrefabs.Length;
-
-        Vector3 spawnPosition = transform.position;
-        GameObject newObj = Instantiate(nextPrefab, spawnPosition, Quaternion.identity);
-
-        // 🔽 ここで角度を引き継ぐ
-        newObj.transform.rotation = this.transform.rotation;
-
-        var newSliderScript = newObject.GetComponent<TimeSlider2>();
-
-       
-
-        if (newSliderScript != null)
-        {
-            
-            newSliderScript.slider = this.slider;
-            newSliderScript.SetPositionHistory(this.GetPositionHistory());
-            newSliderScript.replacementPrefabs = this.replacementPrefabs;
-            newSliderScript.replacementIndex = this.replacementIndex;
-
-        }
-
-        Destroy(this.gameObject);
-        
-    }
-
+   
     public void OnSliderMovedByUser(float value) //スライダーが引き戻されたときにプレイヤー座標を巻き戻す
     {
         isManualInput = true;
@@ -261,6 +223,7 @@ public class TimeSlider2 : MonoBehaviour
             Debug.Log($"[TryRevert] Instantiated: {newObj.name}");
 
             TimeSlider2 newScript = newObj.GetComponent<TimeSlider2>();
+            PlayerJump newjump = newObj.GetComponent<PlayerJump>();
             if (newScript != null)
             {
                 newScript.slider = this.slider;
@@ -268,6 +231,12 @@ public class TimeSlider2 : MonoBehaviour
                 newScript.replacementPrefabs = this.replacementPrefabs;
                 newScript.replacementIndex = this.replacementIndex - 1;
                 newScript.virtualCamera = this.virtualCamera;
+            }
+
+            if (newjump != null)
+            {
+                PlayerJump tihsjump = this.GetComponent<PlayerJump>();
+                newjump.SetNewGravityFlag(tihsjump.GetGravityFlag());
             }
 
             // 🔥ここでスライダー側に「新しいプレイヤー」を教える！
@@ -297,7 +266,7 @@ public class TimeSlider2 : MonoBehaviour
             newObj.transform.rotation = Quaternion.Euler(newObj.transform.rotation.x, newObj.transform.rotation.y, 0f);
             //Debug.LogError("透明なの直したい");
 
-            Debug.LogError("画質向上");
+            Debug.Log("画質向上");
 
             //Destroy(this.gameObject); // 念のためnullチェックしてDestroy
 
@@ -305,8 +274,8 @@ public class TimeSlider2 : MonoBehaviour
         }
         else
         {
-            Debug.LogError(replacementIndex);
-            Debug.LogError("これ以上戻れない！");
+            //Debug.LogError(replacementIndex);
+            Debug.LogWarning("これ以上戻れない！");
         }
     }
 
@@ -326,6 +295,40 @@ public class TimeSlider2 : MonoBehaviour
     {
         currentPlayer = player;
     }
+
+    //ギリ使うかもやから旧ObjectChangedおいておく
+    /*
+   public void ObjectChanged(GameObject newObject) //新しいオブジェクトにスライダーを引継ぎ自身を削除
+   {
+       if (newObject == null) return;
+
+       newObject.SetActive(true); // 念のためアクティブ化
+
+       GameObject nextPrefab = replacementPrefabs[replacementIndex];
+       replacementIndex = (replacementIndex + 1) % replacementPrefabs.Length;
+
+       Vector3 spawnPosition = transform.position;
+       GameObject newObj = Instantiate(nextPrefab, spawnPosition, Quaternion.identity);
+
+       // 🔽 ここで角度を引き継ぐ
+       newObj.transform.rotation = this.transform.rotation;
+
+       var newSliderScript = newObject.GetComponent<TimeSlider2>();
+
+       if (newSliderScript != null)
+       {
+
+           newSliderScript.slider = this.slider;
+           newSliderScript.SetPositionHistory(this.GetPositionHistory());
+           newSliderScript.replacementPrefabs = this.replacementPrefabs;
+           newSliderScript.replacementIndex = this.replacementIndex;
+
+       }
+
+       Destroy(this.gameObject);
+
+   }
+   */
 }
 
 

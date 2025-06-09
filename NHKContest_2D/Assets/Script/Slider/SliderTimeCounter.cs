@@ -199,22 +199,22 @@ public class SliderTimeCounter : MonoBehaviour
                     {
                         GameObject obj = currentObjects[i];
                         if (obj == null) continue;
-                        Debug.LogError("オブジェクトNULLじゃないです");
+                        //Debug.LogError("オブジェクトNULLじゃないです");
 
                         //親オブジェクトを取得(子オブジェクトをアタッチしてても取得できる)
                         TimeSliderObject_Base timeObj = obj.GetComponent<TimeSliderObject_Base>();
 
                         if (timeObj != null)
                         {
-                            Debug.LogError("オブジェクト切り替え処理します");
+                            //Debug.LogError("オブジェクト切り替え処理します");
                             GameObject newObj = timeObj.ReplaceObject(); // 子クラスのオーバーライドされたメソッドが適用される
                             if (newObj != null)
                             {
-                                Debug.LogError($"ステージオブジェクト[{i}]を切り替えました！");
+                                Debug.Log($"ステージオブジェクト[{i}]を切り替えました！");
                             }
                             else
                             {
-                                Debug.Log($"ステージオブジェクト帰ってきてないぞ");
+                                Debug.LogError($"ステージオブジェクト帰ってきてないぞ");
                             }
                         }
                     }
