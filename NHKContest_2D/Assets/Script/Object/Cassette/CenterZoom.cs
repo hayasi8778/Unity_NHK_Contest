@@ -13,6 +13,6 @@ public class CenterZoom : MonoBehaviour
 
     private void Update()
     {
-        transform.localScale = originScale / (transform.position.magnitude / size + 1);
+        transform.localScale = originScale / (transform.localPosition.magnitude / size + 1);
     }
 }
