@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5b5efe1bfce63d8499e3f9143435c240
+guid: 0fd331d9a11bc064f8945f32852fbb06
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3501767243950723327
-    second: sora_0
+      213: 2065425232447690956
+    second: High_Mountain_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,24 +96,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sora_0
+      name: High_Mountain_0
       rect:
         serializedVersion: 2
         x: 0
@@ -121,15 +108,15 @@ TextureImporter:
         width: 2026
         height: 1014
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ff018c551c6c89030800000000000000
-      internalID: 3501767243950723327
+      spriteID: cc85c2a4e4dd9ac10800000000000000
+      internalID: 2065425232447690956
       vertices: []
       indices: 
       edges: []
@@ -138,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 1774d32195052784ba8be5e6bff33e18
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sora_0: 3501767243950723327
+      High_Mountain_0: 2065425232447690956
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
