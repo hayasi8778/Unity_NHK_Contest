@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: eda8a6b804e8cb046819b81984cbe10c
+guid: 680c06e375508c440a98bca864da720e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3954772905264025406
-    second: "\u4E2D\u9593_\u4E00\u4F53_\u5C71_0"
+      213: 8561962462314721736
+    second: Middle_Mountain_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u4E2D\u9593_\u4E00\u4F53_\u5C71_0"
+      name: Middle_Mountain_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e3f0a99010d22e630800000000000000
-      internalID: 3954772905264025406
+      spriteID: 8c17f7a0f7332d670800000000000000
+      internalID: 8561962462314721736
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 177447a40931dd543bd9bb7aeeb57e4f
+    spriteID: 7bc7f6d49dbbaf145b68ce52aec45084
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "\u4E2D\u9593_\u4E00\u4F53_\u5C71_0": 3954772905264025406
+      Middle_Mountain_0: 8561962462314721736
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

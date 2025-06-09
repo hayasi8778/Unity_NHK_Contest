@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0fd331d9a11bc064f8945f32852fbb06
+guid: 3886e0405dc760c40b099e57c6af15af
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2065425232447690956
-    second: High_Mountain_0
+      213: -1831944046335487220
+    second: Law_Forest_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: High_Mountain_0
+      name: Law_Forest_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cc85c2a4e4dd9ac10800000000000000
-      internalID: 2065425232447690956
+      spriteID: c0318cd8890a396e0800000000000000
+      internalID: -1831944046335487220
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 1774d32195052784ba8be5e6bff33e18
+    spriteID: d976df27edacbc442985e7c6bc74bf1b
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      High_Mountain_0: 2065425232447690956
+      Law_Forest_0: -1831944046335487220
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

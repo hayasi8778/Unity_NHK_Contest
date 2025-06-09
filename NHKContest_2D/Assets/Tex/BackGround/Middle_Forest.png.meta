@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1ee916d8ec9391e45a14099a6923f3d3
+guid: 2e470cc58a649f94db8341b1152f0c72
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6414817747593030819
-    second: "\u4E2D\u9593_\u68EE_0"
+      213: -4900782209463517298
+    second: Middle_Forest_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u4E2D\u9593_\u68EE_0"
+      name: Middle_Forest_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d5398d7ee3df9f6a0800000000000000
-      internalID: -6414817747593030819
+      spriteID: e8f7f53cb8cecfbb0800000000000000
+      internalID: -4900782209463517298
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 491916a31be8dcb4996334936e84a09f
+    spriteID: 7432c6fdc2afb5c40af2373b9374374f
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "\u4E2D\u9593_\u68EE_0": -6414817747593030819
+      Middle_Forest_0: -4900782209463517298
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
