@@ -19,7 +19,6 @@ public class SliderTimeCounter : MonoBehaviour
 
 
 
-
     [SerializeField]
     public float initMaxSeconds = 300.0f;  // 最大秒数の初期値
 
@@ -58,7 +57,8 @@ public class SliderTimeCounter : MonoBehaviour
             GameObject obj = currentObjects[i];
             if (obj == null) continue;
 
-            var timeObj = obj.GetComponent<TimeSliderObject>();
+            //親オブジェクトから継承した物を呼び出す
+            TimeSliderObject_Base timeObj = obj.GetComponent<TimeSliderObject_Base>();
             if (timeObj != null)
             {
                 timeObj.SetCurrentnum(i);
@@ -125,7 +125,7 @@ public class SliderTimeCounter : MonoBehaviour
             timeCounter = 0f;
         }
 
-        if (slider.value > 0)
+        if (slider.value > 0)//オブジェクトに座標のログを取らせる
         {
             if (currentObjects != null)
             {
@@ -176,21 +176,45 @@ public class SliderTimeCounter : MonoBehaviour
                 // 🔥 次にステージオブジェクトたちも入れ替え
                 if (currentObjects != null)
                 {
+                    /*クラス継承させる前のコード
+                     for (int i = 0; i < currentObjects.Length; i++)
+                     {
+                         GameObject obj = currentObjects[i];
+                         if (obj == null) continue;
+                         Debug.LogError("オブジェクトNULLじゃないです");
+                         // **基底クラス（TimeSliderObject）を取得**
+                         var timeObj = obj.GetComponent<TimeSliderObject>();
+                         if (timeObj != null)
+                         {
+                             Debug.LogError("オブジェクト切り替え処理します");
+                             GameObject newObj = timeObj.ReplaceObject(); //派生クラスのメソッドが自動適用される
+                             if (newObj != null)
+                             {
+                                 Debug.LogError($"ステージオブジェクト[{i}]を切り替えました！");
+                             }
+                         }
+                     }
+                    */
                     for (int i = 0; i < currentObjects.Length; i++)
                     {
                         GameObject obj = currentObjects[i];
                         if (obj == null) continue;
+                        Debug.LogError("オブジェクトNULLじゃないです");
 
-                        var timeObj = obj.GetComponent<TimeSliderObject>();
+                        //親オブジェクトを取得(子オブジェクトをアタッチしてても取得できる)
+                        TimeSliderObject_Base timeObj = obj.GetComponent<TimeSliderObject_Base>();
+
                         if (timeObj != null)
                         {
-                            // ReplaceObjectには、replacementPrefabsとindexを渡す必要がある！
-                            // 仮に timeObj自身が持っていると想定
-                            GameObject newObj = timeObj.ReplaceObject(/* replacementPrefabs ,  replacementIndex */);
+                            Debug.LogError("オブジェクト切り替え処理します");
+                            GameObject newObj = timeObj.ReplaceObject(); // 子クラスのオーバーライドされたメソッドが適用される
                             if (newObj != null)
                             {
-                                //currentObjects[i] = newObj;
                                 Debug.LogError($"ステージオブジェクト[{i}]を切り替えました！");
+                            }
+                            else
+                            {
+                                Debug.Log($"ステージオブジェクト帰ってきてないぞ");
                             }
                         }
                     }
@@ -213,7 +237,7 @@ public class SliderTimeCounter : MonoBehaviour
             //ログかさばるからデバック用
             //Debug.Log("スライダー動いた時の処理する");
 
-            Debug.Log("手動スライダー操作を検知");
+            //Debug.Log("手動スライダー操作を検知");
             isManualInput = true;
             manualInputTimer = 0f;
 

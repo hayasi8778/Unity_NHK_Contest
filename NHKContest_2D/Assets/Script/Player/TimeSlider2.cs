@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using Unity.Cinemachine;
+using UnityEditor.Rendering;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class TimeSlider2 : MonoBehaviour
@@ -21,8 +23,16 @@ public class TimeSlider2 : MonoBehaviour
     private bool isBeingDestroyed = false; //削除フラグ
     private GameObject currentPlayer; //操作対象のプレイヤー
 
+
+    public CinemachineCamera virtualCamera;
+
+
     void Start()
     {
+
+        //謎回転するのを修正する
+        //transform.rotation = Quaternion.identity;
+
         for (int i = 0; i < positionHistory.Length; i++)
         {
             if (positionHistory[i] == null) //オブジェクト切り替え時に初期座標で埋める可能性があるからnullチェック
@@ -32,12 +42,11 @@ public class TimeSlider2 : MonoBehaviour
             
         }
 
-       
-
     }
 
     void Update()
     {
+
         if (isBeingDestroyed) return; //消されるならアップデート動かさない
 
         if (!isRewinding) //巻き戻し中じゃないなら座標を配列に追加
@@ -130,8 +139,6 @@ public class TimeSlider2 : MonoBehaviour
             Debug.LogWarning("最後のオブジェクトなので入れ替えしません");
             return null;
         }
-
-
         
         replacementIndex = (replacementIndex + 1) % replacementPrefabs.Length;
 
@@ -145,16 +152,22 @@ public class TimeSlider2 : MonoBehaviour
 
         // 新しいオブジェクトに情報を渡す
         TimeSlider2 newScript = newObj.GetComponent<TimeSlider2>();
+        newObj.SetActive(true); // 念のためアクティブ化
+
+        
+
         if (newScript != null)
         {
             newScript.slider = this.slider;
             newScript.SetPositionHistory(this.GetPositionHistory());
             newScript.replacementPrefabs = this.replacementPrefabs;
             newScript.replacementIndex = this.replacementIndex;
+            newScript.virtualCamera = this.virtualCamera;
         }
 
         // カメラの追従対象も更新する
         Camera mainCamera = Camera.main;
+        /*
         if (mainCamera != null)
         {
             FollowPlayerScript followScript = mainCamera.GetComponent<FollowPlayerScript>();
@@ -163,6 +176,16 @@ public class TimeSlider2 : MonoBehaviour
                 followScript.SetTarget(newObj.transform);
             }
         }
+        */
+        //バーチャルカメラ使うからこっちに変更する
+        //Debug.Log("バーチャルカメラ変更");
+        virtualCamera.Follow = newObj.transform;
+        virtualCamera.LookAt = newObj.transform;
+
+
+        //そのままだと入れ替え時に角度バグるから矯正する
+        newObj.transform.rotation = Quaternion.Euler(newObj.transform.rotation.x, newObj.transform.rotation.y, 0f);
+        //Debug.LogError("透明なの直したい");
 
         //最後に自分を消す！
         Destroy(this.gameObject);
@@ -172,9 +195,9 @@ public class TimeSlider2 : MonoBehaviour
 
     public void ObjectChanged(GameObject newObject) //新しいオブジェクトにスライダーを引継ぎ自身を削除
     {
-
-        
         if (newObject == null) return;
+
+        newObject.SetActive(true); // 念のためアクティブ化
 
         GameObject nextPrefab = replacementPrefabs[replacementIndex];
         replacementIndex = (replacementIndex + 1) % replacementPrefabs.Length;
@@ -186,12 +209,17 @@ public class TimeSlider2 : MonoBehaviour
         newObj.transform.rotation = this.transform.rotation;
 
         var newSliderScript = newObject.GetComponent<TimeSlider2>();
+
+       
+
         if (newSliderScript != null)
         {
+            
             newSliderScript.slider = this.slider;
             newSliderScript.SetPositionHistory(this.GetPositionHistory());
             newSliderScript.replacementPrefabs = this.replacementPrefabs;
             newSliderScript.replacementIndex = this.replacementIndex;
+
         }
 
         Destroy(this.gameObject);
@@ -209,7 +237,7 @@ public class TimeSlider2 : MonoBehaviour
         }
     }
 
-    private void TryRevertObject()
+    private void TryRevertObject()//オブジェクトが画質よくなる
     {
         Debug.LogWarning($"[TryRevert] Current replacementIndex: {replacementIndex}");
 
@@ -228,6 +256,8 @@ public class TimeSlider2 : MonoBehaviour
             Quaternion spawnRotation = Quaternion.Euler(90f, 90f, -90f);
 
             GameObject newObj = Instantiate(prevPrefab, spawnPosition, spawnRotation);
+            newObj.SetActive(true); // 念のためアクティブ化
+
             Debug.Log($"[TryRevert] Instantiated: {newObj.name}");
 
             TimeSlider2 newScript = newObj.GetComponent<TimeSlider2>();
@@ -237,6 +267,7 @@ public class TimeSlider2 : MonoBehaviour
                 newScript.SetPositionHistory(this.GetPositionHistory());
                 newScript.replacementPrefabs = this.replacementPrefabs;
                 newScript.replacementIndex = this.replacementIndex - 1;
+                newScript.virtualCamera = this.virtualCamera;
             }
 
             // 🔥ここでスライダー側に「新しいプレイヤー」を教える！
@@ -246,6 +277,11 @@ public class TimeSlider2 : MonoBehaviour
                counter.SetCurrentPlayer(newObj);
             }
 
+            //カメラ切り替え
+            virtualCamera.Follow = newObj.transform;
+            virtualCamera.LookAt = newObj.transform;
+
+            /*
             Camera mainCamera = Camera.main;
             if (mainCamera != null)
             {
@@ -255,8 +291,15 @@ public class TimeSlider2 : MonoBehaviour
                     followScript.SetTarget(newObj.transform);
                 }
             }
+            */
+
+            //そのままだと入れ替え時に角度バグるから矯正する
+            newObj.transform.rotation = Quaternion.Euler(newObj.transform.rotation.x, newObj.transform.rotation.y, 0f);
+            //Debug.LogError("透明なの直したい");
 
             Debug.LogError("画質向上");
+
+            //Destroy(this.gameObject); // 念のためnullチェックしてDestroy
 
             StartCoroutine(DestroyAfterFrame());
         }
@@ -270,6 +313,9 @@ public class TimeSlider2 : MonoBehaviour
     private System.Collections.IEnumerator DestroyAfterFrame()
     {
         yield return null; // 1フレーム待ってから
+
+        
+
         if (this != null)
         {
             Destroy(this.gameObject); // 念のためnullチェックしてDestroy

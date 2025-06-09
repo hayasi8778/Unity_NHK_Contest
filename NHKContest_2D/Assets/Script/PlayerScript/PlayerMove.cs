@@ -7,20 +7,36 @@ using System.Collections;
 public class PlayerMove : MonoBehaviour
 {
     public float movespeed = 1.0f;//移動スピード
-    public VideoPlayer videoPlayer;
-    private bool muveFlag = true; //歩行しているかのフラグ
-    public bool isFacingRight = true; //向き
-    private bool OldisFacing = true; //1フレーム前の向き
+    private bool muveFlag = false; //歩行しているかのフラグ
+    
     private AudioSource audioSource; //音鳴らすためのコンポーネント
     public AudioClip walkSE;
+    private new SpriteRenderer renderer; //レンダーを取得する
 
+    //public PlayerMoveAmin MoveAmin; //歩行時のアニメーション
+    bool animFlag = true;//アニメーション中かのフラグ
 
+    public float AnimationTime = 0.5f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        videoPlayer = GetComponent<VideoPlayer>();
         audioSource = GetComponent<AudioSource>(); // AudioSourceを取得
+
+        //MoveAmin = GetComponent<PlayerMoveAmin>();
+
+        //プレイヤーが描画されないからレンダーが有効か確認する
+        renderer = GetComponent<SpriteRenderer>();
+
+        if (renderer != null)
+        {
+            //Debug.Log("Renderer is " + (renderer.enabled ? "enabled" : "disabled"));
+        }
+        else
+        {
+            Debug.Log("レンダーないぞ");
+        }
+
     }
 
     // Update is called once per frame
@@ -29,22 +45,20 @@ public class PlayerMove : MonoBehaviour
 
         //角度の都合で移動方向左右反転する
 
+        
         muveFlag = false; //歩行フラグは毎フレーム切る
-
+        
         Vector3 scale = transform.localScale;
-
-        OldisFacing = isFacingRight;//1フレーム前の分をとる
-
 
 
         //右移動
         if (Input.GetKey(KeyCode.D))
         {
-
-
+            //左右切り替え
             transform.Translate(movespeed * Time.deltaTime, 0, 0);
 
-            isFacingRight = true;
+            renderer.flipX = false;
+
             muveFlag = true;
 
             if (!audioSource.isPlaying) // 音が再生中じゃないなら
@@ -57,9 +71,11 @@ public class PlayerMove : MonoBehaviour
         //左移動
         if (Input.GetKey(KeyCode.A))
         {
+            //左右切り替え
             transform.Translate(-movespeed * Time.deltaTime, 0, 0);
 
-            isFacingRight = false;
+
+            renderer.flipX = true;
 
             muveFlag = true;
 
@@ -71,41 +87,30 @@ public class PlayerMove : MonoBehaviour
 
         }
 
-
-
-        if (OldisFacing != isFacingRight)
+        if (muveFlag && animFlag)
         {
 
-            // 左右反転（Xスケールを切り替えて対応）
-            scale.x = isFacingRight ? Mathf.Abs(scale.x) : -Mathf.Abs(scale.x);
-            transform.localScale = scale;
-        }
-
-        if (videoPlayer == null)
-        {
-            Debug.Log("動画ないからアップデートここまで");
-            return;
-        }
-
-        if (muveFlag)
-        {
+            PlayAnim();
+            /*
             if (!videoPlayer.isPlaying)
             {
 
                 videoPlayer.Play(); // キー入力があれば再生
 
             }
+            */
         }
         else
         {
             //Debug.LogError("ループ停止処理");
-
+            /*
             if (videoPlayer.time >= videoPlayer.length)
             {
                 videoPlayer.time = 0; // 再生位置をリセット
 
                 videoPlayer.Stop(); // 動画が最後まで再生されたら停止
             }
+            */
         }
 
     }
@@ -122,5 +127,19 @@ public class PlayerMove : MonoBehaviour
         audioSource.Stop();
     }
 
+    void PlayAnim()
+    {
+        animFlag = false;
+        //オブジェクト継承して
+        PlayerMoveAmin MoveAmin = this.GetComponent<PlayerMoveAmin>();
+
+        MoveAmin.ChangeSprite();
+        Invoke("StopAmin", AnimationTime);
+    }
+
+    void StopAmin()
+    {
+        animFlag=true;
+    }
 
 }
