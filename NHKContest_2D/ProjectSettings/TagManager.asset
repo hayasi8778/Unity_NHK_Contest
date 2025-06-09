@@ -13,6 +13,9 @@ TagManager:
   - bomb1
   - bomb2
   - bomb3
+  - Warp1
+  - Warp2
+  - Warp3
   layers:
   - Default
   - TransparentFX
