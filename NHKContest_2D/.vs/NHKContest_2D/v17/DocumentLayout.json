@@ -58,6 +58,17 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DropState.cs",
+              "DocumentMoniker": "C:\\Users\\abc36\\Desktop\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\Object\\Cassette\\State\\DropState.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Object\\Cassette\\State\\DropState.cs",
+              "ToolTip": "C:\\Users\\abc36\\Desktop\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\Object\\Cassette\\State\\DropState.cs",
+              "RelativeToolTip": "Assets\\Script\\Object\\Cassette\\State\\DropState.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAADwvxkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T00:56:26.492Z"
+            },
+            {
               "DocumentIndex": 2,
               "Title": "TimeSlider2.cs",
               "DocumentMoniker": "C:\\Users\\daryu\\Desktop\\HAL\\\u795E\u30B2\u30FC\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\Player\\TimeSlider2.cs",
