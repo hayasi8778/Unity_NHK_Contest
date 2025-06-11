@@ -114,4 +114,12 @@ public class PlayerJump : MonoBehaviour
         Debug.Log("新しいオブジェクトに重力フラグつけるよ");
         GravityFlag = flag;
     }
+
+    public void FlipPlayerTexture()
+    {
+        Vector3 scale = transform.localScale;
+        scale.y *= -1; // Y軸方向に反転
+        transform.localScale = scale;
+    }
+
 }

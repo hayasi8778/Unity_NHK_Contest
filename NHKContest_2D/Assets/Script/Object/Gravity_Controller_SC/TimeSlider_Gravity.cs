@@ -28,7 +28,7 @@ public class TimeSlider_Gravity : TimeSliderObject_Base
         if (Input.GetKeyDown(KeyCode.E)) // スペースキーで重力反転
         {
             isGravityFlipped = !isGravityFlipped;
-            Physics2D.gravity = new Vector2(0, isGravityFlipped ? 9.8f : -9.8f);
+            Physics2D.gravity = new Vector2(0, isGravityFlipped ? -9.8f : 9.8f);
         }
 
     }
@@ -56,24 +56,39 @@ public class TimeSlider_Gravity : TimeSliderObject_Base
                 }
                 else
                 {
-                    isComingFromAbove = collision.relativeVelocity.y > 0;
+                    isComingFromAbove = collision.relativeVelocity.y > 0.3;
                 }
 
-                 PlayerJump playerJump = collision.gameObject.GetComponent<PlayerJump>();   
+                 PlayerJump playerJump = collision.gameObject.GetComponent<PlayerJump>();
 
-                if (/*playerBottom <= buttonTop &&*/ isComingFromAbove) // 上から踏んだ場合のみ反転
+               
+
+                if (/*playerBottom <= buttonTop &&*/ isComingFromAbove) // プレイヤーが踏んだ場合のみ反転
                 {
-                    isGravityFlipped = !isGravityFlipped;
-                    Physics2D.gravity = new Vector2(0, isGravityFlipped ? 9.8f : -9.8f);
+                    //カメラの上下反転させる
+                    Camera_Flip camera_fl = this.gameObject.GetComponent<Camera_Flip>();
+
+                    camera_fl.FlipCamera();
+
+                    isGravityFlipped = !playerJump.GetGravityFlag();
+
+                    Physics2D.gravity = new Vector2(0, isGravityFlipped ? -9.8f : 9.8f);
+
+                    //Debug.Log($"isGravityFlipped: {isGravityFlipped}");
+                    Debug.Log(Physics2D.gravity);
 
                     playerJump.SetGravityFlag();//重力反転したことをプレイヤーに伝える
+                    playerJump.FlipPlayerTexture();
                 }
 
             }
         }
     }
 
-
+    /// <summary>
+    /// //////////////////////////////////////////////////////////////////////////////////////////////////
+    /// </summary>
+    /// <returns></returns>
     //スライダー関係の処理
     public override GameObject ReplaceObject()//オブジェクト入れ替え(後ろ)
     {
