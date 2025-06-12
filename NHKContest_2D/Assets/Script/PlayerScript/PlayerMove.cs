@@ -60,9 +60,9 @@ public class PlayerMove : MonoBehaviour
 
             transform.Translate(movespeed * Time.deltaTime, 0, 0);
 
-            
 
-            renderer.flipX = false;
+            // «ƒQ[ƒ€“àŠÔ‚ğ~‚ß‚Ä‚àU‚è‚Ş‚¢‚¿‚á‚¤‚ñ‚ÅğŒ’Ç‰Á‚µ‚Ü‚µ‚½@’†’J
+            if (Time.timeScale > 0) renderer.flipX = false;
 
             muveFlag = true;
 
@@ -78,8 +78,8 @@ public class PlayerMove : MonoBehaviour
         {
             transform.Translate(-movespeed * Time.deltaTime, 0, 0);
 
-
-            renderer.flipX = true;
+            // «ƒQ[ƒ€“àŠÔ‚ğ~‚ß‚Ä‚àU‚è‚Ş‚¢‚¿‚á‚¤‚ñ‚ÅğŒ’Ç‰Á‚µ‚Ü‚µ‚½@’†’J
+            if (Time.timeScale > 0) renderer.flipX = true;
 
             muveFlag = true;
 
