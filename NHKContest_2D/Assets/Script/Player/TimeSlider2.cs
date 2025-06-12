@@ -143,7 +143,7 @@ public class TimeSlider2 : MonoBehaviour
         replacementIndex = (replacementIndex + 1) % replacementPrefabs.Length;
 
         Vector3 spawnPosition = transform.position;
-        spawnPosition.y += 0.5f; // 0.5f上にずらす
+        //spawnPosition.y += 0.5f; // 0.5f上にずらす
         Quaternion spawnRotation = Quaternion.Euler(90f, 90f, -90f);
 
         GameObject nextPrefab = replacementPrefabs[replacementIndex];
@@ -214,7 +214,7 @@ public class TimeSlider2 : MonoBehaviour
             }
 
             Vector3 spawnPosition = transform.position;
-            spawnPosition.y += 0.5f;
+            //spawnPosition.y += 0.5f;//オブジェクトずらす
             Quaternion spawnRotation = Quaternion.Euler(90f, 90f, -90f);
 
             GameObject newObj = Instantiate(prevPrefab, spawnPosition, spawnRotation);

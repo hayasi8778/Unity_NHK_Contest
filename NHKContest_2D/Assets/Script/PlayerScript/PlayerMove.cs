@@ -18,6 +18,8 @@ public class PlayerMove : MonoBehaviour
 
     public float AnimationTime = 0.5f;
 
+    private bool GravityFlag = true;//重力フラグ(trueで正常falseで反転)
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -61,9 +63,21 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             //左右切り替え
-            transform.Translate(movespeed * Time.deltaTime, 0, 0);
+            if (GravityFlag) //画面回るから操作方向切り替える
+            {
+                transform.Translate(movespeed * Time.deltaTime, 0, 0);
 
-            renderer.flipX = false;
+                renderer.flipX = false;
+            }
+            else
+            {
+                transform.Translate(-movespeed * Time.deltaTime, 0, 0);
+
+                renderer.flipX = true;
+            }
+
+
+                
 
             muveFlag = true;
 
@@ -77,11 +91,23 @@ public class PlayerMove : MonoBehaviour
         //左移動
         if (Input.GetKey(KeyCode.A))
         {
-            //左右切り替え
-            transform.Translate(-movespeed * Time.deltaTime, 0, 0);
+            if (GravityFlag)
+            {
+                //左右切り替え
+                transform.Translate(-movespeed * Time.deltaTime, 0, 0);
+
+                renderer.flipX = true;
+            }
+            else
+            {
+                transform.Translate(movespeed * Time.deltaTime, 0, 0);
+
+                renderer.flipX = false;
+            }
 
 
-            renderer.flipX = true;
+
+                
 
             muveFlag = true;
 
@@ -97,26 +123,6 @@ public class PlayerMove : MonoBehaviour
         {
 
             PlayAnim();
-            /*
-            if (!videoPlayer.isPlaying)
-            {
-
-                videoPlayer.Play(); // キー入力があれば再生
-
-            }
-            */
-        }
-        else
-        {
-            //Debug.LogError("ループ停止処理");
-            /*
-            if (videoPlayer.time >= videoPlayer.length)
-            {
-                videoPlayer.time = 0; // 再生位置をリセット
-
-                videoPlayer.Stop(); // 動画が最後まで再生されたら停止
-            }
-            */
         }
 
     }
@@ -146,6 +152,11 @@ public class PlayerMove : MonoBehaviour
     void StopAmin()
     {
         animFlag=true;
+    }
+
+    public void SetGravityFrag(bool flag)
+    {
+        GravityFlag = flag;
     }
 
 }

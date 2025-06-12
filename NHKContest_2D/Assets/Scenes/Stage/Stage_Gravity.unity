@@ -5247,6 +5247,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box_First
       objectReference: {fileID: 0}
+    - target: {fileID: 3983524674230510532, guid: 25c2fc9c79ad579419b1d3306c35da97, type: 3}
+      propertyPath: slider
+      value: 
+      objectReference: {fileID: 226355487}
     - target: {fileID: 5365191946827929570, guid: 25c2fc9c79ad579419b1d3306c35da97, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.5456052

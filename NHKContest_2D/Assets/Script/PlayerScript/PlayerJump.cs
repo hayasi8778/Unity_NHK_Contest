@@ -102,6 +102,11 @@ public class PlayerJump : MonoBehaviour
         {
             GravityFlag = true;
         }
+
+        //playermuveのフラグも同時に切り替える
+        PlayerMove playermove = this.gameObject.GetComponent<PlayerMove>();
+
+        playermove.SetGravityFrag(GravityFlag);
     }
 
     public bool GetGravityFlag()
@@ -113,6 +118,8 @@ public class PlayerJump : MonoBehaviour
     {
         Debug.Log("新しいオブジェクトに重力フラグつけるよ");
         GravityFlag = flag;
+
+        FlipCheck();
     }
 
     public void FlipPlayerTexture()
@@ -120,6 +127,16 @@ public class PlayerJump : MonoBehaviour
         Vector3 scale = transform.localScale;
         scale.y *= -1; // Y軸方向に反転
         transform.localScale = scale;
+    }
+
+    public void FlipCheck()//上下切り替えているかを調べる
+    {
+        if (!GravityFlag)
+        {
+            Vector3 scale = transform.localScale;
+            scale.y *= -1; // Y軸方向に反転
+            transform.localScale = scale;
+        }
     }
 
 }
