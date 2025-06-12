@@ -39,6 +39,12 @@ public class PlayerMove : MonoBehaviour
 
     }
 
+    private bool canMove = true; // ˆÚ“®‹–‰Âƒtƒ‰ƒO
+    public void SetCanMove(bool flag)
+    {
+        canMove = flag;
+    }
+
     // Update is called once per frame
     void Update()
     {
