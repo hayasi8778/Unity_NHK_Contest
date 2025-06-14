@@ -153,6 +153,7 @@ public class TimeSlider2 : MonoBehaviour
         // 新しいオブジェクトに情報を渡す
         TimeSlider2 newScript = newObj.GetComponent<TimeSlider2>();
         PlayerJump newjump = newObj.GetComponent<PlayerJump>();
+        PlayerMove newmove = newObj.GetComponent<PlayerMove>();
         newObj.SetActive(true); // 念のためアクティブ化
 
         if (newScript != null)
@@ -164,11 +165,19 @@ public class TimeSlider2 : MonoBehaviour
             newScript.virtualCamera = this.virtualCamera;
         }
 
+        //重力の引継ぎ
         if (newjump != null) 
         {
             PlayerJump tihsjump = this.GetComponent<PlayerJump>();
             newjump.SetNewGravityFlag(tihsjump.GetGravityFlag());
         }
+
+        if (newmove != null)
+        {
+            PlayerMove tihsmove = this.GetComponent<PlayerMove>();
+            newmove.SetGravityFrag(tihsmove.GetGravityFlag());
+        }
+        //ここまで重力引継ぎ
 
         // カメラの追従対象も更新する
         Camera mainCamera = Camera.main;
@@ -224,6 +233,7 @@ public class TimeSlider2 : MonoBehaviour
 
             TimeSlider2 newScript = newObj.GetComponent<TimeSlider2>();
             PlayerJump newjump = newObj.GetComponent<PlayerJump>();
+            PlayerMove newmove = newObj.GetComponent<PlayerMove>();
             if (newScript != null)
             {
                 newScript.slider = this.slider;
@@ -233,11 +243,19 @@ public class TimeSlider2 : MonoBehaviour
                 newScript.virtualCamera = this.virtualCamera;
             }
 
+            //重力の変化を引き継ぐ
             if (newjump != null)
             {
                 PlayerJump tihsjump = this.GetComponent<PlayerJump>();
                 newjump.SetNewGravityFlag(tihsjump.GetGravityFlag());
             }
+
+            if(newmove != null)
+            {
+                PlayerMove tihsmove = this.GetComponent<PlayerMove>();
+                newmove.SetGravityFrag(tihsmove.GetGravityFlag());
+            }
+            //ここまで重力処理
 
             // 🔥ここでスライダー側に「新しいプレイヤー」を教える！
             var counter = slider.GetComponent<SliderTimeCounter>();

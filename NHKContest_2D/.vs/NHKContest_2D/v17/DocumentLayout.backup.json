@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Git\\TestGit1\\NHKContest_2D\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\Git\\TestGit1\\NHKContest_2D\\assets\\script\\playerscript\\playermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|c:\\git\\testgit1\\nhkcontest_2d\\assets\\script\\playerscript\\playermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playerscript\\playermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|c:\\git\\testgit1\\nhkcontest_2d\\assets\\script\\playerscript\\playerjump.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\Git\\TestGit1\\NHKContest_2D\\assets\\script\\playerscript\\playerjump.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playerscript\\playerjump.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -42,15 +42,15 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{2d7728c2-de0a-45b5-99aa-89b609dfde73}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
@@ -60,7 +60,7 @@
               "RelativeDocumentMoniker": "Assets\\Script\\PlayerScript\\PlayerMove.cs",
               "ToolTip": "C:\\Git\\TestGit1\\NHKContest_2D\\Assets\\Script\\PlayerScript\\PlayerMove.cs",
               "RelativeToolTip": "Assets\\Script\\PlayerScript\\PlayerMove.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAQwGgAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-11T14:49:06.116Z",
               "EditorCaption": ""
@@ -85,9 +85,10 @@
               "RelativeDocumentMoniker": "Assets\\Script\\Player\\TimeSlider2.cs",
               "ToolTip": "C:\\Git\\TestGit1\\NHKContest_2D\\Assets\\Script\\Player\\TimeSlider2.cs",
               "RelativeToolTip": "Assets\\Script\\Player\\TimeSlider2.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAADwvxgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAMwAAAAAAAAAAAAiwNgAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T03:37:11.38Z"
+              "WhenOpened": "2025-06-09T03:37:11.38Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -95,11 +96,12 @@
               "Title": "Camera_Flip.cs",
               "DocumentMoniker": "C:\\Git\\TestGit1\\NHKContest_2D\\Assets\\Script\\Object\\Gravity_Controller_SC\\Camera_Flip.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Object\\Gravity_Controller_SC\\Camera_Flip.cs",
-              "ToolTip": "C:\\Git\\TestGit1\\NHKContest_2D\\Assets\\Script\\Object\\Gravity_Controller_SC\\Camera_Flip.cs*",
-              "RelativeToolTip": "Assets\\Script\\Object\\Gravity_Controller_SC\\Camera_Flip.cs*",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAIwGUAAAAfAAAAAAAAAA==",
+              "ToolTip": "C:\\Git\\TestGit1\\NHKContest_2D\\Assets\\Script\\Object\\Gravity_Controller_SC\\Camera_Flip.cs",
+              "RelativeToolTip": "Assets\\Script\\Object\\Gravity_Controller_SC\\Camera_Flip.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T03:35:41.306Z"
+              "WhenOpened": "2025-06-09T03:35:41.306Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -109,7 +111,7 @@
               "RelativeDocumentMoniker": "Assets\\Script\\PlayerScript\\PlayerJump.cs",
               "ToolTip": "C:\\Git\\TestGit1\\NHKContest_2D\\Assets\\Script\\PlayerScript\\PlayerJump.cs",
               "RelativeToolTip": "Assets\\Script\\PlayerScript\\PlayerJump.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAUwGwAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-09T03:35:07.102Z",
               "EditorCaption": ""

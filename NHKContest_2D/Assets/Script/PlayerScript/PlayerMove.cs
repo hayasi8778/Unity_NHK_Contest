@@ -159,4 +159,9 @@ public class PlayerMove : MonoBehaviour
         GravityFlag = flag;
     }
 
+    public bool GetGravityFlag() 
+    {
+        return GravityFlag;
+    }
+
 }
