@@ -117,6 +117,8 @@ public class PlayerMove : MonoBehaviour
             */
         }
 
+        // ポーズ中に音が出ないようにとりあえず応急処置しました　中谷
+        if (Time.timeScale == 0) StopAudio();
     }
 
     void PlaySound()

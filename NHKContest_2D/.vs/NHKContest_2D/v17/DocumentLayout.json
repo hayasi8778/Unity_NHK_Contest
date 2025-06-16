@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\daryu\\Desktop\\HAL\\\u795E\u30B2\u30FC\\Unity_NHK_Contest\\NHKContest_2D\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|c:\\users\\daryu\\desktop\\hal\\\u795E\u30B2\u30FC\\unity_nhk_contest\\nhkcontest_2d\\assets\\script\\ui\\pausebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\ui\\pausebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|c:\\users\\daryu\\desktop\\hal\\\u795E\u30B2\u30FC\\unity_nhk_contest\\nhkcontest_2d\\assets\\script\\playerscript\\playermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playerscript\\playermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\Users\\daryu\\Desktop\\HAL\\\u795E\u30B2\u30FC\\Unity_NHK_Contest\\NHKContest_2D\\assets\\script\\playerscript\\playermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playerscript\\playermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|c:\\users\\daryu\\desktop\\hal\\\u795E\u30B2\u30FC\\unity_nhk_contest\\nhkcontest_2d\\assets\\script\\playerscript\\playermoveamin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playerscript\\playermoveamin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\Users\\daryu\\Desktop\\HAL\\\u795E\u30B2\u30FC\\Unity_NHK_Contest\\NHKContest_2D\\assets\\script\\ui\\pausebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\ui\\pausebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\Users\\daryu\\Desktop\\HAL\\\u795E\u30B2\u30FC\\Unity_NHK_Contest\\NHKContest_2D\\assets\\script\\object\\timesliderobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -41,7 +45,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -52,37 +56,46 @@
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlayerMoveAmin.cs",
+              "DocumentMoniker": "C:\\Users\\daryu\\Desktop\\HAL\\\u795E\u30B2\u30FC\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\PlayerScript\\PlayerMoveAmin.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\PlayerScript\\PlayerMoveAmin.cs",
+              "ToolTip": "C:\\Users\\daryu\\Desktop\\HAL\\\u795E\u30B2\u30FC\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\PlayerScript\\PlayerMoveAmin.cs",
+              "RelativeToolTip": "Assets\\Script\\PlayerScript\\PlayerMoveAmin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T00:33:07.371Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "PauseButton.cs",
               "DocumentMoniker": "C:\\Users\\daryu\\Desktop\\HAL\\\u795E\u30B2\u30FC\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\UI\\PauseButton.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\UI\\PauseButton.cs",
               "ToolTip": "C:\\Users\\daryu\\Desktop\\HAL\\\u795E\u30B2\u30FC\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\UI\\PauseButton.cs",
               "RelativeToolTip": "Assets\\Script\\UI\\PauseButton.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAowCEAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T02:52:20.488Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-09T02:52:20.488Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "PlayerMove.cs",
               "DocumentMoniker": "C:\\Users\\daryu\\Desktop\\HAL\\\u795E\u30B2\u30FC\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\PlayerScript\\PlayerMove.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\PlayerScript\\PlayerMove.cs",
               "ToolTip": "C:\\Users\\daryu\\Desktop\\HAL\\\u795E\u30B2\u30FC\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\PlayerScript\\PlayerMove.cs",
               "RelativeToolTip": "Assets\\Script\\PlayerScript\\PlayerMove.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAIwFAAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T01:08:15.973Z"
+              "WhenOpened": "2025-06-09T01:08:15.973Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "TimeSliderObject.cs",
               "DocumentMoniker": "C:\\Users\\daryu\\Desktop\\HAL\\\u795E\u30B2\u30FC\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\Object\\TimeSliderObject.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Object\\TimeSliderObject.cs",
@@ -94,7 +107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "TimeSlider2.cs",
               "DocumentMoniker": "C:\\Users\\daryu\\Desktop\\HAL\\\u795E\u30B2\u30FC\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\Player\\TimeSlider2.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Player\\TimeSlider2.cs",
@@ -106,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "SliderTimeCounter.cs",
               "DocumentMoniker": "C:\\Users\\daryu\\Desktop\\HAL\\\u795E\u30B2\u30FC\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\Slider\\SliderTimeCounter.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Slider\\SliderTimeCounter.cs",
@@ -118,7 +131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Camera_Move.cs",
               "DocumentMoniker": "C:\\Users\\daryu\\Desktop\\HAL\\\u795E\u30B2\u30FC\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\Camera_Move.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Camera_Move.cs",
@@ -130,7 +143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "SliderTimeCounter.cs",
               "DocumentMoniker": "C:\\Users\\daryu\\Desktop\\HAL\\\u795E\u30B2\u30FC\\Unity_NHK_Contest\\NHKContest\\Assets\\Scripts\\SliderTimeCounter.cs",
               "RelativeDocumentMoniker": "..\\NHKContest\\Assets\\Scripts\\SliderTimeCounter.cs",
@@ -142,7 +155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "SliderTime.cs",
               "DocumentMoniker": "C:\\Users\\daryu\\Desktop\\HAL\\\u795E\u30B2\u30FC\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\SliderTime.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\SliderTime.cs",
