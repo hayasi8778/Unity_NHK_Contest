@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 8496188874003495042}
   - component: {fileID: 8818321697603155047}
   m_Layer: 0
-  m_Name: warp1
-  m_TagString: Warp1
+  m_Name: warp5
+  m_TagString: Warp5
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.11475258, g: 0.16037719, b: 0.85660374, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -169,9 +169,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 0}
   replacementPrefabs:
+  - {fileID: 210935459490492298, guid: 4375501859174d24f873153931f89c28, type: 3}
   - {fileID: 210935459490492298}
-  - {fileID: 210935459490492298, guid: 3945691e90093c645bd9d95a2a74849c, type: 3}
-  - {fileID: 210935459490492298, guid: 066520ea40277c94cb417fcf670de10e, type: 3}
+  - {fileID: 210935459490492298, guid: d9a215b28d22cb141adfffe87f7996fa, type: 3}
   replacementIndex: 0
 --- !u!114 &8818321697603155047
 MonoBehaviour:

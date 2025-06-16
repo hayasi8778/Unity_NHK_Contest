@@ -16,6 +16,9 @@ TagManager:
   - Warp1
   - Warp2
   - Warp3
+  - Warp4
+  - Warp5
+  - Warp6
   layers:
   - Default
   - TransparentFX

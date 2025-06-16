@@ -62,8 +62,8 @@ public class WarpZone2D : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // ワープ対象かどうか判定（プレイヤーかWarpableObjectタグのみ）
-        if (!other.CompareTag("Player") && !other.CompareTag("Object1") && !other.CompareTag("Object2"))
+        // ワープ対象かどうか判定（プレイヤーかObjectタグのみ）
+        if (!other.CompareTag("Player") && !other.CompareTag("Object1") && !other.CompareTag("Object2") && !other.CompareTag("bomb1") && !other.CompareTag("bomb2"))
             return;
 
         // 現在のワープゾーンのタグから遅延時間を取得
@@ -76,7 +76,7 @@ public class WarpZone2D : MonoBehaviour
         int directionFactor = dir.x > 0 ? 1 : -1;
 
         // Warp2またはWarp3の場合はワープ中に透明化する
-        bool makeInvisible = (tag == "Warp2" || tag == "Warp3");
+        bool makeInvisible = (tag == "Warp2" || tag == "Warp3"||tag == "Warp5" || tag == "Warp6");
 
         // ワープ開始時のタグを保持（遅延中にタグが変わったか確認用）
         string initialTag = tag;
@@ -93,6 +93,9 @@ public class WarpZone2D : MonoBehaviour
             case "Warp1": return 0f;  // 即時ワープ
             case "Warp2": return 2f;  // 2秒遅延
             case "Warp3": return 6f;  // 6秒遅延
+            case "Warp4": return 0f;  // 即時ワープ
+            case "Warp5": return 2f;  // 2秒遅延
+            case "Warp6": return 6f;  // 6秒遅延
             default: return 0f;
         }
     }
@@ -184,3 +187,5 @@ public class WarpZone2D : MonoBehaviour
         return basePos + baseOffset;
     }
 }
+
+
