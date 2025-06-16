@@ -1,8 +1,9 @@
 using UnityEngine;
 
-public class CenterZoom : MonoBehaviour
+public class PointZoom : MonoBehaviour
 {
     const float size = 20;
+    public Vector3 point;
     
     private Vector3 originScale;
 
@@ -13,6 +14,6 @@ public class CenterZoom : MonoBehaviour
 
     private void Update()
     {
-        transform.localScale = originScale / (transform.localPosition.magnitude / size + 1);
+        transform.localScale = originScale / ((transform.localPosition - point).magnitude / size + 1);
     }
 }

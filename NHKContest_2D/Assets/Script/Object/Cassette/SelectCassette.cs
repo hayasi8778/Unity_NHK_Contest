@@ -8,7 +8,7 @@ public class SelectCassette : MonoBehaviour
     private void Start()
     {
         stateMachine.gameObject = gameObject;
-        stateMachine.ChangeState(new Cassette.State.ChooseState());
+        stateMachine.ChangeState(new Cassette.State.CassetteSelectState());
     }
 
     private void Update()
