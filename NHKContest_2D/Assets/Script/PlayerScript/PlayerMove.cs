@@ -7,7 +7,7 @@ using System.Collections;
 public class PlayerMove : MonoBehaviour
 {
     public float movespeed = 1.0f;//移動スピード
-    private bool muveFlag = false; //歩行しているかのフラグ
+    private bool moveFlag = false; //歩行しているかのフラグ
     
     private AudioSource audioSource; //音鳴らすためのコンポーネント
     public AudioClip walkSE;
@@ -35,6 +35,9 @@ public class PlayerMove : MonoBehaviour
             Debug.Log("レンダーないぞ");
         }
 
+        // サウンドの設定　中谷
+        audioSource.clip = walkSE;  // 音を設定
+        audioSource.loop = true;    // ループするように設定
     }
 
     // Update is called once per frame
@@ -42,35 +45,18 @@ public class PlayerMove : MonoBehaviour
     {
 
         //角度の都合で移動方向左右反転する
-
-        
-        muveFlag = false; //歩行フラグは毎フレーム切る
-        
-
+        moveFlag = false; //歩行フラグは毎フレーム切る
         Vector3 scale = transform.localScale;
-
-       
-
-
 
         //右移動
         if (Input.GetKey(KeyCode.D))
         {
-
-
             transform.Translate(movespeed * Time.deltaTime, 0, 0);
-
 
             // ↓ゲーム内時間を止めても振りむいちゃうんで条件追加しました　中谷
             if (Time.timeScale > 0) renderer.flipX = false;
 
-            muveFlag = true;
-
-            if (!audioSource.isPlaying) // 音が再生中じゃないなら
-            {
-                PlaySound(); //SE再生
-            }
-
+            moveFlag = true;
         }
 
         //左移動
@@ -81,19 +67,11 @@ public class PlayerMove : MonoBehaviour
             // ↓ゲーム内時間を止めても振りむいちゃうんで条件追加しました　中谷
             if (Time.timeScale > 0) renderer.flipX = true;
 
-            muveFlag = true;
-
-            if (!audioSource.isPlaying) // 再生中でないなら
-            {
-                PlaySound();
-
-            }
-
+            moveFlag = true;
         }
 
-        if (muveFlag && animFlag)
+        if (moveFlag && animFlag)
         {
-
             PlayAnim();
             /*
             if (!videoPlayer.isPlaying)
@@ -117,20 +95,21 @@ public class PlayerMove : MonoBehaviour
             */
         }
 
-        // ポーズ中に音が出ないようにとりあえず応急処置しました　中谷
-        if (Time.timeScale == 0) StopAudio();
+        // 入力状況とゲーム内時間の確認をして音を鳴らすか止める　中谷
+        if (moveFlag && Time.timeScale > 0) PlaySound();
+        else StopAudio();
     }
 
     void PlaySound()
     {
-        audioSource.PlayOneShot(walkSE);
-        Invoke("StopAudio", 0.5f);
+        // 再生状況の確認を関数内で行う　中谷
+        if (!audioSource.isPlaying) audioSource.Play();
     }
-
 
     void StopAudio()
     {
-        audioSource.Stop();
+        // 再生状況の確認を関数内で行う　中谷
+        if (audioSource.isPlaying) audioSource.Stop();
     }
 
     void PlayAnim()
