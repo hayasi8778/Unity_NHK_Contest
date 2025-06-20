@@ -63,7 +63,7 @@ public class WarpZone2D : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         // ワープ対象かどうか判定（プレイヤーかObjectタグのみ）
-        if (!other.CompareTag("Player") && !other.CompareTag("Object1") && !other.CompareTag("Object2") && !other.CompareTag("bomb1") && !other.CompareTag("bomb2"))
+        if (!other.CompareTag("Player") && !other.CompareTag("Object1") && !other.CompareTag("Object2") && !other.CompareTag("bomb1"))
             return;
 
         // 現在のワープゾーンのタグから遅延時間を取得
