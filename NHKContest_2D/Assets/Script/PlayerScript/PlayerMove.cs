@@ -20,6 +20,13 @@ public class PlayerMove : MonoBehaviour
 
     private bool GravityFlag = true;//重力フラグ(trueで正常falseで反転)
 
+    //壁の接触フラグ
+    bool pushFlag = false;
+    [SerializeField] private float wallCheckOffset = 0.5f; // プレイヤーの中心から左右に離す距離
+    [SerializeField] private float wallCheckDistance = 0.1f;
+    [SerializeField] private LayerMask wallLayer; // 判定したいレイヤーを指定
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -51,9 +58,16 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
 
+        pushFlag = false;
+
+        // 壁との接触チェック
+        CheckPush(); // ← 追加
+
+        if (pushFlag) Debug.Log("push判定on");
+
         //角度の都合で移動方向左右反転する
 
-        
+
         muveFlag = false; //歩行フラグは毎フレーム切る
         
         Vector3 scale = transform.localScale;
@@ -127,6 +141,26 @@ public class PlayerMove : MonoBehaviour
 
     }
 
+    void CheckPush()
+    {
+        Vector2 position = transform.position;
+
+        // Rayを出す起点を左右にずらす
+        Vector2 rightOrigin = position + Vector2.right * wallCheckOffset;
+        Vector2 leftOrigin = position + Vector2.left * wallCheckOffset;
+
+        // 各方向にRayを飛ばす
+        RaycastHit2D hitRight = Physics2D.Raycast(rightOrigin, Vector2.right, wallCheckDistance, wallLayer);
+        RaycastHit2D hitLeft = Physics2D.Raycast(leftOrigin, Vector2.left, wallCheckDistance, wallLayer);
+
+        pushFlag = (hitRight.collider != null || hitLeft.collider != null);
+
+        // デバッグ表示（シーンビューでRayを見えるように）
+        Debug.DrawRay(rightOrigin, Vector2.right * wallCheckDistance, Color.red);
+        Debug.DrawRay(leftOrigin, Vector2.left * wallCheckDistance, Color.red);
+
+    }
+
     void PlaySound()
     {
         audioSource.PlayOneShot(walkSE);
@@ -145,7 +179,15 @@ public class PlayerMove : MonoBehaviour
         //オブジェクト継承して
         PlayerMoveAmin MoveAmin = this.GetComponent<PlayerMoveAmin>();
 
-        MoveAmin.ChangeSprite();
+        if (pushFlag)
+        {
+            MoveAmin.ChangeSprite_Push();
+        }
+        else
+        {
+            MoveAmin.ChangeSprite();
+            
+        }
         Invoke("StopAmin", AnimationTime);
     }
 

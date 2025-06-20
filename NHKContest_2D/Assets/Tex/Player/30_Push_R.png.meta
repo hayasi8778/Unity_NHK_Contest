@@ -1,0 +1,880 @@
+fileFormatVersion: 2
+guid: 55527410f4a20f44396bda325f5c8f97
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1568136385400009921
+    second: 30_Push_R_0
+  - first:
+      213: -8691306496364714494
+    second: 30_Push_R_1
+  - first:
+      213: -1588556577279633507
+    second: 30_Push_R_2
+  - first:
+      213: 792748574862090465
+    second: 30_Push_R_3
+  - first:
+      213: -7145148127488393190
+    second: 30_Push_R_4
+  - first:
+      213: -1059532218960885051
+    second: 30_Push_R_5
+  - first:
+      213: 4120393746222148285
+    second: 30_Push_R_6
+  - first:
+      213: 1903698358214054445
+    second: 30_Push_R_7
+  - first:
+      213: 2280392037932220279
+    second: 30_Push_R_8
+  - first:
+      213: -7126354852207526982
+    second: 30_Push_R_9
+  - first:
+      213: 8051005149810115620
+    second: 30_Push_R_10
+  - first:
+      213: 7256411331595258548
+    second: 30_Push_R_11
+  - first:
+      213: -7156745724334589502
+    second: 30_Push_R_12
+  - first:
+      213: 1358765032028754993
+    second: 30_Push_R_13
+  - first:
+      213: 7196271201915671807
+    second: 30_Push_R_14
+  - first:
+      213: 683197564774233416
+    second: 30_Push_R_15
+  - first:
+      213: -4769649887119779575
+    second: 30_Push_R_16
+  - first:
+      213: 801947038262697614
+    second: 30_Push_R_17
+  - first:
+      213: -6007616541975492602
+    second: 30_Push_R_18
+  - first:
+      213: 8517412555132737212
+    second: 30_Push_R_19
+  - first:
+      213: -8333063406725054387
+    second: 30_Push_R_20
+  - first:
+      213: -2535446186875901253
+    second: 30_Push_R_21
+  - first:
+      213: 4320435805149663823
+    second: 30_Push_R_22
+  - first:
+      213: 2130009807976673879
+    second: 30_Push_R_23
+  - first:
+      213: 6673571319765479785
+    second: 30_Push_R_24
+  - first:
+      213: -5732679426569832618
+    second: 30_Push_R_25
+  - first:
+      213: -1965906604474836800
+    second: 30_Push_R_26
+  - first:
+      213: 411311164353008978
+    second: 30_Push_R_27
+  - first:
+      213: 7896574444758057071
+    second: 30_Push_R_28
+  - first:
+      213: 8388825889734134761
+    second: 30_Push_R_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 30_Push_R_0
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 3999
+        width: 626
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3b0edc044cdc3ae0800000000000000
+      internalID: -1568136385400009921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30_Push_R_1
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 3999
+        width: 627
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 206e2224ac6426780800000000000000
+      internalID: -8691306496364714494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30_Push_R_2
+      rect:
+        serializedVersion: 2
+        x: 2142
+        y: 3999
+        width: 629
+        height: 901
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9713a1a53054f9e0800000000000000
+      internalID: -1588556577279633507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30_Push_R_3
+      rect:
+        serializedVersion: 2
+        x: 3141
+        y: 3999
+        width: 630
+        height: 902
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e02ad0f0a8600b00800000000000000
+      internalID: 792748574862090465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30_Push_R_4
+      rect:
+        serializedVersion: 2
+        x: 4140
+        y: 3999
+        width: 631
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a10c18972a557dc90800000000000000
+      internalID: -7145148127488393190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30_Push_R_5
+      rect:
+        serializedVersion: 2
+        x: 5139
+        y: 3999
+        width: 632
+        height: 889
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ca41cc7f09cb41f0800000000000000
+      internalID: -1059532218960885051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30_Push_R_6
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 2999
+        width: 633
+        height: 883
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbaef4a08449e2930800000000000000
+      internalID: 4120393746222148285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30_Push_R_7
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 2999
+        width: 634
+        height: 876
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d22d7d0129b4b6a10800000000000000
+      internalID: 1903698358214054445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30_Push_R_8
+      rect:
+        serializedVersion: 2
+        x: 2137
+        y: 2999
+        width: 634
+        height: 879
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77f3499f97495af10800000000000000
+      internalID: 2280392037932220279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30_Push_R_9
+      rect:
+        serializedVersion: 2
+        x: 3137
+        y: 2999
+        width: 634
+        height: 882
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abbf9cad40a1a1d90800000000000000
+      internalID: -7126354852207526982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30_Push_R_10
+      rect:
+        serializedVersion: 2
+        x: 4137
+        y: 2999
+        width: 634
+        height: 885
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 424c547178aeabf60800000000000000
+      internalID: 8051005149810115620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30_Push_R_11
+      rect:
+        serializedVersion: 2
+        x: 5138
+        y: 2999
+        width: 633
+        height: 889
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bacad3f8a3f3b460800000000000000
+      internalID: 7256411331595258548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30_Push_R_12
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 1999
+        width: 633
+        height: 892
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c9bd398ea12eac90800000000000000
+      internalID: -7156745724334589502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30_Push_R_13
+      rect:
+        serializedVersion: 2
+        x: 1138
+        y: 1999
+        width: 633
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 134db4bf89d4bd210800000000000000
+      internalID: 1358765032028754993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30_Push_R_14
+      rect:
+        serializedVersion: 2
+        x: 2139
+        y: 1999
+        width: 632
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff49e89d78a4ed360800000000000000
+      internalID: 7196271201915671807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30_Push_R_15
+      rect:
+        serializedVersion: 2
+        x: 3139
+        y: 1999
+        width: 632
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 845b7cfb0943b7900800000000000000
+      internalID: 683197564774233416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30_Push_R_16
+      rect:
+        serializedVersion: 2
+        x: 4140
+        y: 1999
+        width: 631
+        height: 901
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9095e37c2bccecdb0800000000000000
+      internalID: -4769649887119779575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30_Push_R_17
+      rect:
+        serializedVersion: 2
+        x: 5139
+        y: 1999
+        width: 632
+        height: 903
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8e13581596112b00800000000000000
+      internalID: 801947038262697614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30_Push_R_18
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 999
+        width: 632
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6084ac4b598a0aca0800000000000000
+      internalID: -6007616541975492602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30_Push_R_19
+      rect:
+        serializedVersion: 2
+        x: 1139
+        y: 999
+        width: 632
+        height: 892
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb6932a779de33670800000000000000
+      internalID: 8517412555132737212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30_Push_R_20
+      rect:
+        serializedVersion: 2
+        x: 2139
+        y: 999
+        width: 632
+        height: 887
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d40c8576bf20b5c80800000000000000
+      internalID: -8333063406725054387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30_Push_R_21
+      rect:
+        serializedVersion: 2
+        x: 3138
+        y: 999
+        width: 633
+        height: 881
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbaa42c502940dcd0800000000000000
+      internalID: -2535446186875901253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30_Push_R_22
+      rect:
+        serializedVersion: 2
+        x: 4137
+        y: 999
+        width: 634
+        height: 876
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4213d0697545fb30800000000000000
+      internalID: 4320435805149663823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30_Push_R_23
+      rect:
+        serializedVersion: 2
+        x: 5137
+        y: 999
+        width: 634
+        height: 879
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7523c8492a05f8d10800000000000000
+      internalID: 2130009807976673879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30_Push_R_24
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 0
+        width: 634
+        height: 880
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9613bd9d1c94d9c50800000000000000
+      internalID: 6673571319765479785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30_Push_R_25
+      rect:
+        serializedVersion: 2
+        x: 1138
+        y: 0
+        width: 633
+        height: 883
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6577d104f6e6170b0800000000000000
+      internalID: -5732679426569832618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30_Push_R_26
+      rect:
+        serializedVersion: 2
+        x: 2139
+        y: 0
+        width: 632
+        height: 886
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c8deaaeb52b7b4e0800000000000000
+      internalID: -1965906604474836800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30_Push_R_27
+      rect:
+        serializedVersion: 2
+        x: 3140
+        y: 0
+        width: 631
+        height: 889
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 255d963235545b500800000000000000
+      internalID: 411311164353008978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30_Push_R_28
+      rect:
+        serializedVersion: 2
+        x: 4142
+        y: 0
+        width: 629
+        height: 892
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f604b32ae94469d60800000000000000
+      internalID: 7896574444758057071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 30_Push_R_29
+      rect:
+        serializedVersion: 2
+        x: 5143
+        y: 0
+        width: 628
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eb043863b81b6470800000000000000
+      internalID: 8388825889734134761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
