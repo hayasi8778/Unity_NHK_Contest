@@ -33,11 +33,12 @@ namespace Cassette.State
             {
                 velocity += acceleration * Time.deltaTime;
                 position += velocity * Time.deltaTime;
+                position.x = 0;
             }
             else
             {
                 position.y = -5;
-                //parent.ChangeState(new Cassette.State.ZoomTVState());
+                parent.ChangeState(new Cassette.State.ZoomTVState());
             }
             CassetteSelectState.viewCassettes[CassetteSelectState.viewMaxCount / 2].transform.position = position;
 
@@ -45,6 +46,8 @@ namespace Cassette.State
 
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
+                foreach (GameObject cassette in CassetteSelectState.viewCassettes)
+                    Object.Destroy(cassette);
                 parent.ChangeState(new Cassette.State.CassetteSelectState());
             }
 

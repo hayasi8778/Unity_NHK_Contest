@@ -24,7 +24,7 @@ namespace Cassette.State
             for (int i = 0; i < viewMaxCount; i++)
             {
                 Vector3 pos = new Vector3((i - viewMaxCount / 2) * interval, 0, 0);
-                viewCassettes[i] = Object.Instantiate(allCassette.cassettes[(i - viewMaxCount / 2 + allCassette.cassettes.Length) % allCassette.cassettes.Length], pos, Quaternion.identity);
+                viewCassettes[i] = Object.Instantiate(allCassette.cassettes[(i - viewMaxCount / 2 + allCassette.cassettes.Length + selectIndex) % allCassette.cassettes.Length], pos, Quaternion.identity);
                 viewCassettes[i].GetComponent<FloatEffect>().enabled = true;
                 viewCassettes[i].GetComponent<MoveCassette>().enabled = true;
                 viewCassettes[i].GetComponent<PointZoom>().enabled = true;
@@ -77,7 +77,10 @@ namespace Cassette.State
                     }
                     if (Input.GetKeyDown(KeyCode.DownArrow))
                     {
-                        next = true;
+                        if (-2.0f < viewCassettes[viewMaxCount / 2].transform.position.x && viewCassettes[viewMaxCount / 2].transform.position.x < 2.0f)
+                        {
+                            next = true;
+                        }
                     }
                 }
             }
