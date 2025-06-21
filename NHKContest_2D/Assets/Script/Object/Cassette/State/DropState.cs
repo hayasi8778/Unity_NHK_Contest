@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UIElements.Experimental;
+#if UNITY_EDITOR
 using static UnityEditor.PlayerSettings;
+#endif
 using static UnityEngine.RuleTile.TilingRuleOutput;
 
 namespace Cassette.State

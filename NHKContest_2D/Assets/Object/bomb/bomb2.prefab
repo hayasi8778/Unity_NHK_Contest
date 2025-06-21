@@ -171,6 +171,7 @@ MonoBehaviour:
   explosionMask:
     serializedVersion: 2
     m_Bits: 0
+  Vod: 5
 --- !u!114 &2408998087065836423
 MonoBehaviour:
   m_ObjectHideFlags: 0

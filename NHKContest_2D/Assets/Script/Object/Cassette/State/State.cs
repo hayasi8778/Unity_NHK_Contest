@@ -1,4 +1,6 @@
-﻿using UnityEditor.Rendering.Universal;
+﻿#if  UNITY_EDITOR
+using UnityEditor.Rendering.Universal;
+#endif
 using UnityEngine;
 
 namespace Cassette

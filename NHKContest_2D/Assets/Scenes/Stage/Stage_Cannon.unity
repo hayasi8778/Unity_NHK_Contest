@@ -7527,6 +7527,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 7675143064009246318, guid: e1173eb9eef3b0e40b7788eda4768022, type: 3}
+      propertyPath: AnimationTime
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 8031231580685338730, guid: e1173eb9eef3b0e40b7788eda4768022, type: 3}
       propertyPath: material
       value: 
