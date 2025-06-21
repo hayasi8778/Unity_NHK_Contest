@@ -50,10 +50,12 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
+        if (!canMove) return;
 
         //角度の都合で移動方向左右反転する
 
-        
+
         muveFlag = false; //歩行フラグは毎フレーム切る
         
         Vector3 scale = transform.localScale;
