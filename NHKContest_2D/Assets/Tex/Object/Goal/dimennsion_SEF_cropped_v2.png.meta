@@ -1,0 +1,695 @@
+fileFormatVersion: 2
+guid: 688109b48c2607447931f7d7807a8e1f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3190497782145127483
+    second: dimennsion_SEF_cropped_v2_0
+  - first:
+      213: 4767655358264857743
+    second: dimennsion_SEF_cropped_v2_1
+  - first:
+      213: 3964868469505196384
+    second: dimennsion_SEF_cropped_v2_2
+  - first:
+      213: -5913496784491978519
+    second: dimennsion_SEF_cropped_v2_3
+  - first:
+      213: -2899999630748965284
+    second: dimennsion_SEF_cropped_v2_4
+  - first:
+      213: 4166095741250000287
+    second: dimennsion_SEF_cropped_v2_5
+  - first:
+      213: 382389790420084427
+    second: dimennsion_SEF_cropped_v2_6
+  - first:
+      213: 7644464728166028566
+    second: dimennsion_SEF_cropped_v2_7
+  - first:
+      213: -5238837133671399127
+    second: dimennsion_SEF_cropped_v2_8
+  - first:
+      213: 4958406730257953671
+    second: dimennsion_SEF_cropped_v2_9
+  - first:
+      213: -1604993281378783934
+    second: dimennsion_SEF_cropped_v2_10
+  - first:
+      213: 1262615851372857309
+    second: dimennsion_SEF_cropped_v2_11
+  - first:
+      213: -2076483875999445745
+    second: dimennsion_SEF_cropped_v2_12
+  - first:
+      213: -1684738449336720769
+    second: dimennsion_SEF_cropped_v2_13
+  - first:
+      213: -3467062826627392682
+    second: dimennsion_SEF_cropped_v2_14
+  - first:
+      213: 785050870307601801
+    second: dimennsion_SEF_cropped_v2_15
+  - first:
+      213: -2942268239320414290
+    second: dimennsion_SEF_cropped_v2_16
+  - first:
+      213: 746258375771792271
+    second: dimennsion_SEF_cropped_v2_17
+  - first:
+      213: 7600336861446337677
+    second: dimennsion_SEF_cropped_v2_18
+  - first:
+      213: -5338332999068904558
+    second: dimennsion_SEF_cropped_v2_19
+  - first:
+      213: 2664100939800024654
+    second: dimennsion_SEF_cropped_v2_20
+  - first:
+      213: -4990126593782435926
+    second: dimennsion_SEF_cropped_v2_21
+  - first:
+      213: 5553418264552593808
+    second: dimennsion_SEF_cropped_v2_22
+  - first:
+      213: -7197829226217119450
+    second: dimennsion_SEF_cropped_v2_23
+  - first:
+      213: 4747439002077630622
+    second: dimennsion_SEF_cropped_v2_24
+  - first:
+      213: 4709460622033873356
+    second: dimennsion_SEF_cropped_v2_25
+  - first:
+      213: 2669536593517961916
+    second: dimennsion_SEF_cropped_v2_26
+  - first:
+      213: 3597576939211874494
+    second: dimennsion_SEF_cropped_v2_27
+  - first:
+      213: 4101829126772560199
+    second: dimennsion_SEF_cropped_v2_28
+  - first:
+      213: 1967259086646348064
+    second: dimennsion_SEF_cropped_v2_29
+  - first:
+      213: 1802618412257717438
+    second: dimennsion_SEF_cropped_v2_30
+  - first:
+      213: 3896140325098651571
+    second: dimennsion_SEF_cropped_v2_31
+  - first:
+      213: -3245816670915545632
+    second: dimennsion_SEF_cropped_v2_32
+  - first:
+      213: 8139662483505942273
+    second: dimennsion_SEF_cropped_v2_33
+  - first:
+      213: -8066323768710957439
+    second: dimennsion_SEF_cropped_v2_34
+  - first:
+      213: -1710672577496536484
+    second: dimennsion_SEF_cropped_v2_35
+  - first:
+      213: -1212777497596094527
+    second: dimennsion_SEF_cropped_v2_36
+  - first:
+      213: 3010499264348079749
+    second: dimennsion_SEF_cropped_v2_37
+  - first:
+      213: -7367762534855778554
+    second: dimennsion_SEF_cropped_v2_38
+  - first:
+      213: 8952397881153633403
+    second: dimennsion_SEF_cropped_v2_39
+  - first:
+      213: 8407966300827869771
+    second: dimennsion_SEF_cropped_v2_40
+  - first:
+      213: -8735324043971006343
+    second: dimennsion_SEF_cropped_v2_41
+  - first:
+      213: -7318032523347083446
+    second: dimennsion_SEF_cropped_v2_42
+  - first:
+      213: 5458654982403828439
+    second: dimennsion_SEF_cropped_v2_43
+  - first:
+      213: -3785207944392512378
+    second: dimennsion_SEF_cropped_v2_44
+  - first:
+      213: -2017382858825572373
+    second: dimennsion_SEF_cropped_v2_45
+  - first:
+      213: -8224358835637008415
+    second: dimennsion_SEF_cropped_v2_46
+  - first:
+      213: 1184830197402009604
+    second: dimennsion_SEF_cropped_v2_47
+  - first:
+      213: -1247312864703726310
+    second: dimennsion_SEF_cropped_v2_48
+  - first:
+      213: 1681745819360121344
+    second: dimennsion_SEF_cropped_v2_49
+  - first:
+      213: 6923471127194781256
+    second: dimennsion_SEF_cropped_v2_50
+  - first:
+      213: 7229139496066972970
+    second: dimennsion_SEF_cropped_v2_51
+  - first:
+      213: 2267375071442241292
+    second: dimennsion_SEF_cropped_v2_52
+  - first:
+      213: -4799049013745257459
+    second: dimennsion_SEF_cropped_v2_53
+  - first:
+      213: 1048276186648118237
+    second: dimennsion_SEF_cropped_v2_54
+  - first:
+      213: -5643297963778134767
+    second: dimennsion_SEF_cropped_v2_55
+  - first:
+      213: 4468365098577651806
+    second: dimennsion_SEF_cropped_v2_56
+  - first:
+      213: 2414358150641572996
+    second: dimennsion_SEF_cropped_v2_57
+  - first:
+      213: -7094649485322748734
+    second: dimennsion_SEF_cropped_v2_58
+  - first:
+      213: 5105306077976478091
+    second: dimennsion_SEF_cropped_v2_59
+  - first:
+      213: 6078444348996354255
+    second: dimennsion_SEF_cropped_v2_60
+  - first:
+      213: -4023276654251037543
+    second: dimennsion_SEF_cropped_v2_61
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dimennsion_SEF_cropped_v2_1
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 793
+        width: 159
+        height: 240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97f0dbe42f6e5784eb97592054739f89
+      internalID: 775235988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dimennsion_SEF_cropped_v2_4
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 793
+        width: 159
+        height: 240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b9cce117de1aea4c9b0e902596cae5a
+      internalID: -1504019061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dimennsion_SEF_cropped_v2_7
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 793
+        width: 160
+        height: 240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34cd2a039fa29f5428a7aa499085712a
+      internalID: 58360637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dimennsion_SEF_cropped_v2_10
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 793
+        width: 169
+        height: 240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0e79fd748b1ff546a468b1fc61b64b7
+      internalID: -347531356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dimennsion_SEF_cropped_v2_12
+      rect:
+        serializedVersion: 2
+        x: 1563
+        y: 794
+        width: 169
+        height: 239
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 812829361faf06b41bdc1906430e61b5
+      internalID: -795666688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dimennsion_SEF_cropped_v2_25
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 408
+        width: 159
+        height: 239
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de8ccfda44ef81643aad4fd7ffd009d1
+      internalID: -598632643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dimennsion_SEF_cropped_v2_26
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 408
+        width: 159
+        height: 239
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fb7d66255252dc43b40336248147f85
+      internalID: -1674570008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dimennsion_SEF_cropped_v2_27
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 408
+        width: 160
+        height: 239
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65567c2b98591fd4c9c8d9a5e29ad8e0
+      internalID: -259166683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dimennsion_SEF_cropped_v2_28
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 408
+        width: 162
+        height: 239
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a882b83945e46a34c9ea2c8eadc18146
+      internalID: 1782839040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dimennsion_SEF_cropped_v2_29
+      rect:
+        serializedVersion: 2
+        x: 1564
+        y: 408
+        width: 162
+        height: 239
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 767660fd44983e143ba055a65b57217f
+      internalID: 974726261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dimennsion_SEF_cropped_v2_37
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 34
+        width: 166
+        height: 239
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15afc5a0df5c1464d80240efaf8e5188
+      internalID: 89649139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dimennsion_SEF_cropped_v2_38
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 34
+        width: 167
+        height: 239
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecf9b98ea927fbf419977b8c702e676d
+      internalID: -170463474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dimennsion_SEF_cropped_v2_40
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 34
+        width: 166
+        height: 238
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 597b132638232a943b9b50c3f0b80d89
+      internalID: 1533764746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dimennsion_SEF_cropped_v2_42
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 34
+        width: 162
+        height: 239
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcba7269ed08254478a45844606668d0
+      internalID: 1935399456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dimennsion_SEF_cropped_v2_45
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 33
+        width: 163
+        height: 240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415ce7610934c1b4bb68c0d295cfd9cb
+      internalID: -1674166294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 7f17005c9eb9c5546aa071d7027bb7af
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      dimennsion_SEF_cropped_v2_0: -102548007
+      dimennsion_SEF_cropped_v2_1: 775235988
+      dimennsion_SEF_cropped_v2_10: -347531356
+      dimennsion_SEF_cropped_v2_11: -1067739606
+      dimennsion_SEF_cropped_v2_12: -795666688
+      dimennsion_SEF_cropped_v2_13: 353482090
+      dimennsion_SEF_cropped_v2_14: 151829430
+      dimennsion_SEF_cropped_v2_15: 1854708510
+      dimennsion_SEF_cropped_v2_16: -1103291840
+      dimennsion_SEF_cropped_v2_17: 781159901
+      dimennsion_SEF_cropped_v2_18: -290761144
+      dimennsion_SEF_cropped_v2_19: 1889988093
+      dimennsion_SEF_cropped_v2_2: -2130637576
+      dimennsion_SEF_cropped_v2_20: 844340372
+      dimennsion_SEF_cropped_v2_21: -218220259
+      dimennsion_SEF_cropped_v2_22: -1222120938
+      dimennsion_SEF_cropped_v2_23: 1457592357
+      dimennsion_SEF_cropped_v2_24: -3684500
+      dimennsion_SEF_cropped_v2_25: -598632643
+      dimennsion_SEF_cropped_v2_26: -1674570008
+      dimennsion_SEF_cropped_v2_27: -259166683
+      dimennsion_SEF_cropped_v2_28: 1782839040
+      dimennsion_SEF_cropped_v2_29: 974726261
+      dimennsion_SEF_cropped_v2_3: -1287022545
+      dimennsion_SEF_cropped_v2_30: 793326354
+      dimennsion_SEF_cropped_v2_31: 642512045
+      dimennsion_SEF_cropped_v2_32: 729473321
+      dimennsion_SEF_cropped_v2_33: 1155020943
+      dimennsion_SEF_cropped_v2_34: 1312286113
+      dimennsion_SEF_cropped_v2_35: -926072527
+      dimennsion_SEF_cropped_v2_36: 494855491
+      dimennsion_SEF_cropped_v2_37: 89649139
+      dimennsion_SEF_cropped_v2_38: -170463474
+      dimennsion_SEF_cropped_v2_39: 1930025278
+      dimennsion_SEF_cropped_v2_4: -1504019061
+      dimennsion_SEF_cropped_v2_40: 1533764746
+      dimennsion_SEF_cropped_v2_41: 342261265
+      dimennsion_SEF_cropped_v2_42: 1935399456
+      dimennsion_SEF_cropped_v2_43: 1600136399
+      dimennsion_SEF_cropped_v2_44: 1843833421
+      dimennsion_SEF_cropped_v2_45: -1674166294
+      dimennsion_SEF_cropped_v2_46: 1145345194
+      dimennsion_SEF_cropped_v2_47: -344788335
+      dimennsion_SEF_cropped_v2_48: -1886165582
+      dimennsion_SEF_cropped_v2_49: 1564785576
+      dimennsion_SEF_cropped_v2_5: 599182378
+      dimennsion_SEF_cropped_v2_50: -1235725978
+      dimennsion_SEF_cropped_v2_51: 1608968273
+      dimennsion_SEF_cropped_v2_52: -246446688
+      dimennsion_SEF_cropped_v2_53: 524526481
+      dimennsion_SEF_cropped_v2_54: 913339753
+      dimennsion_SEF_cropped_v2_55: -724987447
+      dimennsion_SEF_cropped_v2_56: -1782424310
+      dimennsion_SEF_cropped_v2_57: -200546070
+      dimennsion_SEF_cropped_v2_58: 1210891668
+      dimennsion_SEF_cropped_v2_59: 1160721144
+      dimennsion_SEF_cropped_v2_6: -1975532059
+      dimennsion_SEF_cropped_v2_60: 658240449
+      dimennsion_SEF_cropped_v2_61: -1710052845
+      dimennsion_SEF_cropped_v2_7: 58360637
+      dimennsion_SEF_cropped_v2_8: 906086467
+      dimennsion_SEF_cropped_v2_9: -155245517
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

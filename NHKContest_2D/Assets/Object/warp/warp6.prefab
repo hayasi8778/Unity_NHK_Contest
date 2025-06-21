@@ -16,8 +16,8 @@ GameObject:
   - component: {fileID: 270956163047715876}
   - component: {fileID: 7710649755487257908}
   m_Layer: 0
-  m_Name: warp1
-  m_TagString: Warp1
+  m_Name: warp6
+  m_TagString: Warp3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170,9 +170,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 0}
   replacementPrefabs:
-  - {fileID: 8885387951448453065}
-  - {fileID: 8885387951448453065, guid: c217259c95a18764a8b8f33ca585fa2a, type: 3}
-  - {fileID: 8885387951448453065, guid: dbf59743bf5773b4cbbcc4db055680d7, type: 3}
+  - {fileID: 210935459490492298, guid: a1ae9d0e43421d44bb874c2b4d8a3576, type: 3}
+  - {fileID: 210935459490492298, guid: 3945691e90093c645bd9d95a2a74849c, type: 3}
+  - {fileID: 210935459490492298, guid: 066520ea40277c94cb417fcf670de10e, type: 3}
   replacementIndex: 0
 --- !u!114 &270956163047715876
 MonoBehaviour:
