@@ -138,7 +138,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 512
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -872,7 +872,37 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      30_Push_R_0: -1568136385400009921
+      30_Push_R_1: -8691306496364714494
+      30_Push_R_10: 8051005149810115620
+      30_Push_R_11: 7256411331595258548
+      30_Push_R_12: -7156745724334589502
+      30_Push_R_13: 1358765032028754993
+      30_Push_R_14: 7196271201915671807
+      30_Push_R_15: 683197564774233416
+      30_Push_R_16: -4769649887119779575
+      30_Push_R_17: 801947038262697614
+      30_Push_R_18: -6007616541975492602
+      30_Push_R_19: 8517412555132737212
+      30_Push_R_2: -1588556577279633507
+      30_Push_R_20: -8333063406725054387
+      30_Push_R_21: -2535446186875901253
+      30_Push_R_22: 4320435805149663823
+      30_Push_R_23: 2130009807976673879
+      30_Push_R_24: 6673571319765479785
+      30_Push_R_25: -5732679426569832618
+      30_Push_R_26: -1965906604474836800
+      30_Push_R_27: 411311164353008978
+      30_Push_R_28: 7896574444758057071
+      30_Push_R_29: 8388825889734134761
+      30_Push_R_3: 792748574862090465
+      30_Push_R_4: -7145148127488393190
+      30_Push_R_5: -1059532218960885051
+      30_Push_R_6: 4120393746222148285
+      30_Push_R_7: 1903698358214054445
+      30_Push_R_8: 2280392037932220279
+      30_Push_R_9: -7126354852207526982
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

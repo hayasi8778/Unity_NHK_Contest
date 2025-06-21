@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3188321655330994647}
   - component: {fileID: 7675143064009246318}
   - component: {fileID: 8031231580685338730}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player_first
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -172,6 +172,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movespeed: 4
   walkSE: {fileID: 8300000, guid: 6e65b62b2d1a8c94495a4bde59cf02db, type: 3}
+  AnimationTime: 0.5
+  wallCheckOffset: 0.5
+  wallCheckDistance: 0.1
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!82 &452743488508843523
 AudioSource:
   m_ObjectHideFlags: 0
@@ -314,6 +320,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eed44d4ac78d0434986f8cc0c5ec6885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
   sprites:
   - {fileID: -5098009807472485664, guid: 5bd3f1bc616e5404ea7526e5e7bcf67f, type: 3}
   - {fileID: -440736293735374185, guid: bb70335c3c313154f8272b4317b2ef1e, type: 3}
+  sprites_Push: []

@@ -11,6 +11,8 @@ public class Cannon_Script : MonoBehaviour
     public float gravity = 9.81f;
     public Material dashedMaterial;
 
+    [SerializeField] private LayerMask stopLayer; // 衝突を止めたいレイヤー
+
     private bool hitDetected = false;
     private int hitIndex = -1;
 
@@ -35,6 +37,8 @@ public class Cannon_Script : MonoBehaviour
 
     void Update()
     {
+        hitDetected = false;
+        hitIndex = -1;
         DrawTrajectory();
         UpdateTextureScale();
     }
@@ -49,7 +53,7 @@ public class Cannon_Script : MonoBehaviour
 
         for (int i = 0; i < resolution; i++)
         {
-            if (hitDetected && i >= hitIndex) break; // 衝突後は描画しない
+            if (hitDetected && i >= hitIndex) break;
 
             float t = i * 0.1f;
             float x = vX * t;
@@ -58,12 +62,12 @@ public class Cannon_Script : MonoBehaviour
 
             points.Add(point);
 
-            RaycastHit2D hit = CheckCollision(startPosition, point, i);
-            if (!hitDetected && hit.collider != null) // hit を明示的に受け取る
+            RaycastHit2D hit = CheckCollision(startPosition, point);
+            if (!hitDetected && hit.collider != null)
             {
                 hitDetected = true;
                 hitIndex = i;
-                Debug.Log($"衝突検出: {hit.collider.name} at {hit.point}, インデックス: {hitIndex}");
+                //Debug.Log($"衝突検出: {hit.collider.name} at {hit.point}, インデックス: {hitIndex}");
                 break;
             }
         }
@@ -72,34 +76,17 @@ public class Cannon_Script : MonoBehaviour
         lineRenderer.SetPositions(points.ToArray());
     }
 
-    RaycastHit2D CheckCollision(Vector3 startPoint, Vector3 endPoint, int index)
+    RaycastHit2D CheckCollision(Vector3 startPoint, Vector3 endPoint)
     {
         Vector2 direction = (endPoint - startPoint).normalized;
         float distance = Vector3.Distance(startPoint, endPoint);
-        int layerMask = LayerMask.GetMask("Default", "CollisionLayer");
 
-        //RaycastHit2D hit = Physics2D.Raycast(startPoint, direction, distance * 1.5f, layerMask);
-        RaycastHit2D hit = Physics2D.Raycast(startPoint, direction, float.MaxValue, layerMask);
+        RaycastHit2D hit = Physics2D.Raycast(startPoint, direction, distance, stopLayer);
 
-        // レイを可視化
-        Debug.DrawRay(startPoint, direction * distance, Color.red, float.MaxValue, false);
+        Debug.DrawRay(startPoint, direction * distance, Color.red, 2f);
 
-        // **もし衝突したオブジェクトが "Cannon1" なら無視**
-        if (hit.collider != null && hit.collider.name == "Cannon1")
-        {
-            //Debug.Log("Ignored collision with: " + hit.collider.name);
-            return new RaycastHit2D(); // 空の `RaycastHit2D` を返して判定を無視
-        }
-
-        if (hit.collider != null)
-        {
-            Debug.Log("Collision detected with: " + hit.collider.name + " at position: " + hit.point);
-        }
-
-        return hit;//hitを返す
-
+        return hit;
     }
-
 
     void UpdateTextureScale()
     {
@@ -113,5 +100,6 @@ public class Cannon_Script : MonoBehaviour
         float textureRepeats = totalLength / 2f;
         lineRenderer.material.SetTextureScale("_MainTex", new Vector2(textureRepeats, 1f));
     }
+
 
 }

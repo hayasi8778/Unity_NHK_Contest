@@ -67,7 +67,7 @@ public class PlayerMove : MonoBehaviour
         // 壁との接触チェック
         CheckPush(); // ← 追加
 
-        if (pushFlag) Debug.Log("push判定on");
+        //if (pushFlag) Debug.Log("push判定on");
 
         //角度の都合で移動方向左右反転する
 
