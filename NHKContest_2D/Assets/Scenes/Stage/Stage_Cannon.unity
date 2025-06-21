@@ -7730,6 +7730,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 258936631}
     - target: {fileID: 6662187460329562534, guid: e1173eb9eef3b0e40b7788eda4768022, type: 3}
+      propertyPath: walkSE
+      value: 
+      objectReference: {fileID: 8300000, guid: 36e802dbf996a5d4e935c710a54132fc, type: 3}
+    - target: {fileID: 6662187460329562534, guid: e1173eb9eef3b0e40b7788eda4768022, type: 3}
       propertyPath: AnimationTime
       value: 0.3
       objectReference: {fileID: 0}

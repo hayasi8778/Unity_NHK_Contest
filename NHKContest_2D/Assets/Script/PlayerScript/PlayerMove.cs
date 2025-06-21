@@ -46,6 +46,10 @@ public class PlayerMove : MonoBehaviour
             Debug.Log("レンダーないぞ");
         }
 
+
+        // サウンドの設定　中谷
+        audioSource.clip = walkSE;  // 音を設定
+        audioSource.loop = true;    // ループするように設定
     }
 
     private bool canMove = true; // 移動許可フラグ
@@ -76,29 +80,41 @@ public class PlayerMove : MonoBehaviour
         //右移動
         if (Input.GetKey(KeyCode.D))
         {
-            //左右切り替え
-            if (GravityFlag) //画面回るから操作方向切り替える
-            {
-                transform.Translate(movespeed * Time.deltaTime, 0, 0);
 
-                renderer.flipX = false;
+
+
+            //左右切り替え
+            if (GravityFlag) //画面回るから操作方向切り替える  林
+            {
+                // ↓ゲーム内時間を止めても振りむいちゃうんで条件追加しました　中谷
+                if (Time.timeScale > 0)
+                {
+                    transform.Translate(movespeed * Time.deltaTime, 0, 0);
+
+                    renderer.flipX = false;
+                }
             }
             else
             {
-                transform.Translate(-movespeed * Time.deltaTime, 0, 0);
+                // ↓ゲーム内時間を止めても振りむいちゃうんで条件追加しました　中谷
+                if (Time.timeScale > 0)
+                {
+                    
+                    transform.Translate(-movespeed * Time.deltaTime, 0, 0);
 
-                renderer.flipX = true;
+                    renderer.flipX = true;
+                }
             }
 
 
                 
 
             muveFlag = true;
-
+            /*
             if (!audioSource.isPlaying) // 音が再生中じゃないなら
             {
                 PlaySound(); //SE再生
-            }
+            }*/
 
         }
 
@@ -107,16 +123,26 @@ public class PlayerMove : MonoBehaviour
         {
             if (GravityFlag)
             {
-                //左右切り替え
-                transform.Translate(-movespeed * Time.deltaTime, 0, 0);
+                // ↓ゲーム内時間を止めても振りむいちゃうんで条件追加しました　中谷
+                if (Time.timeScale > 0)
+                {
+                    
+                    //左右切り替え
+                    transform.Translate(-movespeed * Time.deltaTime, 0, 0);
 
-                renderer.flipX = true;
+                    renderer.flipX = true;
+                }
             }
             else
             {
-                transform.Translate(movespeed * Time.deltaTime, 0, 0);
+                // ↓ゲーム内時間を止めても振りむいちゃうんで条件追加しました　中谷
+                if (Time.timeScale > 0)
+                {
+                   
+                    transform.Translate(movespeed * Time.deltaTime, 0, 0);
 
-                renderer.flipX = false;
+                    renderer.flipX = false;
+                }
             }
 
 
@@ -124,12 +150,13 @@ public class PlayerMove : MonoBehaviour
                 
 
             muveFlag = true;
-
+            /*
             if (!audioSource.isPlaying) // 再生中でないなら
             {
                 PlaySound();
 
             }
+            */
 
         }
 
@@ -138,6 +165,10 @@ public class PlayerMove : MonoBehaviour
 
             PlayAnim();
         }
+
+        // 入力状況とゲーム内時間の確認をして音を鳴らすか止める　中谷
+        if (muveFlag && Time.timeScale > 0) PlaySound();
+        else StopAudio();
 
     }
 
@@ -163,14 +194,15 @@ public class PlayerMove : MonoBehaviour
 
     void PlaySound()
     {
-        audioSource.PlayOneShot(walkSE);
-        Invoke("StopAudio", 0.5f);
+        // 再生状況の確認を関数内で行う　中谷
+        if (!audioSource.isPlaying) audioSource.Play();
     }
 
 
     void StopAudio()
     {
-        audioSource.Stop();
+        // 再生状況の確認を関数内で行う　中谷
+        if (audioSource.isPlaying) audioSource.Stop();
     }
 
     void PlayAnim()
