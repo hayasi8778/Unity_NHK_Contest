@@ -160,6 +160,38 @@ public class Goal : MonoBehaviour
             Time.timeScale = 0f;
         }
     }
+    /// <summary>
+    /// エンドボタンが押された時の処理
+    /// </summary>
+    public void OnEndButtonClicked()
+    {
+        // 時間を戻す
+        Time.timeScale = 1f;
 
-   
+        // ここにエンド処理を追加（例：エンディングへ遷移など）
+        Debug.Log("エンドボタンが押されました。");
+    }
+
+    /// <summary>
+    /// リスタートボタンが押された時の処理
+    /// </summary>
+    public void OnRestartButtonClicked()
+    {
+        // 時間を戻して現在のシーンを再読み込み
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    /// <summary>
+    /// セレクトボタンが押された時の処理
+    /// </summary>
+    public void OnSelectButtonClicked()
+    {
+        // 時間を戻してセレクト画面に遷移
+        Time.timeScale = 1f;
+
+
+    }
+
+
 }
