@@ -5,6 +5,7 @@ namespace Cassette.State
     public class ZoomTVState : IState
     {
         private bool zoom;
+       
         public override void Enter()
         {
             zoom = true;
@@ -18,6 +19,8 @@ namespace Cassette.State
                 pos.y = Mathf.Lerp(pos.y, 6, Time.deltaTime * 10);
                 Camera.main.transform.position = pos;
                 Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, 3, Time.deltaTime * 10);
+
+
             }
 
             if (Input.GetKeyDown(KeyCode.UpArrow))
@@ -44,7 +47,6 @@ namespace Cassette.State
                 parent.ChangeState(new Cassette.State.CassetteSelectState());
             }
         }
-
         public override void Exit()
         {
 

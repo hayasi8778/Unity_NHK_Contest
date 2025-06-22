@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class Bomb : MonoBehaviour
 {
@@ -7,9 +8,13 @@ public class Bomb : MonoBehaviour
     public LayerMask explosionMask;
     public float Vod = 5f;
 
+    public AudioClip beepClip;            // ピ音
+    private AudioSource audioSource;      // AudioSource
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+
         if (CompareTag("bomb1"))
         {
             Debug.Log("爆弾タグ: bomb1 → 爆発なし");
@@ -17,14 +22,35 @@ public class Bomb : MonoBehaviour
         }
         else if (CompareTag("bomb2"))
         {
+            
             Debug.Log("爆弾タグ: bomb2 → 3秒後に爆発");
-            Invoke("Explode", Vod);
+            StartCoroutine(CountdownAndExplode(Vod));
         }
         else if (CompareTag("bomb3"))
         {
+           
             Debug.Log("爆弾タグ: bomb3 → 10秒後に爆発");
-            Invoke("Explode", Vod);
+            StartCoroutine(CountdownAndExplode(Vod));
         }
+    }
+
+    IEnumerator CountdownAndExplode(float delay)
+    {
+        float timeLeft = delay;
+
+        while (timeLeft > 0f)
+        {
+            Debug.Log($"カウントダウン: {timeLeft}秒");
+            if (beepClip != null && audioSource != null)
+            {
+                audioSource.PlayOneShot(beepClip);
+            }
+
+            yield return new WaitForSeconds(1f);
+            timeLeft -= 1f;
+        }
+
+        Explode();
     }
 
     void Explode()
@@ -37,7 +63,6 @@ public class Bomb : MonoBehaviour
         {
             Debug.Log("検出: " + col.name + " / タグ: " + col.tag);
 
-            // 💨 吹き飛ばす処理（Rigidbody2D がある場合）
             Rigidbody2D rb = col.attachedRigidbody;
             if (rb != null)
             {
@@ -46,7 +71,6 @@ public class Bomb : MonoBehaviour
                 Debug.Log("💨 力を加えた: " + col.name);
             }
 
-            // ✅ 破壊対象かどうかチェックして破壊
             if (col.CompareTag("Object1") || col.CompareTag("Object2") || col.CompareTag("Object3"))
             {
                 Debug.Log("✅ 破壊対象に一致: " + col.name);
@@ -58,12 +82,9 @@ public class Bomb : MonoBehaviour
             }
         }
 
-        // 自分（爆弾）も消す
         Destroy(gameObject);
     }
 
-
-    // 爆風範囲をシーンビューに表示
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
