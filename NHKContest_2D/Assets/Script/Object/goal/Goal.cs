@@ -1,49 +1,56 @@
 using UnityEngine;
+using UnityEngine.SceneManagement; // シーン管理に使用
 
 /// <summary>
 /// Goal.cs
 /// 
-/// 使い方（インスペクター設定）
-/// 1. このスクリプトをGoalオブジェクトにアタッチしてください。
-/// 2. 以下のGameObjectをインスペクターでセットしてください：
-///    - DarkOverlay : 画面を暗くするオブジェクト（最初は非表示にしてください）
-///    - ClearScreen : クリア画面オブジェクト（最初はCanvas内で非表示にしておく）
-///    - Geme_end : クリア後に表示するエンドボタン（Canvas内）
-///    - RestartButton : クリア後に表示するリスタートボタン（Canvas内）
-///    - SelectButton : クリア後に表示するセレクトボタン（Canvas内）
-/// 3. プレイヤーオブジェクトは必ずタグ "Player" を設定してください。
-/// 4. ゴールオブジェクトはCollider2Dに「IsTrigger」をONにしてください。
+/// 【使い方（インスペクター設定）】
+/// 1. このスクリプトを Goal オブジェクトにアタッチしてください。
+/// 2. 以下の GameObject をインスペクターで設定してください：
+///    - DarkOverlay : ゴール後に画面を暗くするUIオブジェクト（非表示にしておく）
+///    - ClearScreen : クリア画面（Canvas内の画像など、非表示＆小さくしておく）
+///    - Geme_end : エンドボタン（Canvas内に配置）
+///    - RestartButton : リスタートボタン（Canvas内に配置）
+///    - SelectButton : セレクト画面に戻るボタン（Canvas内に配置）
+/// 3. プレイヤーのオブジェクトにタグ "Player" をつけてください。
+/// 4. Goal オブジェクトには 2D Collider をアタッチし、"Is Trigger" を ON にしてください。
 /// </summary>
-
 public class Goal : MonoBehaviour
 {
     [Header("UIオブジェクト設定")]
-    public GameObject DarkOverlay;       // 画面を暗くするオーバーレイ（最初は非表示）
-    public GameObject ClearScreen;       // クリア画面オブジェクト（最初は小さく非表示）
-    public GameObject Geme_end;           // エンド（クリア）ボタン
-    public GameObject RestartButton;     // もう一度ボタン
-    public GameObject SelectButton;      // セレクト画面に戻るボタン
+    public GameObject DarkOverlay;       // 背景を暗くするUI
+    public GameObject ClearScreen;       // 拡大して表示されるクリアスクリーン
+    public GameObject Geme_end;          // 「エンド」ボタン
+    public GameObject RestartButton;     // 「もう一度プレイ」ボタン
+    public GameObject SelectButton;      // 「セレクトへ戻る」ボタン
 
-    [Header("拡大スピード")]
-    public float scaleSpeed = 1f;        // クリア画面が拡大する速度
+    [Header("拡大アニメーション設定")]
+    public float scaleSpeed = 1f;        // クリア画面の拡大スピード
 
-    private Vector3 targetScale = Vector3.one;   // 目標スケール（画面の80％ぐらい）
-    private bool isGoalReached = false;           // ゴールに到達したか判定
-    private bool buttonShown = false;              // ボタンを表示したか判定
+    [Header("拡大サイズ調整（画面に対する割合）")]
+    [Range(0.1f, 2f)]
+    public float widthScaleFactor = 1.6f;   // 横の拡大倍率（画面幅に対する比率）
+
+    [Range(0.1f, 2f)]
+    public float heightScaleFactor = 0.8f;  // 縦の拡大倍率（画面高さに対する比率）
+
+    private Vector3 targetScale = Vector3.one;   // 目標スケール（アニメーション完了後のサイズ）
+    private bool isGoalReached = false;          // ゴールに到達したかどうかのフラグ
+    private bool buttonShown = false;            // ボタンが表示されたかどうかのフラグ
 
     void Start()
     {
-        // 最初はオーバーレイ非表示
+        // 暗転オーバーレイを非表示にしておく
         if (DarkOverlay != null)
             DarkOverlay.SetActive(false);
 
-        // ClearScreenは非表示＆スケール0に設定
+        // クリアスクリーンを非表示＆初期スケール0にしておく
         if (ClearScreen != null)
         {
             ClearScreen.SetActive(false);
             ClearScreen.transform.localScale = Vector3.zero;
 
-            // RectTransformから画面サイズに合わせた目標スケールを計算
+            // RectTransform から目標スケールを計算
             RectTransform rectTransform = ClearScreen.GetComponent<RectTransform>();
             if (rectTransform != null)
             {
@@ -51,38 +58,39 @@ public class Goal : MonoBehaviour
                 float screenHeight = Screen.height;
                 Vector2 size = rectTransform.sizeDelta;
 
-                // 横を画面幅の80％ × 2倍（横を大きめに拡大）
-                float scaleX = (screenWidth * 0.8f) / size.x * 2.0f;
-                float scaleY = (screenHeight * 0.8f) / size.y;
+                // 指定された倍率に応じてスケールを決定
+                float scaleX = (screenWidth * widthScaleFactor) / size.x;
+                float scaleY = (screenHeight * heightScaleFactor) / size.y;
 
                 targetScale = new Vector3(scaleX, scaleY, 1f);
             }
             else
             {
-                targetScale = new Vector3(2f, 0.8f, 1f);
+                // RectTransformがない場合のデフォルト値
+                targetScale = new Vector3(widthScaleFactor, heightScaleFactor, 1f);
             }
         }
 
-        // ボタンは透明＆非操作に初期化
+        // 各ボタンの透明度と操作設定を初期化
         InitializeButton(Geme_end);
         InitializeButton(RestartButton);
         InitializeButton(SelectButton);
     }
 
     /// <summary>
-    /// ボタンを透明かつクリック不可に設定
+    /// ボタンを透明かつ非操作に初期化
     /// </summary>
     void InitializeButton(GameObject button)
     {
         if (button != null)
         {
-            button.SetActive(true);
+            button.SetActive(true); // 表示はしておく（CanvasGroupで透明にする）
             var cg = button.GetComponent<CanvasGroup>();
             if (cg == null)
                 cg = button.AddComponent<CanvasGroup>();
-            cg.alpha = 0f;
-            cg.interactable = false;
-            cg.blocksRaycasts = false;
+            cg.alpha = 0f; // 完全に透明
+            cg.interactable = false; // クリック不可
+            cg.blocksRaycasts = false; // レイを通す（無視）
         }
     }
 
@@ -90,23 +98,24 @@ public class Goal : MonoBehaviour
     {
         if (isGoalReached && ClearScreen != null)
         {
+            // クリアスクリーンを表示
             ClearScreen.SetActive(true);
 
-            // ClearScreenを画面中央に固定
+            // スクリーンを画面中央に固定
             RectTransform rect = ClearScreen.GetComponent<RectTransform>();
             if (rect != null)
                 rect.anchoredPosition = Vector2.zero;
             else
                 ClearScreen.transform.localPosition = Vector3.zero;
 
-            // スケールを徐々に目標値まで拡大
+            // 徐々に拡大アニメーション
             ClearScreen.transform.localScale = Vector3.MoveTowards(
                 ClearScreen.transform.localScale,
                 targetScale,
                 scaleSpeed * Time.unscaledDeltaTime
             );
 
-            // 拡大完了したらボタンを表示可能にする
+            // 拡大完了時にボタンを表示
             if (!buttonShown && ClearScreen.transform.localScale == targetScale)
             {
                 ShowButton(Geme_end);
@@ -118,7 +127,7 @@ public class Goal : MonoBehaviour
     }
 
     /// <summary>
-    /// ボタンを見えるようにし操作可能に設定
+    /// ボタンを表示＆操作可能にする
     /// </summary>
     void ShowButton(GameObject button)
     {
@@ -127,15 +136,15 @@ public class Goal : MonoBehaviour
             var cg = button.GetComponent<CanvasGroup>();
             if (cg != null)
             {
-                cg.alpha = 1f;
-                cg.interactable = true;
-                cg.blocksRaycasts = true;
+                cg.alpha = 1f;           // 表示
+                cg.interactable = true;  // 操作可能
+                cg.blocksRaycasts = true;// クリックなどを受け付ける
             }
         }
     }
 
     /// <summary>
-    /// プレイヤーがGoalに触れた時の処理
+    /// プレイヤーがゴールに触れたらクリア処理を開始
     /// </summary>
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -147,7 +156,7 @@ public class Goal : MonoBehaviour
             if (DarkOverlay != null)
                 DarkOverlay.SetActive(true);
 
-            // ゲーム時間を停止
+            // ゲーム時間を止める
             Time.timeScale = 0f;
         }
     }
