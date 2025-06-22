@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ROGO_0: 3926207998880800750
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
