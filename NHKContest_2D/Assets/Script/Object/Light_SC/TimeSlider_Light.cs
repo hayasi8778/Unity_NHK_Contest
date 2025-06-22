@@ -25,7 +25,7 @@ public class TimeSlider_Light : TimeSliderObject_Base
     // Update is called once per frame
     void Update()
     {
-
+        /*
         revertTimer += Time.deltaTime;
         if (revertTimer >= revertTimeLimit)
         {
@@ -33,6 +33,7 @@ public class TimeSlider_Light : TimeSliderObject_Base
             TryRevertObject();
             
         }
+        */
     }
 
     public override GameObject ReplaceObject()//オブジェクト入れ替え(後ろ)
@@ -97,7 +98,7 @@ public class TimeSlider_Light : TimeSliderObject_Base
         Currentnum = num;
     }
 
-    private void TryRevertObject()
+    public override void TryRevertObject()
     {
         if (replacementPrefabs == null || replacementPrefabs.Length == 0)
             return;
@@ -136,7 +137,45 @@ public class TimeSlider_Light : TimeSliderObject_Base
 
         Destroy(this.gameObject);
     }
-    
 
+    public override void ChangeImageQuality (int num)
+    {
+        if (replacementPrefabs == null || replacementPrefabs.Length == 0)
+            return;
+
+        if (replacementIndex <= 0)
+        {
+            Debug.LogWarning("これ以上戻れない！");
+            return;
+        }
+
+        // ここでいったん減らす（戻す）
+        replacementIndex--;
+
+        Vector3 spawnPosition = transform.position;
+        GameObject prevPrefab = replacementPrefabs[replacementIndex];
+        GameObject newObj = Instantiate(prevPrefab, spawnPosition, transform.rotation);
+
+        var newScript = newObj.GetComponent<TimeSlider_Light>();
+        if (newScript != null)
+        {
+            newScript.slider = this.slider;
+            newScript.replacementPrefabs = this.replacementPrefabs;
+            newScript.Currentnum = this.Currentnum; //配列番号更新処理を追加
+
+            // 🔥 注意！！戻った後のオブジェクトでは「次に行けるよう」replacementIndexを1つ進めた値にする！
+            newScript.replacementIndex = this.replacementIndex;
+        }
+
+        // ここでスライダー側に「新しいオブジェクト」を教える！
+        var counter = slider.GetComponent<SliderTimeCounter>();
+        if (counter != null)
+        {
+            Debug.LogWarning("配列設定" + Currentnum);
+            counter.SetCurrentObjects(newObj, Currentnum);
+        }
+
+        Destroy(this.gameObject);
+    }
 
 }

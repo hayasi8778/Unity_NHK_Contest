@@ -5,8 +5,10 @@ public class TimeSlider_Gravity : TimeSliderObject_Base
 {
 
     public GameObject[] replacementPrefabs;
+
     public int replacementIndex = 0;
     public Slider slider; //スライダー
+    public GameObject Imagechanger;
 
     private int Currentnum = 0;//配列の何番目にいるか
 
@@ -143,6 +145,16 @@ public class TimeSlider_Gravity : TimeSliderObject_Base
 
         return newObj;
 
+    }
+
+    public override void TryRevertObject()//オブジェクト入れ替え(前)
+    {
+        //一旦画質の影響を受けないから消す
+    }
+
+    public override void ChangeImageQuality(int num)//オブジェクト入れ替え(前)
+    {
+        //一旦画質の影響を受けないから消す
     }
 
     public override void SetCurrentnum(int num)

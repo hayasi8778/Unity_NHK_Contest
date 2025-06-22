@@ -145,7 +145,8 @@ public class SliderTimeCounter : MonoBehaviour
 
 
         // 履歴が一周したら動きの差分チェック
-        if (/* historyIndex == 0 && */changeCooldownTimer <= 0f)//判断基準一旦切る
+        /*スライダーでの画質切り替えは消す
+        if (changeCooldownTimer <= 0f)//判断基準一旦切る
         {
             float oldest = sliderHistory[(historyIndex + 1) % historySize];
             float newest = sliderHistory[(historyIndex - 1 + historySize) % historySize];
@@ -173,28 +174,9 @@ public class SliderTimeCounter : MonoBehaviour
                     }
                 }
 
-                // 🔥 次にステージオブジェクトたちも入れ替え
+                //ステージオブジェクトたちも入れ替え
                 if (currentObjects != null)
                 {
-                    /*クラス継承させる前のコード
-                     for (int i = 0; i < currentObjects.Length; i++)
-                     {
-                         GameObject obj = currentObjects[i];
-                         if (obj == null) continue;
-                         Debug.LogError("オブジェクトNULLじゃないです");
-                         // **基底クラス（TimeSliderObject）を取得**
-                         var timeObj = obj.GetComponent<TimeSliderObject>();
-                         if (timeObj != null)
-                         {
-                             Debug.LogError("オブジェクト切り替え処理します");
-                             GameObject newObj = timeObj.ReplaceObject(); //派生クラスのメソッドが自動適用される
-                             if (newObj != null)
-                             {
-                                 Debug.LogError($"ステージオブジェクト[{i}]を切り替えました！");
-                             }
-                         }
-                     }
-                    */
                     for (int i = 0; i < currentObjects.Length; i++)
                     {
                         GameObject obj = currentObjects[i];
@@ -224,6 +206,7 @@ public class SliderTimeCounter : MonoBehaviour
                 changeCooldownTimer = changeCooldown;
             }
         }
+        */
 
     }
 
