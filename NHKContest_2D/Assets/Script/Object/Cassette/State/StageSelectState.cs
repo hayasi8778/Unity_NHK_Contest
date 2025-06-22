@@ -1,53 +1,69 @@
-﻿using Unity.VisualScripting;
-using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Cassette.State
+public class StageSelectState : IState
 {
-    public class StageSelectState : IState
+    const float delta = 0.01f;  // 小さい数値
+    const float centerY = 6;
+    const float min = 3;
+    const float max = 5;
+
+    private bool zoom;
+    private Vector2 center;
+    private CassetteSelectState cassetteSelectState;
+    private GameObject[] viewCassettes;
+    private int viewMaxCount;
+
+    public override void StateEnter()
     {
-        private Cassettes allCassette;
-        public const int viewMaxCount = 5;
-        public const float interval = 8;
+        cassetteSelectState = parent.transform.Find("CassetteSelectState").GetComponent<CassetteSelectState>();
+        viewCassettes = cassetteSelectState.viewCassettes;
+        viewMaxCount = cassetteSelectState.viewMaxCount;
 
-        public static GameObject[] viewCassettes;
-        private SmoothMove[] smoothMoves;
-        public static int selectIndex = 0;
+        zoom = true;
+    }
 
-
-
-        public override void Enter()
+    public override void StateUpdate()
+    {
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            allCassette = (Cassettes)Resources.Load("Cassette/AllCassette");
-            viewCassettes = new GameObject[viewMaxCount];
-            smoothMoves = new SmoothMove[viewMaxCount];
-            for (int i = 0; i < viewMaxCount; i++)
-            {
-                Vector3 pos = new Vector3((i - viewMaxCount / 2) * interval, 0, 0);
-                viewCassettes[i] = Object.Instantiate(allCassette.cassettes[(i - viewMaxCount / 2 + allCassette.cassettes.Length) % allCassette.cassettes.Length], pos, Quaternion.identity);
-                viewCassettes[i].GetComponent<FloatEffect>().enabled = true;
-                viewCassettes[i].GetComponent<MoveCassette>().enabled = true;
-                viewCassettes[i].GetComponent<PointZoom>().enabled = true;
-                viewCassettes[i].GetComponent<SmoothMove>().enabled = true;
-                smoothMoves[i] = viewCassettes[i].GetComponent<SmoothMove>();
-                smoothMoves[i].goal = viewCassettes[i].transform.position;
-            }
+            zoom = false;
         }
 
-        public override void Update()
+        if (Camera.main.orthographicSize > min && zoom)
+        {
+            Vector3 pos = Camera.main.transform.position;
+            pos.y = Mathf.Lerp(pos.y, centerY, Time.deltaTime * 10);
+            Camera.main.transform.position = pos;
+            Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, 3, Time.deltaTime * 10);
+        }
+
+        if (Camera.main.orthographicSize < min + delta && zoom)
         {
 
         }
 
-        public override void Exit()
+        if (Camera.main.orthographicSize < max && !zoom)
         {
-            for (int i = 0; i < viewMaxCount; i++)
-            {
-                viewCassettes[i].GetComponent<FloatEffect>().enabled = false;
-                viewCassettes[i].GetComponent<MoveCassette>().enabled = false;
-                viewCassettes[i].GetComponent<PointZoom>().enabled = false;
-                viewCassettes[i].GetComponent<SmoothMove>().enabled = false;
-            }
+            Vector3 pos = Camera.main.transform.position;
+            pos.y = Mathf.Lerp(pos.y, 0, Time.deltaTime * 10);
+            Camera.main.transform.position = pos;
+            Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, 5, Time.deltaTime * 10);
+
+            Vector3 casPos = viewCassettes[viewMaxCount / 2].transform.position;
+            casPos.y = Mathf.Lerp(casPos.y, 0, Time.deltaTime * 10);
+            viewCassettes[viewMaxCount / 2].transform.position = casPos;
         }
+
+        if (Camera.main.orthographicSize > max - delta && !zoom)
+        {
+            foreach (GameObject cassette in viewCassettes)
+                Object.Destroy(cassette);
+            parent.ChangeState("CassetteSelectState");
+        }
+    }
+
+    public override void StateExit()
+    {
+
     }
 }
