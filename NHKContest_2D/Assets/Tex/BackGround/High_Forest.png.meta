@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 020207e7058cb424c8dce1eaee99bab7
+guid: c89139e1a76464f49aa1f9946af6093b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1233134464842997720
-    second: "\u304D\u308C\u3044_\u68EE_0"
+      213: -8099759704428648274
+    second: High_Forest_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u304D\u308C\u3044_\u68EE_0"
+      name: High_Forest_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 820edb6dcb603eee0800000000000000
-      internalID: -1233134464842997720
+      spriteID: ea8e183967fd79f80800000000000000
+      internalID: -8099759704428648274
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2c730e43bf92e1f47949d306f42d86e3
+    spriteID: caa56a5353964e743986c164e0742d78
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "\u304D\u308C\u3044_\u68EE_0": -1233134464842997720
+      High_Forest_0: -8099759704428648274
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

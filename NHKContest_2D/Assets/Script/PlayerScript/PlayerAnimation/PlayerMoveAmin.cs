@@ -21,6 +21,10 @@ public abstract class PlayerMoveAmin : MonoBehaviour
 
     public abstract void ChangeSprite();
 
+    public abstract void ChangeSprite_Push();
+
+    public abstract void ChangeSprite_Jump();
+
     /*
     public void ChangeSprite()
     {

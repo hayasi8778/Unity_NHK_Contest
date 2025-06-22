@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6890944968982849587}
   - component: {fileID: 7627085713754656283}
   - component: {fileID: 4382090532999436998}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player_1
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -172,6 +172,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movespeed: 4
   walkSE: {fileID: 8300000, guid: 6e65b62b2d1a8c94495a4bde59cf02db, type: 3}
+  AnimationTime: 0.5
+  wallCheckOffset: 0.5
+  wallCheckDistance: 0.1
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!82 &8512856123756561121
 AudioSource:
   m_ObjectHideFlags: 0
@@ -322,3 +328,10 @@ MonoBehaviour:
   - {fileID: -8623162231518452739, guid: 8a515088bf446d54eaad5521c6f01c85, type: 3}
   - {fileID: 3034995077209905059, guid: 8a515088bf446d54eaad5521c6f01c85, type: 3}
   - {fileID: 203965419430724318, guid: 8a515088bf446d54eaad5521c6f01c85, type: 3}
+  sprites_Push:
+  - {fileID: 643483055943903133, guid: 19834820fc80fbd42b8faa685307bed0, type: 3}
+  - {fileID: -1456981815285973950, guid: 19834820fc80fbd42b8faa685307bed0, type: 3}
+  - {fileID: 453387764893531875, guid: 19834820fc80fbd42b8faa685307bed0, type: 3}
+  - {fileID: 3171894427883160748, guid: 19834820fc80fbd42b8faa685307bed0, type: 3}
+  - {fileID: -480269806465401789, guid: 19834820fc80fbd42b8faa685307bed0, type: 3}
+  - {fileID: -7444158725793327355, guid: 19834820fc80fbd42b8faa685307bed0, type: 3}

@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7551027744167458220}
   - component: {fileID: 670682403480641691}
   - component: {fileID: 971381533317372749}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player_2
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -173,6 +173,11 @@ MonoBehaviour:
   movespeed: 4
   walkSE: {fileID: 8300000, guid: 6e65b62b2d1a8c94495a4bde59cf02db, type: 3}
   AnimationTime: 0.1
+  wallCheckOffset: 0.5
+  wallCheckDistance: 0.1
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!82 &2447861952562108892
 AudioSource:
   m_ObjectHideFlags: 0
@@ -329,3 +334,16 @@ MonoBehaviour:
   - {fileID: 933928104040227701, guid: 5ad01d02f0423754683a817795153314, type: 3}
   - {fileID: -974255366347481917, guid: 5ad01d02f0423754683a817795153314, type: 3}
   - {fileID: 6067351414777022819, guid: 5ad01d02f0423754683a817795153314, type: 3}
+  sprites_Push:
+  - {fileID: -6687969467094643624, guid: 734ff6f8fdbdcbf4c8e6830962a0b27f, type: 3}
+  - {fileID: 7058122895693559269, guid: 734ff6f8fdbdcbf4c8e6830962a0b27f, type: 3}
+  - {fileID: -2751623503000549911, guid: 734ff6f8fdbdcbf4c8e6830962a0b27f, type: 3}
+  - {fileID: -7785264545009976375, guid: 734ff6f8fdbdcbf4c8e6830962a0b27f, type: 3}
+  - {fileID: 5798797434755464122, guid: 734ff6f8fdbdcbf4c8e6830962a0b27f, type: 3}
+  - {fileID: -4723423919805663803, guid: 734ff6f8fdbdcbf4c8e6830962a0b27f, type: 3}
+  - {fileID: -538315725443017172, guid: 734ff6f8fdbdcbf4c8e6830962a0b27f, type: 3}
+  - {fileID: -7762251339541912967, guid: 734ff6f8fdbdcbf4c8e6830962a0b27f, type: 3}
+  - {fileID: -4172931702659505990, guid: 734ff6f8fdbdcbf4c8e6830962a0b27f, type: 3}
+  - {fileID: 6168028749276738362, guid: 734ff6f8fdbdcbf4c8e6830962a0b27f, type: 3}
+  - {fileID: -602767857099495617, guid: 734ff6f8fdbdcbf4c8e6830962a0b27f, type: 3}
+  - {fileID: -3768589874891296330, guid: 734ff6f8fdbdcbf4c8e6830962a0b27f, type: 3}

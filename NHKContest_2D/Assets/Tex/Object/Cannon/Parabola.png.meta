@@ -1,0 +1,313 @@
+fileFormatVersion: 2
+guid: d3852caff4291ef458bd443a99fae18c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1347045676432571460
+    second: Parabola_0
+  - first:
+      213: 3060349995401334022
+    second: Parabola_1
+  - first:
+      213: 1997372501595103253
+    second: Parabola_2
+  - first:
+      213: 8422469243045245541
+    second: Parabola_3
+  - first:
+      213: 8394707282382574303
+    second: Parabola_4
+  - first:
+      213: 127062553700558896
+    second: Parabola_5
+  - first:
+      213: 7302411111193601089
+    second: Parabola_6
+  - first:
+      213: 7708408007588286013
+    second: Parabola_7
+  - first:
+      213: 4687844662148869596
+    second: Parabola_8
+  - first:
+      213: 8893433845098710943
+    second: Parabola_9
+  - first:
+      213: 2969209159303689814
+    second: Parabola_10
+  - first:
+      213: -7294135535535405100
+    second: Parabola_11
+  - first:
+      213: 5525236581746592568
+    second: Parabola_12
+  - first:
+      213: 8988654718164489880
+    second: Parabola_13
+  - first:
+      213: -3171409854477568268
+    second: Parabola_14
+  - first:
+      213: 8090157464805149722
+    second: Parabola_15
+  - first:
+      213: 7312439699055551184
+    second: Parabola_16
+  - first:
+      213: -4634681189288872173
+    second: Parabola_17
+  - first:
+      213: -6280231344829081415
+    second: Parabola_18
+  - first:
+      213: 8526118115182133095
+    second: Parabola_19
+  - first:
+      213: -8919081977702534498
+    second: Parabola_20
+  - first:
+      213: 8543010305563771390
+    second: Parabola_21
+  - first:
+      213: 8319221910910485920
+    second: Parabola_22
+  - first:
+      213: 9017383919951151934
+    second: Parabola_23
+  - first:
+      213: 8402525942372635430
+    second: Parabola_24
+  - first:
+      213: -3251134302418146234
+    second: Parabola_25
+  - first:
+      213: 6786457738297388704
+    second: Parabola_26
+  - first:
+      213: -9171962469342791388
+    second: Parabola_27
+  - first:
+      213: -3682410435647406892
+    second: Parabola_28
+  - first:
+      213: 796998276510771296
+    second: Parabola_29
+  - first:
+      213: 7278883850182261843
+    second: Parabola_30
+  - first:
+      213: 4165077711049637274
+    second: Parabola_31
+  - first:
+      213: 1347473781654681255
+    second: Parabola_32
+  - first:
+      213: 8814700294438066141
+    second: Parabola_33
+  - first:
+      213: 6053169556654138287
+    second: Parabola_34
+  - first:
+      213: 9035171671047240938
+    second: Parabola_35
+  - first:
+      213: 9193211867292559174
+    second: Parabola_36
+  - first:
+      213: -541066173029333185
+    second: Parabola_37
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Parabola_0
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 917
+        width: 1365
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44c3dffd7eaa1b210800000000000000
+      internalID: 1347045676432571460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parabola_7
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 573
+        width: 1405
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3e8314fd34c9fa60800000000000000
+      internalID: 7708408007588286013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parabola_17
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 230
+        width: 1458
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3177041930e4eafb0800000000000000
+      internalID: -4634681189288872173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 9f1e094ce7b5cd34fb6a8d9ae3acb240
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Parabola_0: 1347045676432571460
+      Parabola_17: -4634681189288872173
+      Parabola_7: 7708408007588286013
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

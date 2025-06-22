@@ -9,6 +9,7 @@ public class TimeSliderObject : TimeSliderObject_Base
     private int currentIndex = 0;
 
     public Slider slider; //スライダー
+    public GameObject ImageChanger;//画質更新するオブジェクト
 
     public GameObject[] replacementPrefabs;
     public int replacementIndex = 0;
@@ -33,12 +34,14 @@ public class TimeSliderObject : TimeSliderObject_Base
     {
         if (isBeingDestroyed) return;
 
+        /*時間経過の部分無効化する
         revertTimer += Time.deltaTime;
         if (revertTimer >= revertTimeLimit)
         {
             TryRevertObject();
             revertTimer = 0f; // タイマーリセット
         }
+        */
     }
 
     public void UpdatePositionHistory(float sliderValue)
@@ -83,6 +86,7 @@ public class TimeSliderObject : TimeSliderObject_Base
         if (newScript != null)
         {
             newScript.slider = this.slider;
+            newScript.ImageChanger = this.ImageChanger;
             newScript.replacementPrefabs = this.replacementPrefabs;
             newScript.replacementIndex = this.replacementIndex;
             newScript.Currentnum = this.Currentnum; //配列番号更新処理を追加
@@ -97,12 +101,29 @@ public class TimeSliderObject : TimeSliderObject_Base
             counter.SetCurrentObjects(newObj, Currentnum);
         }
 
+        var IC_counter = slider.GetComponent<ImageChanger>();
+        if (IC_counter != null)
+        {
+            Debug.LogWarning("配列設定" + Currentnum);
+            IC_counter.SetCurrentObjects(newObj, Currentnum);
+        }
+
+        //画質変更するやつに新しいオブジェクト入れる
+
+        var IC_Counter = ImageChanger.GetComponent<ImageChanger>();
+        if (IC_Counter != null)
+        {
+            Debug.LogWarning("配列設定" + Currentnum);
+            IC_Counter.SetCurrentObjects(newObj, Currentnum);
+        }
+        
+
         Destroy(this.gameObject);
 
         return newObj;
     }
 
-    private void TryRevertObject()
+    public override void TryRevertObject()//オブジェクト入れ替え(前)
     {
         if (replacementPrefabs == null || replacementPrefabs.Length == 0)
             return;
@@ -124,6 +145,7 @@ public class TimeSliderObject : TimeSliderObject_Base
         if (newScript != null)
         {
             newScript.slider = this.slider;
+            newScript.ImageChanger = this.ImageChanger;
             newScript.replacementPrefabs = this.replacementPrefabs;
             newScript.Currentnum = this.Currentnum; //配列番号更新処理を追加
             newScript.positionHistory = this.positionHistory;
@@ -138,6 +160,13 @@ public class TimeSliderObject : TimeSliderObject_Base
         {
             Debug.LogWarning("配列設定" + Currentnum);
             counter.SetCurrentObjects(newObj, Currentnum);
+        }
+
+        var IC_Counter = ImageChanger.GetComponent<ImageChanger>();
+        if (IC_Counter != null)
+        {
+            Debug.LogWarning("配列設定" + Currentnum);
+            IC_Counter.SetCurrentObjects(newObj, Currentnum);
         }
 
         StartCoroutine(DestroyAfterFrame());
@@ -161,6 +190,55 @@ public class TimeSliderObject : TimeSliderObject_Base
         //配列が設定されたよ
         Debug.LogWarning("配列設定" + num);
         Currentnum = num;
+    }
+
+    public override void ChangeImageQuality(int num)//オブジェクト入れ替え(前)
+    {
+        if (replacementPrefabs == null || replacementPrefabs.Length == 0)
+            return;
+
+        if (replacementIndex == num)
+        {
+            Debug.LogWarning("これ以上戻れない！");
+            return;
+        }
+
+        // ここでいったん減らす（戻す）
+        replacementIndex = num;
+
+        Vector3 spawnPosition = transform.position;
+        GameObject prevPrefab = replacementPrefabs[replacementIndex];
+        GameObject newObj = Instantiate(prevPrefab, spawnPosition, transform.rotation);
+
+        var newScript = newObj.GetComponent<TimeSliderObject>();
+        if (newScript != null)
+        {
+            newScript.slider = this.slider;
+            newScript.ImageChanger = this.ImageChanger;
+            newScript.replacementPrefabs = this.replacementPrefabs;
+            newScript.Currentnum = this.Currentnum; //配列番号更新処理を追加
+            newScript.positionHistory = this.positionHistory;
+
+            // 🔥 注意！！戻った後のオブジェクトでは「次に行けるよう」replacementIndexを1つ進めた値にする！
+            newScript.replacementIndex = this.replacementIndex;
+        }
+
+        // ここでスライダー側に「新しいオブジェクト」を教える！
+        var counter = slider.GetComponent<SliderTimeCounter>();
+        if (counter != null)
+        {
+            Debug.LogWarning("配列設定" + Currentnum);
+            counter.SetCurrentObjects(newObj, Currentnum);
+        }
+
+        var IC_Counter = ImageChanger.GetComponent<ImageChanger>();
+        if (IC_Counter != null)
+        {
+            Debug.LogWarning("配列設定" + Currentnum);
+            IC_Counter.SetCurrentObjects(newObj, Currentnum);
+        }
+
+        StartCoroutine(DestroyAfterFrame());
     }
 
 }
