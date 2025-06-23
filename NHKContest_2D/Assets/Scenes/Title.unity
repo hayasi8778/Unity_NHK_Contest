@@ -381,6 +381,7 @@ GameObject:
   - component: {fileID: 539653356}
   - component: {fileID: 539653355}
   - component: {fileID: 539653354}
+  - component: {fileID: 539653357}
   m_Layer: 5
   m_Name: Story
   m_TagString: Untagged
@@ -451,9 +452,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: QuitGame, Assembly-CSharp
-        m_MethodName: Quit
+      - m_Target: {fileID: 539653357}
+        m_TargetAssemblyTypeName: SceneChangeButton, Assembly-CSharp
+        m_MethodName: OnButtonPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -483,7 +484,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7204671117113229737, guid: 62e73a27791271048abecb60e19bbabd, type: 3}
+  m_Sprite: {fileID: 1968381097245904912, guid: 59c04e7007f5da641a32ff44d9e3f718, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -501,6 +502,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 539653352}
   m_CullTransparentMesh: 1
+--- !u!114 &539653357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539653352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ceedd315ed6c7f47bcb4a487d21f8cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: TestStageSelect
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1514,7 +1528,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5696435641422147484, guid: d394e231a95be9644aeeb8f55100dc7f, type: 3}
+  m_Sprite: {fileID: 7960712277792059792, guid: 98ec3650ed0485d46acd3124cc9780b7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
