@@ -142,17 +142,11 @@ public class TimeSlider_Light : TimeSliderObject_Base
 
     public override void ChangeImageQuality (int num)
     {
-        if (replacementPrefabs == null || replacementPrefabs.Length == 0)
-            return;
 
-        if (replacementIndex <= 0)
-        {
-            Debug.LogWarning("これ以上戻れない！");
-            return;
-        }
+        Debug.Log("ライトの画質切り替え");
 
         // ここでいったん減らす（戻す）
-        replacementIndex--;
+        replacementIndex = num;
 
         Vector3 spawnPosition = transform.position;
         GameObject prevPrefab = replacementPrefabs[replacementIndex];

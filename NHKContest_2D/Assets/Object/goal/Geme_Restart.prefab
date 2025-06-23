@@ -13,13 +13,14 @@ GameObject:
   - component: {fileID: 2197076060491171352}
   - component: {fileID: 3772901921059799268}
   - component: {fileID: 5444745387648755706}
+  - component: {fileID: -4368404807676780459}
   m_Layer: 5
   m_Name: Geme_Restart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7964741175029769912
 RectTransform:
   m_ObjectHideFlags: 0
@@ -146,3 +147,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: 
+--- !u!225 &-4368404807676780459
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4993464273677340805}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0

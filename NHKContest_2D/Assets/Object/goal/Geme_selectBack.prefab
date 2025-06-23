@@ -13,13 +13,14 @@ GameObject:
   - component: {fileID: 4323885404510788367}
   - component: {fileID: 1600594695845449995}
   - component: {fileID: 8338767514897496388}
+  - component: {fileID: 856688600301393850}
   m_Layer: 5
   m_Name: Geme_selectBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4204053066655431272
 RectTransform:
   m_ObjectHideFlags: 0
@@ -146,3 +147,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: TestStageSelect
+--- !u!225 &856688600301393850
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4397913994708715734}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
