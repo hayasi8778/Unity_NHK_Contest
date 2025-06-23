@@ -4,7 +4,7 @@ using UnityEngine;
 public class StageSelectState : IState
 {
     [SerializeField]
-    private GameObject[] allPreview;
+    public GameObject[] allPreview;
     [SerializeField]
     public int selectIndex;
     [SerializeField]

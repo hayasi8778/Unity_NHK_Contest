@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FadeOutState : IState
 {
@@ -29,11 +30,13 @@ public class FadeOutState : IState
     private StageSelectState stageSelectState;
     private int worldIndex;
     private int stageIndex;
+    private string sceneName;
 
     public override void StateEnter()
     {
         worldIndex = cassetteSelectState.selectIndex;
         stageIndex = stageSelectState.selectIndex;
+        sceneName = stageSelectState.allPreview[worldIndex].GetComponent<StageData>().stageData[stageIndex].sceneName;
 
         fadeOut.SetActive(true);
         screen.GetComponent<FollowBack>().enabled = false;
@@ -56,7 +59,8 @@ public class FadeOutState : IState
 
         if (screenZoomScale.x < scrScale.x + epsilon && screenZoomScale.y < scrScale.y + epsilon)
         {
-            Debug.Log("ここでworldIndexとstageIndexを使ってシーン遷移 world : " + worldIndex.ToString() + "  stage : " + stageIndex.ToString());
+            Debug.Log("ここでsceneNameを使ってシーン遷移 " + sceneName);
+            //SceneManager.LoadScene(sceneName);
         }
     }
     public override void StateExit()
