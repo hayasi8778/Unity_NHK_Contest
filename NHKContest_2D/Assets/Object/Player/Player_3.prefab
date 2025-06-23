@@ -172,7 +172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movespeed: 4
   walkSE: {fileID: 8300000, guid: 6e65b62b2d1a8c94495a4bde59cf02db, type: 3}
-  AnimationTime: 0.03
+  AnimationTime: 0.04
   wallCheckOffset: 0.5
   wallCheckDistance: 0.1
   wallLayer:
@@ -288,6 +288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 0}
+  ImageQualityChanger: {fileID: 0}
   replacementPrefabs:
   - {fileID: 6830803382852583797, guid: 7ef14876fd2f11145a422a3e5a83aada, type: 3}
   - {fileID: 5440094310445643248, guid: 5bc1327223585f040b4b3597cfe64dcf, type: 3}
@@ -308,6 +309,8 @@ MonoBehaviour:
   rb: {fileID: 3513710689290386941}
   JumpPower: 19
   jumpSE: {fileID: 8300000, guid: 10f64368dc936e44f9a906df74739e5b, type: 3}
+  AnimationTime: 0.5
+  JumpToTime: 0.5
 --- !u!114 &3192595974237312747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -383,3 +386,4 @@ MonoBehaviour:
   - {fileID: 411311164353008978, guid: 55527410f4a20f44396bda325f5c8f97, type: 3}
   - {fileID: 7896574444758057071, guid: 55527410f4a20f44396bda325f5c8f97, type: 3}
   - {fileID: 8388825889734134761, guid: 55527410f4a20f44396bda325f5c8f97, type: 3}
+  sprites_Jump: []
