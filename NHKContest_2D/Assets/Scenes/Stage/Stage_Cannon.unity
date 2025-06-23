@@ -369,12 +369,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -993,7 +993,7 @@ RectTransform:
   m_GameObject: {fileID: 226355485}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.55, y: 1.81, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 579144057}
@@ -1003,7 +1003,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.0001, y: -112}
+  m_AnchoredPosition: {x: -4.0001, y: -357}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &226355487
@@ -2982,7 +2982,7 @@ RectTransform:
   m_GameObject: {fileID: 711774172}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 636654199}
@@ -2992,7 +2992,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 345, y: 68}
+  m_AnchoredPosition: {x: 750, y: 264}
   m_SizeDelta: {x: 200, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &711774174
@@ -3662,7 +3662,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1905942422}
   m_HandleRect: {fileID: 1905942420}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -7542,7 +7542,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7675143064009246318, guid: e1173eb9eef3b0e40b7788eda4768022, type: 3}
       propertyPath: AnimationTime
-      value: 0.3
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8031231580685338730, guid: e1173eb9eef3b0e40b7788eda4768022, type: 3}
       propertyPath: material
@@ -7581,9 +7581,37 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 203965419430724318, guid: 8a515088bf446d54eaad5521c6f01c85, type: 3}
     - target: {fileID: 8031231580685338730, guid: e1173eb9eef3b0e40b7788eda4768022, type: 3}
+      propertyPath: sprites_Jump.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8031231580685338730, guid: e1173eb9eef3b0e40b7788eda4768022, type: 3}
       propertyPath: sprites_Push.Array.size
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 8031231580685338730, guid: e1173eb9eef3b0e40b7788eda4768022, type: 3}
+      propertyPath: 'sprites_Jump.Array.data[0]'
+      value: 
+      objectReference: {fileID: -9136313342249681479, guid: 195ba9f4b10a13f42acca18d1291a580, type: 3}
+    - target: {fileID: 8031231580685338730, guid: e1173eb9eef3b0e40b7788eda4768022, type: 3}
+      propertyPath: 'sprites_Jump.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2720637360320223207, guid: 195ba9f4b10a13f42acca18d1291a580, type: 3}
+    - target: {fileID: 8031231580685338730, guid: e1173eb9eef3b0e40b7788eda4768022, type: 3}
+      propertyPath: 'sprites_Jump.Array.data[2]'
+      value: 
+      objectReference: {fileID: -3250345608131057903, guid: 195ba9f4b10a13f42acca18d1291a580, type: 3}
+    - target: {fileID: 8031231580685338730, guid: e1173eb9eef3b0e40b7788eda4768022, type: 3}
+      propertyPath: 'sprites_Jump.Array.data[3]'
+      value: 
+      objectReference: {fileID: -7409163170735776623, guid: 195ba9f4b10a13f42acca18d1291a580, type: 3}
+    - target: {fileID: 8031231580685338730, guid: e1173eb9eef3b0e40b7788eda4768022, type: 3}
+      propertyPath: 'sprites_Jump.Array.data[4]'
+      value: 
+      objectReference: {fileID: 5585049647556612555, guid: 195ba9f4b10a13f42acca18d1291a580, type: 3}
+    - target: {fileID: 8031231580685338730, guid: e1173eb9eef3b0e40b7788eda4768022, type: 3}
+      propertyPath: 'sprites_Jump.Array.data[5]'
+      value: 
+      objectReference: {fileID: 5016479393929233102, guid: 195ba9f4b10a13f42acca18d1291a580, type: 3}
     - target: {fileID: 8031231580685338730, guid: e1173eb9eef3b0e40b7788eda4768022, type: 3}
       propertyPath: 'sprites_Push.Array.data[0]'
       value: 

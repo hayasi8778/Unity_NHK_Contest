@@ -13,10 +13,12 @@ public class PlayerJump : MonoBehaviour
     public AudioClip jumpSE;
 
     public float AnimationTime = 0.5f;//アニメーションの待ち時間
+    public float JumpToTime = 0.5f;//ジャンプアニメーションの許可時間
 
     private bool GravityFlag = true;//重力フラグ(trueで正常falseで反転)
 
      private bool animFlag = true; //アニメーションのフラグ
+    private bool P_jumpFlag = false; //アニメーションのフラグ
 
     void Start()
     {
@@ -46,12 +48,20 @@ public class PlayerJump : MonoBehaviour
                     audioSource.PlayOneShot(jumpSE); // ジャンプ時のSE再生
                 }
             }
+
+            //ジャンプのアニメーションフラグon
+            JumpFlagON();
             
         }
 
-        if(!(validGround.Count > 0 && animFlag == false) && Input.GetKey(KeyCode.Space))//何処にもあたっていないなら
+        if(!(validGround.Count > 0))//何処にもあたっていないなら
         {
-            PlayJump();//ジャンプアニメーション流す
+            if (animFlag && P_jumpFlag)
+            {
+                Debug.Log("ジャンプアニメーション");
+                PlayJump();//ジャンプアニメーション流す
+            }
+           
         }
 
         //animFlag = false;
@@ -156,8 +166,6 @@ public class PlayerJump : MonoBehaviour
     {
         animFlag = false;
 
-        Debug.Log("ジャンプアニメーション");
-
         //オブジェクト継承して
         PlayerMoveAmin JumpAmin = this.GetComponent<PlayerMoveAmin>();
 
@@ -169,6 +177,22 @@ public class PlayerJump : MonoBehaviour
     void StopAmin()
     {
         animFlag = true;
+    }
+
+    private void JumpFlagON()
+    {
+        P_jumpFlag = true;
+
+        //Debug.Log("ジャンプアニメーション");
+
+        Invoke("JumpFlagOFF", JumpToTime);
+
+    }
+
+    private void JumpFlagOFF()
+    {
+        P_jumpFlag = false;
+
     }
 
 }
