@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 3f3669557e7d48145a960cf7e546ad9e
+guid: 6cc1c2f53fe3a544d8d3bc2ae87dd31c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4691995272226028247
-    second: kasettokari_0
+      213: -3345003959854417232
+    second: kasettokari (1)_0
   - first:
-      213: -5281657904876166439
-    second: kasettokari_1
+      213: -6513128204306635150
+    second: kasettokari (1)_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: kasettokari_1
+      name: kasettokari (1)_1
       rect:
         serializedVersion: 2
         x: 39
         y: 0
         width: 1925
-        height: 1254
+        height: 1238
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9d2e8b27e18c3b6b0800000000000000
-      internalID: -5281657904876166439
+      spriteID: 276a9bdf768bc95a0800000000000000
+      internalID: -6513128204306635150
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b939bef4677aa9642aba1a557e3abb00
+    spriteID: b56930dd306134c44a3c4db0d5bee3f4
     internalID: 0
     vertices: []
     indices: 
@@ -151,7 +151,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      kasettokari_1: -5281657904876166439
+      kasettokari (1)_1: -6513128204306635150
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

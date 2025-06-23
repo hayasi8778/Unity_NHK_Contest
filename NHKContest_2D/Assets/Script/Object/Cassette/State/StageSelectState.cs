@@ -1,53 +1,60 @@
-﻿using Unity.VisualScripting;
-using UnityEditor;
+﻿using TMPro;
 using UnityEngine;
 
-namespace Cassette.State
+public class StageSelectState : IState
 {
-    public class StageSelectState : IState
+    [SerializeField]
+    public GameObject[] allPreview;
+    [SerializeField]
+    public int selectIndex;
+    [SerializeField]
+    private GameObject screenPicture;
+    [SerializeField]
+    private TextMeshProUGUI text;
+
+    [SerializeField]
+    private CassetteSelectState cassetteSelectState;
+    private sData[] stageData;
+    private SpriteRenderer spriteRenderer;
+
+    public override void StateEnter()
     {
-        private Cassettes allCassette;
-        public const int viewMaxCount = 5;
-        public const float interval = 8;
+        stageData = allPreview[cassetteSelectState.selectIndex].GetComponent<StageData>().stageData;
+        spriteRenderer = screenPicture.GetComponent<SpriteRenderer>();
 
-        public static GameObject[] viewCassettes;
-        private SmoothMove[] smoothMoves;
-        public static int selectIndex = 0;
-
-
-
-        public override void Enter()
+        selectIndex = 0;
+        screenPicture.SetActive(true);
+    }
+    public override void StateUpdate()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            allCassette = (Cassettes)Resources.Load("Cassette/AllCassette");
-            viewCassettes = new GameObject[viewMaxCount];
-            smoothMoves = new SmoothMove[viewMaxCount];
-            for (int i = 0; i < viewMaxCount; i++)
-            {
-                Vector3 pos = new Vector3((i - viewMaxCount / 2) * interval, 0, 0);
-                viewCassettes[i] = Object.Instantiate(allCassette.cassettes[(i - viewMaxCount / 2 + allCassette.cassettes.Length) % allCassette.cassettes.Length], pos, Quaternion.identity);
-                viewCassettes[i].GetComponent<FloatEffect>().enabled = true;
-                viewCassettes[i].GetComponent<MoveCassette>().enabled = true;
-                viewCassettes[i].GetComponent<PointZoom>().enabled = true;
-                viewCassettes[i].GetComponent<SmoothMove>().enabled = true;
-                smoothMoves[i] = viewCassettes[i].GetComponent<SmoothMove>();
-                smoothMoves[i].goal = viewCassettes[i].transform.position;
-            }
+            // Indexを循環させながら減らす
+            selectIndex = (selectIndex + stageData.Length - 1) % stageData.Length;
         }
-
-        public override void Update()
+        if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-
+            // Indexを循環させながら減らす
+            selectIndex = (selectIndex +  1) % stageData.Length;
         }
+        spriteRenderer.sprite = stageData[selectIndex].preview;
 
-        public override void Exit()
+        // ホントは画像を切り替えたいよね
+        text.text = (cassetteSelectState.selectIndex + 1).ToString() + " - " + (selectIndex + 1).ToString();
+
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            for (int i = 0; i < viewMaxCount; i++)
-            {
-                viewCassettes[i].GetComponent<FloatEffect>().enabled = false;
-                viewCassettes[i].GetComponent<MoveCassette>().enabled = false;
-                viewCassettes[i].GetComponent<PointZoom>().enabled = false;
-                viewCassettes[i].GetComponent<SmoothMove>().enabled = false;
-            }
+            screenPicture.SetActive(false);
+            parent.transform.Find("ScreenZoomState").GetComponent<ScreenZoomState>().zoom = false;
+            parent.ChangeState("ScreenZoomState");
         }
+        else if(Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            parent.ChangeState("FadeOutState");
+        }
+    }
+    public override void StateExit()
+    {
+        
     }
 }

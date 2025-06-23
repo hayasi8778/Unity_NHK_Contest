@@ -1,64 +1,89 @@
 ﻿using UnityEngine;
-using UnityEngine.UIElements.Experimental;
-#if UNITY_EDITOR
-using static UnityEditor.PlayerSettings;
-#endif
-using static UnityEngine.RuleTile.TilingRuleOutput;
 
-namespace Cassette.State
+public class DropState : IState
 {
-    public class DropState : IState
+    private float velocity;  // 落下用の速度
+    [SerializeField]
+    private float initVelocity = 2.0f;  // 落下用の速度
+    [SerializeField]
+    private float acceleration = -10.0f;   // 落下用の加速度
+    [SerializeField]
+    private Vector2 mouthPos;    // 拡大の中心設定
+
+    // 取得用
+    [SerializeField]
+    private CassetteSelectState cassetteSelectState;
+    private GameObject[] viewCassettes;
+    private int viewMaxCount;
+    private float interval;
+    private GameObject mainCassette;
+
+    public override void StateEnter()
     {
-        private Vector2 velocity;
-        private Vector2 acceleration;
+        // 取得
+        viewCassettes = cassetteSelectState.viewCassettes;
+        viewMaxCount = cassetteSelectState.viewMaxCount;
+        interval = cassetteSelectState.interval;
+        mainCassette = viewCassettes[viewMaxCount / 2];
 
-        public override void Enter()
+        // 真ん中から一つ左右のカセットを画面外に飛ばす
+        SmoothMove leftSmoothMove = viewCassettes[viewMaxCount / 2 - 1].GetComponent<SmoothMove>();
+        leftSmoothMove.enabled = true;
+        leftSmoothMove.goal.x = -(interval * (viewMaxCount / 2));
+        SmoothMove rightSmoothMove = viewCassettes[viewMaxCount / 2 + 1].GetComponent<SmoothMove>();
+        rightSmoothMove.enabled = true;
+        rightSmoothMove.goal.x = interval * (viewMaxCount / 2);
+
+        // カセットのサイズ調整
+        PointZoom pointZoom = mainCassette.GetComponent<PointZoom>();
+        pointZoom.enabled = true;
+        pointZoom.point = new Vector3(mouthPos.x, mouthPos.y, 0);
+
+        velocity = initVelocity;
+    }
+    public override void StateUpdate()
+    {
+        // カセットを落とす
+        Vector2 position = mainCassette.transform.position;
+        if (position.y > mouthPos.y)
         {
-            SmoothMove leftSmoothMove = CassetteSelectState.viewCassettes[CassetteSelectState.viewMaxCount / 2 - 1].GetComponent<SmoothMove>();
-            leftSmoothMove.enabled = true;
-            leftSmoothMove.goal.x = -(CassetteSelectState.interval * (CassetteSelectState.viewMaxCount / 2));
-            SmoothMove rightSmoothMove = CassetteSelectState.viewCassettes[CassetteSelectState.viewMaxCount / 2 + 1].GetComponent<SmoothMove>();
-            rightSmoothMove.enabled = true;
-            rightSmoothMove.goal.x = CassetteSelectState.interval * (CassetteSelectState.viewMaxCount / 2);
-            PointZoom pointZoom = CassetteSelectState.viewCassettes[CassetteSelectState.viewMaxCount / 2].GetComponent<PointZoom>();
-            pointZoom.enabled = true;
-            pointZoom.point = new Vector3(0, -5, 0);
-
-
-            velocity.y = 2;
-            acceleration.y = -10;
+            velocity += acceleration * Time.deltaTime;
+            position.y += velocity * Time.deltaTime;
+            position.x = 0;
         }
-        public override void Update()
+        // 落ちたらステージ選択へ
+        else
         {
-            Vector2 position = CassetteSelectState.viewCassettes[CassetteSelectState.viewMaxCount / 2].transform.position;
-            if (position.y > -5)
-            {
-                velocity += acceleration * Time.deltaTime;
-                position += velocity * Time.deltaTime;
-                position.x = 0;
-            }
-            else
-            {
-                position.y = -5;
-                parent.ChangeState(new Cassette.State.ZoomTVState());
-            }
-            CassetteSelectState.viewCassettes[CassetteSelectState.viewMaxCount / 2].transform.position = position;
-
-            Camera.main.transform.position = new Vector3(2 / (1 + Mathf.Exp(-position.x * 2)) - 1, 2 / (1 + Mathf.Exp(-position.y * 2)) - 1, -10);
-
-            if (Input.GetKeyDown(KeyCode.UpArrow))
-            {
-                foreach (GameObject cassette in CassetteSelectState.viewCassettes)
-                    Object.Destroy(cassette);
-                parent.ChangeState(new Cassette.State.CassetteSelectState());
-            }
-
+            position.y = mouthPos.y;
+            parent.transform.Find("ScreenZoomState").GetComponent<ScreenZoomState>().zoom = true;
+            parent.ChangeState("ScreenZoomState");
         }
-        public override void Exit()
-        {
-            CassetteSelectState.viewCassettes[CassetteSelectState.viewMaxCount / 2 - 1].GetComponent<SmoothMove>().enabled = false;
-            CassetteSelectState.viewCassettes[CassetteSelectState.viewMaxCount / 2 + 1].GetComponent<SmoothMove>().enabled = false;
-            CassetteSelectState.viewCassettes[CassetteSelectState.viewMaxCount / 2].GetComponent<PointZoom>().enabled = false;
-        }
+
+        // 位置の更新
+        mainCassette.transform.position = position;
+
+        // カメラの位置をええ感にする
+        Camera.main.transform.position = new Vector3(2 / (1 + Mathf.Exp(-position.x * 2)) - 1, 2 / (1 + Mathf.Exp(-position.y * 2)) - 1, -10);
+
+
+        // 前の処理
+        //
+        //if (Input.GetKeyDown(KeyCode.UpArrow))
+        //{
+        //    // 画面外のゴミを消す
+        //    foreach (GameObject cassette in viewCassettes)
+        //        Object.Destroy(cassette);
+            
+        //    // カセット選択へ
+        //    parent.ChangeState("CassetteSelectState");
+        //}
+
+    }
+    public override void StateExit()
+    {
+        // カセットの動きを止める
+        viewCassettes[viewMaxCount / 2 - 1].GetComponent<SmoothMove>().enabled = false;
+        viewCassettes[viewMaxCount / 2 + 1].GetComponent<SmoothMove>().enabled = false;
+        mainCassette.GetComponent<PointZoom>().enabled = false;
     }
 }
