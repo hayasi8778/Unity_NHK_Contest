@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -713,6 +713,67 @@ Transform:
   - {fileID: 1184820481}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &215162078
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3292619195466657716, guid: b34fba7ef6e4af8438671a2548f4c9b9, type: 3}
+      propertyPath: m_Name
+      value: ImageQualityChange
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602894803672440750, guid: b34fba7ef6e4af8438671a2548f4c9b9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.2412909
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602894803672440750, guid: b34fba7ef6e4af8438671a2548f4c9b9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.9489689
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602894803672440750, guid: b34fba7ef6e4af8438671a2548f4c9b9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.031092543
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602894803672440750, guid: b34fba7ef6e4af8438671a2548f4c9b9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602894803672440750, guid: b34fba7ef6e4af8438671a2548f4c9b9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602894803672440750, guid: b34fba7ef6e4af8438671a2548f4c9b9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602894803672440750, guid: b34fba7ef6e4af8438671a2548f4c9b9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602894803672440750, guid: b34fba7ef6e4af8438671a2548f4c9b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602894803672440750, guid: b34fba7ef6e4af8438671a2548f4c9b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602894803672440750, guid: b34fba7ef6e4af8438671a2548f4c9b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8047758809533903409, guid: b34fba7ef6e4af8438671a2548f4c9b9, type: 3}
+      propertyPath: currentPlayer
+      value: 
+      objectReference: {fileID: 7553682128706804120}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b34fba7ef6e4af8438671a2548f4c9b9, type: 3}
 --- !u!1 &226355485
 GameObject:
   m_ObjectHideFlags: 0
@@ -2331,7 +2392,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1905942422}
   m_HandleRect: {fileID: 1905942420}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -3882,6 +3943,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2136836580920433320, guid: 09ecb9dbd9676dd44a0a820b9c85057a, type: 3}
   m_PrefabInstance: {fileID: 1493225955}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1645893175 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3292619195466657716, guid: b34fba7ef6e4af8438671a2548f4c9b9, type: 3}
+  m_PrefabInstance: {fileID: 215162078}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1660600507 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2136836580920433320, guid: 09ecb9dbd9676dd44a0a820b9c85057a, type: 3}
@@ -4360,6 +4426,10 @@ PrefabInstance:
       propertyPath: virtualCamera
       value: 
       objectReference: {fileID: 258936631}
+    - target: {fileID: 3188321655330994647, guid: e1173eb9eef3b0e40b7788eda4768022, type: 3}
+      propertyPath: ImageQualityChanger
+      value: 
+      objectReference: {fileID: 1645893175}
     - target: {fileID: 6662187460329562534, guid: e1173eb9eef3b0e40b7788eda4768022, type: 3}
       propertyPath: AnimationTime
       value: 0.3
@@ -4627,3 +4697,4 @@ SceneRoots:
   - {fileID: 413480976}
   - {fileID: 212323466}
   - {fileID: 3735969814710168130}
+  - {fileID: 215162078}

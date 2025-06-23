@@ -46,4 +46,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageData:
   - preview: {fileID: 0}
-    sceneName: 
+    sceneName: Gravity_01
+  - preview: {fileID: 0}
+    sceneName: Gravity_02
+  - preview: {fileID: 0}
+    sceneName: Gravity_03
+  - preview: {fileID: 0}
+    sceneName: Gravity_04
+  - preview: {fileID: 0}
+    sceneName: Gravity_05
+  - preview: {fileID: 0}
+    sceneName: Gravity_06

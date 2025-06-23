@@ -46,4 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageData:
   - preview: {fileID: 0}
-    sceneName: 
+    sceneName: Stage_Cannon

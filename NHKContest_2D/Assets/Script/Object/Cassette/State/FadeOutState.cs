@@ -60,7 +60,7 @@ public class FadeOutState : IState
         if (screenZoomScale.x < scrScale.x + epsilon && screenZoomScale.y < scrScale.y + epsilon)
         {
             Debug.Log("ここでsceneNameを使ってシーン遷移 " + sceneName);
-            //SceneManager.LoadScene(sceneName);
+            SceneManager.LoadScene(sceneName);
         }
     }
     public override void StateExit()

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class TimeSlider_Light : TimeSliderObject_Base
 {
     public GameObject[] replacementPrefabs;
+    public GameObject ImageQuality;
     public int replacementIndex = 0;
     public Slider slider; //スライダー
 
@@ -64,6 +65,7 @@ public class TimeSlider_Light : TimeSliderObject_Base
         {
             newScript.slider = this.slider;
             newScript.replacementPrefabs = this.replacementPrefabs;
+            newScript.ImageQuality = this.ImageQuality;
             newScript.replacementIndex = this.replacementIndex;
             newScript.Currentnum = this.Currentnum;
         }
@@ -161,6 +163,7 @@ public class TimeSlider_Light : TimeSliderObject_Base
         {
             newScript.slider = this.slider;
             newScript.replacementPrefabs = this.replacementPrefabs;
+            newScript.ImageQuality = this.ImageQuality;
             newScript.Currentnum = this.Currentnum; //配列番号更新処理を追加
 
             // 🔥 注意！！戻った後のオブジェクトでは「次に行けるよう」replacementIndexを1つ進めた値にする！
@@ -173,6 +176,14 @@ public class TimeSlider_Light : TimeSliderObject_Base
         {
             Debug.LogWarning("配列設定" + Currentnum);
             counter.SetCurrentObjects(newObj, Currentnum);
+        }
+
+        // ここでスライダー側に「新しいオブジェクト」を教える！
+        var IQ_counter = ImageQuality.GetComponent<ImageChanger>();
+        if (counter != null)
+        {
+            Debug.LogWarning("配列設定" + Currentnum);
+            IQ_counter.SetCurrentObjects(newObj, Currentnum);
         }
 
         Destroy(this.gameObject);
