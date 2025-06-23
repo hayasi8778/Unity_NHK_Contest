@@ -14,12 +14,12 @@ public class StageSelectState : IState
 
     [SerializeField]
     private CassetteSelectState cassetteSelectState;
-    private Sprite[] preview;
+    private sData[] stageData;
     private SpriteRenderer spriteRenderer;
 
     public override void StateEnter()
     {
-        preview = allPreview[cassetteSelectState.selectIndex].GetComponent<PreviewData>().preview;
+        stageData = allPreview[cassetteSelectState.selectIndex].GetComponent<StageData>().stageData;
         spriteRenderer = screenPicture.GetComponent<SpriteRenderer>();
 
         selectIndex = 0;
@@ -30,14 +30,14 @@ public class StageSelectState : IState
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             // Indexを循環させながら減らす
-            selectIndex = (selectIndex + preview.Length - 1) % preview.Length;
+            selectIndex = (selectIndex + stageData.Length - 1) % stageData.Length;
         }
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             // Indexを循環させながら減らす
-            selectIndex = (selectIndex +  1) % preview.Length;
+            selectIndex = (selectIndex +  1) % stageData.Length;
         }
-        spriteRenderer.sprite = preview[selectIndex];
+        spriteRenderer.sprite = stageData[selectIndex].preview;
 
         // ホントは画像を切り替えたいよね
         text.text = (cassetteSelectState.selectIndex + 1).ToString() + " - " + (selectIndex + 1).ToString();

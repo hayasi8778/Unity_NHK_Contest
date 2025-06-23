@@ -44,6 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4911f210d2d79241b76b6892ca5d529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  preview:
-  - {fileID: 6399340461708634234, guid: f92550f38efd6014189b13b5910dd61f, type: 3}
-  - {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  stageData:
+  - preview: {fileID: 6399340461708634234, guid: 1d05e8e9c9111bc4d8ff7bf96f6475ef, type: 3}
+    sceneName: 
+  - preview: {fileID: 0}
+    sceneName: 
