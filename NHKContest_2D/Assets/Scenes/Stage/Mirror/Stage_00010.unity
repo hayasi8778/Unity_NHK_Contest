@@ -3498,6 +3498,10 @@ PrefabInstance:
       propertyPath: virtualCamera
       value: 
       objectReference: {fileID: 258936631}
+    - target: {fileID: 3188321655330994647, guid: e1173eb9eef3b0e40b7788eda4768022, type: 3}
+      propertyPath: ImageQualityChanger
+      value: 
+      objectReference: {fileID: 1183094286}
     - target: {fileID: 6662187460329562534, guid: e1173eb9eef3b0e40b7788eda4768022, type: 3}
       propertyPath: AnimationTime
       value: 0.3
