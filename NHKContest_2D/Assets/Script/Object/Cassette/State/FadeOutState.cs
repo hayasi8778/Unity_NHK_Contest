@@ -20,9 +20,21 @@ public class FadeOutState : IState
     private float pictureZoomSpeed;
     [SerializeField]
     private float screenZoomSpeed;
+    [SerializeField]
+    private float epsilon;
+
+    [SerializeField]
+    private CassetteSelectState cassetteSelectState;
+    [SerializeField]
+    private StageSelectState stageSelectState;
+    private int worldIndex;
+    private int stageIndex;
 
     public override void StateEnter()
     {
+        worldIndex = cassetteSelectState.selectIndex;
+        stageIndex = stageSelectState.selectIndex;
+
         fadeOut.SetActive(true);
         screen.GetComponent<FollowBack>().enabled = false;
     }
@@ -41,6 +53,11 @@ public class FadeOutState : IState
         picture.transform.localScale = picScale;
         screen.transform.position = scrPos;
         screen.transform.localScale = scrScale;
+
+        if (screenZoomScale.x < scrScale.x + epsilon && screenZoomScale.y < scrScale.y + epsilon)
+        {
+            Debug.Log("ここでworldIndexとstageIndexを使ってシーン遷移 world : " + worldIndex.ToString() + "  stage : " + stageIndex.ToString());
+        }
     }
     public override void StateExit()
     {

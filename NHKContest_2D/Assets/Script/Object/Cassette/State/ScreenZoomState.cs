@@ -3,7 +3,7 @@
 public class ScreenZoomState : IState
 {
     [SerializeField]
-    private float delta = 0.01f;  // 小さい数値
+    private float epsilon = 0.01f;  // 小さい数値
     [SerializeField]
     private float centerY = 6;
     [SerializeField]
@@ -13,10 +13,10 @@ public class ScreenZoomState : IState
     [SerializeField]
     private float speed = 10.0f;
     [SerializeField]
-    private GameObject screenPicture;
-    [SerializeField]
     public bool zoom;
-    private Vector2 center;
+
+
+    [SerializeField]
     private CassetteSelectState cassetteSelectState;
     private GameObject[] viewCassettes;
     private int viewMaxCount;
@@ -26,7 +26,6 @@ public class ScreenZoomState : IState
 
     public override void StateEnter()
     {
-        cassetteSelectState = parent.transform.Find("CassetteSelectState").GetComponent<CassetteSelectState>();
         viewCassettes = cassetteSelectState.viewCassettes;
         viewMaxCount = cassetteSelectState.viewMaxCount;
         mainCassette = viewCassettes[viewMaxCount / 2];
@@ -47,15 +46,13 @@ public class ScreenZoomState : IState
             Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, min, Time.deltaTime * speed);
         }
 
-        if (Camera.main.orthographicSize < min + delta && zoom)
+        if (Camera.main.orthographicSize < min + epsilon && zoom)
         {
-            screenPicture.SetActive(true);
             parent.ChangeState("StageSelectState");
         }
 
         if (Camera.main.orthographicSize < max && !zoom)
         {
-            screenPicture.SetActive(false);
             Vector3 pos = Camera.main.transform.position;
             pos.y = Mathf.Lerp(pos.y, 0, Time.deltaTime * speed);
             Camera.main.transform.position = pos;
@@ -66,7 +63,7 @@ public class ScreenZoomState : IState
             mainCassette.transform.position = casPos;
         }
 
-        if (Camera.main.orthographicSize > max - delta && !zoom)
+        if (Camera.main.orthographicSize > max - epsilon && !zoom)
         {
             foreach (GameObject cassette in viewCassettes)
                 Object.Destroy(cassette);

@@ -11,6 +11,7 @@ public class DropState : IState
     private Vector2 mouthPos;    // 拡大の中心設定
 
     // 取得用
+    [SerializeField]
     private CassetteSelectState cassetteSelectState;
     private GameObject[] viewCassettes;
     private int viewMaxCount;
@@ -20,7 +21,6 @@ public class DropState : IState
     public override void StateEnter()
     {
         // 取得
-        cassetteSelectState = parent.transform.Find("CassetteSelectState").GetComponent<CassetteSelectState>();
         viewCassettes = cassetteSelectState.viewCassettes;
         viewMaxCount = cassetteSelectState.viewMaxCount;
         interval = cassetteSelectState.interval;

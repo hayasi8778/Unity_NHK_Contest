@@ -17,7 +17,7 @@ public class CassetteSelectState : IState
     [SerializeField]
     private float lifeTime = 1.0f;  // 画面外のカセットの消える時間
 
-[SerializeField]
+    [SerializeField]
     public GameObject[] viewCassettes;  // 表示されるカセットオブジェクト
     [SerializeField]
     private SmoothMove[] smoothMoves;   // カセットのsmoothMoveパス用
