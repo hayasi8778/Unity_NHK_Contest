@@ -1,217 +1,220 @@
 fileFormatVersion: 2
-guid: 703a7634a8d62494ebe3122dddf21240
+guid: ee9d9389f4164f2488e8a89346ffd12d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8647344452988432403
-    second: dimennsion_SEF_0
+      213: 8605720032912798400
+    second: potal_0
   - first:
-      213: 3713910778148678596
-    second: dimennsion_SEF_1
+      213: 2454967149059648270
+    second: potal_1
   - first:
-      213: 608548987895556023
-    second: dimennsion_SEF_2
+      213: -5201570680441835891
+    second: potal_2
   - first:
-      213: 4547373703025382774
-    second: dimennsion_SEF_3
+      213: 1359631911726783266
+    second: potal_3
   - first:
-      213: -8061265041117215832
-    second: dimennsion_SEF_4
+      213: 5421731537975210931
+    second: potal_4
   - first:
-      213: -3006869652396078632
-    second: dimennsion_SEF_5
+      213: -5803357373425572602
+    second: potal_5
   - first:
-      213: 2725565423978621015
-    second: dimennsion_SEF_6
+      213: 8230569047608022123
+    second: potal_6
   - first:
-      213: -6308038256259736325
-    second: dimennsion_SEF_7
+      213: -2644366658183027785
+    second: potal_7
   - first:
-      213: -6762820548823915164
-    second: dimennsion_SEF_8
+      213: 2577551081513928200
+    second: potal_8
   - first:
-      213: 8972139449025361941
-    second: dimennsion_SEF_9
+      213: 425107412064694648
+    second: potal_9
   - first:
-      213: -7498870075488421895
-    second: dimennsion_SEF_10
+      213: -3814443702743612662
+    second: potal_10
   - first:
-      213: 1418640789132642282
-    second: dimennsion_SEF_11
+      213: -3476786518243275620
+    second: potal_11
   - first:
-      213: -5480818513888179979
-    second: dimennsion_SEF_12
+      213: -1387966191534432590
+    second: potal_12
   - first:
-      213: 766114616414273759
-    second: dimennsion_SEF_13
+      213: -7612167474145583608
+    second: potal_13
   - first:
-      213: -587129872985277569
-    second: dimennsion_SEF_14
+      213: -7927771478253816172
+    second: potal_14
   - first:
-      213: -1874076696092971770
-    second: dimennsion_SEF_15
+      213: -5829497351216000392
+    second: potal_15
   - first:
-      213: 8036498231846228980
-    second: dimennsion_SEF_16
+      213: 4189659019273868811
+    second: potal_16
   - first:
-      213: 5318761335705802075
-    second: dimennsion_SEF_17
+      213: 5894413726338676768
+    second: potal_17
   - first:
-      213: 6117007389287698336
-    second: dimennsion_SEF_18
+      213: -4359776477616003003
+    second: potal_18
   - first:
-      213: 6709449438619048948
-    second: dimennsion_SEF_19
+      213: 3308617142083079623
+    second: potal_19
   - first:
-      213: 7020206492756579844
-    second: dimennsion_SEF_20
+      213: 6864871280374517943
+    second: potal_20
   - first:
-      213: -7801529902614585442
-    second: dimennsion_SEF_21
+      213: 689559825979024867
+    second: potal_21
   - first:
-      213: 1791979064740919458
-    second: dimennsion_SEF_22
+      213: 3009507831315859891
+    second: potal_22
   - first:
-      213: -5161511859725075849
-    second: dimennsion_SEF_23
+      213: -4301285094847002918
+    second: potal_23
   - first:
-      213: 92588351872493873
-    second: dimennsion_SEF_24
+      213: -1387449878548388790
+    second: potal_24
   - first:
-      213: -5995543324764649386
-    second: dimennsion_SEF_25
+      213: -774768542127337437
+    second: potal_25
   - first:
-      213: -6782751862111877525
-    second: dimennsion_SEF_26
+      213: -6816406961938503362
+    second: potal_26
   - first:
-      213: 6097997011305474015
-    second: dimennsion_SEF_27
+      213: 5819006890018740142
+    second: potal_27
   - first:
-      213: 5471375648972229559
-    second: dimennsion_SEF_28
+      213: -7876651913355032162
+    second: potal_28
   - first:
-      213: -3620441646524395757
-    second: dimennsion_SEF_29
+      213: -8940600418605838710
+    second: potal_29
   - first:
-      213: -2136590482714767313
-    second: dimennsion_SEF_30
+      213: 71757684769633358
+    second: potal_30
   - first:
-      213: -2662835146689382562
-    second: dimennsion_SEF_31
+      213: 371221874317656128
+    second: potal_31
   - first:
-      213: 5504866850518801745
-    second: dimennsion_SEF_32
+      213: -3935348117896454036
+    second: potal_32
   - first:
-      213: -2826459816983987956
-    second: dimennsion_SEF_33
+      213: -4918665281023279609
+    second: potal_33
   - first:
-      213: -4075668832387137112
-    second: dimennsion_SEF_34
+      213: -5084308915034110852
+    second: potal_34
   - first:
-      213: 1155959232106562952
-    second: dimennsion_SEF_35
+      213: 2896610143041668005
+    second: potal_35
   - first:
-      213: -860138365301319158
-    second: dimennsion_SEF_36
+      213: 9090127075334611190
+    second: potal_36
   - first:
-      213: 571005707431567266
-    second: dimennsion_SEF_37
+      213: 3504268264657915331
+    second: potal_37
   - first:
-      213: 3192856500871112640
-    second: dimennsion_SEF_38
+      213: -5779757243068040505
+    second: potal_38
   - first:
-      213: 4501650563170211130
-    second: dimennsion_SEF_39
+      213: 800883197379279147
+    second: potal_39
   - first:
-      213: -7344577343833790902
-    second: dimennsion_SEF_40
+      213: 1917034718262620251
+    second: potal_40
   - first:
-      213: 1662535081625305248
-    second: dimennsion_SEF_41
+      213: 7218583376985812191
+    second: potal_41
   - first:
-      213: 4043643947630984852
-    second: dimennsion_SEF_42
+      213: 7565225042286164287
+    second: potal_42
   - first:
-      213: -5904491242055113618
-    second: dimennsion_SEF_43
+      213: -2729715027716230339
+    second: potal_43
   - first:
-      213: 351315092915140352
-    second: dimennsion_SEF_44
+      213: -4497549780141919314
+    second: potal_44
   - first:
-      213: 5155528878768489563
-    second: dimennsion_SEF_45
+      213: 1695060643476110249
+    second: potal_45
   - first:
-      213: -2033568649062598909
-    second: dimennsion_SEF_46
+      213: -5493832179036839294
+    second: potal_46
   - first:
-      213: -3495894362550787170
-    second: dimennsion_SEF_47
+      213: 5989339668820880620
+    second: potal_47
   - first:
-      213: 2558560160399244151
-    second: dimennsion_SEF_48
+      213: 8721695496586616782
+    second: potal_48
   - first:
-      213: -123456904602120270
-    second: dimennsion_SEF_49
+      213: -1543398316909736702
+    second: potal_49
   - first:
-      213: 3429157251001338874
-    second: dimennsion_SEF_50
+      213: -8991524492890461640
+    second: potal_50
   - first:
-      213: 6771971031677590470
-    second: dimennsion_SEF_51
+      213: 4907208292280405863
+    second: potal_51
   - first:
-      213: -3745883981334681501
-    second: dimennsion_SEF_52
+      213: 6959288895402469137
+    second: potal_52
   - first:
-      213: -5805931651910437916
-    second: dimennsion_SEF_53
+      213: -7790590732807426414
+    second: potal_53
   - first:
-      213: 2093989554964582132
-    second: dimennsion_SEF_54
+      213: -880946140126314836
+    second: potal_54
   - first:
-      213: 5760798162830382801
-    second: dimennsion_SEF_55
+      213: 4048537828150122325
+    second: potal_55
   - first:
-      213: 8744165221652172333
-    second: dimennsion_SEF_56
+      213: -4404257222429319273
+    second: potal_56
   - first:
-      213: 2604406634505487326
-    second: dimennsion_SEF_57
+      213: 2100247712310938186
+    second: potal_57
   - first:
-      213: 3226713441686952414
-    second: dimennsion_SEF_58
+      213: 4236568474467433456
+    second: potal_58
   - first:
-      213: 7856678858194832642
-    second: dimennsion_SEF_59
+      213: 2941111668661241951
+    second: potal_59
   - first:
-      213: -6699727417439842729
-    second: dimennsion_SEF_60
+      213: -7460840445403082243
+    second: potal_60
   - first:
-      213: -7056084764700959882
-    second: dimennsion_SEF_61
+      213: -9014846552582709513
+    second: potal_61
   - first:
-      213: -5997028114709400944
-    second: dimennsion_SEF_62
+      213: -1088747275456759095
+    second: potal_62
   - first:
-      213: 2208124280900404422
-    second: dimennsion_SEF_63
+      213: 4954889097873900674
+    second: potal_63
   - first:
-      213: 2595451138832958422
-    second: dimennsion_SEF_64
+      213: 116587498695987886
+    second: potal_64
   - first:
-      213: -6540026147536170676
-    second: dimennsion_SEF_65
+      213: 5614585507141501153
+    second: potal_65
   - first:
-      213: 8890500144652403580
-    second: dimennsion_SEF_66
+      213: -2123361517326313931
+    second: potal_66
   - first:
-      213: 6587168895191135652
-    second: dimennsion_SEF_67
+      213: 7283202348878557675
+    second: potal_67
   - first:
-      213: -885819480297100937
-    second: dimennsion_SEF_68
+      213: 8612931219604912838
+    second: potal_68
   - first:
-      213: -4308516149106377059
-    second: dimennsion_SEF_69
+      213: 755871157649467223
+    second: potal_69
+  - first:
+      213: 3876811973239172727
+    second: potal_70
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -307,123 +310,123 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dimennsion_SEF_2
-      rect:
-        serializedVersion: 2
-        x: 1720
-        y: 1470
-        width: 860
-        height: 734
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7b720fb8410027800800000000000000
-      internalID: 608548987895556023
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dimennsion_SEF_5
+      name: potal_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 736
-        width: 860
-        height: 734
+        y: 900
+        width: 800
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8d987037bf37546d0800000000000000
-      internalID: -3006869652396078632
+      spriteID: 4ccb5162b6b394f49979723bb4ae263c
+      internalID: 1071781577
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dimennsion_SEF_8
+      name: potal_1
       rect:
         serializedVersion: 2
-        x: 2580
-        y: 736
-        width: 860
-        height: 734
+        x: 800
+        y: 900
+        width: 800
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 46563a3ba82a522a0800000000000000
-      internalID: -6762820548823915164
+      spriteID: 83e7c96db6b84dc44bfeb648f82f3d7f
+      internalID: 1351617480
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dimennsion_SEF_11
+      name: potal_2
       rect:
         serializedVersion: 2
-        x: 860
-        y: 2
-        width: 860
-        height: 734
+        x: 1600
+        y: 900
+        width: 800
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ae7812c084600b310800000000000000
-      internalID: 1418640789132642282
+      spriteID: 463915aa9d245bf4293d48eeab3a53e5
+      internalID: 897836805
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dimennsion_SEF_13
+      name: potal_3
       rect:
         serializedVersion: 2
-        x: 2580
-        y: 2
-        width: 860
-        height: 734
+        x: 2400
+        y: 900
+        width: 800
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fd08b904f29c1aa00800000000000000
-      internalID: 766114616414273759
+      spriteID: 4f8d516040666e5489821afbf19189eb
+      internalID: 1000911623
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dimennsion_SEF_0
+      name: potal_4
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 900
+        width: 800
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b06ba3bdc70e714eb566a247a7bcf67
+      internalID: 768139161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: potal_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 1470
-        width: 860
-        height: 734
+        y: 450
+        width: 800
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -432,20 +435,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1dacc5945e4cbe34081ee1a189068339
-      internalID: -1423678227
+      spriteID: e179d6d9044052a42b64acdb5f64a592
+      internalID: -1132919943
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dimennsion_SEF_1
+      name: potal_6
       rect:
         serializedVersion: 2
-        x: 860
-        y: 1470
-        width: 860
-        height: 734
+        x: 800
+        y: 450
+        width: 800
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -454,20 +457,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 449b3f657f8fb5642b74fcb277bcd011
-      internalID: 1177007165
+      spriteID: 71e480bc2410e0742b99321c3fa00b5a
+      internalID: 1535784136
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dimennsion_SEF_3
+      name: potal_7
       rect:
         serializedVersion: 2
-        x: 2580
-        y: 1470
-        width: 860
-        height: 734
+        x: 1600
+        y: 450
+        width: 800
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -476,20 +479,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e071e9c83595e224382b117e98bfcb3a
-      internalID: 1897709948
+      spriteID: cb35f98a67a922d43b144725ac02c8c8
+      internalID: 783006535
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dimennsion_SEF_4
+      name: potal_8
       rect:
         serializedVersion: 2
-        x: 3440
-        y: 1470
-        width: 860
-        height: 734
+        x: 2400
+        y: 450
+        width: 800
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -498,20 +501,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1fc14d3dcf71844c9201a35ef9eb662
-      internalID: -1778457323
+      spriteID: a4178c9a320117645a38351d662580c8
+      internalID: 1846499790
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dimennsion_SEF_6
+      name: potal_9
       rect:
         serializedVersion: 2
-        x: 860
-        y: 736
-        width: 860
-        height: 734
+        x: 3200
+        y: 450
+        width: 800
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -520,64 +523,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3c1f478f6480b446952a8ad00b869c6
-      internalID: -1309910042
+      spriteID: e037486a725b83543bb4c0fe640407f7
+      internalID: 928465104
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dimennsion_SEF_7
-      rect:
-        serializedVersion: 2
-        x: 1720
-        y: 736
-        width: 860
-        height: 734
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3f8557094d79ba2469203c11c81b8abe
-      internalID: 694525631
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dimennsion_SEF_9
-      rect:
-        serializedVersion: 2
-        x: 3440
-        y: 736
-        width: 860
-        height: 734
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bd2fb62891eeef945b3438a1bf744926
-      internalID: 1468492141
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dimennsion_SEF_10
+      name: potal_10
       rect:
         serializedVersion: 2
         x: 0
-        y: 2
-        width: 860
-        height: 734
+        y: 0
+        width: 800
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -586,20 +545,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00edefa354d36e34b8f2206777a58c34
-      internalID: -567044440
+      spriteID: 4a96e4408629ae546b9d100f72121800
+      internalID: 672388693
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dimennsion_SEF_12
+      name: potal_11
       rect:
         serializedVersion: 2
-        x: 1720
-        y: 2
-        width: 860
-        height: 734
+        x: 800
+        y: 0
+        width: 800
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -608,20 +567,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03adb49e15febf944916204fb33d2f12
-      internalID: -2011535486
+      spriteID: 7c017a824921e7441b19500dd6ac6c35
+      internalID: 382009639
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dimennsion_SEF_14
+      name: potal_12
       rect:
         serializedVersion: 2
-        x: 3440
-        y: 2
-        width: 860
-        height: 734
+        x: 1600
+        y: 0
+        width: 800
+        height: 450
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -630,8 +589,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4b20b77511f65d488e9a31573c17b3f
-      internalID: -1306461344
+      spriteID: 948b3408d59525e43aaf85c6efe2c7d5
+      internalID: 2026853777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: potal_13
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 0
+        width: 800
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b19cbcfddcea4c542aa2ab1b06250ccb
+      internalID: -1724510520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: potal_14
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 0
+        width: 800
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c49afe053d69b21418f8fd10f1281183
+      internalID: 1517570757
       vertices: []
       indices: 
       edges: []
@@ -640,7 +643,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 14988f50817dfca4a9aa99b16bcbbbe2
+    spriteID: f42fa0349e98b2e46b2021a7ca2aab06
     internalID: 0
     vertices: []
     indices: 
@@ -650,21 +653,21 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      dimennsion_SEF_0: -1423678227
-      dimennsion_SEF_1: 1177007165
-      dimennsion_SEF_10: -567044440
-      dimennsion_SEF_11: 1418640789132642282
-      dimennsion_SEF_12: -2011535486
-      dimennsion_SEF_13: 766114616414273759
-      dimennsion_SEF_14: -1306461344
-      dimennsion_SEF_2: 608548987895556023
-      dimennsion_SEF_3: 1897709948
-      dimennsion_SEF_4: -1778457323
-      dimennsion_SEF_5: -3006869652396078632
-      dimennsion_SEF_6: -1309910042
-      dimennsion_SEF_7: 694525631
-      dimennsion_SEF_8: -6762820548823915164
-      dimennsion_SEF_9: 1468492141
+      potal_0: 1071781577
+      potal_1: 1351617480
+      potal_10: 672388693
+      potal_11: 382009639
+      potal_12: 2026853777
+      potal_13: -1724510520
+      potal_14: 1517570757
+      potal_2: 897836805
+      potal_3: 1000911623
+      potal_4: 768139161
+      potal_5: -1132919943
+      potal_6: 1535784136
+      potal_7: 783006535
+      potal_8: 1846499790
+      potal_9: 928465104
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
