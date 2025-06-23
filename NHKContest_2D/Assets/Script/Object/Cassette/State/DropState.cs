@@ -55,7 +55,8 @@ public class DropState : IState
         else
         {
             position.y = mouthPos.y;
-            parent.ChangeState("StageSelectState");
+            parent.transform.Find("ScreenZoomState").GetComponent<ScreenZoomState>().zoom = true;
+            parent.ChangeState("ScreenZoomState");
         }
 
         // 位置の更新
@@ -64,15 +65,18 @@ public class DropState : IState
         // カメラの位置をええ感にする
         Camera.main.transform.position = new Vector3(2 / (1 + Mathf.Exp(-position.x * 2)) - 1, 2 / (1 + Mathf.Exp(-position.y * 2)) - 1, -10);
 
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            // 画面外のゴミを消す
-            foreach (GameObject cassette in viewCassettes)
-                Object.Destroy(cassette);
+
+        // 前の処理
+        //
+        //if (Input.GetKeyDown(KeyCode.UpArrow))
+        //{
+        //    // 画面外のゴミを消す
+        //    foreach (GameObject cassette in viewCassettes)
+        //        Object.Destroy(cassette);
             
-            // カセット選択へ
-            parent.ChangeState("CassetteSelectState");
-        }
+        //    // カセット選択へ
+        //    parent.ChangeState("CassetteSelectState");
+        //}
 
     }
     public override void StateExit()

@@ -2,8 +2,6 @@ using UnityEngine;
 public class StateMachine : MonoBehaviour
 {
     [SerializeField]
-    private IState[] allState;  // g‚¤‚·‚×‚Ä‚Ìó‘Ô
-    [SerializeField]
     private IState currentState;    // Œ»İ‚Ìó‘Ô
 
     /// <summary>
