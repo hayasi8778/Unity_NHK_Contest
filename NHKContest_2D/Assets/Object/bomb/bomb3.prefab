@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5512125, g: 0.9245283, b: 0.3331791, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -106,6 +106,8 @@ MonoBehaviour:
   explosionRadius: 3
   explosionForce: 300
   Vod: 6
+  beepClip: {fileID: 0}
+  warningClip: {fileID: 0}
 --- !u!58 &1297330798875403233
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -168,7 +170,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 5
 --- !u!114 &8526903815463697303
 MonoBehaviour:
   m_ObjectHideFlags: 0

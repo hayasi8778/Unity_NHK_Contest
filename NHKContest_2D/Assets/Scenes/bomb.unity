@@ -1350,6 +1350,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1299140408254342275, guid: 50a91a0f1a22d4a48b92d218ef2965a5, type: 3}
+      propertyPath: customInitialPosition.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1299140408254342275, guid: 50a91a0f1a22d4a48b92d218ef2965a5, type: 3}
+      propertyPath: customInitialPosition.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1501817764571999954, guid: 50a91a0f1a22d4a48b92d218ef2965a5, type: 3}
       propertyPath: m_Name
       value: bomb_first
