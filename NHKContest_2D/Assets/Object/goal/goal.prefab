@@ -200,9 +200,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DarkOverlay: {fileID: 6658816571752418979, guid: 50a47bdbe3a7b1c45b023724b9ddc237, type: 3}
   ClearScreen: {fileID: 464187732264209238, guid: bf78adff283e0d54ea13ea1dcdbcc315, type: 3}
-  Geme_end: {fileID: 7463503108835387534, guid: e8b53d8eec959f34dbe2f86fa565f3da, type: 3}
+  Geme_end: {fileID: 6326765528337518996, guid: 14f2f8ed74edcee44b0e6b77099be36c, type: 3}
   RestartButton: {fileID: 4993464273677340805, guid: d8afd3fb3d34fc4478a7aa4f2be72eb3, type: 3}
   SelectButton: {fileID: 4397913994708715734, guid: 3b80fbb37be345c468f6912f72bc3af8, type: 3}
-  scaleSpeed: 2000
-  widthScaleFactor: 0.8
-  heightScaleFactor: 0.8
+  scaleSpeed: 3500
+  widthScaleFactor: 2.5
+  heightScaleFactor: 2.5
