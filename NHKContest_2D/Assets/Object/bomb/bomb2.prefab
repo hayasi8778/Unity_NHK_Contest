@@ -103,11 +103,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 421cc93ab7430f946b9d7726a13291ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scenePositions:
+  - sceneName: bomb
+    position: {x: -4, y: -1, z: 0}
   explosionRadius: 3
-  explosionForce: 300
+  explosionForce: 0
   Vod: 3
-  customInitialPosition: {x: 5, y: 3, z: 0}
-  useCustomPosition: 1
   shortFuseClip: {fileID: 0}
   longFuseClip: {fileID: 0}
 --- !u!58 &1297330798875403233

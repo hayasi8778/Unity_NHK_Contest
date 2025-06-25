@@ -1,53 +1,73 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class Bomb : MonoBehaviour
 {
+    [System.Serializable]
+    public class ScenePosition
+    {
+        public string sceneName;
+        public Vector3 position;
+    }
+
+    [Header("シーンごとの初期位置設定")]
+    public List<ScenePosition> scenePositions;
+
+    [Header("爆発設定")]
     public float explosionRadius = 5f;
     public float explosionForce = 300f;
     public float Vod = 5f;
 
-    public Vector3 customInitialPosition; // インスペクターで指定可能
-    public bool useCustomPosition = false; // true のとき customInitialPosition を使う
+    [Header("サウンド設定")]
+    public AudioClip countdownClip;   // 爆発までのカウントダウン音
+    public AudioClip explosionClip;   // 爆発時の音
 
-    private Vector3 initialPosition;
-    private Rigidbody2D rb;
-    private bool hasExploded = false;
-
-    public AudioClip shortFuseClip;
-    public AudioClip longFuseClip;
     private AudioSource audioSource;
+    private Rigidbody2D rb;
+    private Vector3 initialPosition;
+    private bool hasExploded = false;
 
     void Start()
     {
-        initialPosition = useCustomPosition ? customInitialPosition : transform.position;
         rb = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
 
+        SetInitialPositionByScene();
+
+        // タグごとに遅延設定
         if (CompareTag("bomb1"))
         {
-            Debug.Log("爆弾タグ: bomb1 → 爆発なし・再生成しない");
+            Debug.Log("爆弾タグ: bomb1 → 爆発しない");
             return;
         }
-        else if (CompareTag("bomb2"))
+
+        Vod = CompareTag("bomb2") ? 3f : CompareTag("bomb3") ? 10f : Vod;
+
+        // カウントダウン音再生
+        if (audioSource != null && countdownClip != null)
         {
-            Vod = 3f;
-            Debug.Log("爆弾タグ: bomb2 → 3秒後に爆発");
-        }
-        else if (CompareTag("bomb3"))
-        {
-            Vod = 10f;
-            Debug.Log("爆弾タグ: bomb3 → 10秒後に爆発");
+            audioSource.PlayOneShot(countdownClip);
         }
 
-        if (audioSource != null)
+        Invoke(nameof(Explode), Vod);
+    }
+
+    void SetInitialPositionByScene()
+    {
+        string sceneName = SceneManager.GetActiveScene().name;
+        foreach (var sp in scenePositions)
         {
-            if (Vod <= 3f && shortFuseClip != null)
-                audioSource.PlayOneShot(shortFuseClip);
-            else if (Vod > 3f && longFuseClip != null)
-                audioSource.PlayOneShot(longFuseClip);
+            if (sp.sceneName == sceneName)
+            {
+                initialPosition = sp.position;
+                Debug.Log($"初期位置設定: シーン「{sceneName}」→ {initialPosition}");
+                return;
+            }
         }
 
-        Invoke("Explode", Vod);
+        initialPosition = transform.position;
+        Debug.LogWarning($"初期位置未設定: シーン「{sceneName}」。現在位置を使用");
     }
 
     void Explode()
@@ -55,10 +75,14 @@ public class Bomb : MonoBehaviour
         if (hasExploded) return;
         hasExploded = true;
 
-        Debug.Log("💥 爆発処理開始");
+        Debug.Log("💥 爆発！");
+
+        if (audioSource != null && explosionClip != null)
+        {
+            audioSource.PlayOneShot(explosionClip);
+        }
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius);
-
         foreach (Collider2D col in colliders)
         {
             Rigidbody2D colRb = col.attachedRigidbody;
@@ -87,7 +111,14 @@ public class Bomb : MonoBehaviour
         rb.rotation = 0f;
 
         hasExploded = false;
-        Invoke("Explode", Vod);
+
+        // カウントダウン再再生
+        if (audioSource != null && countdownClip != null)
+        {
+            audioSource.PlayOneShot(countdownClip);
+        }
+
+        Invoke(nameof(Explode), Vod);
     }
 
     void OnDrawGizmosSelected()

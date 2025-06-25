@@ -106,6 +106,10 @@ MonoBehaviour:
   explosionRadius: 3
   explosionForce: 300
   Vod: 5
+  customInitialPosition: {x: -4, y: -1, z: 0}
+  useCustomPosition: 0
+  shortFuseClip: {fileID: 0}
+  longFuseClip: {fileID: 0}
 --- !u!58 &1297330798875403233
 CircleCollider2D:
   m_ObjectHideFlags: 0
