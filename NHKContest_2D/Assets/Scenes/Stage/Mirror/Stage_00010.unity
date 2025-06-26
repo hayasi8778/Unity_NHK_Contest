@@ -3546,6 +3546,10 @@ PrefabInstance:
       propertyPath: MirrorRayDirection.x
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 2466402169933037364, guid: 6526df65cd5a3ae479333594beba66df, type: 3}
+      propertyPath: MirrorRayDirection.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6174135108290451589, guid: 6526df65cd5a3ae479333594beba66df, type: 3}
       propertyPath: m_Name
       value: Mirror (6)

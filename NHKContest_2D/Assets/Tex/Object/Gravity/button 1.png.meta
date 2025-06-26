@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 773f1210b6bf4454883080d32b96acc1
+guid: 6b35e6ebcdd425f4b9827213685933e1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 284856485936216227
-    second: 2025-06-23_183808_0
+      213: -2306148863814198951
+    second: button 1_0
+  - first:
+      213: -2671880383022096744
+    second: button 1_1
+  - first:
+      213: -8430227474356105421
+    second: button 1_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 500
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 2025-06-23_183808_0
+      name: button 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1240
-        height: 698
+        width: 615
+        height: 263
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +134,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3a8b138f67304f300800000000000000
-      internalID: 284856485936216227
+      spriteID: 9591f2da3d9eeffd0800000000000000
+      internalID: -2306148863814198951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button 1_1
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 0
+        width: 615
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89e12a7a2f29bead0800000000000000
+      internalID: -2671880383022096744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button 1_2
+      rect:
+        serializedVersion: 2
+        x: 2268
+        y: 0
+        width: 615
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33f044ff6c0d10b80800000000000000
+      internalID: -8430227474356105421
       vertices: []
       indices: 
       edges: []
@@ -148,7 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      2025-06-23_183808_0: 284856485936216227
+      button 1_0: -2306148863814198951
+      button 1_1: -2671880383022096744
+      button 1_2: -8430227474356105421
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

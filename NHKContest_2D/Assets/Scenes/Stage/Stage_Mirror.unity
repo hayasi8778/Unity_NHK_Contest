@@ -6819,6 +6819,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LightXmuinus_First
       objectReference: {fileID: 0}
+    - target: {fileID: 1296838166537391797, guid: 7dcef845a142d834e80ff04fb8968d81, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4873966714594456768, guid: 7dcef845a142d834e80ff04fb8968d81, type: 3}
       propertyPath: slider
       value: 
