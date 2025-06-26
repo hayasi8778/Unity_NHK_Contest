@@ -9,6 +9,10 @@ public class DropState : IState
     private float acceleration = -10.0f;   // 落下用の加速度
     [SerializeField]
     private Vector2 mouthPos;    // 拡大の中心設定
+    [SerializeField]
+    private float initChangeWaitTime;
+
+    private float changeWaitTime;
 
     // 取得用
     [SerializeField]
@@ -40,6 +44,7 @@ public class DropState : IState
         pointZoom.point = new Vector3(mouthPos.x, mouthPos.y, 0);
 
         velocity = initVelocity;
+        changeWaitTime = initChangeWaitTime;
     }
     public override void StateUpdate()
     {
@@ -55,8 +60,7 @@ public class DropState : IState
         else
         {
             position.y = mouthPos.y;
-            parent.transform.Find("ScreenZoomState").GetComponent<ScreenZoomState>().zoom = true;
-            parent.ChangeState("ScreenZoomState");
+            changeWaitTime -= Time.deltaTime;
         }
 
         // 位置の更新
@@ -64,6 +68,12 @@ public class DropState : IState
 
         // カメラの位置をええ感にする
         Camera.main.transform.position = new Vector3(2 / (1 + Mathf.Exp(-position.x * 2)) - 1, 2 / (1 + Mathf.Exp(-position.y * 2)) - 1, -10);
+
+        if (changeWaitTime < 0)
+        {
+            parent.transform.Find("ScreenZoomState").GetComponent<ScreenZoomState>().zoom = true;
+            parent.ChangeState("ScreenZoomState");
+        }
 
 
         // 前の処理
@@ -73,7 +83,7 @@ public class DropState : IState
         //    // 画面外のゴミを消す
         //    foreach (GameObject cassette in viewCassettes)
         //        Object.Destroy(cassette);
-            
+
         //    // カセット選択へ
         //    parent.ChangeState("CassetteSelectState");
         //}
