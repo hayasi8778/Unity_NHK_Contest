@@ -12,13 +12,13 @@ public class ChatManager : MonoBehaviour
         // -------------------------------
         // ① メッセージを加工して、10全角文字ごとに改行を入れる
         // -------------------------------
-        message = InsertLineBreaks(message, 10);
+        message = InsertLineBreaks(message, 8);
         // -------------------------------
         // ② 行数を計算する
         // -------------------------------
-        int charsPerLine = 10; // 1行あたりの最大全角文字数
+        int charsPerLine = 8; // 1行あたりの最大全角文字数
         int lineCount = Mathf.CeilToInt((float)message.Split('\n').Length);
-        int lineHeight = 28; // 1行あたりの高さ（ピクセル）
+        int lineHeight = 62; // 1行あたりの高さ（ピクセル）
         float shiftHeight = lineCount * lineHeight;
         // -------------------------------
         // ③ 既存のコメントをすべて上にずらす

@@ -28,10 +28,10 @@ public class Goal : MonoBehaviour
     public float scaleSpeed = 1f;        // クリア画面の拡大スピード
 
     [Header("拡大サイズ調整（画面に対する割合）")]
-    [Range(0.1f, 2f)]
+    [Range(0.1f, 2.5f)]
     public float widthScaleFactor = 1.6f;   // 横の拡大倍率（画面幅に対する比率）
 
-    [Range(0.1f, 2f)]
+    [Range(0.1f, 2.5f)]
     public float heightScaleFactor = 0.8f;  // 縦の拡大倍率（画面高さに対する比率）
 
     private Vector3 targetScale = Vector3.one;   // 目標スケール（アニメーション完了後のサイズ）
