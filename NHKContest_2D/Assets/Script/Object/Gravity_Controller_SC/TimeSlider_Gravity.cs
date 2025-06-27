@@ -10,10 +10,17 @@ public class TimeSlider_Gravity : TimeSliderObject_Base
     public Slider slider; //スライダー
     public GameObject Imagechanger;
 
+    // スプライト切り替え用
+    public Sprite normalSprite;
+    public Sprite flippedSprite;
+    private SpriteRenderer spriteRenderer;
+
     private int Currentnum = 0;//配列の何番目にいるか
 
     //重力の反転フラグ
     private bool isGravityFlipped = false;
+
+    private bool Old_isGravityFlipped = false;
 
     //重力反転後に触るボタンかどうか
     public bool ButtonRotatFlag = false;
@@ -21,7 +28,8 @@ public class TimeSlider_Gravity : TimeSliderObject_Base
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        UpdateSprite(); // 初期状態に応じたスプライトを表示
     }
 
     // Update is called once per frame
@@ -32,6 +40,12 @@ public class TimeSlider_Gravity : TimeSliderObject_Base
             isGravityFlipped = !isGravityFlipped;
             Physics2D.gravity = new Vector2(0, isGravityFlipped ? -9.8f : 9.8f);
         }
+
+        if (Old_isGravityFlipped != isGravityFlipped) 
+        {
+            UpdateSprite();
+        }
+        Old_isGravityFlipped = isGravityFlipped;
 
     }
 
@@ -76,11 +90,15 @@ public class TimeSlider_Gravity : TimeSliderObject_Base
 
                     Physics2D.gravity = new Vector2(0, isGravityFlipped ? -9.8f : 9.8f);
 
+                    //UpdateSprite();
+
                     //Debug.Log($"isGravityFlipped: {isGravityFlipped}");
                     Debug.Log(Physics2D.gravity);
 
                     playerJump.SetGravityFlag();//重力反転したことをプレイヤーに伝える
                     playerJump.FlipPlayerTexture();
+
+                   
                 }
 
             }
@@ -163,4 +181,13 @@ public class TimeSlider_Gravity : TimeSliderObject_Base
         Debug.LogWarning("配列設定" + num);
         Currentnum = num;
     }
+
+    private void UpdateSprite()//スプライト切り替え
+    {
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.sprite = isGravityFlipped ? flippedSprite : normalSprite;
+        }
+    }
+
 }

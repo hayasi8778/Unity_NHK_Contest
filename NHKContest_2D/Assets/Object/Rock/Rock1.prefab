@@ -178,6 +178,6 @@ MonoBehaviour:
   ImageChanger: {fileID: 0}
   replacementPrefabs:
   - {fileID: 1944436431291864602}
-  - {fileID: 1944436431291864602, guid: e0e3682e7d262ff499c6491b4784feee, type: 3}
-  - {fileID: 1944436431291864602, guid: aafa046f2737cdf46b0aa3a7d62fc9c7, type: 3}
+  - {fileID: 1944436431291864602, guid: d4d60a1758ed4a14383d829129e4cfd8, type: 3}
+  - {fileID: 1944436431291864602, guid: 76c19c8a2da471944a47e66fe7f54e5b, type: 3}
   replacementIndex: 0
