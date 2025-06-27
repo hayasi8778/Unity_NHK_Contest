@@ -175,8 +175,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 0}
+  ImageChanger: {fileID: 0}
   replacementPrefabs:
-  - {fileID: 7803388291614828352, guid: 26ae44ab56151cc4786901dba62e0023, type: 3}
-  - {fileID: 1818018595928640035, guid: 63f0f88213bbc8b47b5a96ad04659b85, type: 3}
-  - {fileID: 4649342223579448146, guid: 10727141af3aafd43afc75ae01b0a8a1, type: 3}
+  - {fileID: 1944436431291864602}
+  - {fileID: 1944436431291864602, guid: e0e3682e7d262ff499c6491b4784feee, type: 3}
+  - {fileID: 1944436431291864602, guid: aafa046f2737cdf46b0aa3a7d62fc9c7, type: 3}
   replacementIndex: 0

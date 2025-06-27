@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8354934728152645418}
   - component: {fileID: 3983524674230510532}
   m_Layer: 0
-  m_Name: ScaleBox_First
+  m_Name: Rock1
   m_TagString: Object1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 843ef6fabf9ffc847aa1e32c4c353c4e, type: 2}
+  - {fileID: 2100000, guid: a8a0776b97395e840ad4ae837b47cad6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -177,7 +177,7 @@ MonoBehaviour:
   slider: {fileID: 0}
   ImageChanger: {fileID: 0}
   replacementPrefabs:
-  - {fileID: 1944436431291864602, guid: c3f9a4efb4e716147a4f75f26552a1f9, type: 3}
+  - {fileID: 1944436431291864602}
   - {fileID: 1944436431291864602, guid: e0e3682e7d262ff499c6491b4784feee, type: 3}
   - {fileID: 1944436431291864602, guid: aafa046f2737cdf46b0aa3a7d62fc9c7, type: 3}
   replacementIndex: 0

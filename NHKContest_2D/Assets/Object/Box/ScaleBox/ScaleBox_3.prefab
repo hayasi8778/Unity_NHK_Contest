@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.3, y: -0.009640843, z: -0.040923573}
-  m_LocalScale: {x: 1.7, y: 1.7, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -177,7 +177,7 @@ MonoBehaviour:
   slider: {fileID: 0}
   ImageChanger: {fileID: 0}
   replacementPrefabs:
-  - {fileID: 7803388291614828352, guid: 26ae44ab56151cc4786901dba62e0023, type: 3}
-  - {fileID: 1818018595928640035, guid: 63f0f88213bbc8b47b5a96ad04659b85, type: 3}
-  - {fileID: 4649342223579448146, guid: 10727141af3aafd43afc75ae01b0a8a1, type: 3}
+  - {fileID: 1944436431291864602, guid: c3f9a4efb4e716147a4f75f26552a1f9, type: 3}
+  - {fileID: 1944436431291864602, guid: e0e3682e7d262ff499c6491b4784feee, type: 3}
+  - {fileID: 1944436431291864602}
   replacementIndex: 0
