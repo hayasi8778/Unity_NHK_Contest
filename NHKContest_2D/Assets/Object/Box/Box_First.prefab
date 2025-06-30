@@ -161,7 +161,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &3983524674230510532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,6 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 0}
+  ImageChanger: {fileID: 0}
   replacementPrefabs:
   - {fileID: 7803388291614828352, guid: 26ae44ab56151cc4786901dba62e0023, type: 3}
   - {fileID: 1818018595928640035, guid: 63f0f88213bbc8b47b5a96ad04659b85, type: 3}
