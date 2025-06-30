@@ -1005,6 +1005,9 @@ MonoBehaviour:
   - {fileID: 151501324}
   - {fileID: 2130129887}
   initMaxSeconds: 60
+  targetObjects:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &231188848 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2136836580920433320, guid: 09ecb9dbd9676dd44a0a820b9c85057a, type: 3}
