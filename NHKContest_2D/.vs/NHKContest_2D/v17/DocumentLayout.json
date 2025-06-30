@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\abc36\\Desktop\\Unity_NHK_Contest\\NHKContest_2D\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|c:\\users\\abc36\\desktop\\unity_nhk_contest\\nhkcontest_2d\\assets\\script\\object\\cassette\\state\\dropstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\object\\cassette\\state\\dropstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|c:\\users\\abc36\\desktop\\unity_nhk_contest\\nhkcontest_2d\\assets\\script\\object\\cassette\\state\\screenzoomstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\object\\cassette\\state\\screenzoomstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\Users\\abc36\\Desktop\\Unity_NHK_Contest\\NHKContest_2D\\assets\\script\\object\\cassette\\state\\cassetteselectstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\object\\cassette\\state\\cassetteselectstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|c:\\users\\abc36\\desktop\\unity_nhk_contest\\nhkcontest_2d\\assets\\script\\object\\cassette\\state\\fadeoutstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\object\\cassette\\state\\fadeoutstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,21 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DropState.cs",
-              "DocumentMoniker": "C:\\Users\\abc36\\Desktop\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\Object\\Cassette\\State\\DropState.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Object\\Cassette\\State\\DropState.cs",
-              "ToolTip": "C:\\Users\\abc36\\Desktop\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\Object\\Cassette\\State\\DropState.cs",
-              "RelativeToolTip": "Assets\\Script\\Object\\Cassette\\State\\DropState.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAIwEcAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T11:24:02.679Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -47,28 +26,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ScreenZoomState.cs",
-              "DocumentMoniker": "C:\\Users\\abc36\\Desktop\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\Object\\Cassette\\State\\ScreenZoomState.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Object\\Cassette\\State\\ScreenZoomState.cs",
-              "ToolTip": "C:\\Users\\abc36\\Desktop\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\Object\\Cassette\\State\\ScreenZoomState.cs",
-              "RelativeToolTip": "Assets\\Script\\Object\\Cassette\\State\\ScreenZoomState.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "FadeOutState.cs",
+              "DocumentMoniker": "C:\\Users\\abc36\\Desktop\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\Object\\Cassette\\State\\FadeOutState.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Object\\Cassette\\State\\FadeOutState.cs",
+              "ToolTip": "C:\\Users\\abc36\\Desktop\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\Object\\Cassette\\State\\FadeOutState.cs",
+              "RelativeToolTip": "Assets\\Script\\Object\\Cassette\\State\\FadeOutState.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAADwvzEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T11:22:21.66Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CassetteSelectState.cs",
-              "DocumentMoniker": "C:\\Users\\abc36\\Desktop\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\Object\\Cassette\\State\\CassetteSelectState.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Object\\Cassette\\State\\CassetteSelectState.cs",
-              "ToolTip": "C:\\Users\\abc36\\Desktop\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\Object\\Cassette\\State\\CassetteSelectState.cs",
-              "RelativeToolTip": "Assets\\Script\\Object\\Cassette\\State\\CassetteSelectState.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T07:41:57.058Z",
+              "WhenOpened": "2025-06-30T01:55:13.08Z",
               "EditorCaption": ""
             }
           ]
