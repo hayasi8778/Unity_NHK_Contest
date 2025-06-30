@@ -42,6 +42,12 @@ public class SliderTimeCounter : MonoBehaviour
     // 作成者：畦内
     public GameObject[] targetObjects;
 
+    // 時間停止時に表示（透明解除）するオブジェクト
+    // 作成者：畦内
+    public GameObject[] unhideOnStopObjects;
+
+    private bool isTimeStopped = false; // 時間停止状態フラグ
+
     void Start()
     {
         // 初期値を設定
@@ -68,6 +74,7 @@ public class SliderTimeCounter : MonoBehaviour
 
         // 作成者：畦内 - 対象オブジェクトを非表示で初期化
         HideTargetObjects();
+        HideUnhideOnStopObjects();
     }
 
     void Update()
@@ -88,7 +95,7 @@ public class SliderTimeCounter : MonoBehaviour
         // 手動操作中は時間経過で復帰
         if (isManualInput)
         {
-            manualInputTimer += Time.deltaTime;
+            manualInputTimer += Time.unscaledDeltaTime; // ★UnscaledTimeで回す（Time.timeScale=0でもカウント）
             if (manualInputTimer >= 1.0f)
             {
                 isManualInput = false;
@@ -100,18 +107,17 @@ public class SliderTimeCounter : MonoBehaviour
             return;
         }
 
-        // 手動操作が行われた場合、一定時間(1秒)は時間経過によるスライダーの移動を停止
-        if (isManualInput)
+        // ★最大値から戻った場合の復帰処理
+        if (isTimeStopped && slider.value < slider.maxValue)
         {
-            manualInputTimer += Time.deltaTime;
-            if (manualInputTimer >= 1.0f)
-            {
-                isManualInput = false;
-                //manualInputTimer = 0f;
-                Debug.Log("スライダー停止");
-            }
-            return;
+            Time.timeScale = 1f;
+            slider.interactable = true;
+            isTimeStopped = false;
+            HideUnhideOnStopObjects();
         }
+
+        // 時間停止時に処理スキップ（自動加算含む）
+        if (isTimeStopped) return;
 
         // 時間加算（0.1秒ごと）
         timeCounter += Time.deltaTime;
@@ -148,8 +154,24 @@ public class SliderTimeCounter : MonoBehaviour
                 }
             }
         }
+
+        if (!isTimeStopped && slider.value >= slider.maxValue)
+        {
+            HideTargetObjects(); // スライダー中に表示していたやつを消す
+            StartCoroutine(StopTimeAfterOneFrame()); // ★コルーチンで時間停止を遅延実行
+            return;
+        }
     }
 
+    // 作成者：畦内 - 時間停止処理を1フレーム遅らせて確実に止める
+    private System.Collections.IEnumerator StopTimeAfterOneFrame()
+    {
+        yield return null; // 1フレーム待機
+        Time.timeScale = 0f; // ★確実に停止させる
+                             //slider.interactable = false;
+        isTimeStopped = true;
+        ShowUnhideOnStopObjects();
+    }
     // スライダーが操作された際に呼ばれる
     public void OnSliderMoved(float value) //valueが更新されたときの処理
     {
@@ -232,6 +254,34 @@ public class SliderTimeCounter : MonoBehaviour
         if (targetObjects == null) return;
 
         foreach (var obj in targetObjects)
+        {
+            if (obj != null)
+            {
+                obj.SetActive(false);
+            }
+        }
+    }
+
+    // 作成者：畦内 - 時間停止時に表示（透明解除）するオブジェクト
+    public void ShowUnhideOnStopObjects()
+    {
+        if (unhideOnStopObjects == null) return;
+
+        foreach (var obj in unhideOnStopObjects)
+        {
+            if (obj != null)
+            {
+                obj.SetActive(true);
+            }
+        }
+    }
+
+    // 作成者：畦内 - 時間再開時に非表示に戻す
+    public void HideUnhideOnStopObjects()
+    {
+        if (unhideOnStopObjects == null) return;
+
+        foreach (var obj in unhideOnStopObjects)
         {
             if (obj != null)
             {
