@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\daryu\\Desktop\\HAL\\\u795E\u30B2\u30FC\\Unity_NHK_Contest\\NHKContest_2D\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|c:\\users\\daryu\\desktop\\hal\\\u795E\u30B2\u30FC\\unity_nhk_contest\\nhkcontest_2d\\assets\\script\\stage\\water.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\stage\\water.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|c:\\users\\daryu\\desktop\\hal\\\u795E\u30B2\u30FC\\unity_nhk_contest\\nhkcontest_2d\\assets\\script\\audiocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\audiocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|c:\\users\\daryu\\desktop\\hal\\\u795E\u30B2\u30FC\\unity_nhk_contest\\nhkcontest_2d\\assets\\editer\\helpbox_audiocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\editer\\helpbox_audiocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\Users\\daryu\\Desktop\\HAL\\\u795E\u30B2\u30FC\\Unity_NHK_Contest\\NHKContest_2D\\assets\\script\\playerscript\\playermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playerscript\\playermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\Users\\daryu\\Desktop\\HAL\\\u795E\u30B2\u30FC\\Unity_NHK_Contest\\NHKContest_2D\\assets\\script\\stage\\water.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\stage\\water.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\Users\\daryu\\Desktop\\HAL\\\u795E\u30B2\u30FC\\Unity_NHK_Contest\\NHKContest_2D\\assets\\script\\object\\imagechanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,18 +58,44 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "HelpBox_AudioController.cs",
+              "DocumentMoniker": "C:\\Users\\daryu\\Desktop\\HAL\\\u795E\u30B2\u30FC\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Editer\\HelpBox_AudioController.cs",
+              "RelativeDocumentMoniker": "Assets\\Editer\\HelpBox_AudioController.cs",
+              "ToolTip": "C:\\Users\\daryu\\Desktop\\HAL\\\u795E\u30B2\u30FC\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Editer\\HelpBox_AudioController.cs",
+              "RelativeToolTip": "Assets\\Editer\\HelpBox_AudioController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T01:59:09.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AudioController.cs",
+              "DocumentMoniker": "C:\\Users\\daryu\\Desktop\\HAL\\\u795E\u30B2\u30FC\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\AudioController.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\AudioController.cs",
+              "ToolTip": "C:\\Users\\daryu\\Desktop\\HAL\\\u795E\u30B2\u30FC\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\AudioController.cs",
+              "RelativeToolTip": "Assets\\Script\\AudioController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T13:55:32.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "PlayerMove.cs",
               "DocumentMoniker": "C:\\Users\\daryu\\Desktop\\HAL\\\u795E\u30B2\u30FC\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\PlayerScript\\PlayerMove.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\PlayerScript\\PlayerMove.cs",
               "ToolTip": "C:\\Users\\daryu\\Desktop\\HAL\\\u795E\u30B2\u30FC\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\PlayerScript\\PlayerMove.cs",
               "RelativeToolTip": "Assets\\Script\\PlayerScript\\PlayerMove.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAK0AAAAAAAAAAAAowKsAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-23T02:48:24.737Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "water.cs",
               "DocumentMoniker": "C:\\Users\\daryu\\Desktop\\HAL\\\u795E\u30B2\u30FC\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\Stage\\water.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Stage\\water.cs",
@@ -69,12 +103,11 @@
               "RelativeToolTip": "Assets\\Script\\Stage\\water.cs",
               "ViewState": "AgIAAC0AAAAAAAAAAAAiwH4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T10:11:20.997Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-22T10:11:20.997Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "ImageChanger.cs",
               "DocumentMoniker": "C:\\Users\\daryu\\Desktop\\HAL\\\u795E\u30B2\u30FC\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\Object\\ImageChanger.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Object\\ImageChanger.cs",
@@ -86,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "TimeSliderObject.cs",
               "DocumentMoniker": "C:\\Users\\daryu\\Desktop\\HAL\\\u795E\u30B2\u30FC\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\Object\\TimeSliderObject.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Object\\TimeSliderObject.cs",
@@ -98,7 +131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "SliderTimeCounter.cs",
               "DocumentMoniker": "C:\\Users\\daryu\\Desktop\\HAL\\\u795E\u30B2\u30FC\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\Slider\\SliderTimeCounter.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Slider\\SliderTimeCounter.cs",
@@ -110,7 +143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "TimeSlider2.cs",
               "DocumentMoniker": "C:\\Users\\daryu\\Desktop\\HAL\\\u795E\u30B2\u30FC\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\Player\\TimeSlider2.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Player\\TimeSlider2.cs",
@@ -122,7 +155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "TimeSlider_Light.cs",
               "DocumentMoniker": "C:\\Git\\TestGit1\\NHKContest_2D\\Assets\\Script\\Object\\Light\\TimeSlider_Light.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Git\\TestGit1\\NHKContest_2D\\Assets\\Script\\Object\\Light\\TimeSlider_Light.cs",
