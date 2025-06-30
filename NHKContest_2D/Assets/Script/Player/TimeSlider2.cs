@@ -19,7 +19,7 @@ public class TimeSlider2 : MonoBehaviour
 
     //時間で画質戻すための処理
     private float revertTimer = 0f;
-    private float revertTimeLimit = 5f; // 5秒で戻す
+    private float revertTimeLimit = 10f; // 5秒で戻す
     private bool isBeingDestroyed = false; //削除フラグ
     private GameObject currentPlayer; //操作対象のプレイヤー
 
