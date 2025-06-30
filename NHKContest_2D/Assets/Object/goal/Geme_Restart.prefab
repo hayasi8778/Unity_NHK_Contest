@@ -13,13 +13,14 @@ GameObject:
   - component: {fileID: 2197076060491171352}
   - component: {fileID: 3772901921059799268}
   - component: {fileID: 5444745387648755706}
+  - component: {fileID: -4368404807676780459}
   m_Layer: 5
   m_Name: Geme_Restart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7964741175029769912
 RectTransform:
   m_ObjectHideFlags: 0
@@ -67,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -652692265844378589, guid: 005b4a0593da7654b9e0b1a9da8d62d9, type: 3}
+  m_Sprite: {fileID: 1264764313760290526, guid: 0d42e164de5426a46b69f1e1f0e47f28, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -103,7 +104,7 @@ MonoBehaviour:
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
+    m_ColorMultiplier: 2.74
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
@@ -145,4 +146,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ceedd315ed6c7f47bcb4a487d21f8cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: warp
+  sceneName: 
+--- !u!225 &-4368404807676780459
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4993464273677340805}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0

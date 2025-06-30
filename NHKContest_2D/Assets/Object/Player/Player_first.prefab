@@ -288,6 +288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 0}
+  ImageQualityChanger: {fileID: 0}
   replacementPrefabs:
   - {fileID: 6830803382852583797, guid: 7ef14876fd2f11145a422a3e5a83aada, type: 3}
   - {fileID: 5440094310445643248, guid: 5bc1327223585f040b4b3597cfe64dcf, type: 3}
@@ -308,6 +309,7 @@ MonoBehaviour:
   rb: {fileID: 4505315051361708382}
   JumpPower: 19
   jumpSE: {fileID: 8300000, guid: 10f64368dc936e44f9a906df74739e5b, type: 3}
+  AnimationTime: 0.5
 --- !u!114 &8031231580685338730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,6 +324,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
   sprites:
-  - {fileID: -5098009807472485664, guid: 5bd3f1bc616e5404ea7526e5e7bcf67f, type: 3}
-  - {fileID: -440736293735374185, guid: bb70335c3c313154f8272b4317b2ef1e, type: 3}
-  sprites_Push: []
+  - {fileID: 8520206792165776059, guid: 8a515088bf446d54eaad5521c6f01c85, type: 3}
+  - {fileID: -2556326963459654297, guid: 8a515088bf446d54eaad5521c6f01c85, type: 3}
+  - {fileID: 3436375672041200614, guid: 8a515088bf446d54eaad5521c6f01c85, type: 3}
+  - {fileID: -8623162231518452739, guid: 8a515088bf446d54eaad5521c6f01c85, type: 3}
+  - {fileID: 3034995077209905059, guid: 8a515088bf446d54eaad5521c6f01c85, type: 3}
+  - {fileID: 203965419430724318, guid: 8a515088bf446d54eaad5521c6f01c85, type: 3}
+  sprites_Push:
+  - {fileID: 643483055943903133, guid: 19834820fc80fbd42b8faa685307bed0, type: 3}
+  - {fileID: -1456981815285973950, guid: 19834820fc80fbd42b8faa685307bed0, type: 3}
+  - {fileID: 453387764893531875, guid: 19834820fc80fbd42b8faa685307bed0, type: 3}
+  - {fileID: 3171894427883160748, guid: 19834820fc80fbd42b8faa685307bed0, type: 3}
+  - {fileID: -480269806465401789, guid: 19834820fc80fbd42b8faa685307bed0, type: 3}
+  - {fileID: -7444158725793327355, guid: 19834820fc80fbd42b8faa685307bed0, type: 3}
+  sprites_Jump: []

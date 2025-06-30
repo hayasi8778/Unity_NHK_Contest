@@ -186,9 +186,10 @@ public class TimeSlider2 : MonoBehaviour
         Camera mainCamera = Camera.main;
         //バーチャルカメラ使うからこっちに変更する
         //Debug.Log("バーチャルカメラ変更");
+        /*
         virtualCamera.Follow = newObj.transform;
         virtualCamera.LookAt = newObj.transform;
-
+        */
 
         //そのままだと入れ替え時に角度バグるから矯正する
         newObj.transform.rotation = Quaternion.Euler(newObj.transform.rotation.x, newObj.transform.rotation.y, 0f);
@@ -276,8 +277,10 @@ public class TimeSlider2 : MonoBehaviour
             
 
             //カメラ切り替え
+            /*
             virtualCamera.Follow = newObj.transform;
             virtualCamera.LookAt = newObj.transform;
+            */
 
             /*
             Camera mainCamera = Camera.main;
@@ -372,10 +375,11 @@ public class TimeSlider2 : MonoBehaviour
         }
 
 
-        //カメラ切り替え
+        //カメラ切り替え固定カメラにするから無効化
+        /*
         virtualCamera.Follow = newObj.transform;
         virtualCamera.LookAt = newObj.transform;
-
+        */
 
         //そのままだと入れ替え時に角度バグるから矯正する
         newObj.transform.rotation = Quaternion.Euler(newObj.transform.rotation.x, newObj.transform.rotation.y, 0f);

@@ -13,13 +13,14 @@ GameObject:
   - component: {fileID: 7059047651415029010}
   - component: {fileID: 8367017818501476888}
   - component: {fileID: 8265923402160116651}
+  - component: {fileID: 81893006756794226}
   m_Layer: 5
   m_Name: Geme_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5683618298214829570
 RectTransform:
   m_ObjectHideFlags: 0
@@ -145,4 +146,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ceedd315ed6c7f47bcb4a487d21f8cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: SampleScene
+  sceneName: Title
+--- !u!225 &81893006756794226
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7463503108835387534}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0

@@ -5106,6 +5106,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Geme_Restart
       objectReference: {fileID: 0}
+    - target: {fileID: 4993464273677340805, guid: d8afd3fb3d34fc4478a7aa4f2be72eb3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7964741175029769912, guid: d8afd3fb3d34fc4478a7aa4f2be72eb3, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5420,6 +5424,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClearScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 464187732264209238, guid: bf78adff283e0d54ea13ea1dcdbcc315, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6308418599354785193, guid: bf78adff283e0d54ea13ea1dcdbcc315, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5597,6 +5605,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Geme_end
       objectReference: {fileID: 0}
+    - target: {fileID: 7463503108835387534, guid: e8b53d8eec959f34dbe2f86fa565f3da, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5763,6 +5775,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Geme_selectBack
       objectReference: {fileID: 0}
+    - target: {fileID: 4397913994708715734, guid: 3b80fbb37be345c468f6912f72bc3af8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5859,6 +5875,10 @@ PrefabInstance:
     - target: {fileID: 6658816571752418979, guid: 50a47bdbe3a7b1c45b023724b9ddc237, type: 3}
       propertyPath: m_Name
       value: DarkOverlay
+      objectReference: {fileID: 0}
+    - target: {fileID: 6658816571752418979, guid: 50a47bdbe3a7b1c45b023724b9ddc237, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
