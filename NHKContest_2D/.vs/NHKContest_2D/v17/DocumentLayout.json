@@ -3,36 +3,48 @@
   "WorkspaceRootPath": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|c:\\git\\backapp\\unity_nhk_contest\\nhkcontest_2d\\assets\\object\\warp\\warpzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\object\\warp\\warpzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\assets\\script\\slider\\slidertimecounter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\slider\\slidertimecounter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|c:\\git\\backapp\\unity_nhk_contest\\nhkcontest_2d\\assets\\script\\pausetime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\pausetime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|c:\\git\\backapp\\unity_nhk_contest\\nhkcontest_2d\\assets\\script\\object\\timesliderobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\object\\timesliderobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\assets\\script\\player\\timeslider2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\timeslider2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\assets\\chat\\randomcomment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\chat\\randomcomment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\assets\\object\\bomb\\bomb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\object\\bomb\\bomb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\assets\\script\\playerscript\\playeranimation\\player01_animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playerscript\\playeranimation\\player01_animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\assets\\script\\ui\\popupui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\ui\\popupui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\assets\\script\\playerscript\\playerjump.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playerscript\\playerjump.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\assets\\script\\object\\timesliderobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\object\\timesliderobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\assets\\script\\object\\imagechanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\object\\imagechanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\assets\\script\\ui\\popupui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\ui\\popupui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\assets\\script\\pausetime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\pausetime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\assets\\script\\player\\timeslider2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\timeslider2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\assets\\script\\playerscript\\playeranimation\\player01_animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playerscript\\playeranimation\\player01_animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\assets\\script\\object\\goal\\goal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -41,10 +53,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\assets\\chat\\chatmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\chat\\chatmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\assets\\chat\\randomcomment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\chat\\randomcomment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\assets\\chat\\chatflg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -57,10 +65,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\assets\\script\\object\\cassette\\state\\fadeoutstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\object\\cassette\\state\\fadeoutstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\assets\\script\\playerscript\\playerjump.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\playerscript\\playerjump.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C4F2C5A4-5586-71A6-4BAE-C4557D4A1616}|Assembly-CSharp.csproj|C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\assets\\script\\object\\gravity_controller_sc\\timeslider_gravity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -98,7 +102,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -114,7 +118,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "WarpZone.cs",
+              "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Object\\warp\\WarpZone.cs",
+              "RelativeDocumentMoniker": "Assets\\Object\\warp\\WarpZone.cs",
+              "ToolTip": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Object\\warp\\WarpZone.cs",
+              "RelativeToolTip": "Assets\\Object\\warp\\WarpZone.cs",
+              "ViewState": "AgIAAK8AAAAAAAAAAAAQwMYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T01:05:04.176Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "PauseTime.cs",
               "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\PauseTime.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\PauseTime.cs",
@@ -122,98 +139,95 @@
               "RelativeToolTip": "Assets\\Script\\PauseTime.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T00:53:20.755Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-30T00:53:20.755Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ImageChanger.cs",
               "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\Object\\ImageChanger.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Object\\ImageChanger.cs",
               "ToolTip": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\Object\\ImageChanger.cs",
               "RelativeToolTip": "Assets\\Script\\Object\\ImageChanger.cs",
-              "ViewState": "AgIAAIQAAAAAAAAAAAAIwI0AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAI0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-22T06:55:55.478Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "TimeSliderObject.cs",
               "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\Object\\TimeSliderObject.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Object\\TimeSliderObject.cs",
               "ToolTip": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\Object\\TimeSliderObject.cs",
               "RelativeToolTip": "Assets\\Script\\Object\\TimeSliderObject.cs",
-              "ViewState": "AgIAAMEAAAAAAAAAAADwv98AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAUwN8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T06:54:04Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-22T06:54:04Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 5,
               "Title": "PlayerJump.cs",
               "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\PlayerScript\\PlayerJump.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\PlayerScript\\PlayerJump.cs",
               "ToolTip": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\PlayerScript\\PlayerJump.cs",
               "RelativeToolTip": "Assets\\Script\\PlayerScript\\PlayerJump.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAADwvxEAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAYwBkAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-23T00:39:02.167Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Bomb.cs",
               "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Object\\bomb\\Bomb.cs",
               "RelativeDocumentMoniker": "Assets\\Object\\bomb\\Bomb.cs",
               "ToolTip": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Object\\bomb\\Bomb.cs",
               "RelativeToolTip": "Assets\\Object\\bomb\\Bomb.cs",
-              "ViewState": "AgIAAGgAAAAAAAAAAAAAwHEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAGIAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-22T08:18:36.502Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 2,
               "Title": "RandomComment.cs",
               "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\chat\\RandomComment.cs",
               "RelativeDocumentMoniker": "Assets\\chat\\RandomComment.cs",
               "ToolTip": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\chat\\RandomComment.cs",
               "RelativeToolTip": "Assets\\chat\\RandomComment.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAADwvxYAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-24T14:02:44.234Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "PopupUI.cs",
               "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\UI\\PopupUI.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\UI\\PopupUI.cs",
               "ToolTip": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\UI\\PopupUI.cs",
               "RelativeToolTip": "Assets\\Script\\UI\\PopupUI.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAADwvx8AAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAQwB8AAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-24T14:23:53.635Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "SliderTimeCounter.cs",
               "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\Slider\\SliderTimeCounter.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Slider\\SliderTimeCounter.cs",
               "ToolTip": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\Slider\\SliderTimeCounter.cs",
               "RelativeToolTip": "Assets\\Script\\Slider\\SliderTimeCounter.cs",
-              "ViewState": "AgIAAJsAAAAAAAAAAAAAwKIAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAOwAAAAAAAAAAAAcwE4AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T06:48:55.289Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-22T06:48:55.289Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "TimeSlider2.cs",
               "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\Player\\TimeSlider2.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Player\\TimeSlider2.cs",
@@ -225,7 +239,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "Player01_Animation.cs",
               "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\PlayerScript\\PlayerAnimation\\Player01_Animation.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\PlayerScript\\PlayerAnimation\\Player01_Animation.cs",
@@ -237,7 +251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "PlayerMove.cs",
               "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\PlayerScript\\PlayerMove.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\PlayerScript\\PlayerMove.cs",
@@ -249,7 +263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "ChatManager.cs",
               "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\chat\\ChatManager.cs",
               "RelativeDocumentMoniker": "Assets\\chat\\ChatManager.cs",
@@ -261,7 +275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "Goal.cs",
               "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\Object\\goal\\Goal.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Object\\goal\\Goal.cs",
@@ -273,7 +287,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "ChatFlg.cs",
               "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\chat\\ChatFlg.cs",
               "RelativeDocumentMoniker": "Assets\\chat\\ChatFlg.cs",
@@ -285,7 +299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "FadeOutState.cs",
               "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\Object\\Cassette\\State\\FadeOutState.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Object\\Cassette\\State\\FadeOutState.cs",
@@ -297,7 +311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "TimeSlider_Light.cs",
               "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\Object\\Light_SC\\TimeSlider_Light.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Object\\Light_SC\\TimeSlider_Light.cs",
@@ -309,7 +323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "SelectCassette.cs",
               "DocumentMoniker": "C:\\git\\TestGit1\\NHKContest_2D\\Assets\\Script\\Object\\Cassette\\SelectCassette.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\TestGit1\\NHKContest_2D\\Assets\\Script\\Object\\Cassette\\SelectCassette.cs",
@@ -321,7 +335,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "DestroyCassette.cs",
               "DocumentMoniker": "C:\\git\\TestGit1\\NHKContest_2D\\Assets\\Script\\Object\\Cassette\\DestroyCassette.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\TestGit1\\NHKContest_2D\\Assets\\Script\\Object\\Cassette\\DestroyCassette.cs",
@@ -333,7 +347,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "ZoomTVState.cs",
               "DocumentMoniker": "C:\\git\\TestGit1\\NHKContest_2D\\Assets\\Script\\Object\\Cassette\\State\\ZoomTVState.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\TestGit1\\NHKContest_2D\\Assets\\Script\\Object\\Cassette\\State\\ZoomTVState.cs",
@@ -345,7 +359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "TimeSlider_Gravity.cs",
               "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\Object\\Gravity_Controller_SC\\TimeSlider_Gravity.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Object\\Gravity_Controller_SC\\TimeSlider_Gravity.cs",
@@ -357,7 +371,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "SceneChangeButton.cs",
               "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\SceneChangeButton.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\SceneChangeButton.cs",
@@ -369,7 +383,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "CassetteSelectState.cs",
               "DocumentMoniker": "C:\\git\\backapp\\Unity_NHK_Contest\\NHKContest_2D\\Assets\\Script\\Object\\Cassette\\State\\CassetteSelectState.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Object\\Cassette\\State\\CassetteSelectState.cs",
@@ -381,7 +395,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "TimeSlider_Light.cs",
               "DocumentMoniker": "C:\\git\\TestGit1\\NHKContest_2D\\Assets\\Script\\Object\\Light\\TimeSlider_Light.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\TestGit1\\NHKContest_2D\\Assets\\Script\\Object\\Light\\TimeSlider_Light.cs",

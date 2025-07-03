@@ -40,10 +40,12 @@ public class SliderTimeCounter : MonoBehaviour
 
     // スライダー操作時に一時的に表示するオブジェクト
     // 作成者：畦内
+    [Header("スライダー操作時に表示するオブジェクト")]
     public GameObject[] targetObjects;
 
     // 時間停止時に表示（透明解除）するオブジェクト
     // 作成者：畦内
+    [Header("スライダーが最大まで進んだ時に表示するオブジェクト")]
     public GameObject[] unhideOnStopObjects;
 
     private bool isTimeStopped = false; // 時間停止状態フラグ

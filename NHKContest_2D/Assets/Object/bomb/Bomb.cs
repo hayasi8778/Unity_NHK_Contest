@@ -94,6 +94,9 @@ public class Bomb : MonoBehaviour
 
             if (col.CompareTag("Object1") || col.CompareTag("Object2") || col.CompareTag("Object3"))
             {
+
+                //Vector3 teleportTarget = col.transform.position + new Vector3(0f, 8f, 0f);
+                //col.transform.position = teleportTarget;
                 Destroy(col.gameObject);
             }
         }
