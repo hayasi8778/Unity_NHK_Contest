@@ -26,10 +26,10 @@ public class PopupUI : MonoBehaviour
     [Header("Šg‘åƒAƒjƒ[ƒVƒ‡ƒ“İ’è")]
     public float scaleSpeed = 1f;         // Šg‘å‘¬“x
 
-    [Range(0.1f, 2f)]
+    [Range(0.1f, 2.5f)]
     public float widthScaleFactor = 1.6f;   // ‰¡•ûŒü‚ÌŠg‘å”{—¦
 
-    [Range(0.1f, 2f)]
+    [Range(0.1f, 2.5f)]
     public float heightScaleFactor = 0.8f;  // c•ûŒü‚ÌŠg‘å”{—¦
 
     private Vector3 targetScale = Vector3.one;   // ÅI“I‚ÈŠg‘åƒTƒCƒY

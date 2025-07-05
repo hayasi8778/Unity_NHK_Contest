@@ -17,11 +17,8 @@ public class SliderTimeCounter : MonoBehaviour
     float timeCounter = 0;     // FPSカウンタ
     float ValueOld = 0;   //デバック用にスライダーのログ位置とる
 
-
-
     [SerializeField]
     public float initMaxSeconds = 300.0f;  // 最大秒数の初期値
-
 
     //プレイヤーとスライダーが同期しないための変更
     private bool isManualInput = false;  // 手動で操作されたかどうかのフラグ
@@ -40,6 +37,18 @@ public class SliderTimeCounter : MonoBehaviour
     private int historyIndex = 0;
     private float autoIncreasePerEntry = 0.1f; // 自動加算分
     private float handMoveThreshold = 10.0f;     // 手動で動かしたとみなす最小差分
+
+    // スライダー操作時に一時的に表示するオブジェクト
+    // 作成者：畦内
+    [Header("スライダー操作時に表示するオブジェクト")]
+    public GameObject[] targetObjects;
+
+    // 時間停止時に表示（透明解除）するオブジェクト
+    // 作成者：畦内
+    [Header("スライダーが最大まで進んだ時に表示するオブジェクト")]
+    public GameObject[] unhideOnStopObjects;
+
+    private bool isTimeStopped = false; // 時間停止状態フラグ
 
     void Start()
     {
@@ -64,11 +73,14 @@ public class SliderTimeCounter : MonoBehaviour
                 timeObj.SetCurrentnum(i);
             }
         }
+
+        // 作成者：畦内 - 対象オブジェクトを非表示で初期化
+        HideTargetObjects();
+        HideUnhideOnStopObjects();
     }
 
     void Update()
     {
-
         if (slider == null)//デバック用にスライダー登録されてるか確認する
         {
             Debug.LogError("シェーダーが指定されてないぞ(SliderTimeCounter)");
@@ -85,27 +97,29 @@ public class SliderTimeCounter : MonoBehaviour
         // 手動操作中は時間経過で復帰
         if (isManualInput)
         {
-            manualInputTimer += Time.deltaTime;
+            manualInputTimer += Time.unscaledDeltaTime; // ★UnscaledTimeで回す（Time.timeScale=0でもカウント）
             if (manualInputTimer >= 1.0f)
             {
                 isManualInput = false;
                 Debug.Log("手動入力モード解除");
+
+                // 作成者：畦内 - スライダー操作終了後、再び非表示にする
+                HideTargetObjects();
             }
             return;
         }
 
-        // 手動操作が行われた場合、一定時間(1秒)は時間経過によるスライダーの移動を停止
-        if (isManualInput)
+        // ★最大値から戻った場合の復帰処理
+        if (isTimeStopped && slider.value < slider.maxValue)
         {
-            manualInputTimer += Time.deltaTime;
-            if (manualInputTimer >= 1.0f)
-            {
-                isManualInput = false;
-                //manualInputTimer = 0f;
-                Debug.Log("スライダー停止");
-            }
-            return;
+            Time.timeScale = 1f;
+            slider.interactable = true;
+            isTimeStopped = false;
+            HideUnhideOnStopObjects();
         }
+
+        // 時間停止時に処理スキップ（自動加算含む）
+        if (isTimeStopped) return;
 
         // 時間加算（0.1秒ごと）
         timeCounter += Time.deltaTime;
@@ -143,80 +157,28 @@ public class SliderTimeCounter : MonoBehaviour
             }
         }
 
-
-        // 履歴が一周したら動きの差分チェック
-        /*スライダーでの画質切り替えは消す
-        if (changeCooldownTimer <= 0f)//判断基準一旦切る
+        if (!isTimeStopped && slider.value >= slider.maxValue)
         {
-            float oldest = sliderHistory[(historyIndex + 1) % historySize];
-            float newest = sliderHistory[(historyIndex - 1 + historySize) % historySize];
-
-            float rawDiff = Mathf.Abs(newest - oldest);
-            float expectedAuto = autoIncreasePerEntry * (historySize - 1);
-            float manualMovement = rawDiff - expectedAuto;
-
-            //Debug.Log($"手動移動量: {manualMovement}");
-
-            if (manualMovement > handMoveThreshold)
-            {
-                // 🔥 まずプレイヤーを入れ替え
-                if (currentObject != null)
-                {
-                    TimeSlider2 script = currentObject.GetComponent<TimeSlider2>();
-                    if (script != null)
-                    {
-                        GameObject newObj = script.ObjectChanged();
-                        if (newObj != null)
-                        {
-                            currentObject = newObj;
-                            Debug.LogError("プレイヤーオブジェクトを切り替えました！");
-                        }
-                    }
-                }
-
-                //ステージオブジェクトたちも入れ替え
-                if (currentObjects != null)
-                {
-                    for (int i = 0; i < currentObjects.Length; i++)
-                    {
-                        GameObject obj = currentObjects[i];
-                        if (obj == null) continue;
-                        //Debug.LogError("オブジェクトNULLじゃないです");
-
-                        //親オブジェクトを取得(子オブジェクトをアタッチしてても取得できる)
-                        TimeSliderObject_Base timeObj = obj.GetComponent<TimeSliderObject_Base>();
-
-                        if (timeObj != null)
-                        {
-                            //Debug.LogError("オブジェクト切り替え処理します");
-                            GameObject newObj = timeObj.ReplaceObject(); // 子クラスのオーバーライドされたメソッドが適用される
-                            if (newObj != null)
-                            {
-                                Debug.Log($"ステージオブジェクト[{i}]を切り替えました！");
-                            }
-                            else
-                            {
-                                Debug.LogError($"ステージオブジェクト帰ってきてないぞ");
-                            }
-                        }
-                    }
-                }
-
-                // クールタイムをセットして連続切り替え防止
-                changeCooldownTimer = changeCooldown;
-            }
+            HideTargetObjects(); // スライダー中に表示していたやつを消す
+            StartCoroutine(StopTimeAfterOneFrame()); // ★コルーチンで時間停止を遅延実行
+            return;
         }
-        */
-
     }
 
-
+    // 作成者：畦内 - 時間停止処理を1フレーム遅らせて確実に止める
+    private System.Collections.IEnumerator StopTimeAfterOneFrame()
+    {
+        yield return null; // 1フレーム待機
+        Time.timeScale = 0f; // ★確実に停止させる
+                             //slider.interactable = false;
+        isTimeStopped = true;
+        ShowUnhideOnStopObjects();
+    }
     // スライダーが操作された際に呼ばれる
     public void OnSliderMoved(float value) //valueが更新されたときの処理
     {
         if (Movement)//RemoveListener(OnSliderMoved)で止めれなかったからごり押しで止める
         {
-
             //ログかさばるからデバック用
             //Debug.Log("スライダー動いた時の処理する");
 
@@ -235,13 +197,12 @@ public class SliderTimeCounter : MonoBehaviour
             }
 
             if (CameraController != null) //スライダーの操作に同期してカメラにエフェクトかける
-            { 
+            {
                 FilmGrainToggle script = CameraController.GetComponent<FilmGrainToggle>();
-                if(script != null)
+                if (script != null)
                 {
                     script.SliderMovedControl();//カメラにエフェクトをかける命令
                 }
-            
             }
 
             // ★ステージ内オブジェクトたちの巻き戻し
@@ -259,6 +220,8 @@ public class SliderTimeCounter : MonoBehaviour
                 }
             }
 
+            // 作成者：畦内 - スライダー操作中は対象オブジェクトを一時的に表示
+            ShowTargetObjects();
         }
     }
 
@@ -267,10 +230,65 @@ public class SliderTimeCounter : MonoBehaviour
         currentObject = player;
     }
 
-    public void SetCurrentObjects(GameObject objects,int it)
+    public void SetCurrentObjects(GameObject objects, int it)
     {
         Debug.LogWarning("ステージオブジェクト継承");
         currentObjects[it] = objects;
     }
 
+    // 作成者：畦内 - スライダー操作中に対象オブジェクトを表示
+    public void ShowTargetObjects()
+    {
+        if (targetObjects == null) return;
+
+        foreach (var obj in targetObjects)
+        {
+            if (obj != null)
+            {
+                obj.SetActive(true);
+            }
+        }
+    }
+
+    // 作成者：畦内 - スライダー操作終了時に対象オブジェクトを非表示に戻す
+    public void HideTargetObjects()
+    {
+        if (targetObjects == null) return;
+
+        foreach (var obj in targetObjects)
+        {
+            if (obj != null)
+            {
+                obj.SetActive(false);
+            }
+        }
+    }
+
+    // 作成者：畦内 - 時間停止時に表示（透明解除）するオブジェクト
+    public void ShowUnhideOnStopObjects()
+    {
+        if (unhideOnStopObjects == null) return;
+
+        foreach (var obj in unhideOnStopObjects)
+        {
+            if (obj != null)
+            {
+                obj.SetActive(true);
+            }
+        }
+    }
+
+    // 作成者：畦内 - 時間再開時に非表示に戻す
+    public void HideUnhideOnStopObjects()
+    {
+        if (unhideOnStopObjects == null) return;
+
+        foreach (var obj in unhideOnStopObjects)
+        {
+            if (obj != null)
+            {
+                obj.SetActive(false);
+            }
+        }
+    }
 }

@@ -1,88 +1,127 @@
 ﻿using UnityEngine;
-using System.Collections;
+using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class Bomb : MonoBehaviour
 {
+    [System.Serializable]
+    public class ScenePosition
+    {
+        public string sceneName;
+        public Vector3 position;
+    }
+
+    [Header("シーンごとの初期位置設定")]
+    public List<ScenePosition> scenePositions;
+
+    [Header("爆発設定")]
     public float explosionRadius = 5f;
     public float explosionForce = 300f;
-    public LayerMask explosionMask;
     public float Vod = 5f;
 
-    public AudioClip beepClip;            // ピ音
-    private AudioSource audioSource;      // AudioSource
+    [Header("サウンド設定")]
+    public AudioClip countdownClip;   // 爆発までのカウントダウン音
+    public AudioClip explosionClip;   // 爆発時の音
+
+    private AudioSource audioSource;
+    private Rigidbody2D rb;
+    private Vector3 initialPosition;
+    private bool hasExploded = false;
 
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
 
+        SetInitialPositionByScene();
+
+        // タグごとに遅延設定
         if (CompareTag("bomb1"))
         {
-            Debug.Log("爆弾タグ: bomb1 → 爆発なし");
+            Debug.Log("爆弾タグ: bomb1 → 爆発しない");
             return;
         }
-        else if (CompareTag("bomb2"))
+
+        Vod = CompareTag("bomb2") ? 3f : CompareTag("bomb3") ? 10f : Vod;
+
+        // カウントダウン音再生
+        if (audioSource != null && countdownClip != null)
         {
-            
-            Debug.Log("爆弾タグ: bomb2 → 3秒後に爆発");
-            StartCoroutine(CountdownAndExplode(Vod));
+            audioSource.PlayOneShot(countdownClip);
         }
-        else if (CompareTag("bomb3"))
-        {
-           
-            Debug.Log("爆弾タグ: bomb3 → 10秒後に爆発");
-            StartCoroutine(CountdownAndExplode(Vod));
-        }
+
+        Invoke(nameof(Explode), Vod);
     }
 
-    IEnumerator CountdownAndExplode(float delay)
+    void SetInitialPositionByScene()
     {
-        float timeLeft = delay;
-
-        while (timeLeft > 0f)
+        string sceneName = SceneManager.GetActiveScene().name;
+        foreach (var sp in scenePositions)
         {
-            Debug.Log($"カウントダウン: {timeLeft}秒");
-            if (beepClip != null && audioSource != null)
+            if (sp.sceneName == sceneName)
             {
-                audioSource.PlayOneShot(beepClip);
+                initialPosition = sp.position;
+                Debug.Log($"初期位置設定: シーン「{sceneName}」→ {initialPosition}");
+                return;
             }
-
-            yield return new WaitForSeconds(1f);
-            timeLeft -= 1f;
         }
 
-        Explode();
+        initialPosition = transform.position;
+        Debug.LogWarning($"初期位置未設定: シーン「{sceneName}」。現在位置を使用");
     }
 
     void Explode()
     {
-        Debug.Log("💥 爆発処理開始");
+        if (hasExploded) return;
+        hasExploded = true;
+
+        Debug.Log("💥 爆発！");
+
+        if (audioSource != null && explosionClip != null)
+        {
+            audioSource.PlayOneShot(explosionClip);
+        }
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius);
-
         foreach (Collider2D col in colliders)
         {
-            Debug.Log("検出: " + col.name + " / タグ: " + col.tag);
-
-            Rigidbody2D rb = col.attachedRigidbody;
-            if (rb != null)
+            Rigidbody2D colRb = col.attachedRigidbody;
+            if (colRb != null && colRb != rb)
             {
-                Vector2 direction = rb.position - (Vector2)transform.position;
-                rb.AddForce(direction.normalized * explosionForce);
-                Debug.Log("💨 力を加えた: " + col.name);
+                Vector2 direction = colRb.position - (Vector2)transform.position;
+                colRb.AddForce(direction.normalized * explosionForce);
             }
 
             if (col.CompareTag("Object1") || col.CompareTag("Object2") || col.CompareTag("Object3"))
             {
-                Debug.Log("✅ 破壊対象に一致: " + col.name);
+
+                //Vector3 teleportTarget = col.transform.position + new Vector3(0f, 8f, 0f);
+                //col.transform.position = teleportTarget;
                 Destroy(col.gameObject);
-            }
-            else
-            {
-                Debug.Log("❌ タグ一致せず: " + col.tag);
             }
         }
 
-        Destroy(gameObject);
+        ResetBomb();
+    }
+
+    void ResetBomb()
+    {
+        Debug.Log("🔁 初期位置にワープ");
+
+        rb.linearVelocity = Vector2.zero;
+        rb.angularVelocity = 0f;
+        rb.position = initialPosition;
+        rb.rotation = 0f;
+
+        hasExploded = false;
+
+        // カウントダウン再再生
+        if (audioSource != null && countdownClip != null)
+        {
+            audioSource.PlayOneShot(countdownClip);
+        }
+
+        Invoke(nameof(Explode), Vod);
     }
 
     void OnDrawGizmosSelected()

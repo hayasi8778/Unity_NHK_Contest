@@ -165,8 +165,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 227980322}
   initVelocity: 1
-  acceleration: -10
+  acceleration: -25
   mouthPos: {x: 0, y: -5}
+  initChangeWaitTime: 0.2
   cassetteSelectState: {fileID: 626894492}
 --- !u!1 &18489496
 GameObject:

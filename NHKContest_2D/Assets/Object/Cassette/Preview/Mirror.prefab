@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6316759972669792907}
   - component: {fileID: 850054864786951145}
   m_Layer: 0
-  m_Name: TestStage
+  m_Name: Mirror
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,4 +46,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageData:
   - preview: {fileID: 0}
-    sceneName: Stage_Cannon
+    sceneName: Mirror_01
+  - preview: {fileID: 0}
+    sceneName: Mirror_02
+  - preview: {fileID: 0}
+    sceneName: Mirror_03
+  - preview: {fileID: 0}
+    sceneName: Mirror_04
+  - preview: {fileID: 0}
+    sceneName: Gravity_05
+  - preview: {fileID: 0}
+    sceneName: Mirror_06

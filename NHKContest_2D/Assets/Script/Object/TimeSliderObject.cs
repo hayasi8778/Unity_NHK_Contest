@@ -54,7 +54,7 @@ public class TimeSliderObject : TimeSliderObject_Base
         }
     }
 
-    public void RewindToSlider(float sliderValue)
+    public void RewindToSlider(float sliderValue)//オブジェクトが戻る
     {
         int index = Mathf.RoundToInt(sliderValue * 10f);
         if (index >= 0 && index < positionHistory.Length)

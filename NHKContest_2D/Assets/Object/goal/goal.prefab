@@ -198,11 +198,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 181e106ff2ba2c040a7c0dca8b96c654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DarkOverlay: {fileID: 0}
-  ClearScreen: {fileID: 0}
-  Geme_end: {fileID: 0}
-  RestartButton: {fileID: 0}
-  SelectButton: {fileID: 0}
-  scaleSpeed: 2000
-  widthScaleFactor: 0.8
-  heightScaleFactor: 0.8
+  DarkOverlay: {fileID: 6658816571752418979, guid: 50a47bdbe3a7b1c45b023724b9ddc237, type: 3}
+  ClearScreen: {fileID: 464187732264209238, guid: bf78adff283e0d54ea13ea1dcdbcc315, type: 3}
+  Geme_end: {fileID: 6326765528337518996, guid: 14f2f8ed74edcee44b0e6b77099be36c, type: 3}
+  RestartButton: {fileID: 4993464273677340805, guid: d8afd3fb3d34fc4478a7aa4f2be72eb3, type: 3}
+  SelectButton: {fileID: 4397913994708715734, guid: 3b80fbb37be345c468f6912f72bc3af8, type: 3}
+  scaleSpeed: 3500
+  widthScaleFactor: 2.5
+  heightScaleFactor: 2.5

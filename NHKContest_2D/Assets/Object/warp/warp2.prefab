@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -1670537673, guid: ec332af41790213409ca0b289c28d674, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.9155555, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -169,6 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 0}
+  ImageChanger: {fileID: 0}
   replacementPrefabs:
   - {fileID: 8885387951448453065, guid: 958386b2681fb6d4db869777c388a0b2, type: 3}
   - {fileID: 8885387951448453065}
