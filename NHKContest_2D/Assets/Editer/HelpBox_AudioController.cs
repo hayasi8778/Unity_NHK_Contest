@@ -14,6 +14,7 @@ public class AudioControllerEditor : Editor
                                 "Stop(int Index)     : Ä¶‚ğŠ®‘S‚É’â~\n" +
                                 "Pause(int Index)    : Ä¶‚ğˆê’â~\n" +
                                 "UnPause(int Index)  : ˆê’â~‚ğ‰ğœ\n" +
+                                "PlayOneShot(int Index)  : SE“™‚Ì•¡”‰ñd‚È‚é‰¹‚ÌÄ¶\n" +
                                 "GetIsPlaying(int Index)  : Œ»İ‚ÌÄ¶ó‹µ", MessageType.None);
 
         base.OnInspectorGUI();

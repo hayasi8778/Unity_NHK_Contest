@@ -9,18 +9,18 @@ public class PlayerJump : MonoBehaviour
     private HashSet<GameObject> validGround = new HashSet<GameObject>(); // 有効な"ground"を追跡
     private const float NormalThreshold = 0.7f; // 法線方向のしきい値
 
-    private AudioSource audioSource; //ジャンプ時のSE再生するためのやつ
-    public AudioClip jumpSE;
-
     public float AnimationTime = 0.5f;//アニメーションの待ち時間
 
     private bool GravityFlag = true;//重力フラグ(trueで正常falseで反転)
 
      private bool animFlag = true; //アニメーションのフラグ
 
+    private AudioController audioController; // Audioの操作コンポーネント 中谷
+    enum AudioType { walkSE, jump02 } // 音の種類　中谷
+
     void Start()
     {
-        audioSource = GetComponent<AudioSource>(); // AudioSourceをセット
+        audioController = GetComponent<AudioController>(); // AudioControllerを取得 中谷
     }
 
     [System.Obsolete]
@@ -32,21 +32,15 @@ public class PlayerJump : MonoBehaviour
             if (GravityFlag)
             {
                 rb.AddForce(Vector2.up * JumpPower, ForceMode2D.Impulse);
-                if (!audioSource.isPlaying)
-                {
-                    audioSource.PlayOneShot(jumpSE); // ジャンプ時のSE再生
-                }
+                audioController.PlayOneShot((int)AudioType.jump02); // ジャンプ時のSE再生 中谷
             }
             else
             {
                 //Debug.Log("反転ジャンプ");
                 rb.AddForce(Vector2.down * JumpPower, ForceMode2D.Impulse);
-                if (!audioSource.isPlaying)
-                {
-                    audioSource.PlayOneShot(jumpSE); // ジャンプ時のSE再生
-                }
+                audioController.PlayOneShot((int)AudioType.jump02); // ジャンプ時のSE再生　中谷
             }
-            
+
         }
 
         if(!(validGround.Count > 0 && animFlag == false) && Input.GetKey(KeyCode.Space))//何処にもあたっていないなら
