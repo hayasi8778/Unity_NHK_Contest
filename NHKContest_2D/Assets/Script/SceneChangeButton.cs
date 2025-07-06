@@ -9,6 +9,7 @@ public class SceneChangeButton : MonoBehaviour
 
     private void Start()
     {
+        Physics2D.gravity = new Vector2(0, -9.8f);
         Time.timeScale = 1f; 
     }
     // ƒ{ƒ^ƒ“‚ª‰Ÿ‚³‚ê‚½‚Æ‚«‚ÉŒÄ‚Î‚ê‚éŠÖ”
