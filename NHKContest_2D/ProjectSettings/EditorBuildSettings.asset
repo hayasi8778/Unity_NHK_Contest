@@ -41,6 +41,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Stage/Gravity/Gravity_06.unity
     guid: 391d1fe83301747428c6ca566e8279c2
+  - enabled: 1
+    path: Assets/Scenes/Gravity_Proto/Gravity_02Pro.unity
+    guid: 81b5c4a740376144884e1ba514cc3d6c
+  - enabled: 1
+    path: Assets/Scenes/Plane/Plane01.unity
+    guid: 08321f8a22705824d937bad2eda1d0de
+  - enabled: 1
+    path: Assets/Scenes/Plane/Plane02.unity
+    guid: 669cbd7712ce99f46beb66b9d3d3d10d
+  - enabled: 1
+    path: Assets/Scenes/Plane/Plane03.unity
+    guid: 970ac8a05b236dd4786f41f82ca6f071
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
