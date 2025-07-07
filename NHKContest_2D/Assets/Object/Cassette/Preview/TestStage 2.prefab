@@ -46,14 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageData:
   - preview: {fileID: 6399340461708634234, guid: 1d05e8e9c9111bc4d8ff7bf96f6475ef, type: 3}
-    sceneName: Gravity_01
+    sceneName: Plane01
   - preview: {fileID: 0}
-    sceneName: Gravity_02
+    sceneName: Plane02
   - preview: {fileID: 6399340461708634234, guid: 1d05e8e9c9111bc4d8ff7bf96f6475ef, type: 3}
-    sceneName: Gravity_03
-  - preview: {fileID: 0}
-    sceneName: Gravity_04
-  - preview: {fileID: 6399340461708634234, guid: 1d05e8e9c9111bc4d8ff7bf96f6475ef, type: 3}
-    sceneName: Gravity_05
-  - preview: {fileID: 0}
-    sceneName: Gravity_06
+    sceneName: Plane03

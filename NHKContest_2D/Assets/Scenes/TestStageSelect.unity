@@ -353,9 +353,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 227980322}
   allPreview:
+  - {fileID: 551224340291965663, guid: 22b0f111f01ed574eb040c3ae183f500, type: 3}
   - {fileID: 551224340291965663, guid: 7dcab23cf6ad5fa4f98338a97fee50b1, type: 3}
   - {fileID: 551224340291965663, guid: 60470c90e32f1684cb0bf544a61cb22f, type: 3}
-  - {fileID: 551224340291965663, guid: 22b0f111f01ed574eb040c3ae183f500, type: 3}
   selectIndex: 0
   screenPicture: {fileID: 18489496}
   text: {fileID: 567174100}
@@ -594,9 +594,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 227980322}
   allCassette:
-  - {fileID: 5987436092188937359, guid: 7d975f8e46b0f814faf8112a399a834d, type: 3}
-  - {fileID: 5987436092188937359, guid: 70e15e885efb31a4abec9a459a8e2625, type: 3}
   - {fileID: 5987436092188937359, guid: 0428500294ba2d44796995ca89596a03, type: 3}
+  - {fileID: 5987436092188937359, guid: 70e15e885efb31a4abec9a459a8e2625, type: 3}
+  - {fileID: 5987436092188937359, guid: 7d975f8e46b0f814faf8112a399a834d, type: 3}
   viewMaxCount: 5
   interval: 8
   initInterval: 12
