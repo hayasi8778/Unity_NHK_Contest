@@ -1,45 +1,47 @@
-using UnityEditor;
 using UnityEngine;
 
 public class AudioController : MonoBehaviour
 {
     [System.Serializable]
-    public struct AudioData
+    public class AudioData
     {
         [Header("音源")]
         public AudioClip clip;
 
         [Header("音量")]
         [Range(0f, 1f)]
-        public float volume;
-        public bool mute;
+        public float volume = 1f;
+        public bool mute = false;
 
         [Header("ゲーム開始時に再生するか/ループするか（BGMならON）")]
-        public bool playOnAwake;
-        public bool loop;
+        public bool playOnAwake = false;
+        public bool loop = false;
     }
 
     [Header("オーディオ設定リスト")]
     public AudioData[] audioDataList;
+
     private AudioSource[] audioSources;
 
     void Start()
     {
-        audioSources = new AudioSource[audioDataList.Length];
+        int count = audioDataList.Length;
+        audioSources = new AudioSource[count];
 
-        // 各値をAudioSourceに設定
-        for (int i = 0; i < audioDataList.Length; i++)
+        for (int i = 0; i < count; i++)
         {
-            var audioData = audioDataList[i];
-            var audioSource = gameObject.AddComponent<AudioSource>();
+            AudioData data = audioDataList[i];
+            AudioSource source = gameObject.AddComponent<AudioSource>();
 
-            audioSource.clip        = audioData.clip;
-            audioSource.volume      = audioData.volume;
-            audioSource.mute        = audioData.mute;
-            audioSource.playOnAwake = audioData.playOnAwake;
-            audioSource.loop        = audioData.loop;
+            source.clip = data.clip;
+            source.volume = data.volume;
+            source.mute = data.mute;
+            source.playOnAwake = data.playOnAwake;
+            source.loop = data.loop;
 
-            audioSources[i] = audioSource;
+            if (data.playOnAwake && data.clip != null) source.Play();
+
+            audioSources[i] = source;
         }
     }
 
@@ -47,39 +49,43 @@ public class AudioController : MonoBehaviour
     {
         for (int i = 0; i < audioSources.Length; i++)
         {
-            // Volumeだけリアルタイムに更新（他はStart時のみ）
-            audioSources[i].volume = audioDataList[i].volume;
+            if (audioSources[i] != null) audioSources[i].volume = audioDataList[i].volume;
         }
     }
 
-    // このScriptで再生とかできるなら取得する必要なくね感
-    //public AudioSource[] GetAudioSourceArray()
-    //{
-    //    return audioSources;
-    //}
-
-    public void Play(int Index)
+    // インデックスの妥当性をチェックするヘルパーメソッド
+    private bool IsValidIndex(int index)
     {
-        if (audioSources[Index] != null) audioSources[Index].Play();
+        return index >= 0 && index < audioSources.Length;
     }
 
-    public void Stop(int Index)
+    public void Play(int index)
     {
-        if (audioSources[Index] != null) audioSources[Index].Stop();
+        if (IsValidIndex(index) && audioSources[index].clip != null) audioSources[index].Play();
     }
 
-    public void Pause(int Index)
+    public void Stop(int index)
     {
-        if (audioSources[Index] != null) audioSources[Index].Pause();
+        if (IsValidIndex(index)) audioSources[index].Stop();
     }
 
-    public void UnPause(int Index)
+    public void Pause(int index)
     {
-        if (audioSources[Index] != null) audioSources[Index].UnPause();
+        if (IsValidIndex(index)) audioSources[index].Pause();
     }
 
-    public bool GetIsPlaying(int Index)
+    public void UnPause(int index)
     {
-        return audioSources[Index] != null && audioSources[Index].isPlaying;
+        if (IsValidIndex(index)) audioSources[index].UnPause();
+    }
+
+    public void PlayOneShot(int index)
+    {
+        if (IsValidIndex(index) && audioDataList[index].clip != null) audioSources[index].PlayOneShot(audioDataList[index].clip);
+    }
+
+    public bool GetIsPlaying(int index)
+    {
+        return IsValidIndex(index) && audioSources[index].isPlaying;
     }
 }

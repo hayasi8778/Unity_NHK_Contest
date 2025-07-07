@@ -3,14 +3,11 @@ using UnityEngine.Audio;
 using UnityEngine.Video;
 using System.Collections;
 
-
 public class PlayerMove : MonoBehaviour
 {
     public float movespeed = 1.0f;//移動スピード
     private bool muveFlag = false; //歩行しているかのフラグ
     
-    private AudioSource audioSource; //音鳴らすためのコンポーネント
-    public AudioClip walkSE;
     private new SpriteRenderer renderer; //レンダーを取得する
 
     //public PlayerMoveAmin MoveAmin; //歩行時のアニメーション
@@ -26,13 +23,16 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float wallCheckDistance = 0.1f;
     [SerializeField] private LayerMask wallLayer; // 判定したいレイヤーを指定
 
+    private AudioController audioController; // Audioの操作コンポーネント　中谷
+    enum AudioType { walkSE,jump02 } // 音の種類　中谷
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        audioSource = GetComponent<AudioSource>(); // AudioSourceを取得
-
         //MoveAmin = GetComponent<PlayerMoveAmin>();
+        audioController = GetComponent<AudioController>(); // AudioControllerを取得　中谷
+        audioController.Pause((int)AudioType.walkSE); // プレイヤーの移動音を一時停止　（足音を一時停止と再開を使って違和感をなくしてみよう作戦）　中谷
 
         //プレイヤーが描画されないからレンダーが有効か確認する
         renderer = GetComponent<SpriteRenderer>();
@@ -45,11 +45,6 @@ public class PlayerMove : MonoBehaviour
         {
             Debug.Log("レンダーないぞ");
         }
-
-
-        // サウンドの設定　中谷
-        audioSource.clip = walkSE;  // 音を設定
-        audioSource.loop = true;    // ループするように設定
     }
 
     private bool canMove = true; // 移動許可フラグ
@@ -82,9 +77,6 @@ public class PlayerMove : MonoBehaviour
         //右移動
         if (Input.GetKey(KeyCode.D))
         {
-
-
-
             //左右切り替え
             if (GravityFlag) //画面回るから操作方向切り替える  林
             {
@@ -108,16 +100,12 @@ public class PlayerMove : MonoBehaviour
                 }
             }
 
-
-                
-
             muveFlag = true;
             /*
             if (!audioSource.isPlaying) // 音が再生中じゃないなら
             {
                 PlaySound(); //SE再生
             }*/
-
         }
 
         //左移動
@@ -147,19 +135,13 @@ public class PlayerMove : MonoBehaviour
                 }
             }
 
-
-
-                
-
             muveFlag = true;
             /*
             if (!audioSource.isPlaying) // 再生中でないなら
             {
                 PlaySound();
-
             }
             */
-
         }
 
         if (muveFlag && animFlag)
@@ -168,10 +150,8 @@ public class PlayerMove : MonoBehaviour
             PlayAnim();
         }
 
-        // 入力状況とゲーム内時間の確認をして音を鳴らすか止める　中谷
-        if (muveFlag && Time.timeScale > 0) PlaySound();
-        else StopAudio();
-
+        if (muveFlag && Time.timeScale > 0) audioController.UnPause((int)AudioType.walkSE); // 歩行音を再開　中谷
+        else audioController.Pause((int)AudioType.walkSE); // 歩行音を一時停止　中谷
     }
 
     void CheckPush()
@@ -194,19 +174,6 @@ public class PlayerMove : MonoBehaviour
 
     }
 
-    void PlaySound()
-    {
-        // 再生状況の確認を関数内で行う　中谷
-        if (!audioSource.isPlaying) audioSource.Play();
-    }
-
-
-    void StopAudio()
-    {
-        // 再生状況の確認を関数内で行う　中谷
-        if (audioSource.isPlaying) audioSource.Stop();
-    }
-
     void PlayAnim()
     {
         animFlag = false;
@@ -220,7 +187,6 @@ public class PlayerMove : MonoBehaviour
         else
         {
             MoveAmin.ChangeSprite();
-            
         }
         Invoke("StopAmin", AnimationTime);
     }
