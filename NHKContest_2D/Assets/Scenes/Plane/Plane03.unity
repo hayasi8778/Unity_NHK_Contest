@@ -4095,11 +4095,11 @@ PrefabInstance:
       objectReference: {fileID: 1055283348}
     - target: {fileID: 5163912533423822352, guid: 3f483c947a6c08f42a2e5204d0c6367e, type: 3}
       propertyPath: widthScaleFactor
-      value: 2.5
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 5163912533423822352, guid: 3f483c947a6c08f42a2e5204d0c6367e, type: 3}
       propertyPath: heightScaleFactor
-      value: 2.5
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 5353010144499461430, guid: 3f483c947a6c08f42a2e5204d0c6367e, type: 3}
       propertyPath: m_LocalPosition.x

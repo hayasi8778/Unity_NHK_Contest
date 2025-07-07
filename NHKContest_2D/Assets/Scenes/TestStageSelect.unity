@@ -355,7 +355,7 @@ MonoBehaviour:
   allPreview:
   - {fileID: 551224340291965663, guid: 22b0f111f01ed574eb040c3ae183f500, type: 3}
   - {fileID: 551224340291965663, guid: 7dcab23cf6ad5fa4f98338a97fee50b1, type: 3}
-  - {fileID: 551224340291965663, guid: 60470c90e32f1684cb0bf544a61cb22f, type: 3}
+  - {fileID: 551224340291965663, guid: 7dcab23cf6ad5fa4f98338a97fee50b1, type: 3}
   selectIndex: 0
   screenPicture: {fileID: 18489496}
   text: {fileID: 567174100}
