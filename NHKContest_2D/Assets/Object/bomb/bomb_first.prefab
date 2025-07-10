@@ -109,8 +109,8 @@ MonoBehaviour:
   explosionRadius: 3
   explosionForce: 300
   Vod: 5
-  shortFuseClip: {fileID: 0}
-  longFuseClip: {fileID: 0}
+  countdownClip: {fileID: 0}
+  explosionClip: {fileID: 0}
 --- !u!58 &1297330798875403233
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -189,7 +189,7 @@ MonoBehaviour:
   slider: {fileID: 0}
   ImageChanger: {fileID: 0}
   replacementPrefabs:
-  - {fileID: 1501817764571999954, guid: 96b5e7ff904cdea4bae0770682fe5408, type: 3}
+  - {fileID: 9162603098756173354, guid: 96b5e7ff904cdea4bae0770682fe5408, type: 3}
   - {fileID: 1501817764571999954, guid: 132ee45070f3cc344ba9ec715485e21a, type: 3}
   - {fileID: 1501817764571999954, guid: 18990d7045e963745b15e102e3277821, type: 3}
-  replacementIndex: 2
+  replacementIndex: 0
